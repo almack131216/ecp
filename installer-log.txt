@@ -1,0 +1,179 @@
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* VERSION: 1.2.28
+* STEP-1 START @ 01:26:35
+* NOTICE: Do NOT post this data to public sites or forums
+********************************************************************************
+PHP VERSION:	5.6.30 | SAPI: apache2handler
+PHP TIME LIMIT:	[0] time limit restriction disabled
+PHP MEMORY:	2048M | SUHOSIN: disabled
+SERVER:		Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30
+DOC ROOT:	C:/xampp/htdocs/ecp
+DOC ROOT 755:	true
+LOG FILE 644:	false
+REQUEST URL:	http://localhost/ecp/installer.php
+SAFE MODE :	0
+--------------------------------------
+ARCHIVE EXTRACTION
+--------------------------------------
+NAME:	20171113_theenglishcollegeinprague_900b9ff269050d762844171113104420_archive.zip
+SIZE:	227.63MB
+ZIP:	Enabled (ZipArchive Support)
+
+>>> START EXTRACTION:
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 7371
+    [filename] => C:\xampp\htdocs\ecp\20171113_theenglishcollegeinprague_900b9ff269050d762844171113104420_archive.zip
+    [comment] => 
+)
+File timestamp is 'Current' mode: 2017-11-13 13:28:47
+<<< EXTRACTION COMPLETE: true
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to *.171113132847.orig
+- Reset of .htaccess/web.config files
+
+STEP-1 COMPLETE @ 01:28:47 - RUNTIME: 132.0387 sec.
+
+
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* STEP-2 START @ 02:23:30
+* NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+--------------------------------------
+DATABASE ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 10.1.21 -- Build Server: 5.7.20
+FILE SIZE:	database.sql (14.87MB) - installer-data.sql (14.87MB)
+TIMEOUT:	5000
+MAXPACK:	1048576
+SQLMODE:	NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[C:/xampp/htdocs/ecp/installer-data.sql]
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+TABLES DROPPED:	0
+QUERIES RAN:	206
+
+wp_bc_random_banner: (0)
+wp_bc_random_banner_category: (1)
+wp_bc_random_banner_options: (0)
+wp_commentmeta: (0)
+wp_comments: (0)
+wp_duplicator_packages: (1)
+wp_huge_itportfolio_images: (248)
+wp_huge_itportfolio_portfolios: (24)
+wp_links: (0)
+wp_options: (4009)
+wp_postmeta: (6515)
+wp_posts: (2652)
+wp_term_relationships: (1008)
+wp_term_taxonomy: (891)
+wp_termmeta: (0)
+wp_terms: (891)
+wp_usermeta: (328)
+wp_users: (11)
+wp_yoast_seo_links: (471)
+wp_yoast_seo_meta: (156)
+
+Removed '2965' cache/transient rows
+
+CREATE/INSTALL RUNTIME: 5.5302 sec.
+STEP-2 COMPLETE @ 02:23:36 - RUNTIME: 5.6578 sec.
+
+
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* STEP-3 START @ 02:23:48
+* NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	latin1
+CHARSET CLIENT:	utf8
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+wp_bc_random_banner^ (0)
+wp_bc_random_banner_category~ (1)
+wp_bc_random_banner_options^ (0)
+wp_commentmeta^ (0)
+wp_comments^ (0)
+wp_duplicator_packages^ (0)
+wp_huge_itportfolio_images~ (248)
+wp_huge_itportfolio_portfolios~ (24)
+wp_links^ (0)
+wp_options~ (1042)
+wp_postmeta~ (6515)
+wp_posts~ (2652)
+wp_term_relationships~ (1008)
+wp_term_taxonomy~ (891)
+wp_termmeta^ (0)
+wp_terms~ (891)
+wp_usermeta~ (328)
+wp_users~ (11)
+wp_yoast_seo_links~ (471)
+wp_yoast_seo_meta~ (156)
+--------------------------------------
+Search1:	'/var/www/html' 
+Change1:	'C:/xampp/htdocs/ecp' 
+Search2:	'\/var\/www\/html' 
+Change2:	'C:\/xampp\/htdocs\/ecp' 
+Search3:	'%2Fvar%2Fwww%2Fhtml%2F' 
+Change3:	'C%3A%2Fxampp%2Fhtdocs%2Fecp%2F' 
+Search4:	'\var\www\html' 
+Change4:	'C:/xampp/htdocs/ecp' 
+Search5:	'//www.englishcollege.cz' 
+Change5:	'//localhost:8080/ecp' 
+Search6:	'\/\/www.englishcollege.cz' 
+Change6:	'\/\/localhost:8080\/ecp' 
+Search7:	'%2F%2Fwww.englishcollege.cz' 
+Change7:	'%2F%2Flocalhost%3A8080%2Fecp' 
+Search8:	'https://localhost:8080/ecp' 
+Change8:	'http://localhost:8080/ecp' 
+Search9:	'https:\/\/localhost:8080\/ecp' 
+Change9:	'http:\/\/localhost:8080\/ecp' 
+Search10:	'https%3A%2F%2Flocalhost%3A8080%2Fecp' 
+Change10:	'http%3A%2F%2Flocalhost%3A8080%2Fecp' 
+SCANNED:	Tables:20 	|	 Rows:14238 	|	 Cells:111038 
+UPDATED:	Tables:2 	|	 Rows:2150 	|	 Cells:2340 
+ERRORS:		1 
+RUNTIME:	4.852200 sec
+--------------------------------------
+DATA-REPLACE ERRORS (Serialization):
+SELECT option_value FROM `wp_options`  WHERE option_id = "4613";
+
+
+====================================
+CONFIGURATION FILE UPDATES:
+====================================
+
+UPDATED WP-CONFIG: /wp-config.php' (if present)
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+- Preparing .htaccess file with basic setup.
+Basic .htaccess file edit complete.  If using IIS web.config this process will need to be done manually.
+
+====================================
+GENERAL UPDATES & CLEANUP:
+====================================
+
+- Created directory wp-snapshots
+- Created file wp-snapshots/index.php
+
+====================================
+NOTICES
+====================================
+
+No Notices Found
+
+
+STEP 3 COMPLETE @ 02:23:53 - RUNTIME: 4.9508 sec.
+
+

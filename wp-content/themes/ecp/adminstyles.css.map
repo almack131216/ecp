@@ -1,0 +1,1 @@
+{"version":3,"sources":["adminstyles.css"],"names":[],"mappings":"AAAA,gBAAgB;;AAEhB,iBAAiB,YAAY,EAAE","file":"adminstyles.css","sourcesContent":["/*admin styles*/\n\n#slugdiv input { width: 100%; }\n"]}

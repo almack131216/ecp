@@ -1,0 +1,1810 @@
+# Translation of Plugins - TablePress - Stable (latest release) in Czech
+# This file is distributed under the same license as the Plugins - TablePress - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-02-25 17:02:19+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: cs_CZ\n"
+"Project-Id-Version: Plugins - TablePress - Stable (latest release)\n"
+
+#: views/view-import.php:269
+msgid "(recommended)"
+msgstr "(doporučeno)"
+
+#: views/view-edit.php:638
+msgid "The following error was registered: %s."
+msgstr "Byla zaznamenána následující chyba: %s."
+
+#: classes/class-tablepress.php:365
+msgid "unknown"
+msgstr "neznámý"
+
+#: classes/class-admin-page-helper.php:79
+msgid "Thank you for using <a href=\"%s\">TablePress</a>."
+msgstr "Děkujeme, že používáte <a href=\"%s\">TablePress</a>."
+
+#: views/view-options.php:81
+msgid "In the User Options, every TablePress user can choose the position of the plugin in his WordPress admin menu."
+msgstr "V uživatelském nastavení, si může každý uživatel TablePressu vybrat umístění pluginu v administračním menu WordPressu."
+
+#: views/view-about.php:211
+msgid "the translators in the <a href=\"%s\">Plugin Directory</a>,"
+msgstr "překladatelům v <a href=\"%s\">adresáři pluginů</a>,"
+
+#: views/view-about.php:210
+msgid "Allan Jardine for <a href=\"%s\">DataTables</a>,"
+msgstr "Allan Jardine pro <a href=\"%s\">DataTables</a>,"
+
+#. Author URI of the plugin/theme
+msgid "https://tobias.baethge.com/"
+msgstr "https://tobias.baethge.com/"
+
+#. Author of the plugin/theme
+msgid "Tobias Bäthge"
+msgstr "Tobias Bäthge"
+
+#. Description of the plugin/theme
+msgid "Embed beautiful and feature-rich tables into your posts and pages, without having to write code."
+msgstr "Vkládejte hezké a inteligentní tabulky přímo do svých stránek a příspěvků, bez utnosti kódování."
+
+#. Plugin URI of the plugin/theme
+msgid "https://tablepress.org/"
+msgstr "https://tablepress.org/"
+
+#: views/view-options_custom_css.php:141
+msgid "Proceed without saving &#8220;Custom CSS&#8221; to a file"
+msgstr "Pokračovat bez uložení &#8220;Vlastních CSS&#8221; do souboru"
+
+#: views/view-options_custom_css.php:139
+msgid "Your &#8220;Custom CSS&#8221; will then be loaded inline."
+msgstr "Potom se váš &#8220;Vlastní CSS&#8221; bude načítat inline."
+
+#: views/view-options_custom_css.php:138
+msgid "To proceed without trying to save the &#8220;Custom CSS&#8221; to a file, click the button below."
+msgstr "Pokud chcete pokračovat bez uložení &#8220;Vlastních CSS&#8221; do souboru, klikněte na tlačítko níže."
+
+#: views/view-options_custom_css.php:136
+msgid "Proceed without saving a file"
+msgstr "Pokračovat bez uložení souboru"
+
+#: views/view-options_custom_css.php:109
+msgid "Connection Information"
+msgstr "Informácie o pripojení"
+
+#: views/view-options_custom_css.php:109
+msgid "To try again with the same method that you use for updating plugins or themes, please fill out the &#8220;%s&#8221; form below."
+msgstr "Vyzkoušejte znovu stejným způsobem, který používáte pro aktualizaci pluginů či vzhledů - vyplňte prosím &#8220;%s&#8221; níže uvedený formulář."
+
+#: views/view-options_custom_css.php:108
+msgid "Due to the configuration of your server, TablePress was not able to automatically save your &#8220;Custom CSS&#8221; to a file."
+msgstr "Vzhledem ke konfiguraci vašeho serveru, TablePress nebyl schopen automaticky uložit &#8220;Vlastní CSS&#8221; do souboru."
+
+#: views/view-options_custom_css.php:39
+msgid "Attention: Further action is required to save the changes to your &#8220;Custom CSS&#8221;!"
+msgstr "Pozor: Pro uložení změn ve &#8220;Vlastních CSS&#8221; je nutný další krok."
+
+#: views/view-options.php:189
+msgid "Be very careful with this and only click the button if you know what you are doing!"
+msgstr "Buďte velmi opatrní - kliknětě na tlačítko jen pokud víte, co děláte!"
+
+#: views/view-options.php:188
+msgid "You will manually need to remove the plugin&#8217;s files from the plugin folder afterwards."
+msgstr "Poté budete moci ručně smazat soubory pluginu ze složky pluginu."
+
+#: views/view-options.php:187
+msgid "It is recommended that you create a backup of the tables (by exporting the tables in the JSON format), in case you later change your mind."
+msgstr "Doporučuji vytvořit si zálohu tabulek (pomocí exportu tabulky ve formátu JSON) pro případ, že se později rozmyslíte jinak."
+
+#: views/view-options.php:186
+msgid "Uninstalling <strong>will permanently delete</strong> all TablePress tables and options from the database."
+msgstr "Odinstalováním <strong>trvale vymažete</strong> všechny tabulky TablePressu a nastavení z databáze."
+
+#: views/view-options.php:167
+msgid "TablePress shall be shown in this section of my admin menu: %s"
+msgstr "TablePress může být zobrazen v této sekci admin menu: %s"
+
+#: views/view-options.php:166
+msgid "Admin menu entry"
+msgstr "Umístění v admin menu"
+
+#: views/view-options.php:157
+msgid "Top-Level (bottom)"
+msgstr "Top-Level (dole)"
+
+#: views/view-options.php:156
+msgid "Top-Level (middle)"
+msgstr "Top-Level (uprostřed)"
+
+#: views/view-options.php:155
+msgid "Top-Level (top)"
+msgstr "Top-Level (nahoře)"
+
+#: views/view-options.php:115
+msgid "Please note that invalid CSS code will be stripped, if it can not be corrected automatically."
+msgstr "Vezměte na vědomí, že špatný CSS kód, který nepůjde opravit automaticky, bude odstraněn."
+
+#: views/view-options.php:113
+msgid "Information on available CSS selectors can be found in the <a href=\"%s\">documentation</a>."
+msgstr "Informace o možných CSS selektorech najdete v <a href=\"%s\">dokumentaci</a>."
+
+#: views/view-options.php:111
+msgid "You can get styling examples from the <a href=\"%s\">FAQ</a>."
+msgstr "Příklady stylování designu najdete na <a href=\"%s\">FAQ</a>."
+
+#: views/view-options.php:109
+msgid "&#8220;Custom CSS&#8221; (<a href=\"%s\">Cascading Style Sheets</a>) can be used to change the styling or layout of a table."
+msgstr "&#8220;Vlastní CSS&#8221; (<a href=\"%s\">Kaskádové styly</a>) mohou být použity ke změně vzhledu nebo rozložení tabulky."
+
+#: views/view-options.php:101
+msgid "Load these &#8220;Custom CSS&#8221; commands to influence the table styling:"
+msgstr "Nahrát &#8220;Vlastní CSS&#8221; příkazy pro ovlivnění stylu tabulky:"
+
+#: views/view-options.php:100
+msgid "Custom CSS"
+msgstr "Vlastní CSS"
+
+#: views/view-options.php:78
+msgid "Frontend Options influence the styling of tables in pages, posts, or text widgets, by defining which CSS code shall be loaded."
+msgstr "CSS nastavení ovlivňují vzhled tabulek na stránkách, v příspěvcích, nebo textových widgetech podle toho, který CSS kód je načtený."
+
+#: views/view-options.php:73
+msgid "TablePress has several options which affect the plugin&#8217;s behavior in different areas."
+msgstr "TablePress má několik nastavení, které určují chování pluginu v různých oblastech."
+
+#: views/view-options.php:54
+msgid "User Options"
+msgstr "Uživatelská nastavení"
+
+#: views/view-options.php:52
+msgid "Frontend Options"
+msgstr "Nastavení zobrazení"
+
+#: views/view-options.php:47
+msgid "The WP-Table Reloaded &#8220;Custom CSS&#8221; was imported successfully."
+msgstr "&#8220;Vlastní CSS&#8221; styly z pluginu WP-Table Reloaded byly úspěšně importovány."
+
+#: views/view-options.php:46
+msgid "Error: Options could not be saved."
+msgstr "Chyba: Nastavení se nepodařilo uložit."
+
+#: views/view-options.php:45
+msgid "Options saved successfully, but &#8220;Custom CSS&#8221; was not saved to file."
+msgstr "Nastavení bylo úspěšně uloženo, ale &#8220;Vlastní CSS&#8221; nebyly uloženy do souboru."
+
+#: views/view-options.php:44
+msgid "Options saved successfully."
+msgstr "Nastavení bylo úspěšně uloženo."
+
+#: views/view-options.php:39
+msgid "Are you really sure?"
+msgstr "Jste si jisti?"
+
+#: views/view-options.php:38
+msgid "Do you really want to uninstall TablePress and delete ALL data?"
+msgstr "Opravdu chcete odinstalovat TablePress a odstranit VŠECHNA data?"
+
+#: views/view-list.php:612
+msgid "You should <a href=\"%s\">import</a> a table to get started!"
+msgstr "Pro začátek <a href=\"%s\">importujte</a> tabulku!"
+
+#: views/view-list.php:610
+msgid "You should <a href=\"%s\">add</a> a table to get started!"
+msgstr "Pro začátek <a href=\"%s\">přidejte</a> tabulku!"
+
+#: views/view-list.php:589
+msgid "Apply"
+msgstr "Použít"
+
+#: views/view-list.php:584
+msgid "Bulk Actions"
+msgstr "Hromadné úpravy"
+
+#: views/view-list.php:582
+msgid "Select Bulk Action"
+msgstr "Zvlote hromadnou akci"
+
+#: views/view-list.php:550
+msgctxt "bulk action"
+msgid "Delete"
+msgstr "Smazat"
+
+#: views/view-list.php:547
+msgctxt "bulk action"
+msgid "Export"
+msgstr "Export"
+
+#: views/view-list.php:544
+msgctxt "bulk action"
+msgid "Copy"
+msgstr "Kopie"
+
+#: views/view-list.php:445
+msgid "Show a preview of &#8220;%s&#8221;"
+msgstr "Zobrazit náhled &#8220;%s&#8221;"
+
+#: views/view-list.php:442
+msgid "Delete &#8220;%s&#8221;"
+msgstr "Smazat &#8220;%s&#8221;"
+
+#: views/view-list.php:439
+msgctxt "row action"
+msgid "Export"
+msgstr "Exportovat"
+
+#: views/view-list.php:439
+msgid "Export &#8220;%s&#8221;"
+msgstr "Export &#8220;%s&#8221;"
+
+#: views/view-list.php:436
+msgid "Copy"
+msgstr "Kopírovat"
+
+#: views/view-list.php:436
+msgid "Copy &#8220;%s&#8221;"
+msgstr "Kopie &#8220;%s&#8221;"
+
+#: views/view-list.php:434
+msgid "Show Shortcode"
+msgstr "Zobrazit <em>zkrácený zápis</em>"
+
+#: views/view-list.php:425 views/view-list.php:432
+msgid "Edit &#8220;%s&#8221;"
+msgstr "Upravit &#8220;%s&#8221;"
+
+#: views/view-list.php:324
+msgid "Last Modified By"
+msgstr "Naposledy upraveno"
+
+#: views/view-list.php:323
+msgid "Author"
+msgstr "Autor"
+
+#: views/view-list.php:189
+msgid "Each table has a unique ID that needs to be adjusted in that Shortcode."
+msgstr "Každá tabulka má unikátní ID, které <em>zkrácený zápis</em> obsahuje."
+
+#: views/view-list.php:185
+msgid "Click the corresponding links within the list to edit, copy, delete, or preview a table."
+msgstr "Zvolte příslušnou pložku v seznamu pro úpravu, kopírování, odstranění, nebo pro náhled tabulky."
+
+#: views/view-list.php:184
+msgid "This is a list of your tables."
+msgstr "<strong>Seznam vašich tabulek</strong>."
+
+#: views/view-list.php:118
+msgid "Tables"
+msgstr "Tabulky"
+
+#: views/view-list.php:112
+msgid "The tables were imported successfully from WP-Table Reloaded."
+msgstr "Tabulky byly z WP-Table Reloaded úspěšně importovány."
+
+#: views/view-list.php:111
+msgid "The tables were imported successfully."
+msgstr "Tabulky byly úspěšně importovány."
+
+#: views/view-list.php:110
+msgid "Notice: Not all selected tables could be copied!"
+msgstr "Poznámka: Ne všechny vybrané tabulky lze kopírovat!"
+
+#: views/view-list.php:109
+msgid "Notice: Not all selected tables could be deleted!"
+msgstr "Upozornění: Ne všechny vybrané tabulky mohou být smazány!"
+
+#: views/view-list.php:108
+msgid "Error: You did not select any tables!"
+msgstr "Chyba: Nevybrali jste žádné tabulky!"
+
+#: views/view-list.php:107
+msgid "Error: This bulk action is invalid!"
+msgstr "Chyba: Tato část akce je neplatná!"
+
+#: views/view-list.php:105
+msgid "Error: You did not specify a valid table ID."
+msgstr "Chyba: Nezadali jste platné ID tabulky."
+
+#: views/view-list.php:104
+msgid "Error: The table could not be copied."
+msgstr "Chyba: Tabulku nelze zkopírovat."
+
+#: views/view-list.php:102
+msgid "The copied table has the table ID &#8220;%s&#8221;."
+msgstr "Zkopírovaná tabulka má ID  &#8220;%s&#8221;."
+
+#: views/view-list.php:98 views/view-list.php:99
+msgid "The table was deleted successfully."
+msgid_plural "The tables were deleted successfully."
+msgstr[0] "Tabulka byla úspěšně smazána."
+msgstr[1] "Tabulky byly úspěšně smazány."
+msgstr[2] "Tabulky byly úspěšně smazány."
+
+#: views/view-list.php:91
+msgid "If you like the new features and enhancements, <a href=\"%s\">giving a donation</a> towards the further support and development of TablePress is recommended. Thank you!"
+msgstr "Pokud se vám nové funkce a vylepšení líbí, doporučuji <a href=\"%s\">přispět darem</a> na další podporu a rozvoj TablePress. Děkuji vám!"
+
+#: views/view-list.php:90
+msgid "Please read the <a href=\"%s\">release announcement</a> for more information."
+msgstr "Přečtěte si prosím <a href=\"%s\">poznámky k vydání</a>, kde získáte více informací."
+
+#: views/view-list.php:89
+msgid "Thank you for updating to TablePress %s!"
+msgstr "Děkuji za aktualizaci na TablePress %s!"
+
+#: views/view-list.php:82
+msgid "No, thanks. Don&#8217;t ask again."
+msgstr "Ne, díky. Znovu se neptat."
+
+#: views/view-list.php:81
+msgid "I already donated."
+msgstr "Už jsem přispěl."
+
+#: views/view-list.php:80
+msgid "Sure, I&#8217;ll buy you a coffee and support TablePress!"
+msgstr "Jistě, koupím vám kávu a podpořím tak TablePress!"
+
+#: views/view-list.php:79
+msgid "Sincerly, Tobias"
+msgstr "S pozdravem, Tobias"
+
+#: views/view-list.php:78
+msgid "<a href=\"%s\">Donations</a> help me to continue user support and development of this <em>free</em> software &mdash; things for which I spend countless hours of my free time! Thank you very much!"
+msgstr "<a href=\"%s\">Dárcovství</ a>: pomozte mi pokračovat v uživatelské podpoře a vývoji tohoto <em> free </ em>softwaru, nad kterým jsem strávil nespočet hodin svého volného času! Děkuji moc!"
+
+#: views/view-list.php:77
+msgid "If everything works and you are satisfied with the results of managing your %s table, isn&#8217;t that worth a coffee or two?"
+msgid_plural "If everything works and you are satisfied with the results of managing your %s tables, isn&#8217;t that worth a coffee or two?"
+msgstr[0] "Pokud vše funguje a jste spokojeni s výsledky správy %s tabulky, nestojí to za jednu nebo dvě kávy?"
+msgstr[1] "Pokud vše funguje a jste spokojeni s výsledky správy %s tabulek, nestojí to za jednu nebo dvě kávy?"
+msgstr[2] "Pokud vše funguje a jste spokojeni s výsledky správy %s tabulek, nestojí to za jednu nebo dvě kávy?"
+
+#: views/view-list.php:76
+msgid "Thanks for using it! You&#8217;ve installed TablePress over a month ago."
+msgstr "Díky, že ho používáte! Už je to více než měsíc, co jste nainstalovali TablePress."
+
+#: views/view-list.php:75
+msgid "Hi, my name is Tobias, I&#8217;m the developer of the TablePress plugin."
+msgstr "Ahoj, já jsem Tobias, a jsem vývojářem pluginu TablePress."
+
+#: views/view-list.php:74
+msgid "Tobias Bäthge, developer of TablePress"
+msgstr "Tobias Bäthge, autor TablePress"
+
+#: views/view-list.php:67
+msgid "Import your tables from WP-Table Reloaded"
+msgstr "Importujte své tabulky z WP-Table Reloaded"
+
+#: views/view-list.php:66
+msgid "Please follow the <a href=\"%s\">migration guide</a> to move your tables and then deactivate WP-Table Reloaded!"
+msgstr "Postupujte, prosím, podle <a href=\"%s\">průvodce migrací </ a> - přesuňte své tabulky a pak deaktivujte WP-Table Reloaded!"
+
+#: views/view-list.php:65
+msgid "It is strongly recommended that you switch from WP-Table Reloaded to TablePress, which not only fixes many problems, but also has more and better features than WP-Table Reloaded."
+msgstr "Důrazně doporučuji přejít z WP-Table Reloaded na TablePress, který nejen opravuje mnoho problémů, ale také má více lepších funkcí než WP-Table Reloaded."
+
+#: views/view-list.php:64
+msgid "You have activated the plugin WP-Table Reloaded, which can not be used together with TablePress."
+msgstr "Máte aktivovaný plugin WP-Table Reloaded, který nelze používat zároveň s TablePress."
+
+#: views/view-list.php:63
+msgid "Attention!"
+msgstr "Pozor!"
+
+#: views/view-list.php:56 views/view-list.php:93
+msgid "Hide this message"
+msgstr "Skrýt tuto zprávu"
+
+#: views/view-list.php:55
+msgid "If you encounter any questions or problems, please visit the <a href=\"%1$s\">FAQ</a>, the <a href=\"%2$s\">documentation</a>, and the <a href=\"%3$s\">Support</a> section on the <a href=\"%4$s\">plugin website</a>."
+msgstr "Pokud narazíte na jakékoli dotazy či problémy, navštivte prosím stránky <a href=\"%1$s\"> FAQ </a>, <a href=\"%2$s\"> dokumentace </a>, a <a href=\"%3$s\"> Podpora </a> sekce na <a href=\"%4$s\">webu pluginu</a>."
+
+#: views/view-list.php:54
+msgid "Thank you for using TablePress for the first time!"
+msgstr "Děkuji za první použití pluginu TablePress!"
+
+#: views/view-list.php:53
+msgid "Welcome!"
+msgstr "Vítejte!"
+
+#: views/view-list.php:47
+msgid "No problem! I still hope you enjoy the benefits that TablePress adds to your site. If you should change your mind, you&#8217;ll always find the &#8220;Donate&#8221; button on the <a href=\"%s\">TablePress website</a>."
+msgstr "Bez problému! I přesto doufám, že si užíváte výhod, které TablePress přináší vaší stránce. Pokud byste změnili názor, můžete vždy použít tlačítka &#8220;Donate&#8221; na <a href=\"%s\">webu TablePress</a>."
+
+#: views/view-list.php:46
+msgid "Thank you very much! Your donation is highly appreciated. You just contributed to the further development of TablePress!"
+msgstr "Děkuji moc! Váš příspěvek je cenný. Právě jste přispěl k dalšímu rozvoji TablePress!"
+
+#: views/view-list.php:45
+msgid "To embed this table into a post or page, use this Shortcode:"
+msgstr "Chcete-li vložit tabulku do příspěvku, či stránky, použite tento zkrácený zápis:"
+
+#: views/view-import.php:295
+msgid "You can import your existing tables and &#8220;Custom CSS&#8221; from WP-Table Reloaded into TablePress."
+msgstr "Můžete do TablePress importovat existující tabulky a &#8220;Vlastní CSS&#8221; z WP-Table Reloaded."
+
+#: views/view-import.php:294
+msgid "TablePress Feature: Import from WP-Table Reloaded"
+msgstr "Možnost TablePress: Importovat z WP-Table Reloaded"
+
+#: views/view-import.php:277
+msgctxt "button"
+msgid "Import from WP-Table Reloaded"
+msgstr "Importovat z WP-Table Reloaded"
+
+#: views/view-import.php:273
+msgid "Try to automatically convert the &#8220;Custom CSS&#8221; code from the &#8220;Plugin Options&#8221; screen of WP-Table Reloaded."
+msgstr "Pokusit sa automaticky převést  &#8220;Vlastní CSS&#8221; styly z &#8220;nastavení pluginu&#8221; WP-Table Reloaded."
+
+#: views/view-import.php:272
+msgid "Import styling"
+msgstr "Importovat styly"
+
+#: views/view-import.php:269
+msgid "Import all tables and their settings from WP-Table Reloaded."
+msgstr "Import všech tabulek a jejich nastavení z WP-Table Reloaded."
+
+#: views/view-import.php:268
+msgid "Import tables"
+msgstr "Importovat tabulky"
+
+#: views/view-import.php:254
+msgid "WP-Table Reloaded Dump File"
+msgstr "zálohovací soubor WP-Table Reloaded"
+
+#: views/view-import.php:253
+msgid "WordPress database"
+msgstr "databáze WordPress"
+
+#: views/view-import.php:246
+msgid "Before doing this, it is highly recommended to read the <a href=\"%s\">migration guide</a> on the TablePress website."
+msgstr "Než to uděláte, doporučuji přečíst si na webu TablePress stránku <a href=\"%s\">migration guide</ a>."
+
+#: views/view-import.php:244
+msgid "If you want to import tables from another site, create a &#8220;WP-Table Reloaded Dump File&#8221; there and upload it below, after choosing &#8220;WP-Table Reloaded Dump File&#8221;."
+msgstr "Chcete-li importovat tabulky z jiného webu, vytvořte si tam  &#8220;zálohovací soubor WP-Table Reloaded&#8221; a nahrajte ho sem výběrem &#8220;zálohovací soubor WP-Table Reloaded&#8221;."
+
+#: views/view-import.php:243
+msgid "If WP-Table Reloaded is installed on this site, the &#8220;WordPress database&#8221; option is recommended."
+msgstr "Máte-li na tomto webu nainstalovaný plugin WP-Table Reloaded, doporučuji zvolit &#8220;WordPress database&#8221;."
+
+#: views/view-import.php:241
+msgid "To import all tables from a WP-Table Reloaded installation, choose the relevant import source below."
+msgstr "Chcete-li importovat všechny tabulky z instalace WP-Table Reloaded, zvolte níže příslušný zdroj importu."
+
+#: views/view-import.php:223
+msgctxt "button"
+msgid "Import"
+msgstr "Importovat"
+
+#: views/view-import.php:203
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Vyberte &mdash;"
+
+#: views/view-import.php:200
+msgid "Table to replace or append to"
+msgstr "Nahradit tabulku nebo připojit k"
+
+#: views/view-import.php:196
+msgid "Append rows to existing table"
+msgstr "Připojit řádky k existující tabulce"
+
+#: views/view-import.php:195
+msgid "Replace existing table"
+msgstr "Nahradit existující tabulku"
+
+#: views/view-import.php:194
+msgid "Add as new table"
+msgstr "Vytvořit novou tabulku"
+
+#: views/view-import.php:192
+msgid "Add, Replace, or Append?"
+msgstr "Přidat, nahradit, nebo připojit?"
+
+#: views/view-import.php:186
+msgid "Import of HTML files is not available on your server."
+msgstr "Import HTML souborů tento server neumožňuje."
+
+#: views/view-import.php:174
+msgid "Import Format"
+msgstr "Formát importu"
+
+#: views/view-import.php:168
+msgid "Import data"
+msgstr "Importovat data"
+
+#: views/view-import.php:157
+msgid "Server Path to file"
+msgstr "Cesta k souboru na serveru"
+
+#: views/view-import.php:146
+msgid "File URL"
+msgstr "URL souboru"
+
+#: views/view-import.php:140 views/view-import.php:151
+#: views/view-import.php:162
+msgid "You can import multiple tables by placing them in a ZIP file."
+msgstr "Můžete importovat více tabulek, jsou-li uloženy v archívním souboru ZIP."
+
+#: views/view-import.php:135 views/view-import.php:258
+msgid "Select file"
+msgstr "Vyberte soubor"
+
+#: views/view-import.php:131
+msgid "Manual Input"
+msgstr "Vložit ručně"
+
+#: views/view-import.php:130
+msgid "File on server"
+msgstr "Soubor na serveru"
+
+#: views/view-import.php:129
+msgid "URL"
+msgstr "URL"
+
+#: views/view-import.php:128
+msgid "File Upload"
+msgstr "Nahrát soubor"
+
+#: views/view-import.php:126 views/view-import.php:251
+msgid "Import Source"
+msgstr "Zdroj importu"
+
+#: views/view-import.php:105
+msgid "You can also choose to import it as a new table, to replace an existing table, or to append the rows to an existing table."
+msgstr "Máte několik možností importu: importovat jako novou tabulku, nahradit existující tabulku, nebo přidat řádky do existující tabulky."
+
+#: views/view-import.php:102
+msgid "To import a table, select and enter the import source in the following form."
+msgstr "Chcete-li importovat tabulku, vyberte a zadejte zdroj importu v následujícím formuláři."
+
+#: views/view-import.php:98
+msgid "You can also import existing tables from the WP-Table Reloaded plugin below."
+msgstr "Můžete také importovat existující tabulky z pluginu WP-Table Reloaded."
+
+#: views/view-import.php:97
+msgid "TablePress can import tables from existing data, like from a CSV, XLS, or XLSX file from a spreadsheet application (e.g. Excel), an HTML file resembling a webpage, or its own JSON format."
+msgstr "TablePress dokáže importovat tabulky z existujících dat, jako jsou soubory CSV, XLS, XLSX z tabulkových procesorů (např. Excel), z HTML, nebo z vlastního JSON formátu."
+
+#: views/view-import.php:65
+msgid "Import from WP-Table Reloaded"
+msgstr "Importovat z  WP-Table Reloaded"
+
+#: views/view-import.php:63
+msgid "Import Tables"
+msgstr "Importovat tabulky"
+
+#: views/view-import.php:59
+msgid "Error: The WP-Table Reloaded Dump File could not be imported!"
+msgstr "Chyba: zálohovací soubor WP-Table Reloaded nelze importovat!"
+
+#: views/view-import.php:58
+msgid "Error: The tables from WP-Table Reloaded could not be imported."
+msgstr "Chyba: tabulky z WP-Tables Reloaded nemohly být importovány."
+
+#: views/view-import.php:57
+msgid "Error: Existing WP-Table Reloaded tables were not found in the database."
+msgstr "Chyba: tabulky z WP-Table Reloaded nebyly v databázi nalezeny."
+
+#: views/view-import.php:55
+msgid "Error: The data for the import is invalid."
+msgstr "Chyba: údaje pro import jsou chybné."
+
+#: views/view-import.php:54
+msgid "Error: The source for the import is invalid or could not be accessed."
+msgstr "Chyba: zdroj pro import je neplatný, nebo není dostupný."
+
+#: views/view-import.php:53
+msgid "Error: You selected to replace or append to an existing table, but did not select a table."
+msgstr "Chyba: Vybrali jste <em>nahradit</em> nebo <em>připojit</em> k existující tabulce, ale nevybrali tabulku."
+
+#: views/view-import.php:52
+msgid "Error: The data in the ZIP file is invalid."
+msgstr "Chyba: data v souboru ZIP jsou poškozená."
+
+#: views/view-import.php:51
+msgid "Error: The ZIP file could not be opened."
+msgstr "Chyba: soubor ZIP nelze otevřít."
+
+#: views/view-import.php:50
+msgid "Error: Import of ZIP files is not available on this server."
+msgstr "Chyba: import souborů ZIP tento server neumožňuje."
+
+#: views/view-import.php:49
+msgid "Error: The import failed."
+msgstr "Chyba: import selhal."
+
+#: views/view-import.php:44 views/view-import.php:56
+msgid "Error: You did not select what to import from WP-Table Reloaded!"
+msgstr "Chyba: Nevybrali jste, co chcete importovat z WP-Table Reloaded!"
+
+#: views/view-export.php:182
+msgid "Note: Support for ZIP file creation seems not to be available on this server."
+msgstr "Poznámka: Vytváření souborů ZIP zřejmě tento server neumožňuje."
+
+#: views/view-export.php:179
+msgid "(Mandatory if more than one table is selected.)"
+msgstr "(Povinné, je-li vybraná více jak jedna tabulka.)"
+
+#: views/view-export.php:179
+msgid "Create a ZIP archive."
+msgstr "Vytvořit ZIP archív"
+
+#: views/view-export.php:173
+msgid "ZIP file"
+msgstr "soubor ZIP"
+
+#: views/view-export.php:169
+msgid "(Only needed for CSV export.)"
+msgstr "(Potřebné pouze pro exportní formát CSV.)"
+
+#: views/view-export.php:160
+msgid "CSV Delimiter"
+msgstr "CSV oddělovač "
+
+#: views/view-export.php:147
+msgid "Export Format"
+msgstr "Exportovat ve formátu"
+
+#: views/view-export.php:141
+msgid "You can select multiple tables by holding down the &#8220;Ctrl&#8221; key (Windows) or the &#8220;Command&#8221; key (Mac)."
+msgstr "Můžete vybrat více tabulek podržením klávesy &#8220;Ctrl&#8221; (Windows), nebo &#8220;Command&#8221; (Mac)."
+
+#: views/view-export.php:133 views/view-import.php:213
+msgid "ID %1$s: %2$s"
+msgstr "ID %1$s: %2$s"
+
+#: views/view-export.php:110
+msgid "Select all"
+msgstr "Vybrat všechny"
+
+#: views/view-export.php:107
+msgid "Tables to Export"
+msgstr "Tabulky pro export"
+
+#: views/view-export.php:89 views/view-list.php:608
+msgid "You should <a href=\"%s\">add</a> or <a href=\"%s\">import</a> a table to get started!"
+msgstr "Začínáme: <a href=\"%s\">přidat</a> nebo <a href=\"%s\"> importovat </a> tabulku!"
+
+#: views/view-export.php:71
+msgid "For the JSON format, the table data and the table options are exported."
+msgstr "Do formátu JSON jsou exportována data i nastavení tabulky."
+
+#: views/view-export.php:70
+msgid "Be aware that for the CSV and HTML formats only the table data, but no table options are exported!"
+msgstr "Pamatujte, že do souborů CSV a HTML jsou exportována pouze data tabulky, ne nastavení tabulky!"
+
+#: views/view-export.php:68
+msgid "If you choose more than one table, the exported files will automatically be stored in a ZIP archive file."
+msgstr "Zvolíte-li více než jednu tabulku, budou exportované soubory automaticky uloženy do souboru ZIP."
+
+#: views/view-export.php:67
+msgid "To export, select the tables and the desired export format."
+msgstr "Chcete-li exportovat, vyberte tabulky a požadovaný exportní formát."
+
+#: views/view-export.php:64
+msgid "Regularly exporting tables is also recommended as a backup of your data."
+msgstr "Pravidelný export tabulek je rovněž doporučován pro zálohu vašich dat."
+
+#: views/view-export.php:63
+msgid "Exporting a table allows you to use it in other programs, like spreadsheets applications."
+msgstr "Exportované tabulky můžete použít v jiných programech."
+
+#: views/view-export.php:47
+msgctxt "button"
+msgid "Download Export File"
+msgstr "Stáhnout soubor exportu"
+
+#: views/view-export.php:43 views/view-export.php:46
+msgid "Export Tables"
+msgstr "Exportovat tabulky"
+
+#: views/view-export.php:38
+msgid "Error: The ZIP file could not be created."
+msgstr "Chyba: soubor ZIP se nepodařilo vytvořit."
+
+#: views/view-export.php:37
+msgid "Error: The internal data of this table is corrupted!"
+msgstr "Chyba: Vnitřní data této tabulky jsou poškozeny!"
+
+#: views/view-export.php:36 views/view-list.php:106
+msgid "Error: This table could not be loaded!"
+msgstr "Chyba: Tuto tabulku se nepodařilo načíst!"
+
+#: views/view-export.php:35
+msgid "Error: The export failed."
+msgstr "Chyba: export selhal."
+
+#: views/view-editor_button_thickbox.php:386
+msgid "You should add or import a table on the TablePress screens to get started!"
+msgstr "Začínáme: měli byste přidat nebo importovat do TablePress nějaké tabulky."
+
+#: views/view-editor_button_thickbox.php:384 views/view-export.php:88
+#: views/view-list.php:599
+msgid "No tables found."
+msgstr "Žádné tabulky nebyly nalezeny."
+
+#: views/view-editor_button_thickbox.php:361 views/view-list.php:461
+msgid "(no description)"
+msgstr "(žádný popis)"
+
+#: views/view-editor_button_thickbox.php:285
+msgid "Action"
+msgstr "Akce"
+
+#: views/view-editor_button_thickbox.php:282 views/view-list.php:320
+msgid "ID"
+msgstr "ID"
+
+#: views/view-editor_button_thickbox.php:189 views/view-list.php:213
+msgid "Search Tables"
+msgstr "Hledat tabulky"
+
+#: views/view-editor_button_thickbox.php:183 views/view-list.php:205
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Výsledky hledání pro &#8220;%s&#8221;"
+
+#: views/view-editor_button_thickbox.php:179
+#: views/view-editor_button_thickbox.php:375
+msgid "Insert Shortcode"
+msgstr "Vložit tabulku"
+
+#: views/view-editor_button_thickbox.php:179
+msgid "Click the &#8220;%1$s&#8221; button for the desired table to automatically insert the<br />corresponding Shortcode (%2$s) into the editor."
+msgstr "Klikněte na tlačítko &#8220;%1$s&#8221; kterým vložíte zkrácený zápis (%2$s) pro požadovanou tabulku do editoru."
+
+#: views/view-editor_button_thickbox.php:177
+msgid "You may insert a table into a post or page here."
+msgstr "Zde můžete vložit tabulku do příspěvku, nebo do stránky."
+
+#: views/view-editor_button_thickbox.php:177
+msgid "This is a list of all available tables."
+msgstr "Toto seznam všech dostupných tabulek."
+
+#: views/view-editor_button_thickbox.php:68
+#: views/view-editor_button_thickbox.php:174
+msgid "List of Tables"
+msgstr "Seznam tabulek"
+
+#: views/view-edit.php:684
+msgid "Did you know? You can drag and drop rows and columns via the row number and the column title. And the arrows next to the column title can be used for sorting."
+msgstr "Věděli jste? Můžete přetáhnout řádky a sloupce pomocí čísla řádku a titulku sloupce. A šipky vedle názvu sloupce slouží pro třídění."
+
+#: views/view-edit.php:683
+msgid "TablePress Feature: Moving rows and columns"
+msgstr "TablePress funkce: Přesun řádků a sloupců"
+
+#: views/view-edit.php:672
+msgid "To insert the table into a page, post, or text widget, copy the Shortcode %s and paste it at the desired place in the editor."
+msgstr "Když chcete vložit tabulku do stránky, příspěvku, nebo textového widgetu, zkopírujte <em>zkrácený zápis</em> %s a vložte ho na požadované místo v editoru."
+
+#: views/view-edit.php:669
+msgid "For example, you can insert things like text, images, or links into the table, or change the used table features. You can also insert, delete, move, hide, and swap columns and rows."
+msgstr "Například: můžete vložit do tabulky text, obrázky, nebo odkazy, nebo změnit vlastnosti tabulky. Můžete také vložit, odstranit, přesunout, skrýt a vyměnit sloupce a řádky."
+
+#: views/view-edit.php:668
+msgid "On this screen, you can edit the content and structure of the table with the ID %s."
+msgstr "Na této obrazovce lze měnit obsah a strukturu tabulky s ID %s."
+
+#: views/view-edit.php:650
+msgid "Back to the List of Tables"
+msgstr "Zpět na seznam tabulek"
+
+#: views/view-edit.php:645
+msgid "Please see the <a href=\"%s\">TablePress FAQ page</a> for further instructions."
+msgstr "Pro další instrukce si přečtěte <a href=\"%s\">Stránku častých dotazů k TabelPressu</a>."
+
+#: views/view-edit.php:643
+msgid "Because of this error, the table can not be edited at this time, to prevent possible further data loss."
+msgstr "Kvůli této chybě v tuto chvíli nemůže být tabulka editována, předcházíme tím další ztrátě dat."
+
+#: views/view-edit.php:636
+msgid "The internal data of table &#8220;%1$s&#8221; (ID %2$s) is corrupted."
+msgstr "Interní data tabulky &#8222;%1$s&#8220; (ID %2$s) jsou porušena."
+
+#: views/view-edit.php:633
+msgid "Attention: Unfortunately, an error occurred."
+msgstr "Upozornění: Nastala chyba."
+
+#: views/view-edit.php:615
+msgid "For advanced use only."
+msgstr "Jen pro pokročilé."
+
+#: views/view-edit.php:614
+msgid "Custom Commands"
+msgstr "Vlastní příkazy"
+
+#: views/view-edit.php:608
+msgid "Enable horizontal scrolling, to make viewing tables with many columns easier."
+msgstr "Povolit vodorovné posouvání pro jednodušší prohlížení tabulek se mnoha sloupci."
+
+#: views/view-edit.php:607
+msgid "Horizontal Scrolling"
+msgstr "Horizontální rolování"
+
+#: views/view-edit.php:604
+msgid "Enable the table information display, with information about the currently visible data, like the number of rows."
+msgstr "Zapnout informace o aktuálně zobrazených údajích, jako je počet řádků."
+
+#: views/view-edit.php:603
+msgid "Info"
+msgstr "Info"
+
+#: views/view-edit.php:600
+msgid "Allow the visitor to change the number of rows shown when using pagination."
+msgstr "Povolit návštěvníkům změnit počet řádků zobrazených při použití stránkování."
+
+#: views/view-edit.php:599
+msgid "Pagination Length Change"
+msgstr "Změna délky stránkování"
+
+#: views/view-edit.php:596
+msgid "Show %s rows per page."
+msgstr "Zobrazit %s řádků na stránce."
+
+#: views/view-edit.php:595
+msgid "Enable pagination of the table (viewing only a certain number of rows at a time) by the visitor."
+msgstr "Povolit návštěvníkům stránkování tabulky (zobrazí se pouze určitý počet řádků najednou)."
+
+#: views/view-edit.php:594
+msgid "Pagination"
+msgstr "Stránkování"
+
+#: views/view-edit.php:591
+msgid "Enable the visitor to filter or search the table. Only rows with the search word in them are shown."
+msgstr "Povolit návštěvníkům filtrování, nebo vyhledávání v tabulce. Zobrazeny jsou pouze řádky s hledaným výrazem."
+
+#: views/view-edit.php:590
+msgid "Search/Filtering"
+msgstr "Vyhledávání / Filtrování"
+
+#: views/view-edit.php:587
+msgid "Enable sorting of the table by the visitor."
+msgstr "Povolit  návštěvníkům třídění údajů tabulky."
+
+#: views/view-edit.php:586
+msgid "Sorting"
+msgstr "Řazení"
+
+#: views/view-edit.php:583
+msgid "Use the following features of the DataTables JavaScript library with this table:"
+msgstr "Použít nasledující funkce knihovny <em>DataTables JavaScript</em>:"
+
+#: views/view-edit.php:582
+msgid "Use DataTables"
+msgstr "Použití DataTables"
+
+#: views/view-edit.php:578
+msgid "These features and options are only available, when the &#8220;%1$s&#8221; checkbox in the &#8220;%2$s&#8221; section is checked."
+msgstr "Tyto vlastnosti a možnosti jsou k dispozici, je-li vybrané  &#8220;%1$s&#8221; zatržítko &#8220;%2$s&#8221; sekce."
+
+#: views/view-edit.php:560
+msgid "This is NOT the place to enter <a href=\"%s\">Custom CSS</a> code!"
+msgstr "Toto není místo pro vložení <a href=\"%s\">vlastního CSS</a> kódu!"
+
+#: views/view-edit.php:560
+msgid "Additional CSS classes for styling purposes can be entered here."
+msgstr "Další CSS třídy můžete zadat zde."
+
+#: views/view-edit.php:560
+msgid "This field can only contain letters, numbers, spaces, hyphens (-), and underscores (_)."
+msgstr "Toto pole může obsahovat pouze písmena, číslice, mezery, pomlčky (-) a podtržítka (_)."
+
+#: views/view-edit.php:559
+msgid "Extra CSS Classes"
+msgstr "Extra CSS třídy"
+
+#: views/view-edit.php:556
+msgid "Show the table description %s the table."
+msgstr "Zobrazit popis tabulky %s."
+
+#: views/view-edit.php:549
+msgid "Print Table Description"
+msgstr "Popis tabulky"
+
+#: views/view-edit.php:546
+msgid "Show the table name %s the table."
+msgstr "Zobrazit název tabulky %s"
+
+#: views/view-edit.php:543 views/view-edit.php:553
+msgid "below"
+msgstr "pod"
+
+#: views/view-edit.php:542 views/view-edit.php:552
+msgid "above"
+msgstr "nad"
+
+#: views/view-edit.php:539
+msgid "Print Table Name"
+msgstr "Název tabulky"
+
+#: views/view-edit.php:536
+msgid "Highlight a row while the mouse cursor hovers above it by changing its background color."
+msgstr "Zvýraznit řádek změnou barvy pozadí při přejetí myší."
+
+#: views/view-edit.php:535
+msgid "Row Hover Highlighting"
+msgstr "Zvýraznění řádku"
+
+#: views/view-edit.php:532
+msgid "The background colors of consecutive rows shall alternate."
+msgstr "Barvy pozadí se v po sobě jdoucích řádcích střídají."
+
+#: views/view-edit.php:531
+msgid "Alternating Row Colors"
+msgstr "Střídavá barva řádků"
+
+#: views/view-edit.php:528
+msgid "The last row of the table is the table footer."
+msgstr "Poslední řádek tabulky je patička."
+
+#: views/view-edit.php:527
+msgid "Table Foot Row"
+msgstr "Patička tabulky"
+
+#: views/view-edit.php:524
+msgid "The first row of the table is the table header."
+msgstr "První řádek tabulky je hlavička tabulky."
+
+#: views/view-edit.php:523 views/view-edit.php:578
+msgid "Table Head Row"
+msgstr "Hlavička tabulky"
+
+#: views/view-edit.php:499
+msgid "OK"
+msgstr "OK"
+
+#: views/view-edit.php:498
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: views/view-edit.php:470
+msgid "Delete Table"
+msgstr "Smazat tabulku"
+
+#: views/view-edit.php:467
+msgid "Export Table"
+msgstr "Export tabulky"
+
+#: views/view-edit.php:464
+msgid "Copy Table"
+msgstr "Kopírovat tabulku"
+
+#: views/view-edit.php:462
+msgid "Other Actions"
+msgstr "Ostatní akce"
+
+#: views/view-edit.php:418
+msgid "To use the Table Manipulation features, JavaScript needs to be enabled in your browser."
+msgstr "Chcete-li používat vlastnosti pro &#8220;Úpravu buněk&#8221; povote JavaScript ve svém prohlížeči."
+
+#: views/view-edit.php:414
+msgid "Add %s column(s)"
+msgstr "Přidat %s sloupec (sloupce)"
+
+#: views/view-edit.php:411 views/view-edit.php:414
+msgid "Add"
+msgstr "Přidat"
+
+#: views/view-edit.php:411
+msgid "Add %s row(s)"
+msgstr "Přidat %s řádek (řádky)"
+
+#: views/view-edit.php:400 views/view-edit.php:406 views/view-list.php:442
+msgid "Delete"
+msgstr "Smazat"
+
+#: views/view-edit.php:399 views/view-edit.php:405
+msgid "Insert"
+msgstr "Vložit"
+
+#: views/view-edit.php:398 views/view-edit.php:404
+msgid "Duplicate"
+msgstr "Duplikovat"
+
+#: views/view-edit.php:390 views/view-edit.php:403
+msgid "Selected columns"
+msgstr "Vybrané sloupce"
+
+#: views/view-edit.php:387 views/view-edit.php:392
+msgid "Show"
+msgstr "Zobrazit"
+
+#: views/view-edit.php:386 views/view-edit.php:391
+msgid "Hide"
+msgstr "Skrýt"
+
+#: views/view-edit.php:385 views/view-edit.php:397
+msgid "Selected rows"
+msgstr "Vybrané řádky"
+
+#: views/view-edit.php:379
+msgid "Be aware that the functions of the DataTables JavaScript library will not work on tables which have combined cells."
+msgstr "Funkce DataTables JavaScript nebude fungovat v tabulkách se sloučenými buňkami."
+
+#: views/view-edit.php:378
+msgid "Repeat this to add the keyword to all cells that shall be connected."
+msgstr "Opakujte tento postup přidáním klíčového slova do všech buněk, které mají být sloučeny."
+
+#: views/view-edit.php:377
+msgid "To combine adjacent cells in a column, add the keyword <code>#rowspan#</code> to the cell below the one with the content for the combined cell by using the corresponding button."
+msgstr "Chcete-li sloučit sousední buňky ve sloupci, přidejte klíčové slovo <code>#colspan#</code> do buňky pod tou s obsahem, který chcete zobrazit ve sloučené buňce."
+
+#: views/view-edit.php:376
+msgid "To combine adjacent cells in a row, add the keyword <code>#colspan#</code> to the cell to the right of the one with the content for the combined cell by using the corresponding button."
+msgstr "Chcete-li sloučit sousední buňky v řádku, přidejte klíčové slovo <code>#colspan#</code> do buňky vpravo od té s obsahem, který chcete zobrazit ve sloučené buňce."
+
+#: views/view-edit.php:375
+msgid "Combining consecutive cells within the same column is called &#8220;rowspanning&#8221;."
+msgstr "Sloučení po sobě jdoucích buněk ve stejném sloupci se nazývá &#8220;rowspanning&#8221;."
+
+#: views/view-edit.php:374
+msgid "Combining consecutive cells within the same row is called &#8220;colspanning&#8221;."
+msgstr "Sloučení po sobě jdoucích buněk ve stejném řádku se nazývá &#8220;colspanning&#8221;."
+
+#: views/view-edit.php:373
+msgid "Table cells can span across more than one column or row."
+msgstr "Buňky tabulky mohou být rozložené přes více než jeden sloupec, nebo řádek."
+
+#: views/view-edit.php:371
+msgid "Help on combining cells"
+msgstr "Pomoc při spojování buňek"
+
+#: views/view-edit.php:371
+msgid "?"
+msgstr "?"
+
+#: views/view-edit.php:370
+msgid "in a row (colspan)"
+msgstr "v řádku (colspan)"
+
+#: views/view-edit.php:369
+msgid "in a column (rowspan)"
+msgstr "ve sloupci (rowspan)"
+
+#: views/view-edit.php:368
+msgid "Combine cells"
+msgstr "Spojování buněk"
+
+#: views/view-edit.php:365
+msgid "Advanced Editor"
+msgstr "Rozšířený Editor"
+
+#: views/view-edit.php:364
+msgid "Insert Image"
+msgstr "Vložit obrázek"
+
+#: views/view-edit.php:363
+msgid "Insert Link"
+msgstr "Vložit odkaz"
+
+#: views/view-edit.php:231
+msgid "%1$s by %2$s"
+msgstr "%1$s  %2$s"
+
+#: views/view-edit.php:230 views/view-list.php:325
+msgid "Last Modified"
+msgstr "Naposledy změněno"
+
+#: views/view-edit.php:217
+msgid "Shortcode"
+msgstr "Zkrácený zápis"
+
+#: views/view-edit.php:216
+msgid "The Table ID can only consist of letters, numbers, hyphens (-), and underscores (_)."
+msgstr "Tabulka ID může obsahovat pouze písmena, číslice, pomlčky (-) a podtržítka (_)."
+
+#: views/view-edit.php:213
+msgid "Table ID"
+msgstr "ID tabulky"
+
+#: views/view-edit.php:157
+msgid "Features of the DataTables JavaScript library"
+msgstr "Vlastnosti knihovny DataTables JavaScript"
+
+#: views/view-edit.php:156 views/view-edit.php:578
+msgid "Table Options"
+msgstr "Možnosti tabulky"
+
+#: views/view-edit.php:155
+msgid "Table Manipulation"
+msgstr "Úpravy buněk"
+
+#: views/view-edit.php:154
+msgid "Table Content"
+msgstr "Obsah tabulky"
+
+#: views/view-edit.php:153
+msgid "Table Information"
+msgstr "Informace o tabulce"
+
+#: views/view-edit.php:145
+msgid "You can not connect cells out of the table foot row!"
+msgstr "Nemůžete připojit buňky k patičce tabulky!"
+
+#: views/view-edit.php:144
+msgid "You can not connect cells into the table head row!"
+msgstr "Nemůžete připojit buňky ke hlavičce tabulky!"
+
+#: views/view-edit.php:143
+msgid "You can not add colspan to the first column!"
+msgstr "Nemůžete sloučit buňky prvního sloupce!"
+
+#: views/view-edit.php:142
+msgid "You can not add rowspan to the first row!"
+msgstr "Nemůžete sloučit buňky prvního řádku!"
+
+#: views/view-edit.php:141 views/view-edit.php:285
+msgid "Sort descending"
+msgstr "Řadit sestupně"
+
+#: views/view-edit.php:140 views/view-edit.php:285
+msgid "Sort ascending"
+msgstr "Řadit vzestupně"
+
+#: views/view-edit.php:139
+msgid "The entered value in the field &#8220;Pagination Entries&#8221; is not a number."
+msgstr "Zadaná hodnota v poli &#8220;stránkování záznamů&#8221; není číslo."
+
+#: views/view-edit.php:138
+msgid "The entered value in the field &#8220;Extra CSS classes&#8221; is invalid."
+msgstr "Zadaná hodnota v poli &#8220;Extra třídy CSS&#8221; je neplatná."
+
+#: views/view-edit.php:137
+msgid "Do you really want to change the Table ID? All Shortcodes for this table in your pages and posts will have to be adjusted!"
+msgstr "Opravdu chcete změnit ID tabulky? Všechny <em>zkrácené zápisy</em> na vašich stránkách budou muset být upraveny!"
+
+#: views/view-edit.php:136
+msgid "The Table ID &#8220;0&#8221; is not supported. Please enter a different Table ID!"
+msgstr "ID tabulky &#8220;0&#8221; není podporované. Vložte jiné ID!"
+
+#: views/view-edit.php:135
+msgid "The Table ID field can not be empty. Please enter a Table ID!"
+msgstr "Pole ID tabulky nemůže být prázdné. Vložte ID tabulky!"
+
+#: views/view-edit.php:134
+msgid "Changes are being saved..."
+msgstr "Změny jsou uložené..."
+
+#: views/view-edit.php:133
+msgid "Saving failed"
+msgstr "Neuloženo"
+
+#: views/view-edit.php:132
+msgid "Saving successful"
+msgstr "Uloženo"
+
+#: views/view-edit.php:131
+msgid "The Table Preview could not be loaded."
+msgstr "Náhled nemohl být načten."
+
+#: views/view-edit.php:130
+msgid "The Table Preview is being loaded..."
+msgstr "Náhled tabulky se nahrává..."
+
+#: views/view-edit.php:129
+msgid "The changes to this table were not saved yet and will be lost if you navigate away from this page."
+msgstr "Jestliže nyní opustíte stránku, změny v této tabulce budou ztracené."
+
+#: views/view-edit.php:128 views/view-edit.php:182
+msgid "Insert into Table"
+msgstr "Vložit do tabulky"
+
+#: views/view-edit.php:128
+msgid "Click the &#8220;%s&#8221; button to insert the image."
+msgstr "Klikněte na &#8220;%s&#8221; tlačítko pro vložení obrázku."
+
+#: views/view-edit.php:127
+msgid "The Media Library will open, where you can select or upload the desired image or enter the image URL."
+msgstr "Otevře se Knihovna médií, kde můžete vybrat, nebo nahrát požadovaný obrázek, nebo zadat URL adresu obrázku."
+
+#: views/view-edit.php:126
+msgid "Please click into the cell that you want to add an image to."
+msgstr "Klikněte do buňky, do které chcete vložit obrázek."
+
+#: views/view-edit.php:125
+msgid "You can then enter the Link URL and Text or choose an existing page or post."
+msgstr "Potom můžete vložit URL odkazu a text, nebo vybrat existující stránku, či príspěvek."
+
+#: views/view-edit.php:124
+msgid "Please click into the cell that you want to add a link to."
+msgstr "Klikněte do buňky, do které chcete vložit odkaz."
+
+#: views/view-edit.php:123
+msgid "Do you want to proceed and automatically turn off the usage of DataTables for this table?"
+msgstr "Chcete pokračovat s automatickým vypnutím DataTables této tabulky?"
+
+#: views/view-edit.php:122
+msgid "Unfortunately, these can not be used in tables with combined cells."
+msgstr "Bohužel, není možné je použít v tabulkách se sloučenými buňkami."
+
+#: views/view-edit.php:121
+msgid "Attention: You have enabled the usage of the DataTables JavaScript library for features like sorting, search, or pagination."
+msgstr "Upozornění: Povolili jste použití knihovny DataTables JavaScript pro funkce, jako je třídění, vyhledávání, nebo stránkování."
+
+#: views/view-edit.php:120
+msgid "To combine cells within a row, click into the cell to the right of the cell that has the content the combined cells shall have."
+msgstr "Chcete-li sloučit buňky v řádku, klepněte do buňky vpravo od buňky s obsahem, který sa má zobrazit ve sloučené buňce."
+
+#: views/view-edit.php:119
+msgid "To combine cells within a column, click into the cell below the cell that has the content the combined cells shall have."
+msgstr "Chcete-li sloučit buňky ve sloupci, klepněte do buňky pod buňkou s obsahem, který sa má zobrazit ve sloučené buňce."
+
+#: views/view-edit.php:118
+msgid "Please click into the cell that you want to edit using the &#8220;Advanced Editor&#8221;."
+msgstr "Prosím, klikněte do buňky, kterou chcete upravit pomocí &#8220;Editora&#8221;."
+
+#: views/view-edit.php:116 views/view-edit.php:117
+msgid "Do you really want to delete the selected column?"
+msgid_plural "Do you really want to delete the selected columns?"
+msgstr[0] "Opravdu odstranit vybraný sloupec?"
+msgstr[1] "Opravdu odstranit vybrané sloupce?"
+msgstr[2] "Opravdu odstranit vybrané sloupce?"
+
+#: views/view-edit.php:114 views/view-edit.php:115
+msgid "Do you really want to delete the selected row?"
+msgid_plural "Do you really want to delete the selected rows?"
+msgstr[0] "Opravdu odstranit vybraný řádek?"
+msgstr[1] "Opravdu odstranit vybrané řádky?"
+msgstr[2] "Opravdu odstranit vybrané řádky?"
+
+#: views/view-edit.php:113
+msgid "The value for the number of columns is invalid!"
+msgstr "Hodnota pro počet sloupců je neplatná!"
+
+#: views/view-edit.php:112
+msgid "The value for the number of rows is invalid!"
+msgstr "Hodnota pro počet řádků je neplatná!"
+
+#: views/view-edit.php:111
+msgid "You did not select any columns!"
+msgstr "Nevybrali jste žádné sloupce!"
+
+#: views/view-edit.php:110
+msgid "You did not select any rows!"
+msgstr "Nevybrali jste žádné řádky!"
+
+#: views/view-edit.php:109
+msgid "You can not delete all table columns!"
+msgstr "Nemůžete odstranit všechny sloupce tabulky!"
+
+#: views/view-edit.php:108
+msgid "You can not delete all table rows!"
+msgstr "Nemůžete odstranit všechny řádky tabulky!"
+
+#: views/view-edit.php:56
+msgid "The table was saved successfully, but the table ID could not be changed!"
+msgstr "Tabulka byla uložena úspěšně, ale ID tabukky nelze změnit!"
+
+#: views/view-edit.php:55
+msgid "The table was saved successfully, and the table ID was changed."
+msgstr "Tabulka byla uložena a ID tabulky bylo změněno."
+
+#: views/view-edit.php:54 views/view-list.php:100
+msgid "Error: The table could not be deleted."
+msgstr "Chyba: Tabulku nelze odstranit."
+
+#: views/view-edit.php:53 views/view-list.php:101
+msgid "Error: The table could not be saved."
+msgstr "Chyba: Tabulka nemohla být uložena."
+
+#: views/view-edit.php:52
+msgid "The table was imported successfully from WP-Table Reloaded."
+msgstr "Tabulka byla úspěšně importována z WP-Table Reloaded."
+
+#: views/view-edit.php:51
+msgid "The table was imported successfully."
+msgstr "Tabulka byla úspěšně importována."
+
+#: views/view-edit.php:50
+msgid "You are now seeing the copied table, which has the table ID &#8220;%s&#8221;."
+msgstr "Nyní vidíte zkopírovanou tabulku, která má ID &#8220;%s&#8221;."
+
+#: views/view-edit.php:50 views/view-list.php:102 views/view-list.php:103
+msgid "The table was copied successfully."
+msgid_plural "The tables were copied successfully."
+msgstr[0] "Tabulka byla úspěšně zkopírována."
+msgstr[1] "Tabulky byly úspěšně zkopírovány."
+msgstr[2] "Tabulky byly úspěšně zkopírovány."
+
+#: views/view-edit.php:49
+msgid "The table was added successfully."
+msgstr "Tabulka byla přidána."
+
+#: views/view-edit.php:48
+msgid "The table was saved successfully."
+msgstr "Tabulka byla uložena."
+
+#: views/view-add.php:94
+msgid "The number of columns in your table."
+msgstr "Počet sloupců v tabulce."
+
+#: views/view-add.php:92
+msgid "Number of Columns"
+msgstr "Počet sloupců"
+
+#: views/view-add.php:89
+msgid "The number of rows in your table."
+msgstr "Počet řádků v tabulce."
+
+#: views/view-add.php:88 views/view-add.php:93 views/view-edit.php:411
+#: views/view-edit.php:414
+msgid "This field must contain a positive number."
+msgstr "Toto pole musí obsahovat kladné číslo."
+
+#: views/view-add.php:87
+msgid "Number of Rows"
+msgstr "Počet řádků"
+
+#: views/view-add.php:84
+msgid "A description of the contents of your table."
+msgstr "Popis obsahu tabulky."
+
+#: views/view-add.php:83
+msgid "Enter Description here"
+msgstr "Zadejte popis"
+
+#: views/view-add.php:82
+msgid "(optional)"
+msgstr "(volitelné)"
+
+#: views/view-add.php:82 views/view-edit.php:226
+#: views/view-editor_button_thickbox.php:284 views/view-list.php:322
+msgid "Description"
+msgstr "Popis"
+
+#: views/view-add.php:79
+msgid "The name or title of your table."
+msgstr "Jméno nebo název tabulky."
+
+#: views/view-add.php:78
+msgid "Enter Table Name here"
+msgstr "Zadejte název tabulky"
+
+#: views/view-add.php:77 views/view-edit.php:222
+#: views/view-editor_button_thickbox.php:283 views/view-list.php:321
+msgid "Table Name"
+msgstr "Název tabulky"
+
+#: views/view-add.php:60
+msgid "You can always change the name, description, and size of your table later."
+msgstr "Název, popis a velikost tabulky lze později změnit."
+
+#: views/view-add.php:57
+msgid "To add a new table, enter its name, a description (optional), and the number of rows and columns into the form below."
+msgstr "Chcete-li přidat novou tabulku, zadejte její název, popis (volitelné) a počet řádků a sloupců do následujícího formuláře."
+
+#: views/view-add.php:42
+msgid "Add Table"
+msgstr "Přidat tabulku"
+
+#: views/view-add.php:37
+msgid "Error: The table could not be added."
+msgstr "Chyba: Tabulka nemohla být přidána."
+
+#: views/view-about.php:212
+msgid "all donors, contributors, supporters, reviewers, and users of the plugin!"
+msgstr "Děkuji všem dárcům, přispěvatelům, příznivcům, recenzentům a uživatelům pluginu!"
+
+#: views/view-about.php:209
+msgid "Special Thanks go to:"
+msgstr "Zvláštní poděkování patří:"
+
+#: views/view-about.php:173
+msgid "Please provide this information in bug reports and support requests."
+msgstr "Uveďte, prosím, tuto informaci v hlášení o chybách a v žádosti o podporu."
+
+#: views/view-about.php:156
+msgid "If you do not find an answer there, please <a href=\"%s\">open a new thread</a> in the WordPress Support Forums."
+msgstr "Pokud tam nenajdete uspokojivou odpověď, <a href=\"%s\">vytvořte nové vlákno</a> v diskusním fóru WordPress."
+
+#: views/view-about.php:152
+msgid "<a href=\"%s\">Support</a> is provided through the <a href=\"%s\">WordPress Support Forums</a>."
+msgstr "<a href=\"%s\">Podpora</a> je poskytovaná prostřednictvím <a href=\"%s\">WordPress Support Forums</a>."
+
+#: views/view-about.php:136
+msgid "Donations and good ratings encourage me to further develop the plugin and to provide countless hours of support. Any amount is appreciated! Thanks!"
+msgstr "Dary a dobré hodnocení mě povzbudí během mnoha hodin strávených při dalším vývoji pluginu. Každá suma je vítaná! Díky!"
+
+#: views/view-about.php:134
+msgid "Please rate and review the plugin in the <a href=\"%s\">WordPress Plugin Directory</a>."
+msgstr "Prosím o hodnocení pluginu na stránce <a href=\"%s\">WordPress Plugin Directory</a>."
+
+#: views/view-about.php:133
+msgid "If you like the plugin, <a href=\"%s\"><strong>giving a donation</strong></a> is recommended."
+msgstr "Jestli se vám tento plugin líbí, <a href=\"%s\"><strong>podpořte</strong></a> ho."
+
+#: views/view-about.php:131
+msgid "It is licensed as Free Software under GNU General Public License 2 (GPL 2)."
+msgstr "Je licencovaný jako svobodný software pod GNU General Public License (GPL 2)."
+
+#: views/view-about.php:130
+msgid "This plugin was written and developed by <a href=\"%s\">Tobias Bäthge</a>."
+msgstr "Tento plugin napsal a vyvinul <a href=\"%s\">Tobias Bäthge</a>."
+
+#: views/view-about.php:97
+msgid "Please see the <a href=\"%s\">documentation</a> for a list of these selectors and for styling examples."
+msgstr "Prohlédněte si v <a href=\"%s\">dokumentaci</a> seznam těchto selektorů a příklady stylů."
+
+#: views/view-about.php:96
+msgid "For this, each table is given certain CSS classes that can be used as CSS selectors."
+msgstr "Pro tento účel má každá tabulka dané CSS  třídy, které lze použít jako selektory CSS."
+
+#: views/view-about.php:95
+msgid "The plugin ships with default CSS stylesheets, which can be customized with own code or replaced with other stylesheets."
+msgstr "Plugin obsahuje předvolené CSS styly, které si můžete přizpůsobit, nebo nahradit vlastními styly."
+
+#: views/view-about.php:94
+msgid "Tables can be styled by changing and adding CSS commands."
+msgstr "Vzhled tabulek může být určen pomocí CSS stylů."
+
+#: views/view-about.php:91 views/view-list.php:190
+msgid "You can also click the &#8220;%s&#8221; button in the editor toolbar to select and insert a table."
+msgstr "Tabulku můžete vložit i přímo kliknutím na tlačítko &#8220;%s&#8221; (Vložit tabulku z TablePress) v nástrojové liště textového editoru."
+
+#: views/view-about.php:90 views/view-list.php:188
+msgid "To insert a table into a page, post, or text widget, copy its Shortcode %s and paste it at the desired place in the editor."
+msgstr "Pro vložení tabulky do stránky, príspěvku, nebo textového widgetu, zkopírujte <em>zkrácený zápis</em> %s a vložte ho v editoru na požadované místo."
+
+#: views/view-about.php:87
+msgid "Those will ask you for the necessary information and and corresponding HTML code will be added to the cell automatically."
+msgstr "Budete požádáni o potřebné informace a výsledný HTML kód bude do buňky vložen automaticky."
+
+#: views/view-about.php:86
+msgid "To easily add a link or an image to a cell, use the provided buttons."
+msgstr "Obrázek, či odkaz do buňky přídáte snadno použitím příslušného tlačítka."
+
+#: views/view-about.php:85
+msgid "Then you can edit your data or change the structure of your table (e.g. by inserting, deleting, moving, or swaping rows or columns or sorting them) and select specific table features like alternating row colors or whether to print the name or description, if you want."
+msgstr "Potom můžete editovat údaje, nebo měnit strukturu tabulky (např. vkládat, mazat, přesouvat, prohazovat řádky, či sloupce, nebo je třídit) a volit konrétní vlastnosti tabulky, např. alternativní barvy řádků, nebo zda chcete zobrazovat název, nebo popis tabulky."
+
+#: views/view-about.php:82
+msgid "This means that you either let the plugin create an empty table for you or that you load an existing table from either a CSV, HTML, JSON, XLS, or XLSX file."
+msgstr "To znamená, že buď pomocí pluginu vytvoříte novou tabulku, nebo nahrajete existující tabulku z CSV, HTML, JSON, XLS, nebo souboru ze XLSX ."
+
+#: views/view-about.php:81
+msgid "At first, you should add or import a table."
+msgstr "Nejprve byste měli vytvořit, nebo importovat nějakou tabulku."
+
+#: views/view-about.php:65
+msgid "If you want to show your tables anywhere else in your theme, you can use a Template Tag function."
+msgstr "Chcete-li zobrazit svoje tabulky kdekoliv jinde v šabloně, můžete použít funkci Template Tag."
+
+#: views/view-about.php:64
+msgid "You can then show the tables in your posts, on your pages, or in text widgets by using a Shortcode."
+msgstr "Tabulky můžete zobrazovat ve svých příspěvcích, stránkách, nebo v textových widgetech pomocí <em>zkráceného zápisu</em>."
+
+#: views/view-about.php:63
+msgid "Tables may contain text, numbers and even HTML (e.g. to include images or links)."
+msgstr "Tabulky mohou obsahovat text, čísla, nebo i HTML (např. obrázky, nebo odkazy)."
+
+#: views/view-about.php:62
+msgid "TablePress allows you to create and manage tables in the admin area of WordPress."
+msgstr "TablePress umožňuje vytvářet a spravovat tabulky v administraci WordPressu."
+
+#: views/view-about.php:48
+msgid "Debug and Version Information"
+msgstr "Ladění a Informace o verzi"
+
+#: views/view-about.php:47
+msgid "Credits and Thanks"
+msgstr "Poděkování"
+
+#: views/view-about.php:46
+msgid "Author and License"
+msgstr "Autor a licence"
+
+#: views/view-about.php:45
+msgid "Help and Support"
+msgstr "Pomoc a podpora"
+
+#: views/view-about.php:44
+msgid "More Information and Documentation"
+msgstr "Více informací a dokumentace"
+
+#: views/view-about.php:43
+msgid "Usage"
+msgstr "Použití"
+
+#: views/view-about.php:42
+msgid "Plugin Purpose"
+msgstr "Účel pluginu"
+
+#: models/model-table.php:523
+msgid "Copy of %s"
+msgstr "Kopie %s"
+
+#: models/model-table.php:521 views/view-editor_button_thickbox.php:346
+#: views/view-export.php:131 views/view-import.php:211 views/view-list.php:421
+msgid "(no name)"
+msgstr "(bez názvu)"
+
+#: controllers/controller-frontend.php:736 views/view-list.php:504
+msgid "%s ago"
+msgstr "před %s"
+
+#: controllers/controller-admin_ajax.php:274 views/view-preview_table.php:65
+msgid "To insert the table into a page, post, or text widget, copy the Shortcode %s and paste it into the editor."
+msgstr "Pro vložení tabulky do stránky, príspěvku, nebo textového widgetu, zkopírujte <em>zkrácený zápis</em> %s a vložte ho do editoru."
+
+#: controllers/controller-admin_ajax.php:273 views/view-preview_table.php:64
+msgid "The features of the DataTables JavaScript library are also not available or visible in this preview!"
+msgstr "Vlastnosti DataTables JavaScript knihovny v tomto náhledu rovněž nejsou k dispozici!"
+
+#: controllers/controller-admin_ajax.php:272 views/view-preview_table.php:64
+msgid "Because of CSS styling in your theme, the table might look different on your page!"
+msgstr "Kvůli CSS stylům ve vašem motivu (theme) může tabulka na vaší stránce vypadat jinak!"
+
+#: controllers/controller-admin_ajax.php:271 views/view-preview_table.php:64
+msgid "This is a preview of your table."
+msgstr "Toto je náhled vaší tabulky."
+
+#: controllers/controller-admin.php:1921 views/view-options.php:184
+#: views/view-options.php:191
+msgid "Uninstall TablePress"
+msgstr "Odinstalovat TablePress"
+
+#: controllers/controller-admin.php:1919
+msgid "Go to Dashboard"
+msgstr "Přejít na Nástěnku"
+
+#: controllers/controller-admin.php:1917
+msgid "Go to &#8220;Plugins&#8221; page"
+msgstr "Přejděte na stránku &#8220;Pluginy&#8221;"
+
+#: controllers/controller-admin.php:1912
+msgid "You may now also delete your TablePress &#8220;Custom CSS&#8221; files in the <code>wp-content</code> folder."
+msgstr "Nyní můžete také mazat svoje &#8220;Vlastní CSS&#8221; soubory TablePressu ve složce <code>wp-content </code>."
+
+#: controllers/controller-admin.php:1910
+msgid "Please also ask him to delete your TablePress &#8220;Custom CSS&#8221; files from the server."
+msgstr "Rovněž ho požádejte, aby smazal vaše &#8220;Vlastní CSS&#8221;  soubory TablePressu ze serveru."
+
+#: controllers/controller-admin.php:1907
+msgid "Your TablePress &#8220;Custom CSS&#8221; files have been deleted automatically."
+msgstr "Potom budou vaše  &#8220;Vlastní CSS&#8221;vymazány automaticky."
+
+#: controllers/controller-admin.php:1904
+msgid "You may now manually delete the plugin&#8217;s folder <code>tablepress</code> from the <code>plugins</code> directory on your server or use the &#8220;Delete&#8221; link for TablePress on the WordPress &#8220;Plugins&#8221; page."
+msgstr "Nyní můžete ručně smazat složku pluginu <code>tablepress</code> z adresáře <code>plugins</code> na serveru, nebo použít volbu &#8220;Smazat&#8221; TablePress v administraci Worpressu &#8220;Pluginy&#8221;"
+
+#: controllers/controller-admin.php:1902
+msgid "You may now ask the network admin to delete the plugin&#8217;s folder <code>tablepress</code> from the server, if no other site in the network uses it."
+msgstr "Nyní můžete požádat správce webu o smazání složky pluginu <code>tablepress</code> ze serveru, jestliže ji nepoužívá nikdo další."
+
+#: controllers/controller-admin.php:1900
+msgid "All tables, data, and options were deleted."
+msgstr "Všechny tabulky,data a nastavení byly smazány."
+
+#: controllers/controller-admin.php:1899
+msgid "TablePress was uninstalled successfully."
+msgstr "Tabulka byla úspěšně odinstalována."
+
+#: controllers/controller-admin.php:1812
+msgid "The table could not be loaded."
+msgstr "Tabulku nelze načíst."
+
+#: controllers/controller-admin.php:1802 controllers/controller-admin.php:1812
+#: views/view-edit.php:435 views/view-list.php:445
+#: views/view-preview_table.php:53
+msgid "Preview"
+msgstr "Náhled"
+
+#: controllers/controller-admin.php:1802
+#: controllers/controller-admin_ajax.php:278
+msgid "The preview could not be loaded."
+msgstr "Náhled nelze načíst."
+
+#: controllers/controller-admin.php:1143
+msgid "Imported from Manual Input"
+msgstr "Manuálně importovaný"
+
+#: controllers/controller-admin.php:590
+msgid "About TablePress"
+msgstr "O pluginu"
+
+#: controllers/controller-admin.php:589 controllers/controller-admin.php:591
+msgid "About"
+msgstr "O pluginu"
+
+#: controllers/controller-admin.php:582 controllers/controller-admin.php:583
+#: controllers/controller-admin.php:584
+msgid "Plugin Options"
+msgstr "Nastavení"
+
+#: controllers/controller-admin.php:577
+msgctxt "navigation bar"
+msgid "Export"
+msgstr "Export"
+
+#: controllers/controller-admin.php:575 controllers/controller-admin.php:576
+msgid "Export a Table"
+msgstr "Exportovat tabulku"
+
+#: controllers/controller-admin.php:570
+msgctxt "navigation bar"
+msgid "Import"
+msgstr "Import"
+
+#: controllers/controller-admin.php:568 controllers/controller-admin.php:569
+msgid "Import a Table"
+msgstr "Importovat tabulku"
+
+#: controllers/controller-admin.php:561
+msgid "Edit Table"
+msgstr "Upravit tabulku"
+
+#: controllers/controller-admin.php:556
+msgid "Add New"
+msgstr "Nová"
+
+#: controllers/controller-admin.php:554 controllers/controller-admin.php:555
+#: views/view-add.php:41
+msgid "Add New Table"
+msgstr "Nová tabulka"
+
+#: controllers/controller-admin.php:547 controllers/controller-admin.php:548
+#: controllers/controller-admin.php:549
+msgid "All Tables"
+msgstr "Všechny tabulky"
+
+#: controllers/controller-admin.php:458
+msgctxt "Default CSV delimiter in the translated language (\";\", \",\", or \"tab\")"
+msgid ","
+msgstr ","
+
+#: controllers/controller-admin.php:360 controllers/controller-admin.php:437
+#: controllers/controller-admin.php:711 controllers/controller-admin.php:780
+#: controllers/controller-admin.php:836 controllers/controller-admin.php:908
+#: controllers/controller-admin.php:948 controllers/controller-admin.php:1051
+#: controllers/controller-admin.php:1063 controllers/controller-admin.php:1694
+#: controllers/controller-admin.php:1721 controllers/controller-admin.php:1762
+#: controllers/controller-admin.php:1806 controllers/controller-admin.php:1853
+#: controllers/controller-admin.php:1881
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nemáte dostatočné oprávnenie k prístupu na túto stránku."
+
+#: controllers/controller-admin.php:333
+msgid "Donate"
+msgstr "Darovat"
+
+#: controllers/controller-admin.php:333
+msgid "Support TablePress with your donation!"
+msgstr "Podpořte TablePress příspěvkem!"
+
+#: controllers/controller-admin.php:332
+msgid "Support"
+msgstr "Podpora"
+
+#: controllers/controller-admin.php:331
+msgid "Documentation"
+msgstr "Dokumentace"
+
+#: controllers/controller-admin.php:330
+msgid "FAQ"
+msgstr "FAQ"
+
+#: controllers/controller-admin.php:330
+msgid "Frequently Asked Questions"
+msgstr "Často kladené otázky"
+
+#: controllers/controller-admin.php:315
+msgid "Plugin page"
+msgstr "Stránka pluginu"
+
+#: controllers/controller-admin.php:288
+msgid "TablePress Table"
+msgstr "Tabulka Tablepress"
+
+#: controllers/controller-admin.php:206 controllers/controller-admin.php:207
+msgid "Insert a Table from TablePress"
+msgstr "Vložit tabulku z Tablepress"
+
+#: controllers/controller-admin.php:205 views/view-about.php:91
+#: views/view-list.php:190
+msgid "Table"
+msgstr "Tabulka"
+
+#: classes/class-view.php:414 views/view-edit.php:438 views/view-edit.php:439
+#: views/view-options.php:55
+msgid "Save Changes"
+msgstr "Uložit změny"
+
+#. #-#-#-#-#  tmp-tablepress.pot (TablePress 1.8)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: classes/class-view.php:382
+msgid "TablePress"
+msgstr "TablePress"
+
+#: classes/class-view.php:158 classes/class-view.php:159
+msgid "Do you really want to delete this table?"
+msgid_plural "Do you really want to delete these tables?"
+msgstr[0] "Opravdu smazat?"
+msgstr[1] "Opravdu smazat tyto tabulky?"
+msgstr[2] "Opravdu smazat tyto tabulky?"
+
+#: classes/class-view.php:147 controllers/controller-admin.php:142
+#: views/view-editor_button_thickbox.php:68
+#: views/view-editor_button_thickbox.php:174
+#: views/view-options_custom_css.php:37 views/view-preview_table.php:53
+msgid "%1$s &lsaquo; %2$s"
+msgstr "%1$s &lsaquo; %2$s"
+
+#: classes/class-view.php:112
+msgid "For more information:"
+msgstr "Pro více informací:"
+
+#: classes/class-view.php:109
+msgid "If you like the plugin, <a href=\"%1$s\"><strong>a donation</strong></a> is recommended."
+msgstr "Jestli se vám tento plugin líbí <a href=\"%1$s\"><strong>podpořte</strong></a> nás."
+
+#: classes/class-view.php:108 views/view-about.php:153
+msgid "Before asking for support, please carefully read the <a href=\"%s\">Frequently Asked Questions</a>, where you will find answers to the most common questions, and search through the forums."
+msgstr "Než požádáte o pomoc, přečtěte si pozorně <a href=\"%s\">Často kladené otázky (FAQ)</a>, kde najdete odpovědi na nejčastěji kladené otázky, případně si projděte fórum."
+
+#: classes/class-view.php:107
+msgid "<a href=\"%1$s\">Support</a> is provided through the <a href=\"%2$s\">WordPress Support Forums</a>."
+msgstr "<a href=\"%1$s\">Podpora</a> je poskytovaná prostřednictvím <a href=\"%2$s\">fóra WordPressu.</a>."
+
+#: classes/class-view.php:106 views/view-about.php:114
+msgid "For technical information, please see the <a href=\"%s\">documentation</a>."
+msgstr "Technické informace najdete v <a href=\"%s\">dokumentaci</a>."
+
+#: classes/class-view.php:105 views/view-about.php:113
+msgid "More information about TablePress can be found on the <a href=\"%1$s\">plugin&#8217;s website</a> or on its page in the <a href=\"%2$s\">WordPress Plugin Directory</a>."
+msgstr "Více informací najdete na stránce <a href=\"%1$s\">pluginu</a>, nebo na stránce <a href=\"%2$s\">WordPress Plugin Directory</a>."
+
+#: classes/class-view.php:103
+msgid "TablePress Help"
+msgstr "Nápověda Tablepress"
+
+#: classes/class-render.php:410 views/view-list.php:432
+msgid "Edit"
+msgstr "Upravit"
+
+#: classes/class-render.php:272
+msgid "<!-- The table with the ID %s is empty! -->"
+msgstr "<!-- Tabulka s ID %s je prázdná! -->"
+
+#: classes/class-import.php:189 classes/class-import.php:277
+#: classes/class-import.php:378
+msgid "The imported file contains errors:"
+msgstr "Importované soubory obsahují chyby:"
+
+#: classes/class-import.php:86
+msgid "XLSX - Microsoft Excel 2007-2013 (experimental)"
+msgstr "XLSX - Microsoft Excel 2007-2013 (experimentálně)"
+
+#: classes/class-import.php:85
+msgid "XLS - Microsoft Excel 97-2003 (experimental)"
+msgstr "XLS - Microsoft Excel 97-2003 (experimentálně)"
+
+#: classes/class-export.php:62
+msgid "\\t (tabulator)"
+msgstr "\\t (tabulátor)"
+
+#: classes/class-export.php:61
+msgid ", (comma)"
+msgstr ", (čárka)"
+
+#: classes/class-export.php:60
+msgid "; (semicolon)"
+msgstr "; (středník)"
+
+#: classes/class-export.php:57 classes/class-import.php:84
+msgid "JSON - JavaScript Object Notation"
+msgstr "JSON - JavaScript Object Notation"
+
+#: classes/class-export.php:56 classes/class-import.php:82
+msgid "HTML - Hypertext Markup Language"
+msgstr "HTML - Hypertext Markup Language"
+
+#: classes/class-export.php:55 classes/class-import.php:80
+msgid "CSV - Character-Separated Values"
+msgstr "CSV - Character-Separated Values"
+
+#: classes/class-admin-page-helper.php:80
+msgid "Support the plugin with your <a href=\"%s\">donation</a>!"
+msgstr "Podpořte plugin svým <a href=\"%s\">příspěvkem</a>!"

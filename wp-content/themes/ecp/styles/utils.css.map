@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles/utils.css"],"names":[],"mappings":";AAEE;IACE,YAAY;IACZ,eAAe;IACf,YAAY;CACb","file":"utils.css","sourcesContent":["\n.fix {\n  &::after {\n    content: \"\";\n    display: table;\n    clear: both;\n  }\n}\n"]}

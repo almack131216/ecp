@@ -1,0 +1,76 @@
+:root {
+
+  /*typography*/
+  /*--headlineFont: serif;*/
+
+  /*padding*/
+
+  /*colors*/
+
+  /*section specific*/
+
+  /*measures*/ /* 980 */
+
+  /*snippets*/
+}
+
+
+/*footer*/
+
+
+footer.site-footer {
+  background-color: rgb(21, 56, 112);
+  color: white;
+}
+
+
+footer.site-footer .site-footer-content {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+footer.site-footer a {
+  color: white;
+}
+
+
+footer.site-footer h2 {
+  display: none;
+}
+
+
+footer.site-footer #menu-full-menu {
+
+
+  @apply --inverseNavigation;
+}
+
+
+footer.site-footer .site-info {
+  background-color: rgb(158, 0, 18);
+  color: white;
+  text-align: center;
+}
+
+
+footer.site-footer .site-info-content {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+
+footer.site-footer .site-info-content span {
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=footer.css.map */

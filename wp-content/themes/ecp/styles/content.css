@@ -1,0 +1,55 @@
+:root {
+
+  /*typography*/
+  /*--headlineFont: serif;*/
+
+  /*padding*/
+
+  /*colors*/
+
+  /*section specific*/
+
+  /*measures*/ /* 980 */
+
+  /*snippets*/
+}
+
+
+/*content*/
+
+
+.full-width {
+  padding: 1rem;
+}
+
+
+/*background-color: #ffd;*/
+
+
+.full-width p {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+.site-width {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+.entry-content p,
+  .entry-content div:not(.full-width) {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/*# sourceMappingURL=content.css.map */

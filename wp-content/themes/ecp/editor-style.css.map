@@ -1,0 +1,1 @@
+{"version":3,"sources":["editor-style.css"],"names":[],"mappings":";AACA;EACE,aAAa;EACb,aAAa;CACd","file":"editor-style.css","sourcesContent":["\nimg {\n  width: 200px;\n  height: auto;\n}\n"]}
