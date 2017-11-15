@@ -15,13 +15,9 @@ Updated: 2017-11-14 21:37:23
 /* modal */
 /* _variables-color.scss */
 /* Base colors */
-/* Font colors */
 /* debugging */
 /* social media buttons */
-/* table */
-/* hyperlink */
 /* _variables-button.scss */
-/* colors */
 /* _mixins.scss */
 /* _mixins-buttons.scss */
 /* [END] g_btn-base() */
@@ -391,6 +387,23 @@ i[class^="icon-"].fa-bold:before {
 
 /* _minor-tweaks.scss */
 /* line 4, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+.pagepart.banner {
+  padding: 20px 0;
+  background: #eee;
+}
+
+/* line 9, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+.pagepart.banner > .pagepart-content p {
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* line 13, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+.pagepart.banner > .pagepart-content p a {
+  display: block;
+}
+
+/* line 21, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .carpet h1 {
   top: 65%;
 }
