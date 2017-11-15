@@ -19,19 +19,21 @@ function amcust_sc_fact_container($atts = [], $content = null)
 {
     // do something to $content 
     // run shortcode parser recursively
-    $content = '<ul class="circle-container">'.do_shortcode($content).'</ul>';
+    $contentBuild = '<div class="circle-container-wrap">';
+    if($atts['title']) $contentBuild .= '<h2>'.$atts['title'].'</h2>';
+    $contentBuild .= '<ul class="circle-container">'.do_shortcode($content).'</ul></div>';
 
-    return $content;
+    return $contentBuild;
 }
 add_shortcode( 'fact_container', 'amcust_sc_fact_container' );
 
 function amcust_sc_fact_circle( $atts = array() ) {
     //requires 2 attributes (strong + small text)
-    $circleContent = '<li class="circle"><div class="aligner">';
-    $circleContent .= '<strong>'. $atts['strong'] .'</strong>';
-    $circleContent .= '<span>'. $atts['small'] .'</span>';
-    $circleContent .= '</div></li>';
+    $contentBuild = '<li class="circle"><div class="aligner">';
+    $contentBuild .= '<strong>'. $atts['strong'] .'</strong>';
+    $contentBuild .= '<span>'. $atts['small'] .'</span>';
+    $contentBuild .= '</div></li>';
 
-    return $circleContent;
+    return $contentBuild;
 }
 add_shortcode( 'fact_circle', 'amcust_sc_fact_circle' );

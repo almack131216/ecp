@@ -25,6 +25,88 @@ Updated: 2017-11-14 21:37:23
 /* _button.scss */
 /* _form.scss */
 /* _img.scss */
+/* _circles.scss */
+/* line 3, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/modules/_circles.scss */
+.circle-container-wrap {
+  display: block;
+  width: 100%;
+  overflow-y: hidden;
+  background: inherit;
+  /* (END) .circle-container */
+}
+
+/* line 10, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/modules/_circles.scss */
+.circle-container-wrap .circle-container {
+  display: block;
+  list-style: none;
+  background: inherit;
+  min-width: 940px;
+  height: 160px;
+  padding: 0 0 15px 0;
+  margin: 0;
+  /* (END) .circle */
+}
+
+/* line 19, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/modules/_circles.scss */
+.circle-container-wrap .circle-container .circle {
+  border: 5px solid #eee;
+  background-color: white;
+  width: 145px;
+  height: 145px;
+  border-radius: 100%;
+  margin: 0 10px 0 0;
+  display: block;
+  float: left;
+  position: static;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /* (END) .aligner */
+  /* (END) hover */
+}
+
+/* line 31, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/modules/_circles.scss */
+.circle-container-wrap .circle-container .circle > .aligner {
+  height: 100%;
+  text-align: center;
+  padding: 20px 10px 0 10px;
+}
+
+/* line 36, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/modules/_circles.scss */
+.circle-container-wrap .circle-container .circle > .aligner strong {
+  display: block;
+  font-size: 24px;
+}
+
+/* line 41, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/modules/_circles.scss */
+.circle-container-wrap .circle-container .circle > .aligner span {
+  font-size: 12px;
+}
+
+/* line 47, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/modules/_circles.scss */
+.circle-container-wrap .circle-container .circle:hover {
+  background-color: #eee;
+  border-color: #252259;
+}
+
+/* (END) .circle-container-wrap */
+/* line 60, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/modules/_circles.scss */
+.pagepart_key-facts.cz .circle-container-wrap {
+  /* (END) .circle-container */
+}
+
+/* line 63, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/modules/_circles.scss */
+.pagepart_key-facts.cz .circle-container-wrap .circle-container .circle > .aligner {
+  padding: 15px 15px 0 15px;
+}
+
+/* line 66, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/modules/_circles.scss */
+.pagepart_key-facts.cz .circle-container-wrap .circle-container .circle > .aligner span {
+  font-size: 10px;
+}
+
 /* LAYOUTS - page layout styles */
 /* _offsets.scss */
 /* line 3, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/layouts/_offsets.scss */
@@ -386,24 +468,29 @@ i[class^="icon-"].fa-bold:before {
 }
 
 /* _minor-tweaks.scss */
-/* line 4, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+/* line 3, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+.bg-white {
+  background: white;
+}
+
+/* line 12, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .pagepart.banner {
   padding: 20px 0;
   background: #eee;
 }
 
-/* line 9, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+/* line 17, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .pagepart.banner > .pagepart-content p {
   margin: 0 auto;
   padding: 0;
 }
 
-/* line 13, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+/* line 21, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .pagepart.banner > .pagepart-content p a {
   display: block;
 }
 
-/* line 21, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+/* line 29, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .carpet h1 {
   top: 65%;
 }
