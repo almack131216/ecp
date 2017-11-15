@@ -35,7 +35,7 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-<a href="#top" id="to-the-top">▲</a>
+<a href="#top" id="to-the-top">Top</a>
 
 <?php wp_footer(); ?>
 

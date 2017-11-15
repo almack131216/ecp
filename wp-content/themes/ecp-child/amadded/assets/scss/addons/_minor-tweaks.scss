@@ -8,6 +8,26 @@
     
 }
 
+.toTopShow #to-the-top {
+    width: auto;
+    height: auto;
+    padding: $offset-g1;
+    background: white;
+    font-size: 20px;
+    line-height: 20px;
+    bottom: $offset-g1;
+    right: $offset-g1;
+    border: 1px solid $color_primary;
+    color: $color_primary;
+    @include border-radius($border-radius-button);
+    @include set-opacity('semi');    
+
+    &:hover {
+        background: white;
+        @include set-opacity('full');
+    }
+}
+
 //171122 Open Day Banner
 .pagepart.banner {
     padding:$offset-2 0;

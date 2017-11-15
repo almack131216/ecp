@@ -123,19 +123,32 @@
 		};
 	};
 
-	// document.body.classList.add('toTopShow');
+	//document.body.classList.add('toTopShow');
 	var statusOfToTop = false;
 
 	function hideToTop() {
-		if (document.body.scrollTop < 500 && statusOfToTop) {
+		//amcust bugfix 171116
+		//bug: go to top of page button was never showing
+		//reason: document.body.scrollTop is deprecated
+		//solution: 'amcust_scrollTop' is using better method with fallback
+		//ref: https://stackoverflow.com/questions/28633221/document-body-scrolltop-firefox-returns-0-only-js
+		
+		var amcust_consoleLog = true;
+		var amcust_scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+		var amcust_triggerPos = 500;
+		amcust_consoleLog && console.log('hideToTop (' + amcust_scrollTop + ' < 500 && ' + statusOfToTop + ')' );
+
+		if (amcust_scrollTop < amcust_triggerPos && statusOfToTop) {
 			// hide it and return
 			document.body.classList.remove('toTopShow');
 			statusOfToTop = false;
+			amcust_consoleLog && console.log('hideToTop - hide');
 		}
-		if (document.body.scrollTop > 500 && !statusOfToTop) {
+		if (amcust_scrollTop > amcust_triggerPos && !statusOfToTop) {
 			// show it and return
 			document.body.classList.add('toTopShow');
 			statusOfToTop = true;
+			amcust_consoleLog && console.log('hideToTop - show');
 		}
 	};
 

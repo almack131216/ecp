@@ -473,24 +473,50 @@ i[class^="icon-"].fa-bold:before {
   background: white;
 }
 
-/* line 12, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+/* line 11, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+.toTopShow #to-the-top {
+  width: auto;
+  height: auto;
+  padding: 15px;
+  background: white;
+  font-size: 20px;
+  line-height: 20px;
+  bottom: 15px;
+  right: 15px;
+  border: 1px solid #252259;
+  color: #252259;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+/* line 25, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+.toTopShow #to-the-top:hover {
+  background: white;
+  filter: alpha(opacity=100);
+  opacity: 1.0;
+}
+
+/* line 32, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .pagepart.banner {
   padding: 20px 0;
   background: #eee;
 }
 
-/* line 17, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+/* line 37, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .pagepart.banner > .pagepart-content p {
   margin: 0 auto;
   padding: 0;
 }
 
-/* line 21, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+/* line 41, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .pagepart.banner > .pagepart-content p a {
   display: block;
 }
 
-/* line 29, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+/* line 49, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .carpet h1 {
   top: 65%;
 }
