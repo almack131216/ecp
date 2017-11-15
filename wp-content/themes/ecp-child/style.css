@@ -348,6 +348,10 @@ i[class^="icon-"].fa-bold:before {
   height: 20px;
 }
 
-/* _restore-in-future.scss */
+/* _minor-tweaks.scss */
+/* line 4, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+.carpet h1 {
+  top: 65%;
+}
 
 /*# sourceMappingURL=../../../style.map */
