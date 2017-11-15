@@ -1,1 +1,36 @@
 /* _navbar.scss */
+
+header.site-header {
+    > .page-box {
+        > .site-branding {
+            > .site-title {
+
+                @media (max-width:599px){
+                    position: relative;
+                    background: $color_debug;
+                    width: 100px;
+                    height: 90px;
+                    overflow:hidden;
+
+                    a {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        > img {
+                            width:462px;
+                            max-width:462px;
+                            height:100px;
+                            margin:-3px 0 0 -3px;
+                        }
+                    }
+                    /* (END) a */
+                }
+            }
+            /* (END) .site-title */
+        }
+        /* (END) .site-branding */
+    }
+    /* (END) .page-box */
+}
+/* (END) header.site-header */

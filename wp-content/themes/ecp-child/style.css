@@ -285,6 +285,47 @@ Updated: 2017-11-14 21:37:23
 }
 
 /* _navbar.scss */
+/* line 3, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/layouts/_navbar.scss */
+header.site-header {
+  /* (END) .page-box */
+}
+
+/* line 4, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/layouts/_navbar.scss */
+header.site-header > .page-box {
+  /* (END) .site-branding */
+}
+
+/* line 5, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/layouts/_navbar.scss */
+header.site-header > .page-box > .site-branding {
+  /* (END) .site-title */
+}
+
+@media (max-width: 599px) {
+  /* line 6, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/layouts/_navbar.scss */
+  header.site-header > .page-box > .site-branding > .site-title {
+    position: relative;
+    background: inherit;
+    width: 100px;
+    height: 90px;
+    overflow: hidden;
+    /* (END) a */
+  }
+  /* line 15, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/layouts/_navbar.scss */
+  header.site-header > .page-box > .site-branding > .site-title a {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* line 20, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/layouts/_navbar.scss */
+  header.site-header > .page-box > .site-branding > .site-title a > img {
+    width: 462px;
+    max-width: 462px;
+    height: 100px;
+    margin: -3px 0 0 -3px;
+  }
+}
+
+/* (END) header.site-header */
 /* _footer.scss */
 /* _font-awesome-overrule.scss */
 /* line 3, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_font-awesome-overrule.scss */
