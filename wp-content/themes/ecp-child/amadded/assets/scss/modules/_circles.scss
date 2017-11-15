@@ -1,0 +1,58 @@
+/* _circles.scss */
+
+.circle-container {
+    // display: flex;
+    // justify-content: center;
+    // align-content: flex-start;
+    // -webkit-flex-flow: row wrap;
+    // flex-flow: row wrap;
+    display:block;
+    list-style:none;
+    border: 1px solid #000000;
+    height:155px;
+    margin:0;
+    padding:0;
+
+    .circle {
+        border: 5px solid $color_bg-body;
+        background-color: white;
+        width: 145px;
+        height: 145px;
+        border-radius: 100%; 
+        margin: $offset-0-5;
+        display:block;
+        float:left;
+        position:static;
+
+        > .aligner {
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            height: 100%;
+            text-align: center;
+            padding:$offset-g2 $offset-g1 0 $offset-g1;
+
+            strong {
+                display:block;
+                font-size:24px;
+            }
+
+            span {
+                font-size:12px;
+            }
+        }
+
+        &:hover {
+            background-color: $color_bg-body;
+            border-color: $color_primary;
+        }
+
+        &.kitten {
+            background-image: url('http://placekitten.com/g/200/200');
+            background-size: cover;
+            background-repeat: none;
+            background-position: center center;
+            color: white;
+        }
+    }
+}

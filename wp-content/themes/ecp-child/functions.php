@@ -13,3 +13,25 @@ endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+
+
+function amcust_sc_fact_container($atts = [], $content = null)
+{
+    // do something to $content 
+    // run shortcode parser recursively
+    $content = '<ul class="circle-container">'.do_shortcode($content).'</ul>';
+
+    return $content;
+}
+add_shortcode( 'fact_container', 'amcust_sc_fact_container' );
+
+function amcust_sc_fact_circle( $atts = array() ) {
+    //requires 2 attributes (strong + small text)
+    $circleContent = '<li class="circle"><div class="aligner">';
+    $circleContent .= '<strong>'. $atts['strong'] .'</strong>';
+    $circleContent .= '<span>'. $atts['small'] .'</span>';
+    $circleContent .= '</div></li>';
+
+    return $circleContent;
+}
+add_shortcode( 'fact_circle', 'amcust_sc_fact_circle' );
