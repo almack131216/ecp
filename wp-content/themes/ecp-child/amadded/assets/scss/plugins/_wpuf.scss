@@ -1,0 +1,127 @@
+/* _wpuf.scss */
+
+form.wpuf-form-add {
+	ul.wpuf-form.form-label-left {
+        li {
+            padding:0;
+            margin-bottom:$offset-g1;
+
+            &.wpuf-el,
+            &.wpuf-el.field-size-medium {
+                > .wpuf-label {
+                    width:30%;
+                    @media (max-width:$bp-xs-1){
+                        &:not([class^="wpuf-el featured_image"]),
+                        &:not([class^="wpuf-el amcust_image"]) {
+                            width:100%;
+                        }
+                    }
+                }
+                /* [END] .wpuf-label */
+
+                > .wpuf-fields {
+                    width:70%;
+
+                    @media (max-width:$bp-xs-1){
+                        &:not([class^="wpuf-el featured_image"]),
+                        &:not([class^="wpuf-el amcust_image"]) {
+                            width:100%;
+                        }
+                    }
+
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="tel"],
+                    input[type="date"] {
+                        @include input-base();
+                        // padding:$offset-1 $offset-g1;
+                    }
+                    textarea {
+                        @include input-base();
+                        min-height:60px;
+                        margin-bottom: 5px;
+                    }
+                    a.button {
+                        @include btn-base-border();
+                    }
+
+                    .wpuf-help,
+                    .wpuf-error-msg {
+                        color: #666;
+                        margin: 5px 0 0 0;
+                        font-size: $font-size_button;
+                        font-style: italic;
+                        font-family: sans-serif;
+                        display: block;
+                    }
+                }
+                /* [END] .wpuf-fields */
+
+                &[class^="wpuf-el featured_image"],
+                &[class^="wpuf-el amcust_image"] {
+                    > .wpuf-label {
+                        @media (max-width:$bp-xs-1){
+                            float:left;
+                            width:40%;
+                        }
+                    }
+                    > .wpuf-fields {
+                        @media (max-width:$bp-xs-1){
+                            float:left;
+                            width:60%;
+                            overflow: hidden;
+                        }                      
+                    }
+                }
+                /* [END] IMAGE ROWS */
+
+                &.section_break {
+                    margin-top:$offset-g1;
+
+                    .wpuf-section-wrap {
+                        h2.wpuf-section-title {
+                            @extend .h3;
+                        }
+                    }    
+                }
+                /* [END] .section_break */
+
+                &.has-error {
+                    background:white;
+                    
+                    > .wpuf-fields {
+                        input,
+                        textarea {
+                            border-color:$color_validate-error-border;
+                            background:$color_validate-error-bg;
+                        }
+                        .wpuf-error-msg {
+                            color:$color_danger;
+                            font-weight:bold;
+                        }
+                    }
+                }
+                /* [END] .has-error */                   
+            }
+            /* [END] .wpuf-el */
+
+
+
+            &.wpuf-submit {
+                .wpuf-label {
+                    // display:none;
+                }
+                input[type="submit"] {
+                    @include btn-base-border();
+                    @include btn-color-priority();
+                    @include btn-lg();
+                    font-weight: bold;
+                }
+                a.btn {
+                    @include btn-base();
+                }
+            } 
+        }               
+    }
+}
+/* [END] WPUF */

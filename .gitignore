@@ -5,6 +5,7 @@ installer-backup.php
 wp-admin
 wp-contentXXX
 wp-content/cache
+##wp-content/themes/ecp-child/style.css
 wp-content/plugins
 wp-content/upgrade
 wp-content/uploads
