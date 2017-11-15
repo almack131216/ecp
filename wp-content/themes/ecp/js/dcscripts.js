@@ -132,8 +132,8 @@
 		//reason: document.body.scrollTop is deprecated
 		//solution: 'amcust_scrollTop' is using better method with fallback
 		//ref: https://stackoverflow.com/questions/28633221/document-body-scrolltop-firefox-returns-0-only-js
-		
-		var amcust_consoleLog = true;
+
+		var amcust_consoleLog = false;
 		var amcust_scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 		var amcust_triggerPos = 500;
 		amcust_consoleLog && console.log('hideToTop (' + amcust_scrollTop + ' < 500 && ' + statusOfToTop + ')' );
