@@ -501,22 +501,44 @@ i[class^="icon-"].fa-bold:before {
 
 /* line 32, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .pagepart.banner {
-  padding: 20px 0;
-  background: #eee;
+  padding: 20px;
+  background: #fff;
 }
 
-/* line 37, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+@media (max-width: 767px) {
+  /* line 32, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+  .pagepart.banner {
+    padding: 10px;
+  }
+}
+
+/* line 40, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+.pagepart.banner > .pagepart-content {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+/* line 46, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .pagepart.banner > .pagepart-content p {
   margin: 0 auto;
   padding: 0;
 }
 
-/* line 41, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+/* line 50, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .pagepart.banner > .pagepart-content p a {
   display: block;
 }
 
-/* line 49, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+/* line 53, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
+.pagepart.banner > .pagepart-content p a img {
+  width: 100%;
+  max-width: 1250px;
+  height: auto;
+}
+
+/* line 64, C:/xampp/htdocs/ecp/wp-content/themes/ecp-child/amadded/assets/scss/addons/_minor-tweaks.scss */
 .carpet h1 {
   top: 65%;
 }
