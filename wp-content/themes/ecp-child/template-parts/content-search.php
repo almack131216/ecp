@@ -7,11 +7,26 @@
  * @package ecp
  */
 
+$amcust_highlight = true;
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php		
+		
+		if(!$amcust_highlight){
+			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+		}else{
+			$title = get_the_title();
+			$keys= explode(" ",$s);
+			$title = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">\0</strong>', $title);
+
+			echo '<h2 class="entry-title"><a href="'.esc_url( get_permalink() ).'" rel="bookmark">'. $title .'</a></h2>';
+		}
+
+		
+		 ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -21,7 +36,19 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+		<?php
+
+		if(!$amcust_highlight){
+			the_excerpt();
+		}else{
+			$excerpt = get_the_excerpt();
+			$keys= explode(" ",$s);
+			$excerpt = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">\0</strong>', $excerpt);
+
+			echo $excerpt;
+		}		
+		
+		?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
