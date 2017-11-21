@@ -18,7 +18,7 @@ $amcust_highlight = true;
 		if(!$amcust_highlight){
 			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		}else{
-			$title = get_the_title();
+			$title = html_entity_decode(get_the_title());
 			$keys= explode(" ",$s);
 			$title = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">\0</strong>', $title);
 
@@ -41,7 +41,7 @@ $amcust_highlight = true;
 		if(!$amcust_highlight){
 			the_excerpt();
 		}else{
-			$excerpt = get_the_excerpt();
+			$excerpt = html_entity_decode(get_the_excerpt());
 			$keys= explode(" ",$s);
 			$excerpt = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">\0</strong>', $excerpt);
 
