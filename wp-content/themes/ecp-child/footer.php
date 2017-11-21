@@ -35,7 +35,7 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-<a href="#top" id="to-the-top">Top</a>
+<a href="#top" id="to-the-top"><i class="fa fa-chevron-up"></i></a>
 
 <?php wp_footer(); ?>
 

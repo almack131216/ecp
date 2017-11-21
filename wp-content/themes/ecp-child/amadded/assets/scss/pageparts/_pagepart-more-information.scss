@@ -1,0 +1,19 @@
+/* _pagepart-more-information.scss */
+
+.pagepart.more-information {
+    background-color: $color_primary;
+    color: white;
+    text-align: center;
+    padding: $offset-g3 0;
+
+    .pagepart.more-information-share {
+        background-color: $color_primary;
+        color: white;
+        text-align: center;
+        padding:$offset-g1 0 0 0;
+
+        i.fa {
+            @extend .fa-lg;
+        }
+    }
+}
