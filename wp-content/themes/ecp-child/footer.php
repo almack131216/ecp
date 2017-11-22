@@ -13,13 +13,12 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-    <div id="footer-social-icons">
-      <a href="https://twitter.com/ecp_prague" target="_blank" title="">&#xf099;</a>
-      <a href="https://www.facebook.com/englishcollege" target="_blank" title="">&#xf09a;</a>
-      <a href="https://www.youtube.com/user/TheEnglishCollege" target="_blank" title="">&#xf167;</a>
-      <a href="https://inewsletter.co/the-english-college-in-prague/latest" target="_blank" title="">&#xe800;</a>
-    </div>
+	<footer id="colophon" class="site-footer" role="contentinfo">    
+
+    <?php
+      echo print_amcust_share_btns(); 
+    ?>
+
     <div class="site-footer-content">
       <!-- <h2>MENU</h2> -->
       <div id="footer-menu-ecp">

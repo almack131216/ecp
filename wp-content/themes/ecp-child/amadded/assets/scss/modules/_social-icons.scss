@@ -1,0 +1,38 @@
+/* _social-icons.scss */
+
+.contactus-social-icons-wrap {
+    width:100%;
+    text-align:center;
+    padding:$offset-g1 0;
+
+    .contactus-social-icons {
+        background-color: $color_primary;
+        color: white;
+        text-align: center;
+        margin:0 auto;
+        padding:0;
+        display:inline-block;
+
+        a {
+            margin:0 5px;
+
+            i.fa {
+                @extend .fa-lg;
+                @include set-opacity('twothir');
+            }
+
+            &:hover {
+                i.fa {
+                    @include set-opacity('full');
+                }
+            }
+        }
+        
+    }
+}
+
+footer {
+    .contactus-social-icons-wrap {
+        padding:$offset-g2 0;
+    }
+}
