@@ -2,6 +2,9 @@
 20171113_theenglishcollegeinprague_900b9ff269050d762844171113104420_archive.zip
 installer.php
 installer-backup.php
+database.sql
+installer-data.sql
+installer-log.txt
 wp-admin
 wp-contentXXX
 wp-content/cache
