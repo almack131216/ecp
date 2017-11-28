@@ -17,7 +17,7 @@
         margin:0;        
 
         .circle {
-            border: 5px solid $color_bg-body;
+            border: 4px solid $color_primary;
             background-color: white;
             width: 145px;
             height: 145px;
@@ -35,7 +35,7 @@
 
                 strong {
                     display:block;
-                    font-size:24px;
+                    font-weight:bold;
                 }
 
                 span {
@@ -45,8 +45,10 @@
             /* (END) .aligner */
 
             &:hover {
-                background-color: $color_bg-body;
-                border-color: $color_primary;
+                // background-color: $color_bg-body;
+                strong, span {
+                    color:white;
+                }
             }
             /* (END) hover */
         }
@@ -72,3 +74,45 @@
         /* (END) .circle-container */
     }
 }
+/* [END] .pagepart_key-facts.cz */
+
+.pagepart_key-facts {
+    .circle-container-wrap {
+        .circle-container {
+            .circle {
+                > .aligner {
+                    strong {
+                        font-size:24px;
+                    }
+                }
+                /* (END) .aligner */
+
+                &:hover {
+                    border-color: $color_accent-1;
+                    background-color: $color_accent-1;
+                }
+            }
+        }
+    }
+}
+/* [END] .pagepart_key-facts */
+
+.pagepart_our-results {
+    .circle-container-wrap {
+        .circle-container {
+            .circle {
+                > .aligner {
+                    strong {
+                        font-size:18px;
+                    }
+                }
+                /* (END) .aligner */                
+                &:hover {
+                    border-color: $color_accent-4;
+                    background-color: $color_accent-4;
+                }
+            }
+        }
+    }
+}
+/* [END] .pagepart_key-facts */
