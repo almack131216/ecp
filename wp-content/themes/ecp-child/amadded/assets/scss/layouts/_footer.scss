@@ -1,1 +1,27 @@
 /* _footer.scss */
+
+footer {
+    .site-info {
+        padding-bottom:$offset-g2;
+    }
+
+    #footer-menu-ecp {
+        ul.menu > li {
+            text-align:left;
+
+            > a {
+                padding-left:0;                
+            }
+
+            > ul.sub-menu {
+                > li {
+                    > a {
+                        padding-left:0;
+                    }
+                }
+            }
+            /* [END] ul.sub-menu */
+        }
+    }
+    /* [END] #footer-menu-ecp */
+}
