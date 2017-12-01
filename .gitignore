@@ -10,7 +10,6 @@ wp-contentXXX
 wp-content/cache
 wp-content/themes/ecp-child/style.css
 wp-content/themes/ecp-child/style.map
-##wp-content/themes/ecp-child/style.css
 wp-content/plugins/*
 !wp-content/plugins/forget-about-shortcode-buttons
 wp-content/plugins/forget-about-shortcode-buttons/*
