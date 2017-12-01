@@ -1536,9 +1536,9 @@ body #content #toggleable-menu {
   position: relative;
 }
 
-body.single-post #content #toggleable-menu li li:not(.tagged-important), body.home #content #toggleable-menu li li:not(.tagged-important), body.search #content #toggleable-menu li li:not(.tagged-important), body.page #content #toggleable-menu li li:not(.tagged-important) {
+/*body.single-post #content #toggleable-menu li li:not(.tagged-important), body.home #content #toggleable-menu li li:not(.tagged-important), body.search #content #toggleable-menu li li:not(.tagged-important), body.page #content #toggleable-menu li li:not(.tagged-important) {
   display: none;
-}
+}*/
 
 #content #toggleable-menu {
   width: 100%;
@@ -1630,7 +1630,8 @@ body.single-post #content #toggleable-menu li li:not(.tagged-important), body.ho
   position: relative;
 }
 
-#content #toggleable-menu #header-menu > li:hover .sub-menu {
+/* 171201 amedit: added ':not(.is-visible)' to avoid content-jump bug */
+#content #toggleable-menu:not(.is-visible) #header-menu > li:hover .sub-menu {
   height: auto;
   visibility: visible;
   z-index: 30;
@@ -1640,8 +1641,11 @@ body.single-post #content #toggleable-menu li li:not(.tagged-important), body.ho
 }
 
 @media only screen and (max-width: 979px) {
-
-  #content #toggleable-menu #header-menu > li:hover .sub-menu {
+  /* 171201 amedit: added ':not(.is-visible)' to avoid flickering bug */
+  #content #toggleable-menu.is-visible #header-menu > li:hover .sub-menu {
+    position: inherit;
+  }
+  #content #toggleable-menu:not(.is-visible) #header-menu > li:hover .sub-menu {
     visibility: hidden;
     z-index: -10;
   }
