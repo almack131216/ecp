@@ -1,0 +1,28 @@
+/* _four-main.scss */
+
+.four-main-section.full-width {
+     @media (max-width: $bp-xs-1) {
+        padding-left:0;
+        padding-right:0;
+        padding-top:0;
+     }
+
+    .four-main-hp.site-width {
+        padding:0;
+
+        .section {
+            background:white;
+            @media (max-width: $inherit_bp-sm) {
+                width: 100%;//calc(100% - 2 * 1rem);
+            }
+            @media (max-width: $bp-xs-1) {
+                margin-bottom:0;
+            }
+        }
+
+        @media (max-width: $inherit_bp-sm) {
+
+        }
+    }
+}
+

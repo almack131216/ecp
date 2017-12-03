@@ -165,6 +165,7 @@ function show_persons( $atts ) {
             $string .= '<div class="img">';
 			$string .= "<img src=\"$thumbnail\" alt=\"TODO\" />";
 			$string .= '</div>';
+			$string .= '<div class="text-wrap">';//amcust wrap
 			$string .= '<div class="text">';
 			// $string .= do_shortcode($content);
 			$string .= $content;
@@ -174,6 +175,7 @@ function show_persons( $atts ) {
 				$string .= "<div class=\"persontitle\">$persontitle</div>";
 			}
 			$string .= '</div>';
+			$string .= '</div>';// [END] amcust wrap
         }
         $string .= '</div>';
         // $string .= '</div><div class="entry-content">';

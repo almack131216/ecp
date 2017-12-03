@@ -1,0 +1,67 @@
+/* _people.scss */
+
+$people-mug-width: 145px;
+
+.people-box {
+    padding:0;
+
+    > .person {
+        padding:$offset-g2 0 0 0;        
+
+        > .img {
+            width: $people-mug-width;
+            width: calc(100% - #{$offset-g2});
+
+            > img {
+                width:100%;
+                max-width:100%;
+            }
+        }
+        /* [END] .img */
+
+        .text-wrap {
+            padding:0 $offset-g3 0 0; 
+        }
+    }
+}
+
+@media (min-width:$bp-xs) and (max-width:$inherit_bp-sm) {
+    .people-box {        
+        > .person {
+            > .img {                
+                float:left;
+                width:30%;
+                width:calc(#{$people-mug-width} + 0px);
+                margin:0;                
+            }
+            /* [END] .img */
+
+            > .text-wrap {
+                float:left;
+                width:70%;
+                width:calc(100% - #{$people-mug-width});
+                padding:0 $offset-g2 0 $offset-g1;
+            }
+        }
+    }
+}
+
+@media (max-width:$bp-xs-1){
+    .people-box {
+        > .person {
+            padding: $offset-g4 0 0 0;
+            &:first-child {
+                padding-top:0;
+            }
+
+            > .img {
+                width:100%;
+            }
+            /* [END] .img */
+
+            .text-wrap {
+                
+            }
+        }
+    }
+}
