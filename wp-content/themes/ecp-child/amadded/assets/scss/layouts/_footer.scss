@@ -1,8 +1,12 @@
 /* _footer.scss */
 
-footer {
+footer.site-footer {
     .site-info {
         padding-bottom:$offset-g2;
+
+        .site-info-content span {
+            white-space:normal;//bugfix : base style sets this as nowrap, which forces scroll on smaller size
+        }
     }
 
     #footer-menu-ecp {
