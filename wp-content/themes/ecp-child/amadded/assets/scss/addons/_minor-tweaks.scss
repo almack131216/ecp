@@ -37,3 +37,10 @@ p:empty {
 strong.search-excerpt { 
     background-color:yellow;
 }
+
+//huge-portfolio - hide solitary thumbnail
+/* one item */
+ul.elastislide-list li:first-child:nth-last-child(1) {
+/* -or- li:only-child { */
+    display: none;
+}
