@@ -44,3 +44,11 @@ ul.elastislide-list li:first-child:nth-last-child(1) {
 /* -or- li:only-child { */
     display: none;
 }
+
+/* row-box padding improve */
+.row-box div.one-third:first-of-type {
+    margin-right: 0;
+}
+.row-box div.two-thirds:last-of-type {
+    margin-left: 0;
+}
