@@ -3,20 +3,20 @@
 .circle-container-wrap {
     display:block;
     width:100%;
-    // overflow-y:hidden;
     background:$color_debug;
-    // overflow-x:scroll;
+    text-align:center;
+    @media (max-width:$bp-sm-1){
+        text-align:left;
+    }
 
     ul.circle-container {
-        display:block;
+        display:inline-block;
         list-style:none;
         background:$color_debug2;
-        width:100%;
-        // height:160px;//height of circle + padding-bottom
+        width:auto;
         padding:0 0 $offset-g1 0;
-        margin:0;
+        margin:0 auto;
         text-align:center;
-        float:left;     
 
         li.circle {
             position:static;
@@ -24,21 +24,36 @@
             background-color: white;
             width: 145px;
             height: 145px;
+            // transform: scale(0.90);
 
+            // &:hover {
+            //     transform: scale(1.0);
+            // }
             
             border-radius: 100%; 
             margin: $offset-0-5;
             padding:0;
             
             box-sizing: border-box;
-            display:block;
             float:left;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
             @include animate();
 
             > .aligner {
-                height: 100%;
+                display: inline-block;
+                padding: 0;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                max-width: 90%;
+                height: auto;
+
                 text-align: center;
-                padding:$offset-2 $offset-1 0 $offset-1;
+                // padding:$offset-2 $offset-1 0 $offset-1;
 
                 strong {
                     display:block;
@@ -70,7 +85,7 @@
         .circle-container {
             .circle {
                 > .aligner {
-                    padding:$offset-g1 $offset-g1 0 $offset-g1;
+                    padding:0;//$offset-g1 $offset-g1 0 $offset-g1;
 
                     span {
                         font-size:10px;
