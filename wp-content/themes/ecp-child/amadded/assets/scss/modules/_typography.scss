@@ -1,0 +1,53 @@
+/* _typography.scss */
+
+// h1,h2,h3,h4 {
+//     font-size: 1.4em;
+//     line-height: 1.6;
+//     font-weight: bold;
+//     font-weight: 700;
+//     font-stretch: normal;
+// }
+
+.h1 {
+    font-size: 1.8em;
+    padding: 32px 0 16px;
+    padding: 2rem 0 1rem;
+}
+
+.h2 {
+    font-size: 1.4em;
+    padding: 16px 0 8px;
+    padding: 1rem 0 0.5rem;
+}
+
+.h3 {
+    font-size: 1.4em;
+    font-weight: 400;
+    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
+}
+
+.h4 {
+        font-size: 1.2em;
+}
+
+b, strong, .strong {
+    font-weight: bold;
+    color:black;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.text-align-center {
+    text-align:center;
+}
+
+.fmt-uppercase {
+    text-transform: uppercase;
+}
+
+.snippet:after,.snippetWrap p:after {
+    content:'...';
+}
