@@ -1,0 +1,34 @@
+/* _table-press.scss */
+
+table#tablepress-TermDates2017,
+table#tablepress-PublicHolidays1718 {
+    > thead {
+        > tr {
+            > th {
+                background-color:$color-table-th-bg !important;
+                color:$color-table-th-text;
+            }
+        } 
+    }
+
+    > tbody {
+        > tr {
+            > td {
+                border-bottom:1px solid $color-table-border;
+            }
+
+            &:nth-child(odd) {
+                background-color:$color-table-tr-nth;
+            }
+        }
+
+        &.row-hover {
+            > tr:hover {
+                > td {
+                    background-color:#ffc;
+                    border-bottom:1px solid black;
+                }
+            }
+        }
+    }
+}
