@@ -5,8 +5,11 @@
     text-align:center;
     padding:$offset-g1 0;
 
-    .contactus-social-icons {
-        background-color: $color_primary;
+    h4 {
+        margin-bottom:$offset-g1;
+    }
+
+    .contactus-social-icons {        
         color: white;
         text-align: center;
         margin:0 auto;
@@ -15,6 +18,19 @@
 
         a {
             margin:0 5px;
+
+            &.disc {
+                @include btn-disc();
+            }
+
+            &:first-child {
+                margin-left:0;
+            }
+            &:last-child {
+                margin-right:0;
+            }
+
+            
 
             i.fa {
                 @extend .fa-lg;

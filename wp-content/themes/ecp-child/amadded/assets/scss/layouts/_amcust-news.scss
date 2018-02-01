@@ -1,0 +1,106 @@
+
+.single-post {
+
+    #main {
+        text-align:center;
+
+        article,
+        .navigation.post-navigation {
+            background:$color-debug;
+            display:inline-block;
+            width: 100%;
+            max-width: 980px;
+            margin: 0 auto $offset-g2 auto;
+            padding: $offset-g1;
+        }
+
+        article {            
+
+            > header {
+                display:block;
+                width: 100%;
+                max-width: 100%;
+                margin:0;
+                padding: $offset-g1 0;
+                background:$color-debug2;
+                text-align: left;
+                border-bottom:1px solid $color-primary;
+                
+                > h1 {
+                    padding-top:0;
+                }
+            }
+            
+            .amcust-news-wrap {
+                display:block;
+                width: 100%;
+                text-align: left;
+
+                .col-brief {
+                    display:block;
+                    float:left;
+                    width:30%;
+                    background:$color-debug3;
+                    padding:$offset-g2;
+                    padding-left:0;
+                }
+
+                .col-content {
+                    display:block;
+                    float:left;
+                    width:70%;
+                    background:$color-debug;
+
+                    .post-featured-image {
+                        width: 100%;
+                        max-width: 100%;
+                        margin: 0 auto;
+                        padding: 0;
+
+                        > img {
+                            max-width: 100%;
+                            width:100%;
+                            height: auto;
+                        }
+                    }
+
+                    .entry-content {
+                        width: 100%;
+                        max-width: 100%;
+                        margin: 0;
+                        padding:0;
+                        position: static;
+                    }
+
+                }
+            }
+
+        }
+
+        .navigation.post-navigation {
+            
+            .nav-links {
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+
+                .nav-previous {
+                    text-align:left;
+                    > a > i.fa {
+                        margin-right:$offset-1;
+                    }
+                }
+                .nav-next {
+                    text-align:right;
+                    > a > i.fa {
+                        margin-left:$offset-1;
+                    }
+                }
+            }
+        }
+
+    }
+    
+}
+
+

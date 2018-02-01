@@ -1,6 +1,21 @@
 /* _mixins-buttons.scss */
 
+$height-disc-button:50px;
+
 @mixin btn-base() {  
 	      
+}
+
+@mixin btn-disc() {
+    width:$height-disc-button;
+    height:$height-disc-button;
+    line-height:$height-disc-button;
+    padding:0;
+    background-color: $color_primary;
+    @include border-radius(#{$height-disc-button / 2});
+
+    > i.fa {
+        line-height:$height-disc-button;
+    }
 }
 /* [END] g_btn-base() */
