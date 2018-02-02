@@ -16,6 +16,14 @@
         }        
     }
 
+    &.news {
+        .grid-nav-top {
+            > .nav-search {
+                padding:0 0 $offset-g2 0;
+            }        
+        }
+    }
+
     &.news-lite {
 
         .grid-nav-top {
@@ -62,7 +70,7 @@
                         > .post_date,
                         > .title,
                         > .title_link,
-                        > .read_more {
+                        > .read_moreXXX {
                             text-align:left;
                             padding:0 !important;
                         }
@@ -102,7 +110,7 @@
                         > .title,
                         > .excerpt,
                         > .title_link,
-                        > .read_more {
+                        > .read_moreXXX {
                             text-align:left;
                             padding:0 0 5px 0 !important;
                         }
