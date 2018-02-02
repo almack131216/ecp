@@ -24,14 +24,15 @@ function ecp_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
+	// 180202: amcust - remove 'Updated on' and 'Posted on' labels
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$posted_on = sprintf(
-			esc_html_x( 'Updated on %s', 'post date', 'ecp' ),
+			esc_html_x( '%s', 'post date', 'ecp' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 	} else {
 		$posted_on = sprintf(
-			esc_html_x( 'Posted on %s', 'post date', 'ecp' ),
+			esc_html_x( '%s', 'post date', 'ecp' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 	}

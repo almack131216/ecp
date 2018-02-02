@@ -43,6 +43,42 @@
                     background:$color-debug3;
                     padding:$offset-g2;
                     padding-left:0;
+
+                    .entry-meta {
+                        &:before {
+                            @extend .fa-dummy;
+                            content:"\f017" !important;
+                        }
+                    }
+
+                    @media (max-width:$bp-sm-1){
+                        width:100%;
+                        padding:$offset-2 0;
+                        display:flex;
+
+                        .entry-meta {
+                            width:100%;
+                            line-height:$offset-g2;
+                        }
+
+                        .contactus-social-icons-wrap {
+                            width:auto;
+                            padding:0;
+                            text-align:right;
+
+                            h4 {display:none;}
+
+                            .contactus-social-icons {
+                                width:100px;
+                                text-align:right;
+                                display:flex;
+
+                                > a:first-child {
+                                    margin-left:auto;
+                                }
+                            }
+                        }
+                    }
                 }
 
                 .col-content {
@@ -50,6 +86,10 @@
                     float:left;
                     width:70%;
                     background:$color-debug;
+
+                    @media (max-width:$bp-sm-1){
+                        width:100%;
+                    }
 
                     .post-featured-image {
                         width: 100%;
@@ -83,6 +123,21 @@
                 width: 100%;
                 max-width: 100%;
                 padding: 0;
+
+                @media (max-width:$bp-sm-1){
+                    .nav-previous,
+                    .nav-next {
+                        > a {
+                            i.fa {
+                                margin-left:0px !important;
+                                margin-right:0px !important;
+                            }
+                            > .story-title {                        
+                                display:none;
+                            }
+                        }
+                    }
+                }
 
                 .nav-previous {
                     text-align:left;
