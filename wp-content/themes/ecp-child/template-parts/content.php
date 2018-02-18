@@ -43,7 +43,7 @@
 			<?php
 				if ( has_post_thumbnail() ) {
 					echo('<div class="post-featured-image">');
-					the_post_thumbnail();
+					the_post_thumbnail('large');
 					echo('</div>');
 				}
 			?>
