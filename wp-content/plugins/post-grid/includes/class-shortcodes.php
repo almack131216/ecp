@@ -100,7 +100,13 @@ class class_post_grid_shortcodes{
 					}
 				$odd_even++;
 				
-				$html.='<div  class="item mix skin '.$odd_even_calss.' '.$skin.' '.post_grid_term_slug_list(get_the_ID()).'">';
+				// $html.='<div  class="item mix skin '.$odd_even_calss.' '.$skin.' '.post_grid_term_slug_list(get_the_ID()).'">';
+				$backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), $featured_img_size );
+
+				$html.='<div class="item mix skin '.$odd_even_calss.' '.$skin.' bg-img"';
+				// '.post_grid_term_slug_list(get_the_ID()).'"';
+				$html.=' style="background-image: url('.$backgroundImg[0].');"';
+				$html.='>';
 
 				include post_grid_plugin_dir.'/grid-items/layer-media.php';
 				include post_grid_plugin_dir.'/grid-items/layer-content.php';
