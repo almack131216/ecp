@@ -8,8 +8,8 @@ installer-log.txt
 wp-admin
 wp-contentXXX
 wp-content/cache
-wp-content/themes/ecp-child/style.css
-wp-content/themes/ecp-child/style.map
+##wp-content/themes/ecp-child/style.css
+##wp-content/themes/ecp-child/style.map
 wp-content/plugins/*
 !wp-content/plugins/forget-about-shortcode-buttons
 wp-content/plugins/forget-about-shortcode-buttons/*
@@ -33,7 +33,9 @@ wp-content/upgrade
 wp-content/uploads
 wp-content/wptouch-data
 wp-content/mmr
-wp-includes
+wp-includes/*
+!wp-includes/general-template.php
+!wp-includes/link-template.php
 wp-snapshots
 upgrade
 uploads
