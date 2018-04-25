@@ -2,7 +2,7 @@
 Theme Name: Child
 Template: ecp
 Version: 1.0.1510691843
-Updated: 2017-11-14 21:37:23
+Updated: 2018-04-25 15:00:00
 
 */
 
@@ -22,6 +22,8 @@ Updated: 2017-11-14 21:37:23
 @import 'modules/_four-main.scss';
 @import 'modules/_people.scss';
 @import 'modules/_typography.scss';
+@import 'modules/_tabs.scss';
+@import 'modules/_buttons-sidetabs.scss';
 
 /* LAYOUTS - page layout styles */
 @import 'layouts/_offsets.scss';

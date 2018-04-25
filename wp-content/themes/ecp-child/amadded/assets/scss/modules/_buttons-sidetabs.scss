@@ -1,0 +1,70 @@
+
+/* _buttons-sidetabs.scss */
+
+$btn-width-apply: 130px;
+$btn-width-apply-cz: 150px;
+
+#mySidenav {
+
+    @media (max-width:$bp-sm-1) {
+        display:none;
+    }
+
+    &.czXXX {
+        a {
+            width:$btn-width-apply-cz;
+            right: -60px;
+
+            &.tab-newsletter {
+                top: calc(40% + #{$btn-width-apply-cz + $offset-1});
+            }
+
+            &:hover {
+                right: -55px; /* On mouse-over, make the elements appear as they should */
+            }
+        }
+    }
+
+    a {
+        @include btn-base();
+        position: fixed; /* Position them relative to the browser window */
+        right: -50px; /* Position them outside of the screen */
+        height:70px;
+        width:$btn-width-apply;
+        transition: 0.3s; /* Add transition on hover */        
+        padding:$offset-1 0 $offset-g2 0; /* 15px padding */
+        color: white; /* White text color */
+        border-radius: 5px 5px 0px 0px; /* Rounded corners on the top right and bottom right side */
+        text-align: center;
+        -ms-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        width: $btn-width-apply;
+        border-color: white;
+
+
+        /* The about link: 20px from the top with a green background */
+        &.tab-apply {
+            top: 40%;
+            background-color: $color_secondary;                       
+        }
+
+        &.tab-newsletter {
+            top: 70%;
+            top: calc(40% + #{$btn-width-apply + $offset-1});
+            background-color: $color-primary; /* Blue */
+        }
+
+        &:hover {
+            right: -45px; /* On mouse-over, make the elements appear as they should */
+        }
+
+    }
+}
+
+
+
+
+
+
+

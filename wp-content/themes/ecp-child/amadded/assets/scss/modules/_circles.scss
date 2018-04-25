@@ -83,14 +83,35 @@
 /* (END) .circle-container-wrap */
 
 .pagepart_key-facts.cz {
+    padding-bottom:0;
+    
+    &.cz {
+        .circle-container-wrap {
+            .circle-container {
+                .circle {
+                    > .aligner {
+                        padding:$offset-g1 $offset-g1 0 $offset-g1;
+
+                        span {
+                            font-size:10px;
+                        }
+                    }
+                }
+            }
+            /* (END) .circle-container */
+        }
+    }
+    
+}
+/* [END] .pagepart_key-facts.cz */
+
+.pagepart_our-results {
     .circle-container-wrap {
         .circle-container {
             .circle {
                 > .aligner {
-                    padding:$offset-g1 $offset-g1 0 $offset-g1;
-
                     span {
-                        font-size:10px;
+                        font-size:14px;
                     }
                 }
             }
@@ -98,7 +119,7 @@
         /* (END) .circle-container */
     }
 }
-/* [END] .pagepart_key-facts.cz */
+/* [END] .pagepart_our-results */
 
 body.page-id-17,
 body.page-id-63 {

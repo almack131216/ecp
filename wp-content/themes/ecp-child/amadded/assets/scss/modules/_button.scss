@@ -1,11 +1,21 @@
 /* _button.scss */
 
-.fasc-button {
+@mixin btn-base() {
+    font-weight: normal;
+    text-transform: inherit;
     background:white;
     border:1px solid $color_primary;
     color:$color_primary;
-    margin:5px 0;
+    margin:0;// 5px 0
     text-decoration:none;
+    padding:$font-size_button-padding;
+    font-size:$font-size_button;
+    line-height:$font-size_button-line-height;
+}
+
+
+.fasc-button {
+    @include btn-base();    
 
     &.fasc-size-small {
         padding:$font-size_button-padding-sm;
@@ -16,9 +26,6 @@
 
     &.fasc-size-default,
     &.fasc-size-medium {
-        padding:$font-size_button-padding;
-        font-size:$font-size_button;
-        line-height:$font-size_button-line-height;
         @include border-radius($font-size_button-border-radius);
     }
 
