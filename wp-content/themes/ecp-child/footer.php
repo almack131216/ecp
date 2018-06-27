@@ -36,6 +36,25 @@
 </div><!-- #page -->
 <a href="#top" id="to-the-top"><i class="fa fa-chevron-up"></i></a>
 
+<?php
+//echo '???' . $lang;
+if ( $lang === 'cs') {
+  ?>
+<div id="mySidenav" class="sidenav cz">
+  <a href="https://www.englishcollege.cz/cs/o-nas-a-jak-se-prihlasit/#jak-se-prihlasit" class="tab-apply">Přihlaste se</a>
+  <a href="https://inewsletter.co/the-english-college-in-prague/latest" class="tab-newsletter" target="_blank">Newsletter</a>
+</div>
+<?php
+} else {
+	?>
+<div id="mySidenav" class="sidenav">
+  <a href="https://www.englishcollege.cz/why-us-how-to-apply/#how-to-apply" class="tab-apply">Apply Today</a>
+  <a href="https://inewsletter.co/the-english-college-in-prague/latest" class="tab-newsletter" target="_blank">Newsletter</a>
+</div>
+<?php
+}
+?>
+
 <?php wp_footer(); ?>
 
 </body>
