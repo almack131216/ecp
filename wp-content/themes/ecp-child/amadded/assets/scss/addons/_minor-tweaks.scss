@@ -65,8 +65,20 @@ ul.elastislide-list li:first-child:nth-last-child(1) {
 #main .layer-content > .element_2.post_date {font-size:16px;}
 #main .layer-content > .element_3.excerpt {font-size:16px;line-height:24px;}
 #main .layer-content > a.element_4.read_more {font-size:16px !important;line-height:24px !important;}
-.single-post #main article > header {border:0px}
-.single-post #main article .amcust-news-wrap .col-brief {padding-top:0px}
+
+.single-post,
+.single-team_member {
+    #main article {
+        > header {
+            border:0px
+        }
+
+        .amcust-news-wrap .col-brief {
+            padding-top:0px
+        }
+    }
+}
+
 
 .row-box {
 
@@ -115,4 +127,22 @@ ul.elastislide-list li:first-child:nth-last-child(1) {
         min-height:500px;
         margin:0 auto;
     }
+}
+
+
+.grid_circles#sc_our_team .sc_team_member .sc_team_member_name,
+.grid_circles2#sc_our_team .sc_team_member .sc_team_member_name {
+    width: 100%;
+    left: 0;
+    top: 75%;
+    padding: 10px 40px;
+    height: 25%;
+}
+
+.grid#sc_our_team .sc_team_member:hover .sc_team_member_name,
+.grid#sc_our_team .sc_team_member:hover .sc_team_member_jobtitle,
+.grid_circles#sc_our_team .sc_team_member:hover .sc_team_member_name,
+.grid_circles#sc_our_team .sc_team_member:hover .sc_team_member_jobtitle {
+    left: 0;
+    top:110%;
 }

@@ -1,5 +1,6 @@
 
-.single-post {
+.single-post,
+.single-team_member {
 
     #main {
         text-align:center;
@@ -94,8 +95,16 @@
                     .post-featured-image {
                         width: 100%;
                         max-width: 100%;
-                        margin: 0 auto;
+                        margin: 0 auto $offset-g2 auto;
                         padding: 0;
+
+                        &.float-image-right {
+                            @media (min-width:$bp-sm){
+                                float:right;
+                                width:40%;
+                                margin-left:$offset-g2;
+                            }
+                        }
 
                         > img {
                             max-width: 100%;

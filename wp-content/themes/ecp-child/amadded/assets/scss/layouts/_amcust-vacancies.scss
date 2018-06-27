@@ -1,0 +1,54 @@
+
+/* _amcust-vacancies.scss */
+
+.single-post {
+
+    #main {
+
+        article.category-vacancies + .navigation.post-navigation {
+            display:none;
+        }
+
+        article.category-vacancies {
+            .post-featured-image {
+
+            }
+
+            .job-app-form-wrap {
+                padding:$offset-g2;
+                background:#f0f0f0;
+                border:1px solid black;
+            }
+            .wpcf7 {
+                form {
+                    label {
+                        font-weight:bold;
+                    }
+
+                    input[type="text"],
+                    input[type="email"],
+                    textarea {
+                        width:100%;
+                        max-width:300px;
+                        border:1px solid #ccc;
+                        min-height:$offset-g2;
+                        line-height:$offset-g2;
+                    }
+
+                    textarea {
+                        line-height:$offset-2;
+                        height:200px;
+                    }
+
+                    input[type="submit"] {
+                        @extend .fasc-button;
+                    }
+                }
+            }
+        }
+
+    }
+    
+}
+
+
