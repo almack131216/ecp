@@ -42,7 +42,9 @@
 		<div class="col-content">
 			<?php
 				if ( has_post_thumbnail() ) {
-					echo('<div class="post-featured-image">');
+					$appendClass = '';
+					if(in_category( 2467 ) || in_category( 2469 )) $appendClass .= ' float-image-right';
+					echo('<div class="post-featured-image'.$appendClass.'">');					
 					the_post_thumbnail('large');
 					echo('</div>');
 				}

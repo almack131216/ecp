@@ -105,3 +105,101 @@
 
     }
 }
+
+
+.vc_gitem-animate-slideBottom .vc_gitem-zone-b {
+    background: rgba(37,37,89,0.7) !important;
+    transition: all 0.5s ease !important;
+
+    .vc_gitem-row-position-bottom {
+        color:white;
+        bottom: $offset-g2;
+    }
+}
+
+.vc_basic_grid {
+    padding-top:$offset-g2;
+}
+
+.vc_grid.vc_row.vc_grid-gutter-30px .vc_grid-item {
+    @media (max-width:$bp-sm-1) and (min-width:$bp-xs) {
+        padding-bottom:$offset-g1 !important;
+    }
+}
+
+.vc_grid-item {
+    .vc_gitem-animated-block {
+        
+        @media (max-width:$bp-sm-1) and (min-width:$bp-xs) {
+            width: 30%;
+            float: left;
+        }
+
+        .vc_gitem-zone {
+            box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+            max-width:180px;
+            margin:0 0 $offset-g1 0;
+
+            @media (min-width:$bp-xs) and (max-width:$bp-sm-1) {
+                max-width:100%;
+                margin:0 $offset-g1 0 0;
+            }
+
+        }
+    }
+    .vc_gitem-zone.vc_gitem-zone-c {
+        background:white !important;
+
+        @media (max-width:$bp-sm-1) and (min-width:$bp-xs) {
+            width: 70%;
+            float: left;
+        }
+        
+    }
+
+    .vc_gitem_row {
+        .vc_gitem-col {
+            padding:0 $offset-g1 0 0;
+            background: white;
+
+            .vc_custom_heading {
+                margin:$offset-g1 0 0 0;
+
+                h4 {
+                    font-size:1em;
+                }
+            }
+            
+            .job_title {
+                font-size:0.9em;
+            }
+
+        }
+    }
+}
+
+.slt_quote,
+.ib_quote,
+.hof_quote,
+.st_quote,
+.tal_quote,
+.stu_quote,
+.pat_quote,
+.par_quote {
+    display:none;
+}
+
+
+.people-slt-wrap .slt_quote,
+.people-ib-wrap .ib_quote,
+.people-hof-wrap .hof_quote,
+.people-st-wrap .st_quote,
+.people-tal-wrap .tal_quote,
+.people-stu-wrap .stu_quote,
+.people-pat-wrap .pat_quote,
+.people-par-wrap .par_quote {
+    display:block;
+    font-style:italic;
+    color:#666;
+    font-size: 0.9em;
+}
