@@ -30,7 +30,10 @@ add_shortcode( 'fact_container', 'amcust_sc_fact_container' );
 
 function amcust_sc_fact_circle( $atts = array() ) {
     //requires 2 attributes (strong + small text)
-    $contentBuild = '<li class="circle"><div class="aligner">';
+    $appendClass = '';
+    if($atts['class']) $appendClass = ' '.$atts['class'];
+
+    $contentBuild = '<li class="circle"><div class="aligner'.$appendClass.'">';
     $contentBuild .= '<strong>'. $atts['strong'] .'</strong>';
     $contentBuild .= '<span>'. $atts['small'] .'</span>';
     $contentBuild .= '</div></li>';
