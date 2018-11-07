@@ -45,12 +45,12 @@
 
             > .aligner {
                 height: 80px;
-                width: 120px;
+                width: 100px;
                 padding: 0;
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                margin: -40px 0 0 -60px;
+                margin: -40px 0 0 -50px;
                 text-align: center;
 
                 &.nudge-down,
@@ -94,7 +94,11 @@
             .circle-container {
                 .circle {
                     > .aligner {
-                        padding:$offset-g1 $offset-g1 0 $offset-g1;
+                        // padding:$offset-g1 $offset-g1 0 $offset-g1;
+                        width:120px;
+                        margin-left:-60px;
+                        height:100px;
+                        margin-top:-50px;
 
                         span {
                             font-size:10px;

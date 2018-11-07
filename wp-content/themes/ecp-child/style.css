@@ -2,7 +2,7 @@
 Theme Name: Child
 Template: ecp
 Version: 1.0.1510691843
-Updated: 2018-08-22 00:00:00
+Updated: 2018-08-27 00:00:00
 
 */
 /* BASE - base styles, variables, mixins etc */
@@ -132,12 +132,12 @@ Updated: 2018-08-22 00:00:00
 
 .circle-container-wrap ul.circle-container li.circle > .aligner {
   height: 80px;
-  width: 120px;
+  width: 100px;
   padding: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -40px 0 0 -60px;
+  margin: -40px 0 0 -50px;
   text-align: center;
 }
 
@@ -169,7 +169,10 @@ Updated: 2018-08-22 00:00:00
 }
 
 .pagepart_key-facts.cz .circle-container-wrap .circle-container .circle > .aligner {
-  padding: 15px 15px 0 15px;
+  width: 120px;
+  margin-left: -60px;
+  height: 100px;
+  margin-top: -50px;
 }
 
 .pagepart_key-facts.cz .circle-container-wrap .circle-container .circle > .aligner span {
@@ -1295,7 +1298,7 @@ footer.site-footer #footer-menu-ecp ul.menu > li > ul.sub-menu > li > a {
 
 .pagepart.banner > .pagepart-content p a img {
   width: 100%;
-  max-width: 1250px;
+  max-width: 916px !important;
   height: auto;
 }
 

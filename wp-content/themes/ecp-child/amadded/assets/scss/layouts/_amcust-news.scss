@@ -15,7 +15,12 @@
             padding: $offset-g1;
         }
 
-        article {            
+        article {
+
+            &.category-people,
+            &.category-lide {
+                margin-top:$offset-g2;
+            }        
 
             > header {
                 display:block;
@@ -113,6 +118,17 @@
                         }
                     }
 
+                    .people-title {
+                        margin:0 0 $offset-g1 0;
+                        padding:0;
+
+                        h1,
+                        h2 {
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+
                     .entry-content {
                         width: 100%;
                         max-width: 100%;
@@ -156,6 +172,9 @@
                 }
                 .nav-next {
                     text-align:right;
+                    &.full-width {
+                        width:100%;
+                    }
                     > a > i.fa {
                         margin-left:$offset-1;
                     }
