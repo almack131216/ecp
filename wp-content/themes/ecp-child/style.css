@@ -2,7 +2,7 @@
 Theme Name: Child
 Template: ecp
 Version: 1.0.1510691843
-Updated: 2018-08-27 00:00:00
+Updated: 2019-04-19 00:00:00
 
 */
 /* BASE - base styles, variables, mixins etc */
@@ -949,6 +949,29 @@ header.site-header > .page-box > .site-branding {
   /* (END) .site-title */
 }
 
+header.site-header > .page-box > .site-branding.bigger-emblem {
+  /* (END) .site-title */
+}
+
+header.site-header > .page-box > .site-branding.bigger-emblem > .site-title .site-logo {
+  height: 120px;
+}
+
+@media (max-width: 767px) {
+  header.site-header > .page-box > .site-branding.bigger-emblem > .site-title {
+    position: relative;
+    width: 130px;
+    height: 120px;
+    overflow: hidden;
+    /* (END) a */
+  }
+  header.site-header > .page-box > .site-branding.bigger-emblem > .site-title a > img {
+    width: 440px;
+    max-width: 440px;
+    height: 120px;
+  }
+}
+
 @media (max-width: 599px) {
   header.site-header > .page-box > .site-branding > .site-title {
     position: relative;
@@ -1569,7 +1592,7 @@ footer.site-footer #footer-menu-ecp ul.menu > li > ul.sub-menu > li > a {
 }
 
 .vc_grid-item .vc_gitem_row .vc_gitem-col .vc_custom_heading {
-  margin: 15px 0 0 0;
+  margin: 0;
 }
 
 .vc_grid-item .vc_gitem_row .vc_gitem-col .vc_custom_heading h4 {
@@ -1603,6 +1626,7 @@ footer.site-footer #footer-menu-ecp ul.menu > li > ul.sub-menu > li > a {
   font-style: italic;
   color: #666;
   font-size: 0.9em;
+  padding-bottom: 15px;
 }
 
 /* _post-grid-news.scss */
@@ -1691,12 +1715,16 @@ footer.site-footer #footer-menu-ecp ul.menu > li > ul.sub-menu > li > a {
 /* _table-press.scss */
 table#tablepress-TermDates2017 > thead > tr > th,
 table#tablepress-TermDates2018 > thead > tr > th,
+table#tablepress-TermDates1920 > thead > tr > th,
+table#tablepress-Holidays1920 > thead > tr > th,
 table#tablepress-harmonogram1718 > thead > tr > th,
 table#tablepress-Harmonogram2018 > thead > tr > th,
 table#tablepress-PublicHolidays1718 > thead > tr > th,
 table#tablepress-Statnisvatky1718 > thead > tr > th,
 table#tablepress-PublicHolidays1819 > thead > tr > th,
 table#tablepress-Statnisvatky1819 > thead > tr > th,
+table#tablepress-PublicHolidays1920 > thead > tr > th,
+table#tablepress-Statnisvatky1920 > thead > tr > th,
 table#tablepress-EntranceExamResultsEnglish > thead > tr > th,
 table#tablepress-EntranceExamResultsEnglishCZ > thead > tr > th,
 table#tablepress-EntranceExamResultsCzech > thead > tr > th,
@@ -1709,12 +1737,16 @@ table#tablepress-EntranceExamResultsMathsCZ > thead > tr > th {
 
 table#tablepress-TermDates2017 > tbody > tr > td,
 table#tablepress-TermDates2018 > tbody > tr > td,
+table#tablepress-TermDates1920 > tbody > tr > td,
+table#tablepress-Holidays1920 > tbody > tr > td,
 table#tablepress-harmonogram1718 > tbody > tr > td,
 table#tablepress-Harmonogram2018 > tbody > tr > td,
 table#tablepress-PublicHolidays1718 > tbody > tr > td,
 table#tablepress-Statnisvatky1718 > tbody > tr > td,
 table#tablepress-PublicHolidays1819 > tbody > tr > td,
 table#tablepress-Statnisvatky1819 > tbody > tr > td,
+table#tablepress-PublicHolidays1920 > tbody > tr > td,
+table#tablepress-Statnisvatky1920 > tbody > tr > td,
 table#tablepress-EntranceExamResultsEnglish > tbody > tr > td,
 table#tablepress-EntranceExamResultsEnglishCZ > tbody > tr > td,
 table#tablepress-EntranceExamResultsCzech > tbody > tr > td,
@@ -1726,12 +1758,16 @@ table#tablepress-EntranceExamResultsMathsCZ > tbody > tr > td {
 
 table#tablepress-TermDates2017 > tbody > tr:nth-child(odd),
 table#tablepress-TermDates2018 > tbody > tr:nth-child(odd),
+table#tablepress-TermDates1920 > tbody > tr:nth-child(odd),
+table#tablepress-Holidays1920 > tbody > tr:nth-child(odd),
 table#tablepress-harmonogram1718 > tbody > tr:nth-child(odd),
 table#tablepress-Harmonogram2018 > tbody > tr:nth-child(odd),
 table#tablepress-PublicHolidays1718 > tbody > tr:nth-child(odd),
 table#tablepress-Statnisvatky1718 > tbody > tr:nth-child(odd),
 table#tablepress-PublicHolidays1819 > tbody > tr:nth-child(odd),
 table#tablepress-Statnisvatky1819 > tbody > tr:nth-child(odd),
+table#tablepress-PublicHolidays1920 > tbody > tr:nth-child(odd),
+table#tablepress-Statnisvatky1920 > tbody > tr:nth-child(odd),
 table#tablepress-EntranceExamResultsEnglish > tbody > tr:nth-child(odd),
 table#tablepress-EntranceExamResultsEnglishCZ > tbody > tr:nth-child(odd),
 table#tablepress-EntranceExamResultsCzech > tbody > tr:nth-child(odd),
@@ -1743,12 +1779,16 @@ table#tablepress-EntranceExamResultsMathsCZ > tbody > tr:nth-child(odd) {
 
 table#tablepress-TermDates2017 > tbody.row-hover > tr:hover > td,
 table#tablepress-TermDates2018 > tbody.row-hover > tr:hover > td,
+table#tablepress-TermDates1920 > tbody.row-hover > tr:hover > td,
+table#tablepress-Holidays1920 > tbody.row-hover > tr:hover > td,
 table#tablepress-harmonogram1718 > tbody.row-hover > tr:hover > td,
 table#tablepress-Harmonogram2018 > tbody.row-hover > tr:hover > td,
 table#tablepress-PublicHolidays1718 > tbody.row-hover > tr:hover > td,
 table#tablepress-Statnisvatky1718 > tbody.row-hover > tr:hover > td,
 table#tablepress-PublicHolidays1819 > tbody.row-hover > tr:hover > td,
 table#tablepress-Statnisvatky1819 > tbody.row-hover > tr:hover > td,
+table#tablepress-PublicHolidays1920 > tbody.row-hover > tr:hover > td,
+table#tablepress-Statnisvatky1920 > tbody.row-hover > tr:hover > td,
 table#tablepress-EntranceExamResultsEnglish > tbody.row-hover > tr:hover > td,
 table#tablepress-EntranceExamResultsEnglishCZ > tbody.row-hover > tr:hover > td,
 table#tablepress-EntranceExamResultsCzech > tbody.row-hover > tr:hover > td,

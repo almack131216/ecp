@@ -34,12 +34,15 @@
 
 	<header id="masthead" class="site-header" role="banner">
     <div class="page-box">
-  		<div class="site-branding">
+  		<div class="site-branding bigger-emblem">
   			<?php
+        $imgLogo = '/assets/ECP-logo-full-white-transparent-25-year-190418.png';
+			//$imgLogo = '/assets/ECP-logo-full-white-transparent.svg';
+
   			if ( is_front_page() && is_home() ) : ?>
-  				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php bloginfo('template_directory'); ?>/assets/ECP-logo-full-white-transparent.svg" alt="English College Prague" class="site-logo"></a></h1>
+  				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php bloginfo('template_directory');echo $imgLogo; ?>" alt="English College Prague" class="site-logo"></a></h1>
   			<?php else : ?>
-  				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php bloginfo('template_directory'); ?>/assets/ECP-logo-full-white-transparent.svg" alt="English College Prague" class="site-logo"></a></div>
+  				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php bloginfo('template_directory');echo $imgLogo; ?>" alt="English College Prague" class="site-logo"></a></div>
   			<?php
   			endif;
 

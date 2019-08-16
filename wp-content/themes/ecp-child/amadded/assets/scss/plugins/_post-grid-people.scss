@@ -163,7 +163,7 @@
             background: white;
 
             .vc_custom_heading {
-                margin:$offset-g1 0 0 0;
+                margin:0;//$offset-g1 0 0 0;
 
                 h4 {
                     font-size:1em;
@@ -202,4 +202,5 @@
     font-style:italic;
     color:#666;
     font-size: 0.9em;
+    padding-bottom:$offset-g1;
 }

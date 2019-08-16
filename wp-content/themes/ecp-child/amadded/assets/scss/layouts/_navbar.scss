@@ -3,6 +3,34 @@
 header.site-header {
     > .page-box {
         > .site-branding {
+
+            &.bigger-emblem {
+                > .site-title {
+
+                    .site-logo {
+                        height: 120px;
+                    }
+
+                    @media (max-width:767px){
+                        position: relative;
+                        width: 130px;
+                        height: 120px;
+                        overflow:hidden;
+
+                        a {
+                            > img {
+                                width:440px;
+                                max-width:440px;
+                                height:120px;
+                                // margin:-3px 0 0 -3px;
+                            }
+                        }
+                        /* (END) a */
+                    }
+                }
+                /* (END) .site-title */
+            }
+
             > .site-title {
 
                 @media (max-width:599px){
