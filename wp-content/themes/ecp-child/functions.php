@@ -126,22 +126,21 @@ add_shortcode( 'activeplugins', function(){
 
 
 /* list posts for MORE PROGRAMME */
-add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [] ){	
+add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [] ){	    
 
-    $catTitlesUsed = [];
-
+    $depthCount = 0;
+    $allTitlesUsed = [];
     $catPosts = '<br><br>';
     print_r($atts);
 
     $catId = $atts['cat_id'];
+    $allTitlesUsed[] = $catId;
+
     $catDesc = false;//$atts['cat_desc'];
-    $hasSc = $atts['has_sc'];
-    $hasSsc = $atts['has_ssc'];
+    $hasSsc = $atts['depth'] == 3 ? true : false;//$atts['has_ssc'];
 
-    // if($hasSsc){
-        $catPosts .= '<h1>FORCE: '.get_cat_name($catId).' ('.$catId.')</h1>';
-    // }
-
+    $catPosts .= '<h1>'.$depthCount.'. '.get_cat_name($catId).' ['.$catId.']</h1>';
+    
     $args = array(
         'child_of' => $catId,
         'orderby' => 'description',
@@ -153,35 +152,47 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
     $subcategories = get_categories( $args );
 
     if($subcategories){        
+        // $depthCount++;
+
 
         foreach($subcategories as $subcategory) {
-            
-            if( !in_array($subcategory->term_id, $catTitlesUsed)){
-                $catTitlesUsed[] = $subcategory->term_id;
-                $catPosts .= '<h3>_____| ';
-                if($subcategory->category_parent != $catId) $catPosts .= '_____| ';
-                $catPosts .= $subcategory->name;
-                $catPosts .= ' ('.$subcategory->term_id.')';
-                $catPosts .= ' |_____</h3>';
-            }
+            $depthCount = $hasSsc ? 1 : 0;
+            $catTitlesUsed = [];
+            $catTitlesUsed[] = $catId;
 
-            // print_r($subcategory);
-            // $catPosts .= '<h3>1. [c'.$catId.' -> sc'.$subcategories[0]->term_id.'] SC: '.$subcategories[0]->name.'!!!</h3>';
-            // if($catDesc && $subcategories[0]->description) $catPosts .= '<p>Description: '.$subcategories[0]->description.'</p>';
             $catPosts .= '<ul>';
 
             if( ($catId != $subcategory->parent && $hasSsc) || ($catId == $subcategory->parent && !$hasSsc) ){
 
-                
-
                 $catPosts .= '<li>';
 
+
+                if($catId != $subcategory->category_parent) {
+                    if(!in_array($subcategory->category_parent, $allTitlesUsed)) $catPosts .= '<h1>'.$depthCount.'. '.get_cat_name($subcategory->category_parent).'</h1>';
+                    $catTitlesUsed[] = $subcategory->category_parent;
+                    $allTitlesUsed[] = $subcategory->category_parent;
+                    // if(!in_array()) $catPosts .= '<h5>['.get_cat_name($subcategory->category_parent).']</h5>';
+                }
+
+                if( !in_array($subcategory->term_id, $catTitlesUsed)){
+                    $depthCount++;
+                    $catPosts .= '<h5>'.$depthCount.'. '.get_cat_name($subcategory->term_id).'</h5>';
+                    $catTitlesUsed[] = $subcategory->term_id;
+                }
+
                 
 
-                $catPosts .= '<h4>2. [C'.$catId;
-                if($catId != $subcategory->category_parent) $catPosts .= ' -> sc'.$subcategory->category_parent;
-                if($catId != $subcategory->term_id) $catPosts .= ' -> ssc'.$subcategory->term_id;
-                $catPosts .= '] SSC: <a href="' . get_category_link( $subcategory->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $subcategory->name ) . '" ' . '>' . $subcategory->name.'</a> ('.$subcategory->count.')</h4> ';
+                $catPosts .= '<h4>'.$depthCount.'. [';
+                for($i=0;$i<sizeof($catTitlesUsed);$i++){
+                    // if($i>0) $catPosts .= ', ';
+                    $catPosts .= '--'.$catTitlesUsed[$i].'--';
+                }
+                $catPosts .= '] ';
+                $catPosts .= '<a href="' . get_category_link( $subcategory->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $subcategory->name ) . '" ' . '>' . $subcategory->name.'</a>';
+                $catPosts .= ' ('.$subcategory->count.')';
+                $catPosts .= '</h4>';
+
+                
                 // if($catDesc && $subcategory->description) $catPosts .= '<p>Description: '. $subcategory->description . '</p>';
                 // echo '<p>Subcat ID: '. $subcategory->term_id . '</p>'; 
                 
@@ -201,18 +212,11 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
                     )
                 );
                 $featuredPosts = new WP_Query( $postArgs );//'type=post&posts_per_page=5'
-                if( $featuredPosts->have_posts() ):            
-                    // echo '<div class="row row-homepage-wrap">';
-                    //     echo '<div class="col-md-12">';
-                    //     // print_r($subcategory);
-                    //     echo $subcategory->name;
-                    //     // echo amactive_return_title_splitter( array('cat' => $subcategory->term_id) );
-                    //     echo '<hr/>';
-                    //     echo '</div>';
-                    // echo '</div>';
+                
+                if( $featuredPosts->have_posts() ):
                     
                     $catPosts .= '<ul>';
-                    // echo '<h3>'.$subcategory->description.'</h3>';
+                    
                     while ( $featuredPosts->have_posts() ): $featuredPosts->the_post();  
                     
                     $thisPost = get_post();
@@ -245,6 +249,7 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
                     
                     wp_reset_postdata();
                     
+                    
                     $catPosts .= '</li>';
                 endif;
 
@@ -257,13 +262,8 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
     }
 
     return $catPosts;
-
-    // echo do_shortcode('[/show_more]');
-    // echo '</div>';//.expandable
-
-
 });
-// ow_categories_with_subcategories_and_posts( 'more-programme', 'post' );
+
 
 function category_has_parent($catid){
     $category = get_category($catid);
