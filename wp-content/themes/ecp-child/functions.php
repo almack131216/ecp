@@ -134,9 +134,13 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
     print_r($atts);
 
     $catId = $atts['cat_id'];
-    $catDesc = $atts['cat_desc'];
+    $catDesc = false;//$atts['cat_desc'];
     $hasSc = $atts['has_sc'];
     $hasSsc = $atts['has_ssc'];
+
+    // if($hasSsc){
+        $catPosts .= '<h1>FORCE: '.get_cat_name($catId).' ('.$catId.')</h1>';
+    // }
 
     $args = array(
         'child_of' => $catId,
@@ -148,22 +152,22 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
 
     $subcategories = get_categories( $args );
 
-    if($subcategories){
-        
+    if($subcategories){        
 
         foreach($subcategories as $subcategory) {
             
-            if( !in_array($subcategory->name, $catTitlesUsed)){
+            if( !in_array($subcategory->term_id, $catTitlesUsed)){
                 $catTitlesUsed[] = $subcategory->term_id;
                 $catPosts .= '<h3>_____| ';
                 if($subcategory->category_parent != $catId) $catPosts .= '_____| ';
                 $catPosts .= $subcategory->name;
+                $catPosts .= ' ('.$subcategory->term_id.')';
                 $catPosts .= ' |_____</h3>';
             }
 
             // print_r($subcategory);
-            $catPosts .= '<h3>1. [c'.$catId.' -> sc'.$subcategories[0]->term_id.'] SC: '.$subcategories[0]->name.'!!!</h3>';
-            if($catDesc && $subcategories[0]->description) $catPosts .= '<p>Description: '.$subcategories[0]->description.'</p>';
+            // $catPosts .= '<h3>1. [c'.$catId.' -> sc'.$subcategories[0]->term_id.'] SC: '.$subcategories[0]->name.'!!!</h3>';
+            // if($catDesc && $subcategories[0]->description) $catPosts .= '<p>Description: '.$subcategories[0]->description.'</p>';
             $catPosts .= '<ul>';
 
             if( ($catId != $subcategory->parent && $hasSsc) || ($catId == $subcategory->parent && !$hasSsc) ){
@@ -174,10 +178,11 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
 
                 
 
-                $catPosts .= '<h3>2. [C'.$catId.' -> sc'.$subcategories[0]->term_id;
-                if($subcategories[0]->term_id != $subcategory->term_id) $catPosts .= ' -> ssc'.$subcategory->term_id;
-                $catPosts .= '] SSC: <a href="' . get_category_link( $subcategory->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $subcategory->name ) . '" ' . '>' . $subcategory->name.'</a> ('.$subcategory->count.')</h3> ';
-                if($catDesc && $subcategory->description) $catPosts .= '<p>Description: '. $subcategory->description . '</p>';
+                $catPosts .= '<h4>2. [C'.$catId;
+                if($catId != $subcategory->category_parent) $catPosts .= ' -> sc'.$subcategory->category_parent;
+                if($catId != $subcategory->term_id) $catPosts .= ' -> ssc'.$subcategory->term_id;
+                $catPosts .= '] SSC: <a href="' . get_category_link( $subcategory->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $subcategory->name ) . '" ' . '>' . $subcategory->name.'</a> ('.$subcategory->count.')</h4> ';
+                // if($catDesc && $subcategory->description) $catPosts .= '<p>Description: '. $subcategory->description . '</p>';
                 // echo '<p>Subcat ID: '. $subcategory->term_id . '</p>'; 
                 
 
