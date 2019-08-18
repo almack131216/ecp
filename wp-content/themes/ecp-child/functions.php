@@ -128,54 +128,64 @@ add_shortcode( 'activeplugins', function(){
 /* list posts for MORE PROGRAMME */
 add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [] ){	
 
+    $catTitlesUsed = [];
+
     $catPosts = '<br><br>';
     print_r($atts);
 
     $catId = $atts['cat_id'];
     $catDesc = $atts['cat_desc'];
+    $hasSc = $atts['has_sc'];
+    $hasSsc = $atts['has_ssc'];
 
-    $args = array('child_of' => $catId);
-    $categories = get_categories( $args );
-
-    // echo '<a href="#" onclick="toggleMore(event)" class="show-more-handle show-more-handle-button" data-more="Show menu items" data-less="Show less">Show</a>';
-    // echo '<div class="expandable">';
-    // echo do_shortcode('[show_more text_more="Read..." text_less="Show less" style="button" section="way-we-teach"]');
-
+    $args = array(
+        'child_of' => $catId,
+        'orderby' => 'description',
+        'order' => 'ASC'
+    );
     
+    //'include' => array(DV_category_News_id, DV_category_Testimonials_id);
 
-    if($categories){
-        $catPosts .= '<ul>';
+    $subcategories = get_categories( $args );
 
-        foreach($categories as $category) {
+    if($subcategories){
+        
+
+        foreach($subcategories as $subcategory) {
             
-            if($catId != $category->parent){
-                $catPosts .= '<li>';
-                $catPosts .= '<h3>['.$category->parent.'] cat: <a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> ('.$category->count.')</h3> ';
-                if($catDesc && $category->description) $catPosts .= '<p> Description: '. $category->description . '</p>';
-                // echo '<p>Subcat ID: '. $category->term_id . '</p>'; 
+            if( !in_array($subcategory->name, $catTitlesUsed)){
+                $catTitlesUsed[] = $subcategory->term_id;
+                $catPosts .= '<h3>_____| ';
+                if($subcategory->category_parent != $catId) $catPosts .= '_____| ';
+                $catPosts .= $subcategory->name;
+                $catPosts .= ' |_____</h3>';
+            }
+
+            // print_r($subcategory);
+            $catPosts .= '<h3>1. [c'.$catId.' -> sc'.$subcategories[0]->term_id.'] SC: '.$subcategories[0]->name.'!!!</h3>';
+            if($catDesc && $subcategories[0]->description) $catPosts .= '<p>Description: '.$subcategories[0]->description.'</p>';
+            $catPosts .= '<ul>';
+
+            if( ($catId != $subcategory->parent && $hasSsc) || ($catId == $subcategory->parent && !$hasSsc) ){
+
                 
-                // $args = array(
-                //     'type' => 'post',
-                //     'posts_per_page' => 4,
-                //     'orderby' => 'post_date',
-                //     'order' => 'DESC',
-                //     'cat' => 2,
-                //     'category__not_in' => 38,
-                //     'meta_query' => array(
-                //         array(
-                //             'key' => '_thumbnail_id',
-                //             'compare' => 'EXISTS'
-                //         ),
-                //     )
-                // );
-                // $carousel = new WP_Query( $args );
-                // if( $carousel->have_posts() ):
+
+                $catPosts .= '<li>';
+
+                
+
+                $catPosts .= '<h3>2. [C'.$catId.' -> sc'.$subcategories[0]->term_id;
+                if($subcategories[0]->term_id != $subcategory->term_id) $catPosts .= ' -> ssc'.$subcategory->term_id;
+                $catPosts .= '] SSC: <a href="' . get_category_link( $subcategory->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $subcategory->name ) . '" ' . '>' . $subcategory->name.'</a> ('.$subcategory->count.')</h3> ';
+                if($catDesc && $subcategory->description) $catPosts .= '<p>Description: '. $subcategory->description . '</p>';
+                // echo '<p>Subcat ID: '. $subcategory->term_id . '</p>'; 
+                
 
                 $postArgs = array(
                     'post_type'  => 'post',
                     'posts_per_page' => 10,
-                    'cat' => $category->term_id,
-                    // 'category__in' => $category->term_id,
+                    'cat' => $subcategory->term_id,
+                    // 'category__in' => $subcategory->term_id,
                     'orderby' => 'post_date',
                     'order' => 'DESC',
                     'meta_query' => array(
@@ -189,19 +199,23 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
                 if( $featuredPosts->have_posts() ):            
                     // echo '<div class="row row-homepage-wrap">';
                     //     echo '<div class="col-md-12">';
-                    //     // print_r($category);
-                    //     echo $category->name;
-                    //     // echo amactive_return_title_splitter( array('cat' => $category->term_id) );
+                    //     // print_r($subcategory);
+                    //     echo $subcategory->name;
+                    //     // echo amactive_return_title_splitter( array('cat' => $subcategory->term_id) );
                     //     echo '<hr/>';
                     //     echo '</div>';
                     // echo '</div>';
                     
                     $catPosts .= '<ul>';
-                    // echo '<h3>'.$category->description.'</h3>';
+                    // echo '<h3>'.$subcategory->description.'</h3>';
                     while ( $featuredPosts->have_posts() ): $featuredPosts->the_post();  
                     
                     $thisPost = get_post();
-                    $catPosts .= '<li>';             
+                    $catPosts .= '<li>';
+                    // $tmp = get_the_category($thisPost->ID);
+                    // print_r($tmp);
+                    // $catPosts .= '<h2>catName? '.$tmp[sizeof($tmp)-1]->cat_name.' ('.sizeof($tmp).')</h2>';
+                    // print_r($tmp);             
                         // echo '<div class="row">';
                         // echo '<div class="col-xs-12">';
                         $catPosts .= '<div class="col-md-6 col-sm-6 col-xs-12 col-portfolio-item item-is-grid is-white">';
@@ -231,6 +245,8 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
 
                 $catPosts .= '<hr/>';
             }
+
+            $catPosts .= '</ul>';
         }
         $catPosts .= '<hr/>';
     }
@@ -243,6 +259,14 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
 
 });
 // ow_categories_with_subcategories_and_posts( 'more-programme', 'post' );
+
+function category_has_parent($catid){
+    $category = get_category($catid);
+    if ($category->category_parent > 0){
+        return true;
+    }
+    return false;
+}
 
 function get_first_paragraph( $getArr ){
     global $post;
