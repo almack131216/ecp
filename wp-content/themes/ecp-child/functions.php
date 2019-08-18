@@ -103,51 +103,6 @@ add_shortcode( 'activeplugins', function(){
 	return $plugins;
 });
 
-
-
-/*
-Plugin Name: Disable CF7 plugin
-Plugin URI: http://www.damiencarbery.com
-Description: Disable Contact Form 7 plugin except for certain pages.
-Author: Damien Carbery
-Version: $Revision: $
-$Id: $
-*/
-add_filter( 'option_active_plugins', 'disable_plugins_per_page' );
-function disable_plugins_per_page( $plugin_list ) {
-    // Quit immediately if in admin area.
-    if ( is_admin() ) {
-        return $plugin_list;
-    }
-    $disable_plugins = array (
-      // Plugin Name => Urls *not* to disable on.
-      'jetpack/jetpack.php',
-      'advanced-custom-fields-pro/acf.php'
-    );
-    $plugins_to_disable = array();
-    foreach ( $plugin_list as $plugin ) {
-        if (true == array_key_exists( $plugin, $disable_plugins ) ) {
-            //error_log( "Found $plugin in list of active plugins." );
-            //if ( false === array_search( $_SERVER['REQUEST_URI'], $disable_plugins[ $plugin ] ) ) {
-                //error_log( "Disable $plugin on ".$_SERVER['REQUEST_URI']."." );
-                //$plugins_to_disable[] = $plugin;
-            //}
-        }
-    }
-    // If there are plugins to disable then remove them from the list,
-    // otherwise return the original list.
-    $plugins_to_disable[] = 'jetpack/jetpack.php';
-    $plugins_to_disable[] = 'js_composer/js_composer.php';
-    $plugins_to_disable[] = 'wordpress-seo-premium/wp-seo-premium.php';
-        if ( count( $plugins_to_disable ) ) {
-        $new_list = array_diff( $plugin_list, $plugins_to_disable );
-        return $new_list;
-    }
-    else {
-        return $plugin_list;
-    }
-}
-
 /*
     //'include' => array(DV_category_News_id, DV_category_Press_id, DV_category_Testimonials_id)
     $args_cat = array(
@@ -173,7 +128,7 @@ function disable_plugins_per_page( $plugin_list ) {
 /* list posts for MORE PROGRAMME */
 add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [] ){	
 
-    echo '<br><br>';
+    $catPosts = '<br><br>';
     print_r($atts);
 
     $catId = $atts['cat_id'];
@@ -182,15 +137,21 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
     $args = array('child_of' => $catId);
     $categories = get_categories( $args );
 
+    // echo '<a href="#" onclick="toggleMore(event)" class="show-more-handle show-more-handle-button" data-more="Show menu items" data-less="Show less">Show</a>';
+    // echo '<div class="expandable">';
+    // echo do_shortcode('[show_more text_more="Read..." text_less="Show less" style="button" section="way-we-teach"]');
+
+    
+
     if($categories){
-        echo '<ul>';
+        $catPosts .= '<ul>';
 
         foreach($categories as $category) {
             
             if($catId != $category->parent){
-                echo '<li>';
-                echo '<h3>['.$category->parent.'] cat: <a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> ('.$category->count.')</h3> ';
-                if($catDesc && $category->description) echo '<p> Description: '. $category->description . '</p>';
+                $catPosts .= '<li>';
+                $catPosts .= '<h3>['.$category->parent.'] cat: <a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> ('.$category->count.')</h3> ';
+                if($catDesc && $category->description) $catPosts .= '<p> Description: '. $category->description . '</p>';
                 // echo '<p>Subcat ID: '. $category->term_id . '</p>'; 
                 
                 // $args = array(
@@ -235,37 +196,49 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
                     //     echo '</div>';
                     // echo '</div>';
                     
-                    echo '<ul>';
+                    $catPosts .= '<ul>';
                     // echo '<h3>'.$category->description.'</h3>';
-                    while ( $featuredPosts->have_posts() ): $featuredPosts->the_post();   
-                        echo '<li>';             
+                    while ( $featuredPosts->have_posts() ): $featuredPosts->the_post();  
+                    
+                    $thisPost = get_post();
+                    $catPosts .= '<li>';             
                         // echo '<div class="row">';
                         // echo '<div class="col-xs-12">';
-                        echo '<div class="col-md-6 col-sm-6 col-xs-12 col-portfolio-item item-is-grid is-white">';
+                        $catPosts .= '<div class="col-md-6 col-sm-6 col-xs-12 col-portfolio-item item-is-grid is-white">';
                         // get_template_part('content');
-                        get_template_part('content', 'list-item');
-                        echo $featuredPosts->post_title;
-                        echo '</div>';                
+                        // $catPosts .= get_template_part('content', 'list-item');
+                        $catPosts .= '<a href="'. esc_url( get_the_permalink() ) .'" title="Link to '.get_the_title().'">';
+                        if( has_post_thumbnail() ):
+                            $catPosts .= get_the_post_thumbnail( $thisPost->ID, 'thumbnail' );
+                        endif;
+                        $catPosts .= get_the_title().' ('.$thisPost->ID.')</a>';
+
+                        
+                        // $catPosts .= $featuredPosts->post_title;
+                        // $catPosts .= do_shortcode('[display-posts id="7200" include_content="true" image_size="thumbnail" wrapper="div"]');
+                        // print_r($featuredPosts);
+                        $catPosts .= '</div>';                
                         // echo '</div>';
                         // echo '</div>';
-                        echo '</li>';
+                        $catPosts .= '</li>';
                     endwhile;
-                    echo '</ul>';
+                    $catPosts .= '</ul>';
                     
                     wp_reset_postdata();
                     
-                    echo '</li>';
+                    $catPosts .= '</li>';
                 endif;
 
-                echo '<hr/>';
+                $catPosts .= '<hr/>';
             }
         }
-        echo '<hr/>';
+        $catPosts .= '<hr/>';
     }
 
-    // 40 - news
-    // 4 - press
-    // 3 testimonials
+    return $catPosts;
+
+    // echo do_shortcode('[/show_more]');
+    // echo '</div>';//.expandable
 
 
 });
