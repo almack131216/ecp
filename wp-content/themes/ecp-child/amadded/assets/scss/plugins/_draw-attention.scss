@@ -1,0 +1,99 @@
+/* _draw-attention.scss */@at-root
+
+
+.hotspot-info {
+
+    h2.hotspot-title {
+
+    }
+
+    .hotspot-content {
+
+        > .dps_wrap_img-gallery,
+        > .dps_wrap_img-text {
+            > .listing-item {
+                margin:$offset-g1 0;
+                padding:0;
+                display: block;
+                width: 100%;
+                float: left;
+            }
+        }
+
+        > .dps_wrap_img-gallery {
+            ul.wp-block-gallery {
+                margin:0;
+                padding:0;
+            }
+        }
+
+        > .dps_wrap_img-text {
+            > .listing-item {
+                > a.title {
+                    display:none;
+                }
+                a.image {
+                    float:left;
+                    display:block;
+                    margin:0;
+                    padding:0 $offset-2 0 0;
+                    width:33%;
+                    min-height: $offset-g2;
+
+                    @media (max-width:$bp-sm-1){
+                        width:40%;                
+                    }     
+                    @media (max-width:$bp-xs-1){
+                        width:100%;  
+                        padding-right:0;              
+                    }                                                      
+
+                    img {
+                        width:100%;
+                        height:auto;
+                    }
+                }
+                p:empty {
+                    display:none;
+                }
+                .content {    
+                    float:left;                    
+                    display:block;
+                    width:66%;
+                    
+                    @media (max-width:$bp-sm-1){
+                        width:60%;                
+                    }
+                    @media (max-width:$bp-xs-1){
+                        padding-top:$offset-1;
+                        width:100%;                
+                    }
+                }
+            }
+            
+        }
+
+        .display-posts-listing {
+            margin:$offset-g1 0;
+            padding:0;
+            list-style:none;
+    
+            > li.listing-item {
+                > a.title {
+                    display:none;
+                }
+                a.image {
+                    // float:left;
+                    // width:33%;
+                    // display:block;
+                    // margin:0;
+                    // padding:0 $offset-2 $offset-2 0;
+                }
+                .content {    
+                    
+                }
+            }
+        }
+    }
+    
+}
