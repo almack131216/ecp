@@ -133,11 +133,11 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
     $catPosts = '<br><br>';
     print_r($atts);
 
-    $catId = $atts['cat_id'];
+    $catId = $atts['cat_id'];//parent (root) categoryId
     $allTitlesUsed[] = $catId;
 
     $catDesc = false;//$atts['cat_desc'];
-    $hasSsc = $atts['depth'] == 3 ? true : false;//$atts['has_ssc'];
+    $hasSsc = $atts['depth'] == 2 ? true : false;//sub-subcategories?
 
     $catPosts .= '<h1>'.$depthCount.'. '.get_cat_name($catId).' ['.$catId.']</h1>';
     
@@ -145,15 +145,13 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
         'child_of' => $catId,
         'orderby' => 'description',
         'order' => 'ASC'
-    );
-    
+    );    
     //'include' => array(DV_category_News_id, DV_category_Testimonials_id);
 
     $subcategories = get_categories( $args );
 
     if($subcategories){        
         // $depthCount++;
-
 
         foreach($subcategories as $subcategory) {
             $depthCount = $hasSsc ? 1 : 0;
@@ -166,9 +164,8 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
 
                 $catPosts .= '<li>';
 
-
                 if($catId != $subcategory->category_parent) {
-                    if(!in_array($subcategory->category_parent, $allTitlesUsed)) $catPosts .= '<h1>'.$depthCount.'. '.get_cat_name($subcategory->category_parent).'</h1>';
+                    if(!in_array($subcategory->category_parent, $allTitlesUsed)) $catPosts .= '<h1>'.$depthCount.'. '.get_cat_name($subcategory->category_parent).' ['.$subcategory->category_parent.']</h1>';
                     $catTitlesUsed[] = $subcategory->category_parent;
                     $allTitlesUsed[] = $subcategory->category_parent;
                     // if(!in_array()) $catPosts .= '<h5>['.get_cat_name($subcategory->category_parent).']</h5>';
@@ -176,10 +173,9 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
 
                 if( !in_array($subcategory->term_id, $catTitlesUsed)){
                     $depthCount++;
-                    $catPosts .= '<h5>'.$depthCount.'. '.get_cat_name($subcategory->term_id).'</h5>';
+                    $catPosts .= '<h1>'.$depthCount.'. '.get_cat_name($subcategory->term_id).' ['.$subcategory->term_id.']</h1>';
                     $catTitlesUsed[] = $subcategory->term_id;
                 }
-
                 
 
                 $catPosts .= '<h4>'.$depthCount.'. [';
@@ -191,11 +187,9 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
                 $catPosts .= '<a href="' . get_category_link( $subcategory->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $subcategory->name ) . '" ' . '>' . $subcategory->name.'</a>';
                 $catPosts .= ' ('.$subcategory->count.')';
                 $catPosts .= '</h4>';
-
                 
                 // if($catDesc && $subcategory->description) $catPosts .= '<p>Description: '. $subcategory->description . '</p>';
-                // echo '<p>Subcat ID: '. $subcategory->term_id . '</p>'; 
-                
+                // echo '<p>Subcat ID: '. $subcategory->term_id . '</p>';                
 
                 $postArgs = array(
                     'post_type'  => 'post',
