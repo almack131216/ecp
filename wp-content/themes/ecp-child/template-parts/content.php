@@ -23,6 +23,10 @@
 	<div class="amcust-news-wrap">
 		<div class="col-brief">
 			<?php
+			if(in_category( 4787 )){
+				echo '<a href="/test-resp-img-map/" class="btn-back-to-tree"><span>tree</span></a>';
+			}
+
 			if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php ecp_posted_on(); ?>
@@ -57,6 +61,8 @@
 						wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ecp' ), array( 'span' => array( 'class' => array() ) ) ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					) );
+
+					
 
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ecp' ),

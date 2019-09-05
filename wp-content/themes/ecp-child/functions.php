@@ -131,7 +131,7 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
     $depthCount = 0;
     $allTitlesUsed = [];
     $catPosts = '';
-    print_r($atts);
+    // print_r($atts);
 
     $catId = $atts['cat_id'];//parent (root) categoryId
     $allTitlesUsed[] = $catId;
@@ -153,7 +153,12 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
     if($subcategories){        
         // $depthCount++;
 
+        $catPosts .= '<div class="mp-wrap_all">';
         $catPosts .= '<div class="mp-wrap has-'.sizeof($subcategories).'-children">';
+        
+        $catPosts .= '<div class="mp-main-title has-4-children">';
+            $catPosts .= '<h1>'.get_cat_name($catId).'</h1>';
+        $catPosts .= '</div>';
         // $catPosts .= '<div class="tree">';
 
         foreach($subcategories as $subcategory) {
@@ -171,7 +176,7 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
                 if($catId != $subcategory->category_parent) {
                     if(!in_array($subcategory->category_parent, $allTitlesUsed)){
                         // $catPosts .= '<h1>'.$depthCount.'. '.get_cat_name($subcategory->category_parent).' ['.$subcategory->category_parent.']</h1>';
-                        $catPosts .= '<h2>'.get_cat_name($subcategory->category_parent).'</h2>';
+                        // $catPosts .= '<h2>'.get_cat_name($subcategory->category_parent).'</h2>';
                     }
                     $catTitlesUsed[] = $subcategory->category_parent;
                     $allTitlesUsed[] = $subcategory->category_parent;
@@ -256,9 +261,10 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
                     
                     wp_reset_postdata();
                     
-                    $catPosts .= '</li>';
+                    
                 endif;
 
+                $catPosts .= '</li>';
                 // $catPosts .= '<hr/>';
             }
 
@@ -267,6 +273,7 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
         }
         // $catPosts .= '</div>';//(END) tree
         $catPosts .= '</div>';//(END) mp-wrap
+        $catPosts .= '</div>';//(END) mp-wrap_all
     }
 
     return $catPosts;

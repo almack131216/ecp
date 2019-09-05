@@ -1,18 +1,5 @@
 /* _draw-attention.scss */
 
-$color_root: #564037;
-
-@mixin root-hdr-box(){
-    a {
-        background-color:$color_root;
-        padding:$offset-1 $offset-g1;
-        display:inline-block;
-        color:white !important;
-        text-decoration:none !important;
-        text-transform:uppercase !important;
-    }
-}
-
 .hotspot-info {
 
     h2.hotspot-title {
@@ -117,90 +104,27 @@ $color_root: #564037;
     }
     .featherlight-content {
         max-width:980px;
-    }
-}
 
-.mp-wrap {
-    background-color:grey;
-    border:5px solid black;
-    display: block;
-    // display:table-row;
-    float:left;
-    width:100%;
-
-    .mp-item {
-        // display:table-column;
-        // flex-shrink: 1;
-        // order: <integer>;
-        margin:0;
-        padding:$offset-g1;
-        border:1px solid blue;
-        list-style:none;
-        display:block;
-                float:left;
-        width:25%;
-        text-align: center;
-
-            .ul-posts {
-                margin:0;
-                padding:0;
-                list-style:none;
-                display:block;
-                // float:left;
-                // width:100%; 
-        
-                li {     
-                    display:block;
-                    float:left;
-                    width:100%;            
-        
-                    > div {
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            top: -20px;
-                            left: 50%;
-                            width: 10px;
-                            height: 20px;
-                            display:block;
-                            background-color:$color_root;
-                        }
-
-                        h5 {
-                            @include root-hdr-box(); 
-                        }
-        
-                        position: relative;
-                        // border: 1px solid #ccc;
-                        // border-radius: 25px 25px 25px 25px;
-                        margin:20px 0 0 0;
-                        // padding: 5px 10px;
-                        // text-decoration: none;
-                        // color: #666;
-                        // font-family: arial, verdana, tahoma;
-                        // font-size: 11px;
-                        display: inline-block;
-                    }
+        .hotspot-info {
+            &#hotspot-hotspot-7198-14 {
+                h2.hotspot-title {
+                    display:none;
                 }
-                
-                
             }
 
-        h4 {
-            @include root-hdr-box();            
+            .content {
+                p {
+                    padding: 8px 0;
+                    padding: 0.5rem 0;
+                    font-weight: 400;
+                }
+            }
         }
-    }
 
-    
-
-    
-
-
-    &.has-2-children .mp-item {
-    }
-    &.has-3-children .mp-item {
+        
     }
 }
+
 
 .root_tier1 {
     background-color: yellow;
@@ -212,101 +136,26 @@ $color_root: #564037;
     border:5px solid red;
 }
 
-/* tree */
-// https://stackoverflow.com/questions/55569474/center-multiway-tree-root-in-html-css
-.tree ul {
-    padding-top: 20px;
-    position: relative;
-  }
-  
-  /* Using display: inline-block to limit its width */
-  
-  .tree > ul {
-    display: inline-block;
-    // transform: rotate(90deg);
-  }
-  
-  /* Clearing floats (so <ul> has a defined height) */
-  
-  .tree ul:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .tree li {
-    float: left;
-    text-align: center;
-    list-style-type: none;
-    position: relative;
-    padding: 20px 5px 0 5px;
-  }
-  
-  .tree li::before,
-  .tree li::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 50%;
-    border-top: 1px solid #ccc;
-    width: 50%;
-    height: 20px;
-  }
-  
-  .tree li::after {
-    right: auto;
-    left: 50%;
-    border-left: 1px solid #ccc;
-  }
-  
-  .tree li:only-child::after,
-  .tree li:only-child::before {
-    display: none;
-  }
-  
-  .tree li:only-child {
-    padding-top: 0;
-  }
-  
-  .tree li:first-child::before,
-  .tree li:last-child::after {
-    border: 0 none;
-  }
-  
-  .tree li:last-child::before {
-    border-right: 1px solid #ccc;
-    border-radius: 0 5px 0 0;
-  }
-  
-  .tree li:first-child::after {
-    border-radius: 5px 0 0 0;
-  }
-  
-  .tree ul ul::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    border-left: 1px solid #ccc;
-    width: 0;
-    height: 20px;
-  }
-  
-  .tree li a {
-    border: 1px solid #ccc;
-    border-radius: 25px 25px 25px 25px;
-    padding: 5px 10px;
-    text-decoration: none;
-    color: #666;
-    font-family: arial, verdana, tahoma;
-    font-size: 11px;
-    display: inline-block;
-  }
-  
-  .tree .special {
-    min-width: 94.594px;
-  }
-  
-  .tree .special > ul > li {
-    float: none;
-  }
+.mp-title {
+    background-color:#f0f;
+    font-weight:bold;
+}
+
+.mp-more {
+    background-color:#0ff;
+    font-weight:bold;
+}
+
+.btn-back-to-tree {
+    display:block;
+    width:100%;
+    min-height:300px;
+    background:white url(amadded/assets/img/back-to-tree-sm.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    margin:0 0 $offset-g2 0;
+    border:1px solid $color_primary;
+
+    span {
+        display:none;
+    }
+}
