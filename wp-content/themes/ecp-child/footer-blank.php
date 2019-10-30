@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the footer.
+ * The template for displaying the blank page footer.
  *
  * Contains the closing of the #content div and all content after.
  *
@@ -19,7 +19,7 @@
     ?>
 		<div class="site-info">
       <div class="site-info-content">
-        <span>&copy; The English College in Prague - Anglické gymnázium, o. p. s.,</span> <span>Sokolovská 320, Prague 9, Czech Republic</span>
+        <span>&copy;The English College in Prague - Anglické gymnázium, o. p. s.,</span> <span>Sokolovská 320, Prague 9, Czech Republic</span>
   			<!-- <span class="sep"> | </span> -->
   			<?php // printf( esc_html__( 'Theme: %1$s by %2$s.', 'ecp' ), 'ecp', '<a href="https://twitter.com/dadc" rel="designer">dadc</a>' ); ?>
       </div>

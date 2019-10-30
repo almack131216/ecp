@@ -14,6 +14,26 @@
     border-radius: $radius;
 }
 
+@mixin border-radius-corner($corner, $radius){
+    @if $corner == 'top-left' {
+        -webkit-border-top-left-radius: $radius;
+        -moz-border-top-left-radius: $radius;
+        border-top-left-radius: $radius;
+    } @else if $corner == 'top-right'{
+        -webkit-border-top-right-radius: $radius;
+        -moz-border-top-right-radius: $radius;
+        border-top-right-radius: $radius;
+    } @else if $corner == 'bottom-right'{
+        -webkit-border-bottom-right-radius: $radius;
+        -moz-border-bottom-right-radius: $radius;
+        border-bottom-right-radius: $radius;
+    } @else if $corner == 'bottom-left'{
+        -webkit-border-bottom-left-radius: $radius;
+        -moz-border-bottom-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+    }
+}
+
 @mixin set-opacity($opacity){    
     @if $opacity == 'full' {
         filter: alpha(opacity=100);

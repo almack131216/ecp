@@ -24,7 +24,7 @@
 		<div class="col-brief">
 			<?php
 			if(in_category( 4787 )){
-				echo '<a href="/test-resp-img-map/" class="btn-back-to-tree"><span>tree</span></a>';
+				echo '<a href="/test-resp-img-map/" class="fasc-button fasc-size-large back-to-tree in-content"><span>:more</span></a>';
 			}
 
 			if ( 'post' === get_post_type() ) : ?>
@@ -62,7 +62,9 @@
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					) );
 
-					
+					if(in_category( 4787 )){
+						echo '<a href="/test-resp-img-map/" class="fasc-button fasc-size-large back-to-tree in-content"><span>:more programme</span></a>';
+					}
 
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ecp' ),

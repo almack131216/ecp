@@ -25,6 +25,12 @@
 		<?php
 			the_content();
 
+			// $excerpt = get_the_content();
+			// $keys= explode(" ",$s);
+			// $excerpt = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">\0</strong>', $excerpt);
+
+			// echo $excerpt;
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ecp' ),
 				'after'  => '</div>',
