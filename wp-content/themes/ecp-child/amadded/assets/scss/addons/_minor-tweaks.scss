@@ -41,8 +41,10 @@ p:empty {
 }
 
 //search highlight
-strong.search-excerpt { 
+strong.search-excerpt,
+.highlight { 
     background-color:yellow;
+    // border:2px solid red;
 }
 
 //huge-portfolio - hide solitary thumbnail

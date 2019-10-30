@@ -22,7 +22,7 @@ $amcust_highlight = true;
 			$keys= explode(" ",$s);
 			$title = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">\0</strong>', $title);
 
-			echo '<h2 class="entry-title"><a href="'.esc_url( get_permalink() ).'" rel="bookmark">'. $title .'</a></h2>';
+			echo '<h2 class="entry-title"><a href="'.esc_url( get_permalink() ).'?s='.$s.'" rel="bookmark">'. $title .'</a></h2>';
 		}
 
 		

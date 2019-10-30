@@ -312,3 +312,85 @@ function get_first_paragraph( $getArr ){
 
     // return $paras[0];
 }
+
+// if on localhost...
+function amactive_is_localhost() {    
+    if($_SERVER['HTTP_HOST']=="localhost:8080") return true;
+    return false;   
+}
+
+// add highlight_search_term .js file
+function my_theme_scripts_function() {
+    if( amactive_is_localhost() ){
+        // https://johannburkard.de/blog/programming/javascript/highlight-javascript-text-higlighting-jquery-plugin.html
+        // https://www.jqueryscript.net/demo/jQuery-Plugin-To-Highlight-Searched-Text-In-A-Certain-Container-highlight-js/
+        wp_enqueue_script( 'highlight_search_term', get_template_directory_uri().'-child/amadded/jquery.highlight-5.js' );
+    }else{
+        wp_enqueue_script( 'highlight_search_term', get_template_directory_uri().'-child/amadded/jquery.highlight-5.js' );
+    }
+}
+add_action('wp_enqueue_scripts','my_theme_scripts_function');
+
+// if searching...
+// highlight search term
+// scrollTo search term
+add_action('wp_footer','myscript_in_footer');
+function myscript_in_footer(){
+    $s = get_query_var('s');
+    //if searching...
+    if($s){
+        //load javascript functions below...
+?>
+<script type="text/javascript">
+    // 1. run JavaScript after a complete page has loaded
+    jQuery(window).bind("load", function() {
+        //after #### time, highlightSearchWords()
+        window.setTimeout(function(){
+            highlightSearchWords("<?php echo $s; ?>"); },1000);
+        // highlightSearchWords("<?php echo $s; ?>");
+    });
+
+    // 2. highlightSearchWords
+    function highlightSearchWords(getSearchTerm){
+        console.log(getSearchTerm);
+        jQuery("body").highlight(getSearchTerm);
+
+        if(jQuery("body").highlight(getSearchTerm)){
+            highlightScrollToWord();
+        }                
+    }
+
+    // 3. ScrollTo first instance of word
+    function highlightScrollToWord(){
+        var scrollTo = jQuery('.highlight:nth-child(1)').offset();
+        var top = (scrollTo || { "top": NaN }).top;
+        var vOffset = 100;
+        if (isNaN(top)) {
+            // alert(getSearchTerm + ' - COUNT: ' + jQuery('.search-excerpt').length);
+            console.log("No keyword match found");
+        } else {
+            console.log('Keyword match found at: ' + top);
+            jQuery('html, body').animate({scrollTop: top - vOffset},1000);
+        }
+    }
+
+</script>
+<?php
+    }
+    // (END) if searching...
+}
+
+
+
+// function wps_highlight_results($text){
+//     if(is_search()){
+//         $sr = get_query_var('s');
+//         $keys = explode(" ",$sr);
+//         $text = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">'.$sr.'</strong>', $text);
+//     }
+//     return $text;
+// }
+// add_filter('the_excerpt', 'wps_highlight_results');
+// add_filter('the_title', 'wps_highlight_results');
+// add_filter('the_content', 'wps_highlight_results');
+// add_filter('get_the_content', 'wps_highlight_results');
