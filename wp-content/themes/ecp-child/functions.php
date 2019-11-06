@@ -337,9 +337,20 @@ add_action('wp_enqueue_scripts','my_theme_scripts_function');
 // scrollTo search term
 add_action('wp_footer','myscript_in_footer');
 function myscript_in_footer(){
-    $s = get_query_var('s');
+    // echo '<br>xxx '.$_GET['s'].' / '.get_query_var('s').' / '.get_query_var('sfind');
+    // echo '<br>xxxx '.$_GET['sfind'].' / '.get_query_var('sfind').' / '.get_query_var('sfind');
+
+    if(get_query_var('s')){
+        $s = get_query_var('s');
+        $sFind = get_query_var('s');
+    }elseif($_GET['sfind']){
+        $s = $_GET['sfind'];
+        $sFind = $_GET['sfind'];
+    }    
+    // $sFind = get_query_var('s');
+
     //if searching...
-    if($s){
+    if($sFind){
         //load javascript functions below...
 ?>
 <script type="text/javascript">
@@ -347,8 +358,8 @@ function myscript_in_footer(){
     jQuery(window).bind("load", function() {
         //after #### time, highlightSearchWords()
         window.setTimeout(function(){
-            highlightSearchWords("<?php echo $s; ?>"); },1000);
-        // highlightSearchWords("<?php echo $s; ?>");
+            highlightSearchWords("<?php echo $sFind; ?>"); },1000);
+        // highlightSearchWords("<?php echo $sFind; ?>");
     });
 
     // 2. highlightSearchWords
