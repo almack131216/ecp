@@ -11,7 +11,10 @@ get_header(); ?>
 	
 	<?php //get_template_part( 'template-parts/carpet', 'none') ?>
 	<?php get_template_part( 'template-parts/content-banner-event', 'slider') ?>
-	<?php get_template_part( 'template-parts/content', 'slider') ?>
+	<?php
+		get_template_part( 'template-parts/content-banner-video', 'video');
+		// get_template_part( 'template-parts/content', 'slider');
+	?>
 
 	<?php // echo display_key_services_boxes() ?>
 	<!-- <div class="carpet">
