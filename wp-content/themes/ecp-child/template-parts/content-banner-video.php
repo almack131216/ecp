@@ -11,9 +11,10 @@
 	<video autoplay muted loop
 		id="myVideo"
 		class="video"		
-		poster="http://localhost:8080/ecp/wp-content/uploads/2019/11/ecp-video_poster.jpg">
+		poster="<?php echo get_site_url(); ?>/wp-content/uploads/2019/11/ecp-video_poster.jpg">
 		<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-		<h1 class="claim">We encourage active and independent learning</h1>
+		<source src="https://www.w3schools.com/howto/rain.ogg" type="video/ogg">
+		Your browser does not support the video tag.
 	</video>
 
 	<!-- Optional: some overlay text to describe the video -->
@@ -23,6 +24,7 @@
 		<!-- Use a button to pause/play the video with JavaScript -->
 		<button id="btnPlayPause" onclick="videoPlayPause()"><i class="fa fa-pause"></i></button>
 		<button id="btnMuteUnmute" onclick="videoMuteUnmute()"><i class="fa fa-volume-up"></i></button>
+		<button id="btnGoToFullVideo">Watch full video</button>
 		
 	</div>
 </div>

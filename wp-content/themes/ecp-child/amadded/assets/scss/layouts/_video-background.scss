@@ -54,15 +54,20 @@
     /* Style the button used to pause/play the video */
     button {
         display:inline-block;
-        margin: $offset-g1 5px;
-        width: 40px;
+        margin: $offset-g1 5px 0 5px;
+        width: auto;
         height: 40px;
-        font-size: 18px;
-        padding: 10px;
+        font-size: 14px;
+        padding: $offset-1;
         border: none;
         background: #000;
         color: #fff;
         cursor: pointer;
+
+        &#btnPlayPause,
+        &#btnMuteUnmute {
+            width: 40px;
+        }
     }
 
     button:hover {
