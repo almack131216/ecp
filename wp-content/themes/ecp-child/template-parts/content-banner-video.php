@@ -12,8 +12,7 @@
 		id="myVideo"
 		class="video"		
 		poster="<?php echo get_site_url(); ?>/wp-content/uploads/2019/11/ecp-video_poster.jpg">
-		<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-		<source src="https://www.w3schools.com/howto/rain.ogg" type="video/ogg">
+		<source src="<?php echo get_site_url(); ?>/wp-content/uploads/2019/11/ecp-video_trim.mp4" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
 
@@ -22,9 +21,9 @@
 		<h1>Come and join us!</h1>
 		<!-- <p>Lorem ipsum...</p> -->
 		<!-- Use a button to pause/play the video with JavaScript -->
-		<button id="btnPlayPause" onclick="videoPlayPause()"><i class="fa fa-pause"></i></button>
-		<button id="btnMuteUnmute" onclick="videoMuteUnmute()"><i class="fa fa-volume-up"></i></button>
-		<button id="btnGoToFullVideo">Watch full video</button>
+		<button id="btnPlayPause" onclick="videoPlayPause()" class="video-button"><i class="fa fa-pause"></i></button>
+		<button id="btnMuteUnmute" onclick="videoMuteUnmute()" class="video-button"><i class="fa fa-volume-up"></i></button>
+		<a id="btnGoToFullVideo" href="<?php echo get_site_url(); ?>/ecp-video/" class="video-button">Watch full video</a>
 		
 	</div>
 </div>

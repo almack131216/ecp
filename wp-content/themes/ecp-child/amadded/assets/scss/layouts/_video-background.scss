@@ -2,6 +2,7 @@
 
 //https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
 //https://redstapler.co/responsive-css-video-background/
+//https://dissolve.com/
 
 #video-container {
     // height: calc(100vh - 103px - 32px - 60px);
@@ -21,15 +22,6 @@
     width:100%;
     min-height:500px;
 }
-
-/* Style the video: 100% width and height to cover the entire window */
-#myVideoXXX {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
   
   /* Add some content at the bottom of the video/page */
   .video-content {
@@ -52,7 +44,7 @@
     }
 
     /* Style the button used to pause/play the video */
-    button {
+    .video-button {
         display:inline-block;
         margin: $offset-g1 5px 0 5px;
         width: auto;
@@ -63,16 +55,19 @@
         background: #000;
         color: #fff;
         cursor: pointer;
+        text-decoration:none;
 
         &#btnPlayPause,
         &#btnMuteUnmute {
             width: 40px;
         }
+
+        &:hover {
+            background: #ddd;
+            color: black;
+        }
     }
 
-    button:hover {
-        background: #ddd;
-        color: black;
-    }
+    
 
   }
