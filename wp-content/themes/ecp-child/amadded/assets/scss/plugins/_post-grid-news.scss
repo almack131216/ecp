@@ -2,6 +2,24 @@
 
 #main {
     .post-grid-wrap.news {
+
+        &.with-newsletter-button {
+            position:relative;
+
+            a.newsletter-button {
+                position:absolute;
+                top:$offset-g1;
+                left:0px;
+            }
+
+            .grid-nav-top {
+                padding-left:120px;
+            }
+        }
+          
+          
+          
+          
         .grid-nav-top {
             .post-grid-wrap .grid-nav-top > .nav-search {
                 padding: 0 0 $offset-g2 0;
