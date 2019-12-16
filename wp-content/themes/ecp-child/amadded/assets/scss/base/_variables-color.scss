@@ -1,13 +1,13 @@
 /* _variables-color.scss */
 
 /* Base colors */
-$color_primary: #252259;//dark blue
-$color_secondary: #9E0012;//dark red
+$color_primary: #252259; //dark blue
+$color_secondary: #9e0012; //dark red
 
-$color_accent-1:#682C80;
-$color_accent-2:#1D86C1;
-$color_accent-3:#11AD97;
-$color_accent-4:#AC9E33;
+$color_accent-1: #682c80;
+$color_accent-2: #1d86c1;
+$color_accent-3: #11ad97;
+$color_accent-4: #ac9e33;
 
 /* debugging */
 // $color_debug: orange;
@@ -18,21 +18,20 @@ $color_debug2: inherit;
 $color_debug3: inherit;
 
 /* social media buttons */
-$color_share:#a5a9b0;
-$color_twitter:#3b9cff;
-$color_facebook:#2f7ccc;
-$color_youtube:#c41a1a;
-$color_instagram:#f89800;
-$color_pinterest:#BD2026;
-$color_googleplus:#DC4A38;
-$color_whatsapp: #25D366;
-
+$color_share: #a5a9b0;
+$color_twitter: #3b9cff;
+$color_facebook: #2f7ccc;
+$color_youtube: #c41a1a;
+$color_instagram: #f89800;
+$color_pinterest: #bd2026;
+$color_googleplus: #dc4a38;
+$color_whatsapp: #25d366;
 
 $color_bg-body: #eee;
 $color_bg-content: #ffffff;
 $color-border: #ddd;
 
-$color-table-border:$color-border;
+$color-table-border: $color-border;
 $color-table-th-bg: $color_primary;
 $color-table-th-text: white;
 $color-table-tr-nth: #f3f3f3;
@@ -40,6 +39,6 @@ $color-table-tr-nth: #f3f3f3;
 // $color-debug:yellow;
 // $color-debug2:orange;
 // $color-debug3:red;
-$color-debug:transparent;
-$color-debug2:transparent;
-$color-debug3:transparent;
+$color-debug: transparent;
+$color-debug2: transparent;
+$color-debug3: transparent;

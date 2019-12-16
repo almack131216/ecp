@@ -1,68 +1,68 @@
 /* _post-grid-news.scss */
 
 #main {
-.post-grid-wrap.news {
+  .post-grid-wrap.news {
     .grid-nav-top {
-        .post-grid-wrap .grid-nav-top > .nav-search {
-            padding: 0 0 $offset-g2 0;
-        }
+      .post-grid-wrap .grid-nav-top > .nav-search {
+        padding: 0 0 $offset-g2 0;
+      }
     }
     .grid-items {
-        .item {
-            margin:0 0 $offset-g1 0;
-            border:1px solid #ddd;
-            
-            @media (min-width:$bp-sm-xs){
-                // display:flex;
-                margin:0 0 $offset-g2 0;
-                border:none;
-            }
+      .item {
+        margin: 0 0 $offset-g1 0;
+        border: 1px solid #ddd;
 
-            .layer-media {
-                @media (min-width:$bp-sm-xs){
-                    width:35%;
-                    float:left;
-                }
-
-                img {
-                    width:100%;
-                    height:auto;
-                }
-            }
-
-            .layer-content {
-                padding:$offset-2;
-                text-align:left;
-                background: white;
-
-                @media (min-width:$bp-sm-xs) and (max-width:$bp-sm-1){
-                    margin: 0;
-                    padding-top:0;                   
-                }
-
-                @media (min-width:$bp-sm){
-                    margin: 20px 0 0 -20px;                    
-                }
-
-                @media (min-width:$bp-sm-xs){
-                    width:65%;
-                    float: left;
-                }
-
-                > .post_date {
-                    &:before {
-                        @extend .fa-dummy;
-                        content:"\f017" !important;
-                    }
-                }
-
-                > a {
-                    @extend .fasc-button;
-                    @extend .fasc-size-small;
-                    display:inline-block;
-                }
-            }
+        @media (min-width: $bp-sm-xs) {
+          // display:flex;
+          margin: 0 0 $offset-g2 0;
+          border: none;
         }
+
+        .layer-media {
+          @media (min-width: $bp-sm-xs) {
+            width: 35%;
+            float: left;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .layer-content {
+          padding: $offset-2;
+          text-align: left;
+          background: white;
+
+          @media (min-width: $bp-sm-xs) and (max-width: $bp-sm-1) {
+            margin: 0;
+            padding-top: 0;
+          }
+
+          @media (min-width: $bp-sm) {
+            margin: 20px 0 0 -20px;
+          }
+
+          @media (min-width: $bp-sm-xs) {
+            width: 65%;
+            float: left;
+          }
+
+          > .post_date {
+            &:before {
+              @extend .fa-dummy;
+              content: "\f017" !important;
+            }
+          }
+
+          > a {
+            @extend .fasc-button;
+            @extend .fasc-size-small;
+            display: inline-block;
+          }
+        }
+      }
     }
-}
+  }
 }

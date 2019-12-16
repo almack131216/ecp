@@ -1,177 +1,172 @@
 /* _tabs.scss */
 
 .nav {
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 
 @mixin tabby-tab() {
-    @include btn-base();
-    background: transparent;
-    border: 1px solid transparent;
-    border-bottom: none;
-    -webkit-border-top-left-radius: 3px;
-    -webkit-border-top-right-radius: 3px;
-    -moz-border-radius-topleft: 3px;
-    -moz-border-radius-topright: 3px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    margin: 1px $offset-1 0 0;
-    white-space: nowrap;
-    float: left;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  @include btn-base();
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin: 1px $offset-1 0 0;
+  white-space: nowrap;
+  float: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .tabby-wrap {
+  display: block;
+  width: 100%;
+  margin: $offset-g2 0;
+
+  @media (min-width: $bp-sm) {
+    position: relative;
+  }
+
+  @media (max-width: $bp-sm-1) {
+    margin: 0 0 $offset-g2 0;
+    text-align: center;
+  }
+
+  ul.tabby-tabs.right {
     display: block;
-    width: 100%;    
-    margin:$offset-g2 0;
+    list-style: none;
+    margin: 0;
 
-    @media (min-width:$bp-sm){
-        position:relative;
+    @media (min-width: $bp-sm) {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
 
-    @media (max-width:$bp-sm-1){
-        margin:0 0 $offset-g2 0;
-        text-align:center;
+    @media (max-width: $bp-sm-1) {
+      display: inline-block;
+      width: auto;
+      margin: 0 auto $offset-g2 auto;
+      text-align: center;
     }
 
-    ul.tabby-tabs.right {
-        display:block;        
-        list-style: none;
-        margin:0;
+    li {
+      display: inline-block;
 
-        @media (min-width:$bp-sm){
-            position: absolute;
-            top: 0;
-            right: 0;
+      &:last-child > a {
+        margin-right: 0;
+      }
+
+      > a {
+        @include tabby-tab();
+
+        @media (max-width: $bp-sm-1) {
+          background: $color_primary;
+          color: white;
         }
 
-        @media (max-width:$bp-sm-1){
-            display:inline-block;
-            width: auto;
-            margin: 0 auto $offset-g2 auto;
-            text-align:center;
+        &.dashicons-calendar:before {
+          font: 400 16px/1 dashicons;
+          padding-right: 5px;
+          content: "\f145";
         }
 
-        li {         
-            display:inline-block;
-
-            &:last-child > a {
-                margin-right:0;
-            }   
-
-            > a {
-                @include tabby-tab();
-                
-                @media (max-width:$bp-sm-1){
-                    background:$color_primary;
-                    color:white;
-                }
-                
-
-                &.dashicons-calendar:before {
-                    font: 400 16px/1 dashicons;
-                    padding-right: 5px;
-                    content: "\f145";                
-                }
-
-                &.dashicons-email-alt:before {
-                    font: 400 16px/1 dashicons;
-                    padding-right: 5px;
-                    content: "\f466";                  
-                }
-            }
+        &.dashicons-email-alt:before {
+          font: 400 16px/1 dashicons;
+          padding-right: 5px;
+          content: "\f466";
         }
+      }
     }
-    
+  }
 
-    .responsive-tabs-wrapper {
-        .responsive-tabs {
-            ul.responsive-tabs__list {
-                margin:0;
+  .responsive-tabs-wrapper {
+    .responsive-tabs {
+      ul.responsive-tabs__list {
+        margin: 0;
 
-                li.responsive-tabs__list__item {
-                    @include tabby-tab();
-                }
-
-                li.responsive-tabs__list__item--active,
-                li.responsive-tabs__list__item--active:hover {
-                    background: white;
-                    border-color: $color-border;
-                    color: $color-primary;
-                    font-weight:bold;
-                    font-size:18px;
-                    padding-bottom: 11px;
-                    margin-top: 0;
-                    position: relative;
-                    top: 1px;
-                }
-
-            }
-
-            h2.tabtitle.responsive-tabs__heading {
-                text-align:left;
-            }
-
-            h2.tabtitle.responsive-tabs__heading {
-                @include btn-base();
-                background: $color-primary;
-                border: 1px solid $color-primary;
-                border-top: none;                
-                color: white;
-                margin:1px 0 0 0;//1px gap
-                position: relative;
-
-                &:after {
-                    top:20px;
-                    border-top-color: white;
-                }
-            }
-
-            h2.tabtitle.responsive-tabs__heading--active {
-                background: #fff;
-                border: 1px solid #ccc;
-                border-top: none;
-                color: $color-primary;
-
-                &:after {
-                    border-bottom-color: $color-primary;
-                }
-            }
-
-            .tabcontent {
-                padding:$offset-g1 0;
-                border-width:1px 0 0 0;
-
-                .post-grid-wrap.news {
-                    padding-top:$offset-g1;
-                }
-                .embed-container-month {
-                    margin-top:$offset-g1;
-                }
-
-                .tabby-tab-content.term-dates {
-                    .row-box {
-                        .first-half-column {
-                            margin-left:0;                            
-                        }
-                        .first-half-column,
-                        .second-half-column {
-                            width: calc(50% - 15px);
-                        }
-                    }
-                }
-
-            }
-            
-
+        li.responsive-tabs__list__item {
+          @include tabby-tab();
         }
+
+        li.responsive-tabs__list__item--active,
+        li.responsive-tabs__list__item--active:hover {
+          background: white;
+          border-color: $color-border;
+          color: $color-primary;
+          font-weight: bold;
+          font-size: 18px;
+          padding-bottom: 11px;
+          margin-top: 0;
+          position: relative;
+          top: 1px;
+        }
+      }
+
+      h2.tabtitle.responsive-tabs__heading {
+        text-align: left;
+      }
+
+      h2.tabtitle.responsive-tabs__heading {
+        @include btn-base();
+        background: $color-primary;
+        border: 1px solid $color-primary;
+        border-top: none;
+        color: white;
+        margin: 1px 0 0 0; //1px gap
+        position: relative;
+
+        &:after {
+          top: 20px;
+          border-top-color: white;
+        }
+      }
+
+      h2.tabtitle.responsive-tabs__heading--active {
+        background: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        color: $color-primary;
+
+        &:after {
+          border-bottom-color: $color-primary;
+        }
+      }
+
+      .tabcontent {
+        padding: $offset-g1 0;
+        border-width: 1px 0 0 0;
+
+        .post-grid-wrap.news {
+          padding-top: $offset-g1;
+        }
+        .embed-container-month {
+          margin-top: $offset-g1;
+        }
+
+        .tabby-tab-content.term-dates {
+          h1 {
+            display: none;
+          }
+          .row-box {
+            .first-half-column {
+              margin-left: 0;
+            }
+            .first-half-column,
+            .second-half-column {
+              width: calc(50% - 15px);
+            }
+          }
+        }
+      }
     }
-    
+  }
 }
-

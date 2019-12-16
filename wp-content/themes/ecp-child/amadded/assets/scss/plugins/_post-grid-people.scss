@@ -1,181 +1,174 @@
 /* _post-grid-people.scss */
 
 #main {
-    .post-grid-wrap.people {
-        .grid-nav-top {
-            .post-grid-wrap .grid-nav-top > .nav-search {
-                padding: 0 0 $offset-g2 0;
-            }
-        }
-        .grid-items {
-            display: flex;
-            flex-wrap: wrap;
-
-            .item {
-                margin: 0;
-                padding:$offset-g2 $offset-g2 0 0;
-                border: none;
-                display: inline-block;
-                text-align:left;
-                
-                flex-grow: 0;
-                /* height: 100px; */
-                width: 33.33%;
-                /* width: calc(100% * (1/3) - 10px - 1px);*/
-
-                background: white !important;     
-                border:none;
-
-                .layer-media {
-                    @media (min-width:$bp-sm-xs){
-                        width:100%;
-                        float:left;
-                        display:block;
-                        margin:0 0 $offset-g1 0;
-                    }
-
-                    img {
-                        width:100%;
-                        max-width:180px;
-                        height:auto;
-                        box-shadow: 0 0 $offset-1 rgba(0, 0, 0, .2);
-                    }
-                }
-
-                .layer-content {
-                    margin: 0;
-                    padding:0;
-                    text-align:left;
-                    background: white;
-
-                    @media (min-width:$bp-sm-xs) and (max-width:$bp-sm-1){
-                        // margin: 0;
-                        // padding-top:0;                   
-                    }
-
-                    @media (min-width:$bp-sm){
-                        
-                    }
-
-                    > .excerpt {
-                        font-size: 0.9em;
-                        color: #666;
-                        font-style: italic;
-                        padding-bottom: 0;
-                        margin: 0 0 $offset-g1 0;
-                    }
-
-                    > .post_date {
-                        display:none;
-                    }
-
-                    > .title {                        
-                        padding:0;
-                    }
-                }
-            }
-        }
-        .grid-nav-bottom {
-            display:none;
-        }
-
-        .name {
-            font-weight:bold;
-        }
-
-        .excerpt {
-            display:none;
-        }        
-
-        &.slt {
-            .excerpt.slt {
-                display:block;
-            }
-        }
-        &.tlt {
-            .excerpt.tlt {
-                display:block;
-            }
-        }
-        &.st {
-            .excerpt.st {
-                display:block;
-            }
-        }
-
+  .post-grid-wrap.people {
+    .grid-nav-top {
+      .post-grid-wrap .grid-nav-top > .nav-search {
+        padding: 0 0 $offset-g2 0;
+      }
     }
+    .grid-items {
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        margin: 0;
+        padding: $offset-g2 $offset-g2 0 0;
+        border: none;
+        display: inline-block;
+        text-align: left;
+
+        flex-grow: 0;
+        /* height: 100px; */
+        width: 33.33%;
+        /* width: calc(100% * (1/3) - 10px - 1px);*/
+
+        background: white !important;
+        border: none;
+
+        .layer-media {
+          @media (min-width: $bp-sm-xs) {
+            width: 100%;
+            float: left;
+            display: block;
+            margin: 0 0 $offset-g1 0;
+          }
+
+          img {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            box-shadow: 0 0 $offset-1 rgba(0, 0, 0, 0.2);
+          }
+        }
+
+        .layer-content {
+          margin: 0;
+          padding: 0;
+          text-align: left;
+          background: white;
+
+          @media (min-width: $bp-sm-xs) and (max-width: $bp-sm-1) {
+            // margin: 0;
+            // padding-top:0;
+          }
+
+          @media (min-width: $bp-sm) {
+          }
+
+          > .excerpt {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            padding-bottom: 0;
+            margin: 0 0 $offset-g1 0;
+          }
+
+          > .post_date {
+            display: none;
+          }
+
+          > .title {
+            padding: 0;
+          }
+        }
+      }
+    }
+    .grid-nav-bottom {
+      display: none;
+    }
+
+    .name {
+      font-weight: bold;
+    }
+
+    .excerpt {
+      display: none;
+    }
+
+    &.slt {
+      .excerpt.slt {
+        display: block;
+      }
+    }
+    &.tlt {
+      .excerpt.tlt {
+        display: block;
+      }
+    }
+    &.st {
+      .excerpt.st {
+        display: block;
+      }
+    }
+  }
 }
 
-
 .vc_gitem-animate-slideBottom .vc_gitem-zone-b {
-    background: rgba(37,37,89,0.7) !important;
-    transition: all 0.5s ease !important;
+  background: rgba(37, 37, 89, 0.7) !important;
+  transition: all 0.5s ease !important;
 
-    .vc_gitem-row-position-bottom {
-        color:white;
-        bottom: $offset-g2;
-    }
+  .vc_gitem-row-position-bottom {
+    color: white;
+    bottom: $offset-g2;
+  }
 }
 
 .vc_basic_grid {
-    padding-top:$offset-g2;
+  padding-top: $offset-g2;
 }
 
 .vc_grid.vc_row.vc_grid-gutter-30px .vc_grid-item {
-    @media (max-width:$bp-sm-1) and (min-width:$bp-xs) {
-        padding-bottom:$offset-g1 !important;
-    }
+  @media (max-width: $bp-sm-1) and (min-width: $bp-xs) {
+    padding-bottom: $offset-g1 !important;
+  }
 }
 
 .vc_grid-item {
-    .vc_gitem-animated-block {
-        
-        @media (max-width:$bp-sm-1) and (min-width:$bp-xs) {
-            width: 30%;
-            float: left;
-        }
-
-        .vc_gitem-zone {
-            box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-            max-width:180px;
-            margin:0 0 $offset-g1 0;
-
-            @media (min-width:$bp-xs) and (max-width:$bp-sm-1) {
-                max-width:100%;
-                margin:0 $offset-g1 0 0;
-            }
-
-        }
-    }
-    .vc_gitem-zone.vc_gitem-zone-c {
-        background:white !important;
-
-        @media (max-width:$bp-sm-1) and (min-width:$bp-xs) {
-            width: 70%;
-            float: left;
-        }
-        
+  .vc_gitem-animated-block {
+    @media (max-width: $bp-sm-1) and (min-width: $bp-xs) {
+      width: 30%;
+      float: left;
     }
 
-    .vc_gitem_row {
-        .vc_gitem-col {
-            padding:0 $offset-g1 0 0;
-            background: white;
+    .vc_gitem-zone {
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      max-width: 180px;
+      margin: 0 0 $offset-g1 0;
 
-            .vc_custom_heading {
-                margin:0;//$offset-g1 0 0 0;
-
-                h4 {
-                    font-size:1em;
-                }
-            }
-            
-            .job_title {
-                font-size:0.9em;
-            }
-
-        }
+      @media (min-width: $bp-xs) and (max-width: $bp-sm-1) {
+        max-width: 100%;
+        margin: 0 $offset-g1 0 0;
+      }
     }
+  }
+  .vc_gitem-zone.vc_gitem-zone-c {
+    background: white !important;
+
+    @media (max-width: $bp-sm-1) and (min-width: $bp-xs) {
+      width: 70%;
+      float: left;
+    }
+  }
+
+  .vc_gitem_row {
+    .vc_gitem-col {
+      padding: 0 $offset-g1 0 0;
+      background: white;
+
+      .vc_custom_heading {
+        margin: 0; //$offset-g1 0 0 0;
+
+        h4 {
+          font-size: 1em;
+        }
+      }
+
+      .job_title {
+        font-size: 0.9em;
+      }
+    }
+  }
 }
 
 .slt_quote,
@@ -186,9 +179,8 @@
 .stu_quote,
 .pat_quote,
 .par_quote {
-    display:none;
+  display: none;
 }
-
 
 .people-slt-wrap .slt_quote,
 .people-ib-wrap .ib_quote,
@@ -198,9 +190,9 @@
 .people-stu-wrap .stu_quote,
 .people-pat-wrap .pat_quote,
 .people-par-wrap .par_quote {
-    display:block;
-    font-style:italic;
-    color:#666;
-    font-size: 0.9em;
-    padding-bottom:$offset-g1;
+  display: block;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9em;
+  padding-bottom: $offset-g1;
 }

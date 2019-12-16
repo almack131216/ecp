@@ -1,189 +1,181 @@
-
 .single-post,
 .single-team_member {
+  #main {
+    text-align: center;
 
-    #main {
-        text-align:center;
-
-        article,
-        .navigation.post-navigation {
-            background:$color-debug;
-            display:inline-block;
-            width: 100%;
-            max-width: 980px;
-            margin: 0 auto $offset-g2 auto;
-            padding: $offset-g1;
-        }
-
-        article {
-
-            &.category-people,
-            &.category-lide {
-                margin-top:$offset-g2;
-            }        
-
-            > header {
-                display:block;
-                width: 100%;
-                max-width: 100%;
-                margin:0;
-                padding: $offset-g1 0;
-                background:$color-debug2;
-                text-align: left;
-                border-bottom:1px solid $color-primary;
-                
-                > h1 {
-                    padding-top:0;
-                }
-            }
-            
-            .amcust-news-wrap {
-                display:block;
-                width: 100%;
-                text-align: left;
-
-                .col-brief {
-                    display:block;
-                    float:left;
-                    width:30%;
-                    background:$color-debug3;
-                    padding:$offset-g2;
-                    padding-left:0;
-
-                    .entry-meta {
-                        &:before {
-                            @extend .fa-dummy;
-                            content:"\f017" !important;
-                        }
-                    }
-
-                    @media (max-width:$bp-sm-1){
-                        width:100%;
-                        padding:$offset-2 0;
-                        display:flex;
-
-                        .entry-meta {
-                            width:100%;
-                            line-height:$offset-g2;
-                        }
-
-                        .contactus-social-icons-wrap {
-                            width:auto;
-                            padding:0;
-                            text-align:right;
-
-                            h4 {display:none;}
-
-                            .contactus-social-icons {
-                                width:100px;
-                                text-align:right;
-                                display:flex;
-
-                                > a:first-child {
-                                    margin-left:auto;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .col-content {
-                    display:block;
-                    float:left;
-                    width:70%;
-                    background:$color-debug;
-
-                    @media (max-width:$bp-sm-1){
-                        width:100%;
-                    }
-
-                    .post-featured-image {
-                        width: 100%;
-                        max-width: 100%;
-                        margin: 0 auto $offset-g2 auto;
-                        padding: 0;
-
-                        &.float-image-right {
-                            @media (min-width:$bp-sm){
-                                float:right;
-                                width:40%;
-                                margin-left:$offset-g2;
-                            }
-                        }
-
-                        > img {
-                            max-width: 100%;
-                            width:100%;
-                            height: auto;
-                        }
-                    }
-
-                    .people-title {
-                        margin:0 0 $offset-g1 0;
-                        padding:0;
-
-                        h1,
-                        h2 {
-                            margin:0;
-                            padding:0;
-                        }
-                    }
-
-                    .entry-content {
-                        width: 100%;
-                        max-width: 100%;
-                        margin: 0;
-                        padding:0;
-                        position: static;
-                    }
-
-                }
-            }
-
-        }
-
-        .navigation.post-navigation {
-            
-            .nav-links {
-                width: 100%;
-                max-width: 100%;
-                padding: 0;
-
-                @media (max-width:$bp-sm-1){
-                    .nav-previous,
-                    .nav-next {
-                        > a {
-                            i.fa {
-                                margin-left:0px !important;
-                                margin-right:0px !important;
-                            }
-                            > .story-title {                        
-                                display:none;
-                            }
-                        }
-                    }
-                }
-
-                .nav-previous {
-                    text-align:left;
-                    > a > i.fa {
-                        margin-right:$offset-1;
-                    }
-                }
-                .nav-next {
-                    text-align:right;
-                    &.full-width {
-                        width:100%;
-                    }
-                    > a > i.fa {
-                        margin-left:$offset-1;
-                    }
-                }
-            }
-        }
-
+    article,
+    .navigation.post-navigation {
+      background: $color-debug;
+      display: inline-block;
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto $offset-g2 auto;
+      padding: $offset-g1;
     }
-    
+
+    article {
+      &.category-people,
+      &.category-lide {
+        margin-top: $offset-g2;
+      }
+
+      > header {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: $offset-g1 0;
+        background: $color-debug2;
+        text-align: left;
+        border-bottom: 1px solid $color-primary;
+
+        > h1 {
+          padding-top: 0;
+        }
+      }
+
+      .amcust-news-wrap {
+        display: block;
+        width: 100%;
+        text-align: left;
+
+        .col-brief {
+          display: block;
+          float: left;
+          width: 30%;
+          background: $color-debug3;
+          padding: $offset-g2;
+          padding-left: 0;
+
+          .entry-meta {
+            &:before {
+              @extend .fa-dummy;
+              content: "\f017" !important;
+            }
+          }
+
+          @media (max-width: $bp-sm-1) {
+            width: 100%;
+            padding: $offset-2 0;
+            display: flex;
+
+            .entry-meta {
+              width: 100%;
+              line-height: $offset-g2;
+            }
+
+            .contactus-social-icons-wrap {
+              width: auto;
+              padding: 0;
+              text-align: right;
+
+              h4 {
+                display: none;
+              }
+
+              .contactus-social-icons {
+                width: 100px;
+                text-align: right;
+                display: flex;
+
+                > a:first-child {
+                  margin-left: auto;
+                }
+              }
+            }
+          }
+        }
+
+        .col-content {
+          display: block;
+          float: left;
+          width: 70%;
+          background: $color-debug;
+
+          @media (max-width: $bp-sm-1) {
+            width: 100%;
+          }
+
+          .post-featured-image {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto $offset-g2 auto;
+            padding: 0;
+
+            &.float-image-right {
+              @media (min-width: $bp-sm) {
+                float: right;
+                width: 40%;
+                margin-left: $offset-g2;
+              }
+            }
+
+            > img {
+              max-width: 100%;
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          .people-title {
+            margin: 0 0 $offset-g1 0;
+            padding: 0;
+
+            h1,
+            h2 {
+              margin: 0;
+              padding: 0;
+            }
+          }
+
+          .entry-content {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            position: static;
+          }
+        }
+      }
+    }
+
+    .navigation.post-navigation {
+      .nav-links {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+
+        @media (max-width: $bp-sm-1) {
+          .nav-previous,
+          .nav-next {
+            > a {
+              i.fa {
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+              }
+              > .story-title {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .nav-previous {
+          text-align: left;
+          > a > i.fa {
+            margin-right: $offset-1;
+          }
+        }
+        .nav-next {
+          text-align: right;
+          &.full-width {
+            width: 100%;
+          }
+          > a > i.fa {
+            margin-left: $offset-1;
+          }
+        }
+      }
+    }
+  }
 }
-
-

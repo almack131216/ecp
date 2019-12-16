@@ -2,32 +2,32 @@
 
 //171122 Open Day Banner
 .pagepart.banner {
-    padding:$offset-2;
-    background:#fff;
+  padding: $offset-2;
+  background: #fff;
 
-    @media (max-width:$bp-sm-1){
-        padding:$offset-1;
-    }
+  @media (max-width: $bp-sm-1) {
+    padding: $offset-1;
+  }
 
-    > .pagepart-content {
-        text-align: center;
-        width: 100%;
-        max-width: 100%;
-        padding:0;
+  > .pagepart-content {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
 
-        p {
-            margin:0 auto;
-            padding:0;
+    p {
+      margin: 0 auto;
+      padding: 0;
 
-            a {
-                display:block;
+      a {
+        display: block;
 
-                img {
-                    width: 100%;
-                    max-width: 916px !important;//1250px
-                    height: auto;
-                }
-            }
+        img {
+          width: 100%;
+          max-width: 916px !important; //1250px
+          height: auto;
         }
+      }
     }
+  }
 }

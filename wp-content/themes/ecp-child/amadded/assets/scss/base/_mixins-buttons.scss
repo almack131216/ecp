@@ -1,35 +1,34 @@
 /* _mixins-buttons.scss */
 
-$height-disc-button:50px;
-$height-disc-button-sm:30px;
+$height-disc-button: 50px;
+$height-disc-button-sm: 30px;
 
-@mixin btn-base() {  
-	      
+@mixin btn-base() {
 }
 
 @mixin btn-disc() {
-    width:$height-disc-button;
-    height:$height-disc-button;
-    line-height:$height-disc-button;
-    @include border-radius(#{$height-disc-button / 2});
-    padding:0;
-    background-color: $color_primary;
-    text-align:center;    
+  width: $height-disc-button;
+  height: $height-disc-button;
+  line-height: $height-disc-button;
+  @include border-radius(#{$height-disc-button / 2});
+  padding: 0;
+  background-color: $color_primary;
+  text-align: center;
+
+  > i.fa {
+    line-height: $height-disc-button;
+  }
+
+  @media (max-width: $bp-sm-1) {
+    width: $height-disc-button-sm;
+    height: $height-disc-button-sm;
+    line-height: $height-disc-button-sm;
+    @include border-radius(#{$height-disc-button-sm / 2});
 
     > i.fa {
-        line-height:$height-disc-button;
+      font-size: 14px;
+      line-height: $height-disc-button-sm;
     }
-
-    @media (max-width:$bp-sm-1){
-        width:$height-disc-button-sm;
-        height:$height-disc-button-sm;
-        line-height:$height-disc-button-sm;
-        @include border-radius(#{$height-disc-button-sm / 2});
-
-        > i.fa {
-            font-size:14px;
-            line-height:$height-disc-button-sm;
-        }
-    }
+  }
 }
 /* [END] g_btn-base() */

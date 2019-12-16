@@ -18,33 +18,33 @@ table#tablepress-EntranceExamResultsCzech,
 table#tablepress-EntranceExamResultsCzechCZ,
 table#tablepress-EntranceExamResultsMaths,
 table#tablepress-EntranceExamResultsMathsCZ {
-    > thead {
-        > tr {
-            > th {
-                background-color:$color-table-th-bg !important;
-                color:$color-table-th-text;
-            }
-        } 
+  > thead {
+    > tr {
+      > th {
+        background-color: $color-table-th-bg !important;
+        color: $color-table-th-text;
+      }
+    }
+  }
+
+  > tbody {
+    > tr {
+      > td {
+        border-bottom: 1px solid $color-table-border;
+      }
+
+      &:nth-child(odd) {
+        background-color: $color-table-tr-nth;
+      }
     }
 
-    > tbody {
-        > tr {
-            > td {
-                border-bottom:1px solid $color-table-border;
-            }
-
-            &:nth-child(odd) {
-                background-color:$color-table-tr-nth;
-            }
+    &.row-hover {
+      > tr:hover {
+        > td {
+          background-color: #ffc;
+          border-bottom: 1px solid black;
         }
-
-        &.row-hover {
-            > tr:hover {
-                > td {
-                    background-color:#ffc;
-                    border-bottom:1px solid black;
-                }
-            }
-        }
+      }
     }
+  }
 }

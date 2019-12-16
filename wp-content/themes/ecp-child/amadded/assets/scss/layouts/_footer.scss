@@ -1,40 +1,39 @@
 /* _footer.scss */
 
 footer.site-footer {
-    .site-info {
-        padding-bottom:$offset-g2;
+  .site-info {
+    padding-bottom: $offset-g2;
 
-        .site-info-content span {
-            white-space:normal;//bugfix : base style sets this as nowrap, which forces scroll on smaller size
-        }
+    .site-info-content span {
+      white-space: normal; //bugfix : base style sets this as nowrap, which forces scroll on smaller size
     }
+  }
 
-    #footer-menu-ecp {
+  #footer-menu-ecp {
+    ul.menu {
+      margin-left: 0;
 
-        ul.menu {
-            margin-left:0;
+      > li {
+        text-align: left;
 
-            > li {
-                text-align:left;
+        > a {
+          padding: $offset-g1 0;
 
-                > a {
-                    padding:$offset-g1 0;
+          @media (max-width: $bp-xs-1) {
+            padding: $offset-g2 0 $offset-1 0;
+          }
+        }
 
-                    @media (max-width:$bp-xs-1){
-                        padding:$offset-g2 0 $offset-1 0;
-                    }                                 
-                }
-
-                > ul.sub-menu {
-                    > li {
-                        > a {
-                            padding-left:0;
-                        }
-                    }
-                }
-                /* [END] ul.sub-menu */
+        > ul.sub-menu {
+          > li {
+            > a {
+              padding-left: 0;
             }
+          }
         }
+        /* [END] ul.sub-menu */
+      }
     }
-    /* [END] #footer-menu-ecp */
+  }
+  /* [END] #footer-menu-ecp */
 }

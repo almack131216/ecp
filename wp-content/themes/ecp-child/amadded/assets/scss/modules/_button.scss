@@ -1,63 +1,60 @@
 /* _button.scss */
 
 @mixin btn-base() {
-    font-weight: normal;
-    text-transform: inherit;
-    background:white;
-    border:1px solid $color_primary;
-    color:$color_primary;
-    margin:0;// 5px 0
-    text-decoration:none;
-    padding:$font-size_button-padding;
-    font-size:$font-size_button;
-    line-height:$font-size_button-line-height;
+  font-weight: normal;
+  text-transform: inherit;
+  background: white;
+  border: 1px solid $color_primary;
+  color: $color_primary;
+  margin: 0; // 5px 0
+  text-decoration: none;
+  padding: $font-size_button-padding;
+  font-size: $font-size_button;
+  line-height: $font-size_button-line-height;
 }
 
-
 .fasc-button {
-    @include btn-base();    
+  @include btn-base();
 
-    &.fasc-size-small {
-        padding:$font-size_button-padding-sm;
-        font-size:$font-size_button-sm;
-        line-height:$font-size_button-line-height-sm;
-        @include border-radius($font-size_button-border-radius-sm);
-    }
+  &.fasc-size-small {
+    padding: $font-size_button-padding-sm;
+    font-size: $font-size_button-sm;
+    line-height: $font-size_button-line-height-sm;
+    @include border-radius($font-size_button-border-radius-sm);
+  }
 
-    &.fasc-size-default,
-    &.fasc-size-medium {
-        @include border-radius($font-size_button-border-radius);
-    }
+  &.fasc-size-default,
+  &.fasc-size-medium {
+    @include border-radius($font-size_button-border-radius);
+  }
 
-    &.fasc-size-large {
-        padding:$font-size_button-padding-lg;
-        font-size:$font-size_button-lg;
-        line-height:$font-size_button-line-height-lg;
-        @include border-radius($font-size_button-border-radius-lg);
-    }
+  &.fasc-size-large {
+    padding: $font-size_button-padding-lg;
+    font-size: $font-size_button-lg;
+    line-height: $font-size_button-line-height-lg;
+    @include border-radius($font-size_button-border-radius-lg);
+  }
 
-    &.fasc-size-xlarge {
-        padding:$font-size_button-padding-xlg;
-        font-size:$font-size_button-xlg;
-        line-height:$font-size_button-line-height-xlg;
-        @include border-radius($font-size_button-border-radius-xlg);
-    }
-    
-    &.fasc-type-amcust-white {
-        
-    }
+  &.fasc-size-xlarge {
+    padding: $font-size_button-padding-xlg;
+    font-size: $font-size_button-xlg;
+    line-height: $font-size_button-line-height-xlg;
+    @include border-radius($font-size_button-border-radius-xlg);
+  }
 
-    &.fasc-type-amcust-primary,
-    &.fasc-type-amcust-strong {
-        background:$color_primary;
-        border:1px solid white;
-        color:white;
-    }
+  &.fasc-type-amcust-white {
+  }
 
-    &.fasc-type-amcust-secondary {
-        background:$color_secondary;
-        border:1px solid $color_secondary;
-        color:white;
-    }
+  &.fasc-type-amcust-primary,
+  &.fasc-type-amcust-strong {
+    background: $color_primary;
+    border: 1px solid white;
+    color: white;
+  }
 
+  &.fasc-type-amcust-secondary {
+    background: $color_secondary;
+    border: 1px solid $color_secondary;
+    color: white;
+  }
 }

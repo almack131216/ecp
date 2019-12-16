@@ -1,54 +1,51 @@
 /* _social-icons.scss */
 
 .contactus-social-icons-wrap {
-    width:100%;
-    text-align:center;
-    padding:$offset-g1 0;
+  width: 100%;
+  text-align: center;
+  padding: $offset-g1 0;
 
-    h4 {
-        margin-bottom:$offset-g1;
-    }
+  h4 {
+    margin-bottom: $offset-g1;
+  }
 
-    .contactus-social-icons {        
-        color: white;
-        text-align: center;
-        margin:0 auto;
-        padding:0;
-        display:inline-block;
+  .contactus-social-icons {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
 
-        a {
-            margin:0 5px;
+    a {
+      margin: 0 5px;
 
-            &.disc {
-                @include btn-disc();
-            }
+      &.disc {
+        @include btn-disc();
+      }
 
-            &:first-child {
-                margin-left:0;
-            }
-            &:last-child {
-                margin-right:0;
-            }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
 
-            
+      i.fa {
+        @extend .fa-lg;
+        @include set-opacity("twothir");
+      }
 
-            i.fa {
-                @extend .fa-lg;
-                @include set-opacity('twothir');
-            }
-
-            &:hover {
-                i.fa {
-                    @include set-opacity('full');
-                }
-            }
+      &:hover {
+        i.fa {
+          @include set-opacity("full");
         }
-        
+      }
     }
+  }
 }
 
 footer {
-    .contactus-social-icons-wrap {
-        padding:$offset-g2 0;
-    }
+  .contactus-social-icons-wrap {
+    padding: $offset-g2 0;
+  }
 }
