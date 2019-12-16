@@ -2,54 +2,54 @@
 Theme Name: Child
 Template: ecp
 Version: 1.0.1510691843
-Updated: 2019-11-05 00:00:00
+Updated: 2019-12-11 00:00:00
 
 */
 
 /* BASE - base styles, variables, mixins etc */
-@import 'base/_variables.scss';
-@import 'base/_variables-color.scss';
-@import 'base/_variables-button.scss';
-@import 'base/_mixins.scss';
-@import 'base/_mixins-buttons.scss';
+@import "base/_variables.scss";
+@import "base/_variables-color.scss";
+@import "base/_variables-button.scss";
+@import "base/_mixins.scss";
+@import "base/_mixins-buttons.scss";
 
 /* MODULES - individual site components */
-@import 'modules/_button.scss';
-@import 'modules/_form.scss';
-@import 'modules/_img.scss';
-@import 'modules/_circles.scss';
-@import 'modules/_social-icons.scss';
-@import 'modules/_four-main.scss';
-@import 'modules/_people.scss';
-@import 'modules/_typography.scss';
-@import 'modules/_tabs.scss';
-@import 'modules/_buttons-sidetabs.scss';
+@import "modules/_button.scss";
+@import "modules/_form.scss";
+@import "modules/_img.scss";
+@import "modules/_circles.scss";
+@import "modules/_social-icons.scss";
+@import "modules/_four-main.scss";
+@import "modules/_people.scss";
+@import "modules/_typography.scss";
+@import "modules/_tabs.scss";
+@import "modules/_buttons-sidetabs.scss";
 
 /* LAYOUTS - page layout styles */
-@import 'layouts/_offsets.scss';
-@import 'layouts/_logo-row.scss';
-@import 'layouts/_navbar.scss';
-@import 'layouts/_footer.scss';
-@import 'layouts/_row-box.scss';
-@import 'layouts/_amcust-news.scss';
-@import 'layouts/_amcust-vacancies.scss';
-@import 'layouts/_video-background.scss';
+@import "layouts/_offsets.scss";
+@import "layouts/_logo-row.scss";
+@import "layouts/_navbar.scss";
+@import "layouts/_footer.scss";
+@import "layouts/_row-box.scss";
+@import "layouts/_amcust-news.scss";
+@import "layouts/_amcust-vacancies.scss";
+@import "layouts/_video-background.scss";
 
 /* PAGEPARTS - components */
-@import 'pageparts/_pagepart-base.scss';
-@import 'pageparts/_pagepart-banner.scss';
-@import 'pageparts/_pagepart-more-information.scss';
+@import "pageparts/_pagepart-base.scss";
+@import "pageparts/_pagepart-banner.scss";
+@import "pageparts/_pagepart-more-information.scss";
 
 /* PLUGINS - customise how plugins look */
-@import 'plugins/_post-grid.scss';
-@import 'plugins/_post-grid-people.scss';
-@import 'plugins/_post-grid-news.scss';
-@import 'plugins/_table-press.scss';
-@import 'plugins/_wpspw-post-list.scss';
-@import 'plugins/_portfolio-slideshow.scss';
-@import 'plugins/_draw-attention.scss';
-@import 'plugins/_draw-attention-roots.scss';
+@import "plugins/_post-grid.scss";
+@import "plugins/_post-grid-people.scss";
+@import "plugins/_post-grid-news.scss";
+@import "plugins/_table-press.scss";
+@import "plugins/_wpspw-post-list.scss";
+@import "plugins/_portfolio-slideshow.scss";
+@import "plugins/_draw-attention.scss";
+@import "plugins/_draw-attention-roots.scss";
 
-@import 'addons/_font-awesome-overrule.scss';
-@import 'addons/_mbt.scss';
-@import 'addons/_minor-tweaks.scss';
+@import "addons/_font-awesome-overrule.scss";
+@import "addons/_mbt.scss";
+@import "addons/_minor-tweaks.scss";

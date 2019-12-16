@@ -1,344 +1,334 @@
 /* _draw-attention.scss */
 
 .hotspot-info {
+  h2.hotspot-title {
+  }
 
-    h2.hotspot-title {
-
+  .hotspot-content {
+    > .dps_wrap_img-gallery,
+    > .dps_wrap_img-text {
+      > .listing-item {
+        margin: 0; //$offset-g1 0
+        padding: 0;
+        display: block;
+        width: 100%;
+        float: left;
+      }
     }
 
-    .hotspot-content {
+    > .dps_wrap_img-gallery {
+      .listing-item {
+        padding: $offset-g1;
+      }
 
-        > .dps_wrap_img-gallery,
-        > .dps_wrap_img-text {
-            > .listing-item {
-                margin:$offset-g1 0;
-                padding:0;
-                display: block;
-                width: 100%;
-                float: left;
-            }
+      &.bg-primary {
+        .listing-item {
+          background-color: $color_primary;
         }
+      }
 
-        > .dps_wrap_img-gallery {
-            ul.wp-block-gallery {
-                margin:0;
-                padding:0;
-            }
-        }
-
-        > .dps_wrap_img-text {
-            > .listing-item {
-                > a.title {
-                    display:none;
-                }
-                a.image {
-                    float:left;
-                    display:block;
-                    margin:0;
-                    padding:0 $offset-2 0 0;
-                    width:40%;
-                    min-height: $offset-g2;
-
-                    @media (max-width:$bp-sm-1){
-                        width:40%;                
-                    }     
-                    @media (max-width:$bp-xs-1){
-                        width:100%;  
-                        padding-right:0;              
-                    }                                                      
-
-                    img {
-                        width:100%;
-                        height:auto;
-                    }
-                }
-                p:empty {
-                    display:none;
-                }
-                .content {    
-                    float:left;                    
-                    display:block;
-                    width:60%;
-                    
-                    @media (max-width:$bp-sm-1){
-                        width:60%;                
-                    }
-                    @media (max-width:$bp-xs-1){
-                        padding-top:$offset-1;
-                        width:100%;                
-                    }
-                }
-            }
-            
-        }
-
-        .display-posts-listing {
-            margin:$offset-g1 0;
-            padding:0;
-            list-style:none;
-    
-            > li.listing-item {
-                > a.title {
-                    display:none;
-                }
-                a.image {
-                    // float:left;
-                    // width:33%;
-                    // display:block;
-                    // margin:0;
-                    // padding:0 $offset-2 $offset-2 0;
-                }
-                .content {    
-                    
-                }
-            }
-        }
+      ul.wp-block-gallery {
+        margin: 0;
+        padding: 0;
+      }
     }
-    
+
+    ul.wp-block-gallery {
+      margin: 0;
+    }
+
+    > .dps_wrap_img-text {
+      > .listing-item {
+        > a.title {
+          display: none;
+        }
+        a.image {
+          float: left;
+          display: block;
+          margin: 0;
+          padding: 0 $offset-2 0 0;
+          width: 40%;
+          min-height: $offset-g2;
+
+          @media (max-width: $bp-sm-1) {
+            width: 40%;
+          }
+          @media (max-width: $bp-xs-1) {
+            width: 100%;
+            padding-right: 0;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        p:empty {
+          display: none;
+        }
+        .content {
+          float: left;
+          display: block;
+          width: 60%;
+
+          @media (max-width: $bp-sm-1) {
+            width: 60%;
+          }
+          @media (max-width: $bp-xs-1) {
+            padding-top: $offset-1;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .display-posts-listing {
+      margin: $offset-g1;
+      padding: 0;
+      list-style: none;
+
+      > li.listing-item {
+        > a.title {
+          display: none;
+        }
+        a.image {
+          // float:left;
+          // width:33%;
+          // display:block;
+          // margin:0;
+          // padding:0 $offset-2 $offset-2 0;
+        }
+        .content {
+        }
+      }
+    }
+  }
 }
 
 .featherlight {
-    &:last-of-type {
-        // background: rgba(0,0,0,0.8);//default (black)
-        background: rgba(255, 255, 255,0.8) !important;//ECP dark blue
+  &:last-of-type {
+    // background: rgba(0,0,0,0.8);//default (black)
+    background: rgba(255, 255, 255, 0.8) !important; //ECP dark blue
+  }
+
+  .featherlight-content {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 !important;
+
+    button.featherlight-close-icon.featherlight-close {
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      font-weight: bold;
+      top: $offset-2;
+      right: $offset-2;
+      position: absolute;
+      font-size: 25px;
+      width: 40px;
+      height: 40px;
+      @include border-radius(50%);
     }
 
-    
-    .featherlight-content {
-        max-width:900px;
-        margin-right: auto;
-        margin-left: auto;
-        padding:0;
+    &.lightbox-8043 {
+      //   background-color: $color_primary !important;
+    }
 
-        button.featherlight-close-icon.featherlight-close {
-            background: transparent;
-            color: white;
-            font-weight: bold;
-            top: $offset-4;
-            right: $offset-4;
-            position: absolute;
-            font-size: 25px;
+    .hotspot-info {
+      //   padding: $offset-g1;
+
+      &.featherlight-inner {
+        h2.hotspot-title {
+          display: none;
         }
 
-        .hotspot-info {
+        .hotspot-content {
+          .dps_wrap_img-text {
+            .listing-item {
+              background: $color_primary;
+              @include border-radius($offset-4);
+              margin: 0;
+              padding: $offset-2;
 
-            &.featherlight-inner {
-
-                h2.hotspot-title {
-                    display:none;
+              a.image {
+                img {
+                  @include border-radius($offset-2);
                 }
+              }
 
-                .hotspot-content {
-                    .dps_wrap_img-text {
-                        .listing-item {
-                            background: $color_primary;                            
-                            @include border-radius($offset-4);
-                            margin: 0;
-                            padding:$offset-2;
+              .content {
+                color: white;
 
-                            a.image {
-                                img {
-                                    @include border-radius($offset-2);
-                                }
-                            }
-
-                            .content {
-                                color:white;
-
-                                p {
-                                    .mp-title {
-                                        color:black;
-                                        background-color:white;                                        
-                                    }
-                                    
-                                    .mp-more {
-                                        background-color:black;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            /* (END) .hotspot-info custom shared */
-
-            /* top-left corner cut */
-            &.featherlight-inner#hotspot-hotspot-7198-5,//thinkers
-            &.featherlight-inner#hotspot-hotspot-7198-6,//knowledgeable
-            &.featherlight-inner#hotspot-hotspot-7198-8,//inquirers
-            &.featherlight-inner#hotspot-hotspot-7198-10 //balanced
-            {
-                .hotspot-content {
-                    .dps_wrap_img-text {
-                        .listing-item {
-                            @include border-radius-corner('top-left',0px);
-
-                            a.image {
-                                img {
-                                    @include border-radius-corner('top-left',0px);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            /* top-right corner cut */
-            &.featherlight-inner#hotspot-hotspot-7198-3,//reflective
-            &.featherlight-inner#hotspot-hotspot-7198-4,//caring
-            &.featherlight-inner#hotspot-hotspot-7198-9 //risk-takers
-            {
-                .hotspot-content {
-                    .dps_wrap_img-text {
-                        .listing-item {
-                            @include border-radius-corner('top-right',0px);
-                        }
-                    }
-                }
-            }
-            /* bottom-right corner cut */
-            &.featherlight-inner#hotspot-hotspot-7198-7,//open-minded
-            &.featherlight-inner#hotspot-hotspot-7198-12 //communications
-            {
-                .hotspot-content {
-                    .dps_wrap_img-text {
-                        .listing-item {
-                            @include border-radius-corner('bottom-right',0px);
-                        }
-                    }
-                }
-            }
-            /* bottom-left corner cut */
-            &.featherlight-inner#hotspot-hotspot-7198-11 //principled
-            {
-                .hotspot-content {
-                    .dps_wrap_img-text {
-                        .listing-item {
-                            @include border-radius-corner('bottom-left',0px);
-                        }
-                    }
-                }
-            }
-            /* (END) corner cuts */
-
-            
-            /* colors */
-            &.featherlight-inner#hotspot-hotspot-7198-8,//inquirers
-            &.featherlight-inner#hotspot-hotspot-7198-9 //risk-takers
-            {
-                .hotspot-content {
-                    .dps_wrap_img-text {
-                        .listing-item {
-                            background: #AE9F33;
-                        }
-                    }
-                }
-            }
-            &.featherlight-inner#hotspot-hotspot-7198-3,//reflective
-            &.featherlight-inner#hotspot-hotspot-7198-7,//open-minded
-            &.featherlight-inner#hotspot-hotspot-7198-10 //balanced
-            {
-                .hotspot-content {
-                    .dps_wrap_img-text {
-                        .listing-item {
-                            background: #14AF97;
-                        }
-                    }
-                }
-            }
-            &.featherlight-inner#hotspot-hotspot-7198-4,//caring
-            &.featherlight-inner#hotspot-hotspot-7198-11,//principled
-            &.featherlight-inner#hotspot-hotspot-7198-12 //communications
-            {
-                .hotspot-content {
-                    .dps_wrap_img-text {
-                        .listing-item {
-                            background: #1E86C2;
-                        }
-                    }
-                }
-            }
-            /* (END) colors */
-            
-
-            &.featherlight-inner#hotspot-hotspot-7198-5,//thinkers
-            &.featherlight-inner#hotspot-hotspot-7198-6 //knowledgeable
-            {
-                .hotspot-content {
-                    .dps_wrap_img-text {
-                        .listing-item {
-                            background: #692D81;
-                        }
-                    }
-                }
-            }
-            /* (END) .hotspot-info THINKERS + KNOWLEDGEABLE */
-
-
-            .content {
                 p {
-                    padding: 8px 0;
-                    padding: 0.5rem 0;
-                    font-weight: 400;
-                }
-            }
-        }
+                  .mp-title {
+                    color: black;
+                    background-color: white;
+                  }
 
-        
+                  .mp-more {
+                    background-color: black;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      /* (END) .hotspot-info custom shared */
+
+      // cutting corners...
+      .hotspot-content {
+        .dps_wrap_img-text {
+          /* top-left corner cut */
+          &.leaf-thinkers,
+          &.leaf-knowledgeable,
+          &.leaf-inquirers,
+          &.leaf-balanced {
+            .listing-item {
+              @include border-radius-corner("top-left", 0px);
+
+              a.image {
+                img {
+                  @include border-radius-corner("top-left", 0px);
+                }
+              }
+            }
+          }
+          /* top-right corner cut */
+          &.leaf-reflective,
+          &.leaf-caring,
+          &.leaf-risk-takers {
+            .listing-item {
+              @include border-radius-corner("top-right", 0px);
+            }
+          }
+          /* bottom-right corner cut */
+          &.leaf-open-minded,
+          &.leaf-communicators {
+            .listing-item {
+              @include border-radius-corner("bottom-right", 0px);
+            }
+          }
+          /* bottom-left corner cut */
+          &.leaf-principled {
+            .listing-item {
+              @include border-radius-corner("bottom-left", 0px);
+            }
+          }
+        }
+      }
+      /* (END) corner cuts */
+
+      /* colors */
+
+      .hotspot-content {
+        .dps_wrap_img-text {
+          //clouds
+          &.bg-primary {
+            .listing-item {
+              background: $color_accent-1;
+            }
+          }
+          //thinkers
+          //knowledgeable
+          &.bg-accent-1 {
+            .listing-item {
+              background: $color_accent-1;
+            }
+          }
+          //caring
+          //principled
+          //communications
+          &.bg-accent-2 {
+            .listing-item {
+              background: $color_accent-2;
+            }
+          }
+          //reflective
+          //open-minded
+          //balanced
+          &.bg-accent-3 {
+            .listing-item {
+              background: $color_accent-3;
+            }
+          }
+          //inquirers
+          //risk-takers
+          &.bg-accent-4 {
+            .listing-item {
+              background: $color_accent-4;
+            }
+          }
+        }
+      }
+
+      /* (END) colors */
+
+      /* (END) .hotspot-info THINKERS + KNOWLEDGEABLE */
+
+      .content {
+        p {
+          padding: 8px 0;
+          padding: 0.5rem 0;
+          font-weight: 400;
+        }
+      }
     }
+  }
 }
 
-
 .root_tier1 {
-    background-color: yellow;
-    border:5px solid red;
+  background-color: yellow;
+  border: 5px solid red;
 }
 
 .root_tier2 {
-    background-color: orange;
-    border:5px solid red;
+  background-color: orange;
+  border: 5px solid red;
 }
 
 .mp-title,
 .mp-more {
-    font-weight:bold;
-    padding-left:5px;
-    padding-right:5px;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .mp-title-main {
-    text-transform:uppercase;
+  text-transform: uppercase;
 }
 
 .mp-title {
-    background-color:#f0f;
+  background-color: #f0f;
 }
 
 .mp-more {
-    background-color:#0ff;
+  background-color: #0ff;
 }
 
 .fasc-button.fasc-size-large.back-to-tree {
-    margin:$offset-g2 0;
-    background:white url(amadded/assets/img/back-to-tree-sm.png) no-repeat 4px 4px;
-    background-size: 50px 50px;
-    padding-left:60px;
+  margin: $offset-g2 0;
+  background: white url(amadded/assets/img/back-to-tree-sm.png) no-repeat 4px
+    4px;
+  background-size: 50px 50px;
+  padding-left: 60px;
 }
 
 .btn-back-to-tree {
-    display:block;
-    width:150px;
-    min-height:150px;
-    background:white url(amadded/assets/img/back-to-tree-sm.png) no-repeat 0 0;
-    background-size: 100% 100%;
-    margin:0 0 $offset-g2 0;
-    border:1px solid $color_primary;
+  display: block;
+  width: 150px;
+  min-height: 150px;
+  background: white url(amadded/assets/img/back-to-tree-sm.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  margin: 0 0 $offset-g2 0;
+  border: 1px solid $color_primary;
 
-    &.in-content {
-        float:right;
-        margin:0 $offset-g1 $offset-g1 0;
-    }
+  &.in-content {
+    float: right;
+    margin: 0 $offset-g1 $offset-g1 0;
+  }
 
-    span {
-        display:none;
-    }
+  span {
+    display: none;
+  }
 }
