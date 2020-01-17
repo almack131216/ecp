@@ -1,0 +1,82 @@
+/* _more-programme.scss */
+
+.back-to-tree {
+  @extend .fasc-button;
+  @extend .fasc-size-large;
+
+  margin: 0;
+  background: white url(amadded/assets/img/back-to-tree-sm.png) no-repeat 5px
+    5px !important;
+  background-size: 48px 48px !important;
+  padding: 10px 20px !important;
+
+  span {
+    margin-left: 40px;
+  }
+
+  @media (max-width: $bp-xs-1) {
+    height: $offset-g4;
+    padding-left: 58px !important;
+    padding-right: 0 !important;
+    width: $offset-g4 !important;
+
+    span {
+      font-size: 0px;
+      color: transparent;
+      display: none;
+    }
+  }
+}
+
+.col-brief {
+  .back-to-tree {
+    margin-right: $offset-1;
+    @media (min-width: $bp-sm) {
+      display: inline-block;
+      margin-bottom: $offset-g2;
+    }
+  }
+}
+
+.more-button-wrap {
+  text-align: center;
+  padding: $offset-g2 0;
+  // background: yellow;
+
+  &.with-title {
+    &.left {
+      text-align: left;
+
+      a,
+      h1 {
+        display: inline-block;
+      }
+
+      a {
+        float: left;
+      }
+
+      h1 {
+        margin: 0 0 0 $offset-g1;
+        padding: 0;
+
+        @media (max-width: $bp-xs-1) {
+          font-size: 1.4em;
+        }
+
+        &:before {
+          content: "> ";
+        }
+      }
+    }
+  }
+
+  a.back-to-tree {
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin: 0 auto;
+    line-height: $offset-g4;
+  }
+}

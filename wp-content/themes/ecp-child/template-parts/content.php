@@ -6,7 +6,8 @@
  *
  * @package ecp
  */
-
+$categoryMore = 5364;
+if(amactive_is_localhost()) $categoryMore = 1115;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -23,8 +24,8 @@
 	<div class="amcust-news-wrap">
 		<div class="col-brief">
 			<?php
-			if(in_category( 4787 )){
-				echo '<a href="/test-resp-img-map/" class="fasc-button fasc-size-large back-to-tree in-content"><span>:more</span></a>';
+			if(in_category( $categoryMore )){
+				echo '<a href="/more-programme/" class="back-to-tree in-content"><span>:more</span></a>';
 			}
 
 			if ( 'post' === get_post_type() ) : ?>
@@ -62,8 +63,8 @@
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					) );
 
-					if(in_category( 4787 )){
-						echo '<a href="/test-resp-img-map/" class="fasc-button fasc-size-large back-to-tree in-content"><span>:more programme</span></a>';
+					if(in_category( $categoryMore )){
+						echo '<a href="/more-programme/" class="back-to-tree in-content"><span>:more programme</span></a>';
 					}
 
 					wp_link_pages( array(

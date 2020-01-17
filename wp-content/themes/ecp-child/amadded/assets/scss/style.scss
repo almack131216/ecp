@@ -2,7 +2,7 @@
 Theme Name: Child
 Template: ecp
 Version: 1.0.1510691843
-Updated: 2019-12-16 00:00:00
+Updated: 2020-01-16 00:00:00
 */
 
 /* BASE - base styles, variables, mixins etc */
@@ -25,6 +25,7 @@ Updated: 2019-12-16 00:00:00
 @import "modules/_buttons-sidetabs.scss";
 
 /* LAYOUTS - page layout styles */
+@import "layouts/_base.scss";
 @import "layouts/_offsets.scss";
 @import "layouts/_logo-row.scss";
 @import "layouts/_navbar.scss";
@@ -33,6 +34,7 @@ Updated: 2019-12-16 00:00:00
 @import "layouts/_amcust-news.scss";
 @import "layouts/_amcust-vacancies.scss";
 @import "layouts/_video-background.scss";
+@import "layouts/_more-programme.scss";
 
 /* PAGEPARTS - components */
 @import "pageparts/_pagepart-base.scss";
@@ -48,6 +50,7 @@ Updated: 2019-12-16 00:00:00
 @import "plugins/_portfolio-slideshow.scss";
 @import "plugins/_draw-attention.scss";
 @import "plugins/_draw-attention-roots.scss";
+@import "plugins/_display-posts-page.scss";
 
 @import "addons/_font-awesome-overrule.scss";
 @import "addons/_mbt.scss";

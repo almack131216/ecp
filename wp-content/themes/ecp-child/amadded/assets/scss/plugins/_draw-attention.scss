@@ -6,7 +6,8 @@
 
   .hotspot-content {
     > .dps_wrap_img-gallery,
-    > .dps_wrap_img-text {
+    > .dps_wrap_img-text,
+    > .dps_wrap_text-only {
       > .listing-item {
         margin: 0; //$offset-g1 0
         padding: 0;
@@ -24,6 +25,7 @@
       &.bg-primary {
         .listing-item {
           background-color: $color_primary;
+          color: white;
         }
       }
 
@@ -37,7 +39,8 @@
       margin: 0;
     }
 
-    > .dps_wrap_img-text {
+    > .dps_wrap_img-text,
+    > .dps_wrap_text-onlyXXX {
       > .listing-item {
         > a.title {
           display: none;
@@ -112,6 +115,7 @@
   }
 
   .featherlight-content {
+    background: transparent;
     max-width: 900px;
     margin-right: auto;
     margin-left: auto;
@@ -143,7 +147,8 @@
         }
 
         .hotspot-content {
-          .dps_wrap_img-text {
+          .dps_wrap_img-text,
+          .dps_wrap_text-only {
             .listing-item {
               background: $color_primary;
               @include border-radius($offset-4);
@@ -178,7 +183,9 @@
 
       // cutting corners...
       .hotspot-content {
-        .dps_wrap_img-text {
+        .dps_wrap_img-text,
+        .dps_wrap_text-only,
+        .dps_wrap_img-gallery {
           /* top-left corner cut */
           &.leaf-thinkers,
           &.leaf-knowledgeable,
@@ -215,6 +222,20 @@
               @include border-radius-corner("bottom-left", 0px);
             }
           }
+          /* top-left & bottom-right corner cut */
+          &.root-understanding,
+          &.root-development {
+            .listing-item {
+              @include border-radius-corner("top-left", 0px);
+              @include border-radius-corner("bottom-right", 0px);
+
+              a.image {
+                img {
+                  @include border-radius-corner("top-left", 0px);
+                }
+              }
+            }
+          }
         }
       }
       /* (END) corner cuts */
@@ -222,11 +243,12 @@
       /* colors */
 
       .hotspot-content {
-        .dps_wrap_img-text {
+        .dps_wrap_img-text,
+        .dps_wrap_text-only {
           //clouds
           &.bg-primary {
             .listing-item {
-              background: $color_accent-1;
+              background: $color_primary;
             }
           }
           //thinkers
@@ -261,7 +283,6 @@
           }
         }
       }
-
       /* (END) colors */
 
       /* (END) .hotspot-info THINKERS + KNOWLEDGEABLE */
@@ -304,14 +325,6 @@
 
 .mp-more {
   background-color: #0ff;
-}
-
-.fasc-button.fasc-size-large.back-to-tree {
-  margin: $offset-g2 0;
-  background: white url(amadded/assets/img/back-to-tree-sm.png) no-repeat 4px
-    4px;
-  background-size: 50px 50px;
-  padding-left: 60px;
 }
 
 .btn-back-to-tree {

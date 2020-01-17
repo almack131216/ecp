@@ -135,7 +135,7 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
     // print_r($atts);
 
     $catId = $atts['cat_id'];//parent (root) categoryId
-    $styled = $atts['styled'] ? true : false;
+    $styled = $atts['styled'] == 'true' ? true : false;
     // $styled = true;
     $allTitlesUsed[] = $catId;
 

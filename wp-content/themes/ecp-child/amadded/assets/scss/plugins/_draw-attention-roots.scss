@@ -13,11 +13,14 @@ $color_root: #564037;
 
 .mp-wrap_all.list {
   .mp-main-title {
-    // text-align: center;
+    display: none;
+    text-align: center;
     margin-bottom: $offset-g1;
+    padding-top: 0;
   }
 
   .mp-wrap {
+    // https://tobiasahlin.com/blog/common-flexbox-patterns/#3x3-grid
     display: flex;
     flex-wrap: wrap;
     // justify-content: space-between;
@@ -33,6 +36,10 @@ $color_root: #564037;
       list-style: none;
 
       li {
+        h4 {
+          font-size: 1em;
+        }
+
         ul.ul-posts {
           margin: $offset-1 0 0 0;
           background-color: $color_bg-body;

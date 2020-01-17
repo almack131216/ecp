@@ -76,5 +76,13 @@ header.site-header {
     /* (END) .site-branding */
   }
   /* (END) .page-box */
+
+  #menucontactusXXX .request-brochure > a,
+  #menucontactus li:nth-child(1) a {
+    background: $color_accent-1;
+    &:not(:hover) {
+      border-color: $color_accent-1;
+    }
+  }
 }
 /* (END) header.site-header */
