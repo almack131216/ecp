@@ -2,7 +2,7 @@
 Theme Name: Child
 Template: ecp
 Version: 1.0.1510691843
-Updated: 2020-01-16 00:00:00
+Updated: 2020-01-20 00:00:00
 */
 /* BASE - base styles, variables, mixins etc */
 /* _variables.scss */
@@ -22,7 +22,7 @@ Updated: 2020-01-16 00:00:00
 /* [END] g_btn-base() */
 /* MODULES - individual site components */
 /* _button.scss */
-.fasc-button, .single-post #main article.category-vacancies .wpcf7 form input[type="submit"], .back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a {
+.fasc-button, .single-post #main article.category-vacancies .wpcf7 form input[type="submit"], .back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a, div.more-anchors ul li a {
   font-weight: normal;
   text-transform: inherit;
   background: white;
@@ -35,7 +35,7 @@ Updated: 2020-01-16 00:00:00
   line-height: 24px;
 }
 
-.fasc-button.fasc-size-small, .single-post #main article.category-vacancies .wpcf7 form input.fasc-size-small[type="submit"], .fasc-size-small.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-size-small.page-numbers, #main .post-grid-wrap.news .grid-items .item .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .layer-content.paginate > a.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a {
+.fasc-button.fasc-size-small, .single-post #main article.category-vacancies .wpcf7 form input.fasc-size-small[type="submit"], .fasc-size-small.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-size-small.page-numbers, #main .post-grid-wrap.news .grid-items .item .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .layer-content.paginate > a.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a, div.more-anchors ul li a.fasc-size-small, #main .post-grid-wrap.news .grid-items .item div.more-anchors ul li .layer-content > a {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 18px;
@@ -44,13 +44,13 @@ Updated: 2020-01-16 00:00:00
   border-radius: 2px;
 }
 
-.fasc-button.fasc-size-default, .single-post #main article.category-vacancies .wpcf7 form input.fasc-size-default[type="submit"], .fasc-size-default.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-size-default.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-size-default, .fasc-button.fasc-size-medium, .single-post #main article.category-vacancies .wpcf7 form input.fasc-size-medium[type="submit"], .fasc-size-medium.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-size-medium.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-size-medium {
+.fasc-button.fasc-size-default, .single-post #main article.category-vacancies .wpcf7 form input.fasc-size-default[type="submit"], .fasc-size-default.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-size-default.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-size-default, div.more-anchors ul li a.fasc-size-default, .fasc-button.fasc-size-medium, .single-post #main article.category-vacancies .wpcf7 form input.fasc-size-medium[type="submit"], .fasc-size-medium.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-size-medium.page-numbers, div.more-anchors ul li .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > a.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-size-medium, #main .post-grid-wrap.news .grid-items .item div.more-anchors ul li .layer-content > a, div.more-anchors ul li #main .post-grid-wrap.news .grid-items .item .layer-content > a, div.more-anchors ul li a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 
-.fasc-button.fasc-size-large, .single-post #main article.category-vacancies .wpcf7 form input.fasc-size-large[type="submit"], .single-post #main article.category-vacancies .wpcf7 form input[type="submit"].back-to-tree, .back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-size-large.page-numbers, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .page-numbers.back-to-tree, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-size-large, #main .post-grid-wrap.news .grid-items .item .layer-content > a.back-to-tree {
+.fasc-button.fasc-size-large, .single-post #main article.category-vacancies .wpcf7 form input.fasc-size-large[type="submit"], .single-post #main article.category-vacancies .wpcf7 form input[type="submit"].back-to-tree, .back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-size-large.page-numbers, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .page-numbers.back-to-tree, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-size-large, #main .post-grid-wrap.news .grid-items .item .layer-content > a.back-to-tree, div.more-anchors ul li a.fasc-size-large, div.more-anchors ul li a.back-to-tree {
   padding: 10px 20px;
   font-size: 24px;
   line-height: 36px;
@@ -59,7 +59,7 @@ Updated: 2020-01-16 00:00:00
   border-radius: 5px;
 }
 
-.fasc-button.fasc-size-xlarge, .single-post #main article.category-vacancies .wpcf7 form input.fasc-size-xlarge[type="submit"], .fasc-size-xlarge.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-size-xlarge.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-size-xlarge {
+.fasc-button.fasc-size-xlarge, .single-post #main article.category-vacancies .wpcf7 form input.fasc-size-xlarge[type="submit"], .fasc-size-xlarge.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-size-xlarge.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-size-xlarge, div.more-anchors ul li a.fasc-size-xlarge {
   padding: 10px 20px;
   font-size: 30px;
   line-height: 45px;
@@ -68,13 +68,13 @@ Updated: 2020-01-16 00:00:00
   border-radius: 10px;
 }
 
-.fasc-button.fasc-type-amcust-primary, .single-post #main article.category-vacancies .wpcf7 form input.fasc-type-amcust-primary[type="submit"], .fasc-type-amcust-primary.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-type-amcust-primary.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-type-amcust-primary, .fasc-button.fasc-type-amcust-strong, .single-post #main article.category-vacancies .wpcf7 form input.fasc-type-amcust-strong[type="submit"], .fasc-type-amcust-strong.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-type-amcust-strong.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-type-amcust-strong {
+.fasc-button.fasc-type-amcust-primary, .single-post #main article.category-vacancies .wpcf7 form input.fasc-type-amcust-primary[type="submit"], .fasc-type-amcust-primary.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-type-amcust-primary.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-type-amcust-primary, div.more-anchors ul li a.fasc-type-amcust-primary, .fasc-button.fasc-type-amcust-strong, .single-post #main article.category-vacancies .wpcf7 form input.fasc-type-amcust-strong[type="submit"], .fasc-type-amcust-strong.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-type-amcust-strong.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-type-amcust-strong, div.more-anchors ul li a.fasc-type-amcust-strong {
   background: #252259;
   border: 1px solid white;
   color: white;
 }
 
-.fasc-button.fasc-type-amcust-secondary, .single-post #main article.category-vacancies .wpcf7 form input.fasc-type-amcust-secondary[type="submit"], .fasc-type-amcust-secondary.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-type-amcust-secondary.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-type-amcust-secondary {
+.fasc-button.fasc-type-amcust-secondary, .single-post #main article.category-vacancies .wpcf7 form input.fasc-type-amcust-secondary[type="submit"], .fasc-type-amcust-secondary.back-to-tree, .post-grid-wrap.news > .post-grid.grid > .grid-nav-bottom > .pagination > .paginate > .fasc-type-amcust-secondary.page-numbers, #main .post-grid-wrap.news .grid-items .item .layer-content > a.fasc-type-amcust-secondary, div.more-anchors ul li a.fasc-type-amcust-secondary {
   background: #9e0012;
   border: 1px solid #9e0012;
   color: white;
@@ -2714,35 +2714,40 @@ table#tablepress-EntranceExamResultsMathsCZ > tbody.row-hover > tr:hover > td {
 }
 
 /* _display-posts-page.scss */
-ul.ul-more-anchors {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+div.more-anchors {
+  display: block;
+  width: 100%;
 }
 
-ul.ul-more-anchors li {
+div.more-anchors ul {
+  list-style: inline;
+  margin: 0 0 15px 0;
+  padding: 0;
+  display: inline-block;
+}
+
+div.more-anchors ul li {
   /* width: 50%; */
-  display: block;
+  display: inline-block;
+  white-space: nowrap;
+  clear: both;
+  width: auto;
+  margin: 0 10px 10px 0;
   /* flex: 0 0 50%; */
   /* order: 1; */
-  flex: 0 0 50%;
-  margin: -1px 0 0 -1px;
 }
 
 @media (max-width: 479px) {
-  ul.ul-more-anchors li {
+  div.more-anchors ul li {
     flex: 0 0 100%;
   }
 }
 
-ul.ul-more-anchors li a {
+div.more-anchors ul li a {
   text-decoration: none;
   padding: 10px 15px;
-  text-align: center;
-  border: 1px solid #252259;
+  text-align: left;
+  border-bottom: 1px solid #252259;
   color: #252259;
   width: 100%;
   display: block;
