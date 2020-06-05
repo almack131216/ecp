@@ -1,5 +1,53 @@
 /* _more-programme.scss */
 
+.single-post #main article.post-more-programme {
+  // background: red;
+
+  .entry-header {
+    text-align: center;
+    // background: pink;
+    padding: 0;
+
+    a.back-to-tree {
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: $offset-g1 auto;
+    }
+  }
+
+  .entry-content {
+    width: 100%;
+    float: left;
+
+    .more-anchors {
+      text-align: center;
+    }
+
+    .post-featured-image {
+      @media (min-width: $bp-xs) {
+        width: 30%;
+        float: left;
+        margin: 0 $offset-g2 $offset-g2 0;
+      }
+    }
+  }
+
+  .back-to-tree-wrap {
+    float: left;
+    display: block;
+    width: 100%;
+    // background: green;
+    padding: $offset-g2 0;
+    text-align: center;
+
+    a.back-to-tree {
+      margin: 0 auto;
+    }
+  }
+}
+
 .back-to-tree {
   @extend .fasc-button;
   @extend .fasc-size-large;

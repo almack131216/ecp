@@ -7,4 +7,10 @@
   background-color: #eee;
   background-position: top;
   background-size: cover;
+
+  &.full-width {
+    .pagepart-content {
+      max-width: 100%;
+    }
+  }
 }

@@ -6,10 +6,6 @@
   background: $color_debug;
   margin: 0;
 
-  @media (max-width: $bp-sm-1) {
-    display: block;
-  }
-
   ul.amcust_logos-table {
     margin: 0 auto;
     text-align: center;
@@ -20,30 +16,39 @@
     width: 100%;
     background: $color_debug2;
 
-    @media (max-width: $bp-sm-1) {
-      display: block;
+    @media (max-width: $bp-lg-1) {
+      flex-wrap: wrap;
     }
 
     li {
-      padding: 10px 0;
+      padding: $offset-1;
       position: static;
       display: inline-flex;
       text-align: center;
       // min-width: 20%;
       border: 1px solid $color_debug3;
       background: $color_debug;
-
-      @media (max-width: $bp-sm-1) {
-        min-width: 30%;
-        display: inline-block;
+      // display: inline-block;
+      @media (min-width: $bp-sm) and (max-width: $bp-lg-1) {
+        width: 25%;
+        // display: inline-block;
       }
-      @media (max-width: $bp-xs-1) {
-        min-width: 90%;
+      @media (min-width: $bp-tablet) and (max-width: $bp-sm-1) {
+        width: 30%;
+        // display: inline-block;
+      }
+      @media (max-width: $bp-tablet-1) {
+        width: 50%;
+      }
+
+      a {
+        margin: 0 auto;
       }
 
       img {
         height: 86px;
         width: auto;
+        margin: 0 auto;
       }
     }
   }
