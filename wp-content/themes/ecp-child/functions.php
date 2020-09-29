@@ -401,7 +401,18 @@ function myscript_in_footer(){
     // (END) if searching...
 }
 
-
+add_action('pre_get_posts', 'modified_search');
+function modified_search($query){
+    global $wp_query;
+    if($wp_query->is_search){
+        global $wpdb;
+        // echo '<br>---functions<br>';
+        $s_esc = esc_html($_REQUEST['s']);
+        // $GLOBALS['wp_query']->query['s'] = $s_esc;
+        // $GLOBALS['wp_the_query']->query_vars['s'] = $s_esc;
+        set_query_var('s',$s_esc);
+    }
+}
 
 // function wps_highlight_results($text){
 //     if(is_search()){
