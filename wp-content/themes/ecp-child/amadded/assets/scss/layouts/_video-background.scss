@@ -92,24 +92,152 @@
 }
 
 .nivo-lightbox-open {
+  .nivo-lightbox-wrap {
+    .nivo-lightbox-content {
+    //   background:red;
+    // padding:10px;
+    @media (min-width:$bp-lg) {
+      @media (max-height:650px) {
+        // width:640px;
+        // margin:0 auto;
+      }
+    }
+
   .nivo-lightbox-inline {
-    padding:0;
+    position:static !important;
+    margin:0 auto !important;
+    padding:0;    
     background:black;
+    overflow: hidden;
+    // background:yellow;
+    // padding:10px;
+    // height:80%;
+    // margin-top:-200px;
+    // min-height:400px;
+
+    @media (min-width:$bp-lg) {
+      @media (min-height:650px) {
+        height:500px;
+        width:850px;
+      }
+    }  
+
+    .iframe-youtube {   
+      //REF: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+      
+      @media (min-width:$bp-lg) {
+        padding-top:0;
+        height:400px;
+
+        @media (min-height:650px) {
+          height:500px;
+          width:850px;
+        }
+      }     
+
+      /* Then style the iframe to fit in the container div with full height and width */
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+
+        @media (min-width:$bp-lg) {
+          max-height:400px;
+
+          @media (min-height:650px) {
+            max-height:500px;
+            width:850px;
+          }
+        }
+      }
+    }
+  
+    .iframe-youtubeXXX {      
+      margin:0 auto;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+      // @media (max-width:$bp-sm-1){
+      //   width:100% !important;
+      // }
+      
+
+      // iframe {
+      //   height:100%;
+      // }
+
+      /* Then style the iframe to fit in the container div with full height and width */
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+  }
+    }
+  }  
+}
+
+.nivo-lightbox-openXXX {
+  .nivo-lightbox-wrap {
+    .nivo-lightbox-content {
+      background:red;
+  padding:10px;
+
+  .nivo-lightbox-inline {
+    padding:0;    
+    background:black;
+    background:yellow;
+    padding:10px;
     // height:80%;
     // margin-top:-200px;
     // min-height:400px;
   
     .iframe-youtube {      
       margin:0 auto;
-      @media (max-width:$bp-sm-1){
-        width:100% !important;
-      }
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+      // @media (max-width:$bp-sm-1){
+      //   width:100% !important;
+      // }
       
 
-      iframe {
-        height:100%;
+      // iframe {
+      //   height:100%;
+      // }
+
+      /* Then style the iframe to fit in the container div with full height and width */
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
       }
+
     }
   }
+    }
+  }  
 }
 

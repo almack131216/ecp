@@ -16,8 +16,8 @@
 		Your browser does not support the video tag.
 	</video>
 
-	<div id="inline-content" class="iframe-youtube" style="display:none;width:560px;height:315px;overflow:hidden;">
-		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C9E8K-4IDrk?cc_load_policy=1&cc_lang_pref=cs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+	<div id="inline-content" class="iframe-youtube" style="display:none;">
+		<iframe class="responsive-iframe" src="https://www.youtube-nocookie.com/embed/C9E8K-4IDrk?cc_load_policy=1&cc_lang_pref=cs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
 	</div>
 	<!-- Optional: some overlay text to describe the video -->
 	<div class="video-content">
