@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * The header for our theme.
  *
@@ -21,11 +21,21 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400|Ubuntu:400,700,700i&amp;subset=latin-ext" rel="stylesheet">
 <script src="https://use.typekit.net/pea3abk.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T3W227Z');</script>
+<!-- End Google Tag Manager -->
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3W227Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ecp' ); ?></a>
   <div id="toptop">
@@ -36,7 +46,7 @@
     <div class="page-box">
   		<div class="site-branding bigger-emblem">
   			<?php
-        $imgLogo = '/assets/ECP-logo-full-white-transparent-25-year-190418.png';
+			$imgLogo = '/assets/ECP-logo-full-white-transparent-25-year-190418.png';
 			//$imgLogo = '/assets/ECP-logo-full-white-transparent.svg';
 
   			if ( is_front_page() && is_home() ) : ?>
