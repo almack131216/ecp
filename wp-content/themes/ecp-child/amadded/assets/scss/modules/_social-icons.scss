@@ -17,10 +17,59 @@
     display: inline-block;
 
     a {
-      margin: 0 5px;
+      margin: 0 7px;
 
       &.disc {
         @include btn-disc();
+
+        &.twitter {
+          background-color:$color_twitter;
+          border-color:$color_twitter;
+
+          &:hover {
+            > i.fa {
+              color:$color_twitter;
+            }
+          }
+        }
+        &.facebook {
+          background-color:$color_facebook;
+          border-color:$color_facebook;
+
+          &:hover {
+            > i.fa {
+              color:$color_facebook;
+            }
+          }
+        }
+        &.youtube {
+          background-color:$color_youtube;
+          border-color:$color_youtube;
+
+          &:hover {
+            > i.fa {
+              color:$color_youtube;
+            }
+          }
+        }
+        &.instagram {
+          background-color:$color_instagram;
+          border-color:$color_instagram;
+
+          &:hover {
+            > i.fa {
+              color:$color_instagram;
+            }
+          }
+        }
+        &.newsletter {
+          &:hover {
+            > i.fa {
+              color:$color_primary;
+            }
+          }
+        }
+
       }
 
       &:first-child {
@@ -32,12 +81,13 @@
 
       i.fa {
         @extend .fa-lg;
-        @include set-opacity("twothir");
+        // color:white;
+        // @include set-opacity("twothir");
       }
 
       &:hover {
         i.fa {
-          @include set-opacity("full");
+          // @include set-opacity("full");
         }
       }
     }

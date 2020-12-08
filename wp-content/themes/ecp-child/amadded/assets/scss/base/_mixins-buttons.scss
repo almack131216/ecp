@@ -13,10 +13,18 @@ $height-disc-button-sm: 30px;
   @include border-radius(#{$height-disc-button / 2});
   padding: 0;
   background-color: $color_primary;
+  border:2px solid $color_primary;
   text-align: center;
 
+  &:hover {
+    background-color:white !important;
+  }
+
   > i.fa {
-    line-height: $height-disc-button;
+    line-height: 48px;
+    line-height: calc(#{$height-disc-button - 2});// -2 because of border
+    @include set-opacity("full");
+    color:white;
   }
 
   @media (max-width: $bp-sm-1) {
