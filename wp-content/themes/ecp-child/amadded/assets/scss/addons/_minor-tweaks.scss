@@ -165,3 +165,13 @@ ul.elastislide-list li:first-child:nth-last-child(1) {
     }
   }
 }
+
+// 201118_youtube-embed-fix
+// to be used together with code in functions.php: add_theme_support( 'responsive-embeds' );
+figure.wp-block-embed-youtube.is-provider-youtube {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    border:1px solid $color_primary;
+} 
