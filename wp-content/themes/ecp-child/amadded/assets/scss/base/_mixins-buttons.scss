@@ -13,7 +13,7 @@ $height-disc-button-sm: 30px;
   @include border-radius(#{$height-disc-button / 2});
   padding: 0;
   background-color: $color_primary;
-  border:2px solid $color_primary;
+  border:2px solid white;//$color_primary
   text-align: center;
 
   &:hover {

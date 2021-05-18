@@ -175,3 +175,20 @@ figure.wp-block-embed-youtube.is-provider-youtube {
     margin-inline-end: 0;
     border:1px solid $color_primary;
 } 
+
+// 210304
+.post-10918 > .entry-content,
+.post-11383 > .entry-content,
+.post-11170 > .entry-content {
+  width:100%;
+  max-width:100%;
+  display: block;
+    float: left;
+    background:$color_primary;
+    padding-bottom:$offset-g2;
+}
+
+.post-11170 > .entry-content,
+.post-11383 > .entry-content  {
+  padding-top:30px;
+}

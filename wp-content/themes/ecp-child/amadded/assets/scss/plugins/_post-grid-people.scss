@@ -178,7 +178,8 @@
 .tal_quote,
 .stu_quote,
 .pat_quote,
-.par_quote {
+.par_quote,
+.gra_quote {
   display: none;
 }
 
@@ -189,7 +190,8 @@
 .people-tal-wrap .tal_quote,
 .people-stu-wrap .stu_quote,
 .people-pat-wrap .pat_quote,
-.people-par-wrap .par_quote {
+.people-par-wrap .par_quote,
+.people-gra-wrap .gra_quote {
   display: block;
   font-style: italic;
   color: #666;
