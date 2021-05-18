@@ -60,7 +60,7 @@ function print_amcust_share_btns() {
     $tmpContent = '<div class="contactus-social-icons-wrap">';
     $tmpContent .= '<div class="contactus-social-icons">';
     foreach($tmpArray as $item) {
-        $tmpContent .= '<a class="social" title="'.$item['title'].'" href="'.$item['href'].'" target="_blank" rel="noopener noreferrer">';
+        $tmpContent .= '<a class="disc '.$item['name'].'" title="'.$item['title'].'" href="'.$item['href'].'" target="_blank" rel="noopener noreferrer">';
         $tmpContent .= '<i class="fa fa-lg '.$item['fa'].'"></i></a>';
     }
     $tmpContent .= '</div>';
@@ -345,7 +345,7 @@ add_action('wp_enqueue_scripts','my_theme_scripts_function');
 // highlight search term
 // scrollTo search term
 add_action('wp_footer','myscript_in_footer');
-function myscript_in_footer(){
+function myscript_in_footer(){    
     // echo '<br>xxx '.$_GET['s'].' / '.get_query_var('s').' / '.get_query_var('sfind');
     // echo '<br>xxxx '.$_GET['sfind'].' / '.get_query_var('sfind').' / '.get_query_var('sfind');
 
@@ -394,6 +394,21 @@ function myscript_in_footer(){
             jQuery('html, body').animate({scrollTop: top - vOffset},1000);
         }
     }
+
+    function testClick(i){
+        alert('y1 s1 > ' + i);
+    }
+    
+    function DA_Pathways(){
+        var firstImg = jQuery('path.hotspot-default')[1];
+        testClick("999");
+        // alert(firstImg);
+        //firstImg.setAttribute("onClick", function() { testClick(); });
+        //firstImg.setAttribute("onclick", function() { testClick(i) });
+        //firstImg.setAttribute('onclick','testClick('+i+');');
+        var my_string = '123-45-lol , @%# ';
+        firstImg.addEventListener("click", function() { testClick(my_string) });
+    };
 
 </script>
 <?php

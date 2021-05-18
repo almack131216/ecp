@@ -24,9 +24,9 @@ if(amactive_is_localhost()) $categoryMore = 1115;
 	<div class="amcust-news-wrap">
 		<div class="col-brief">
 			<?php
-			if(in_category( $categoryMore )){
-				echo '<a href="/more-programme/" class="back-to-tree in-content"><span>:more</span></a>';
-			}
+			// if(in_category( $categoryMore )){
+			// 	echo '<a href="/more-programme/" class="back-to-tree in-content"><span>:more</span></a>';
+			// }
 
 			if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
@@ -38,8 +38,8 @@ if(amactive_is_localhost()) $categoryMore = 1115;
 			<div class="contactus-social-icons-wrap text-align-left">
 				<h4>Share this article</h4>
 				<div class="contactus-social-icons">
-					<a class="social disc" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=<?php echo(urlencode( get_post_permalink() )) ?>&text=<?php echo( urlencode(get_the_title() ) ) ?>"><i class="fa fa-lg fa-twitter"></i></a>
-					<a class="social disc" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo(urlencode( get_post_permalink() )) ?>"><i class="fa fa-lg fa-facebook"></i></a>
+					<a class="social disc twitter" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=<?php echo(urlencode( get_post_permalink() )) ?>&text=<?php echo( urlencode(get_the_title() ) ) ?>"><i class="fa fa-lg fa-twitter"></i></a>
+					<a class="social disc facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo(urlencode( get_post_permalink() )) ?>"><i class="fa fa-lg fa-facebook"></i></a>
 				</div>
 			</div>
 			
@@ -63,9 +63,9 @@ if(amactive_is_localhost()) $categoryMore = 1115;
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					) );
 
-					if(in_category( $categoryMore )){
-						echo '<a href="/more-programme/" class="back-to-tree in-content"><span>:more programme</span></a>';
-					}
+					// if(in_category( $categoryMore )){
+					// 	echo '<a href="/more-programme/" class="back-to-tree in-content"><span>:more programme</span></a>';
+					// }
 
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ecp' ),

@@ -3146,10 +3146,13 @@ function get_search_query( $escaped = true ) {
 	 *
 	 * @param mixed $search Contents of the search query variable.
 	 */
+	// $GLOBALS['wp_query']->query['s'] = 'get_search_query';
 	$query = apply_filters( 'get_search_query', get_query_var( 's' ) );
 
-	if ( $escaped )
+	if ( $escaped ){
 		$query = esc_attr( $query );
+		// $query = esc_html( $query );
+	}
 	return $query;
 }
 
@@ -3169,7 +3172,7 @@ function the_search_query() {
 	 *
 	 * @param mixed $search Contents of the search query variable.
 	 */
-	echo esc_attr( apply_filters( 'the_search_query', get_search_query( false ) ) );
+	echo esc_attr( apply_filters( 'the_search_query', get_search_query( true ) ) );
 }
 
 /**

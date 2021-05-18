@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">    
-
+<a href="http://localhost:8080/ecp/contact-us/">Contact us</a>
     <?php
       echo print_amcust_share_btns(); 
     ?>

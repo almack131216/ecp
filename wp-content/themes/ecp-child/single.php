@@ -6,6 +6,8 @@
  *
  * @package ecp
  */
+$categoryMore = 5364;
+if(amactive_is_localhost()) $categoryMore = 1115;
 
 get_header(); ?>
 
@@ -15,6 +17,9 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 
+		if(in_category( $categoryMore )){
+			get_template_part( 'template-parts/content-more-programme', get_post_format() );
+		}else{
 			get_template_part( 'template-parts/content', get_post_format() );
 
 			the_post_navigation();
@@ -23,6 +28,7 @@ get_header(); ?>
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
+		}			
 
 		endwhile; // End of the loop.
 		?>
