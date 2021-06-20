@@ -7,7 +7,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
     function chld_thm_cfg_parent_css() {
-        wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css', array(  ) );
+        wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css?v=200929', array(  ) );
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
@@ -135,7 +135,7 @@ add_shortcode( 'ow_categories_with_subcategories_and_posts', function( $atts = [
     // print_r($atts);
 
     $catId = $atts['cat_id'];//parent (root) categoryId
-    $styled = $atts['styled'] == 'true' ? true : false;
+    $styled = $atts['styled'] ? true : false;
     // $styled = true;
     $allTitlesUsed[] = $catId;
 
@@ -345,7 +345,7 @@ add_action('wp_enqueue_scripts','my_theme_scripts_function');
 // highlight search term
 // scrollTo search term
 add_action('wp_footer','myscript_in_footer');
-function myscript_in_footer(){    
+function myscript_in_footer(){
     // echo '<br>xxx '.$_GET['s'].' / '.get_query_var('s').' / '.get_query_var('sfind');
     // echo '<br>xxxx '.$_GET['sfind'].' / '.get_query_var('sfind').' / '.get_query_var('sfind');
 
@@ -395,21 +395,6 @@ function myscript_in_footer(){
         }
     }
 
-    function testClick(i){
-        alert('y1 s1 > ' + i);
-    }
-    
-    function DA_Pathways(){
-        var firstImg = jQuery('path.hotspot-default')[1];
-        testClick("999");
-        // alert(firstImg);
-        //firstImg.setAttribute("onClick", function() { testClick(); });
-        //firstImg.setAttribute("onclick", function() { testClick(i) });
-        //firstImg.setAttribute('onclick','testClick('+i+');');
-        var my_string = '123-45-lol , @%# ';
-        firstImg.addEventListener("click", function() { testClick(my_string) });
-    };
-
 </script>
 <?php
     }
@@ -429,6 +414,9 @@ function modified_search($query){
     }
 }
 
+// 201118_youtube-embed-fix
+add_theme_support( 'responsive-embeds' );
+
 // function wps_highlight_results($text){
 //     if(is_search()){
 //         $sr = get_query_var('s');
@@ -441,3 +429,22 @@ function modified_search($query){
 // add_filter('the_title', 'wps_highlight_results');
 // add_filter('the_content', 'wps_highlight_results');
 // add_filter('get_the_content', 'wps_highlight_results');
+
+// 210518
+// REF: https://wordpress.stackexchange.com/questions/161476/how-to-remove-dashicons-min-css-from-frontend
+add_action( 'wp_print_styles', 'amcust_dequeue_styles' );
+function amcust_dequeue_styles() { 
+    if ( ! is_user_logged_in() ) {
+        wp_dequeue_style( 'dashicons' );
+        wp_deregister_style( 'dashicons' );
+
+        wp_dequeue_style( 'google-analytics-dashboard-for-wp' );
+        wp_deregister_style( 'google-analytics-dashboard-for-wp' );        
+    }
+    //
+    //GIT: CR | r1 | streamline css
+    // DISABLE STYLESHEETS IN PLUGINS:
+    // \wp-content\plugins\cookie-bar\cookie-bar.php
+    // \wp-content\plugins\forget-about-shortcode-buttons\public\class-forget-about-shortcode-buttons-public.php
+    //(END) CR | r1
+}
