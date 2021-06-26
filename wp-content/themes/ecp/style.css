@@ -1290,7 +1290,7 @@ footer.site-footer .site-info-content span {
   border-bottom: 1px solid rgba(255, 255, 255, .4);
 }
 
-.headerbuttons .first-line .search-box #searchform input#searchsubmit {
+.headerbuttons .first-line .search-box #searchform #searchsubmit {
   text-decoration: none;
   display: inline-block;
   color: #ffffff;
@@ -1313,7 +1313,7 @@ footer.site-footer .site-info-content span {
   font-size: 1rem;
 }
 
-.headerbuttons .first-line .search-box #searchform input#searchsubmit:hover {
+.headerbuttons .first-line .search-box #searchform #searchsubmit:hover {
   border: 1px solid #ffffff;
   border: 1px solid rgba(255, 255, 255, .75);
   color: #ffffff;
@@ -1321,7 +1321,7 @@ footer.site-footer .site-info-content span {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
-.headerbuttons .first-line .search-box #searchform input#searchsubmit:hover {
+.headerbuttons .first-line .search-box #searchform #searchsubmit:hover {
   border-color: transparent;
 }
 

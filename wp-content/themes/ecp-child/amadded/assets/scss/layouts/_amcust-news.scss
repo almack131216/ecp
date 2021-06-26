@@ -152,10 +152,30 @@
         max-width: 100%;
         padding: 0;
 
+        .nav-previous a ,
+        .nav-next a {
+          @extend .fasc-button;
+          @extend .fasc-size-medium;
+          color:$color-primary;
+          text-decoration:none;
+          display:inline-block;
+        }
+
+        .nav-previous a:before {
+          @extend .fa-dummy;
+          content: "\f137" !important;
+        }
+
+        .nav-next a:after {
+          @extend .fa-dummy;
+          content: "\f138" !important;
+        }
+
         @media (max-width: $bp-sm-1) {
           .nav-previous,
           .nav-next {
-            > a {
+            > a {             
+
               i.fa {
                 margin-left: 0px !important;
                 margin-right: 0px !important;

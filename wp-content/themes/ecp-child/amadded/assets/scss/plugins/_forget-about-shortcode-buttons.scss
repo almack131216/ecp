@@ -1,6 +1,8 @@
 
 .fasc-button {
     @include btn-base();
+    color:$color-primary;
+    text-decoration:none;
   
     &.fasc-size-small {
       padding: $font-size_button-padding-sm;
@@ -53,7 +55,7 @@
             display: inline-block;
             -webkit-font-smoothing: antialiased;
             padding-right: 5px;
-            content: "\f145";
+            content: "\f0ca";
         }
         
         &.dashicons-calendar:before {
@@ -65,7 +67,7 @@
         // }
         
         &.dashicons-welcome-widgets-menus:before {
-            content: "\f1ea";
+            content: "\f0ca";
         }
     }
   }
