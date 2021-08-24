@@ -1,0 +1,119 @@
+/* _accordion.scss */
+/* REF: https://www.sliderrevolution.com/resources/css-accordion/ */
+  
+.accordion {
+    margin-bottom:$offset-g2;
+    background: white;
+    border-width: 2px 2px 0 2px;
+    border-style:solid;
+    border-color: #ddd;
+
+    p {
+        padding:0;
+    }
+
+    .accordion-title {
+        cursor: pointer;
+        text-decoration: none;
+        color: $color_primary;
+        font-weight: bold;
+        display:block;
+        padding: 10px 15px;
+        line-height:28px;
+        background: white;
+        border-width: 0 0 2px 0;
+        border-style:solid;
+        border-color: #ddd;
+        border-top-width:0px;
+
+        &:hover {
+            .badge {
+                background: #ddd;
+            }            
+        }
+
+        &.first {
+            // border-top-width:2px;
+        }
+
+        .badge {
+            color:$color_primary;
+            background:white;
+            // font-size:10px;
+            text-align:center;
+            display:inline-block;
+            width:30px;
+            height:30px;
+            @include border-radius(50%);
+            border:1px solid #ddd;
+            margin-right:$offset-g1;
+            line-height:28px;
+        }
+    }
+    
+
+    .drop-down-menu {
+        display: block;
+    }
+
+    .activate {
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        width: 100%;
+        height: 40px;
+        margin: 0 0 0 -15px;
+        opacity: 0;
+    }
+
+    /* Skin */
+
+    a,
+    .drop-down-menu {
+        
+    }
+
+    a:hover,
+    .drop-down-menu:hover {
+        // background: #5a6470;
+    }
+
+    .drop-down {
+        max-height: 0;
+        overflow: hidden;
+
+        a {
+            min-width: 90px;
+            // background: #222;
+            &:hover {
+                // background: #111;
+            }
+        }
+    }
+
+    :checked ~ .accordion-title {
+        border-bottom-color: white;
+        .badge {
+            background:$color_primary;
+            color:white;
+        }
+    }
+
+    .activate:checked ~ .drop-down {
+        padding:$offset-g1;
+        max-height: 2000px;
+        border-bottom:2px solid #ddd;
+    }
+
+    
+}
+
+.drop-down,
+.accordion a,
+.drop-down-menu {
+    // -webkit-transform: translateZ(0);  
+    // -webkit-transition: all 0.3s;
+    // -moz-transition: all 0.3s;
+    // -o-transition: all 0.3s;
+    // transition: all 0.3s;
+}

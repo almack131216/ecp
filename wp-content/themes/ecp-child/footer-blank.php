@@ -26,7 +26,7 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-<a href="#top" id="to-the-top"><i class="fa fa-chevron-up"></i></a>
+<a href="#top" id="to-the-top"><i class="fa fa-arrow-up"></i></a>
 
 <?php wp_footer(); ?>
 

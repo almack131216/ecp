@@ -192,3 +192,84 @@ figure.wp-block-embed-youtube.is-provider-youtube {
 .post-11383 > .entry-content  {
   padding-top:30px;
 }
+
+/* (2do) Look at theme footer.php */
+/*
+210526
+remove style from footer theme file
+make this style uniform with pagepart (more info)
+remove pagepart stylesheet
+*/
+.btn-contact-2do-wrap {
+	text-align:center;
+	padding:30px 0;
+}
+
+.btn-contact-2do {
+    display: inline-block;
+    margin:0 auto;
+    padding: 8px 24px;
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(158, 0, 18);
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 18.4px;
+    font-size: 1.15rem;
+}
+html[lang="cs-CZ"] .btn-contact-2do.en {
+	display:none;
+}
+html[lang="en-GB"] .btn-contact-2do.cs {
+	display:none;
+}
+/* (2do) Look at theme footer.php */
+
+.youtube-wrap {
+  padding:0;
+  margin:0;
+  width:100%;
+
+  h3 {
+    margin-bottom:$offset-2;
+  }
+
+  &.fullXXX {    
+    // margin-left:0;
+    // margin-right:0;
+  }
+
+  iframe {
+    width:100%;
+    min-height:300px;
+    margin:0 auto;
+  }
+}
+
+.one-third {
+  .youtube-wrap {  
+    &.fullXXX {
+      margin-left:0 !important;
+      margin-right:0 !important;
+    }
+  
+    iframe {
+      width:100%;
+      min-height:200px;
+    }
+  }
+}
+
+.align-center {
+  text-align:center;
+}
+
+// .show-more-handle {
+//   &.align-center {
+//     text-align:center;
+//     margin:$offset-g2 auto;
+//   }
+//   &.margin-y {
+
+//   }
+// }

@@ -73,16 +73,18 @@
           color: white;
         }
 
+        &.dashicons-calendar:before,
+        &.dashicons-email-alt:before {
+          // font: 400 16px/1 FontAwesome;
+          @extend .fa-dummy;
+          margin-right: 5px;
+        }
         &.dashicons-calendar:before {
-          font: 400 16px/1 dashicons;
-          padding-right: 5px;
-          content: "\f145";
+          content: "\f073";
         }
 
         &.dashicons-email-alt:before {
-          font: 400 16px/1 dashicons;
-          padding-right: 5px;
-          content: "\f466";
+          content: "\f003";
         }
       }
     }

@@ -1,3 +1,4 @@
+/* _forget-about-shortcode-buttons.scss */
 
 .fasc-button {
     @include btn-base();
@@ -50,12 +51,16 @@
     //210518 - icons before
     &.fasc-ico-before {
         &:before {
-            font: normal normal normal 14px/1 FontAwesome;
+            font: normal normal normal 16px/1 FontAwesome;
             vertical-align: middle;
             display: inline-block;
             -webkit-font-smoothing: antialiased;
-            padding-right: 5px;
-            content: "\f0ca";
+            margin-right: 10px;
+            // content: "\f0ca";
+        }
+
+        &.dashicons-admin-users:before {
+          content: "\f0c0";
         }
         
         &.dashicons-calendar:before {
@@ -65,10 +70,17 @@
         //     font: normal normal normal 14px/1 dashicons;
         //     content: "\f145";
         // }
+        &.dashicons-welcome-learn-more:before {
+          content: "\f05a";
+        }
         
         &.dashicons-welcome-widgets-menus:before {
             content: "\f0ca";
         }
+
+        &.dashicons-format-aside:before {
+          content: "\f15c";
+        }   
     }
   }
 

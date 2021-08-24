@@ -42,8 +42,8 @@ i[class^="icon-"] {
 
 .fa-dummy,
 .fa-dummy-before:before {
-  content: "\f00c";
-  font: normal normal normal 18px/1 FontAwesome;
+  // content: "\f00c";//tick icon (disable to avoid overrule)
+  font: normal normal normal 18px/1 FontAwesome;//icomoon
   display: inline-block;
   width: 20px;
   height: 20px;

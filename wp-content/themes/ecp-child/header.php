@@ -19,6 +19,7 @@
 <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400|Playfair+Display:400,700,700i&amp;subset=latin-ext" rel="stylesheet"> -->
 <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,700i|Open+Sans:300,300i,400&amp;subset=latin-ext" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400|Ubuntu:400,700,700i&amp;subset=latin-ext" rel="stylesheet">
+<link href="https://www.englishcollege.cz/wp-content/themes/ecp-child/amadded/assets/css/font-awesome.min.css?ver=210823" rel="stylesheet">
 <script src="https://use.typekit.net/pea3abk.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 <!-- Google Tag Manager -->

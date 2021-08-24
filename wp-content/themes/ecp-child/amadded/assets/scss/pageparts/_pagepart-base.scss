@@ -14,3 +14,16 @@
     }
   }
 }
+
+.pagepart.daily-life li:before,
+.pagepart.way-we-teach li:before,
+.pagepart.why-choose li:before,
+.pagepart.our-results li:before,
+.pagepart.why-exciting li:before {
+  font-family: 'FontAwesome';
+  font-size: 16px;
+  line-height: 16px;
+  padding: 7px;
+  content: "\f00c";
+  // content: "\f058";
+}

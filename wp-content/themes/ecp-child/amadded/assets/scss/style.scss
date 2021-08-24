@@ -1,8 +1,8 @@
 /*
 Theme Name: Child
-Template: ecp
-Version: 1.0.1510691843
-Updated: 2021-03-30 00:00:00 : pathways css tweaks
+Template: ecp-child
+Version: 2108231600
+Updated: 2021-08-24 00:00:00 : replace dashicons
 */
 
 /* BASE - base styles, variables, mixins etc */
@@ -24,6 +24,7 @@ Updated: 2021-03-30 00:00:00 : pathways css tweaks
 @import "modules/_tabs.scss";
 @import "modules/_buttons-sidetabs.scss";
 @import "modules/_amgrid.scss";
+@import "modules/_accordion.scss";
 
 /* LAYOUTS - page layout styles */
 @import "layouts/_base.scss";
@@ -58,4 +59,5 @@ Updated: 2021-03-30 00:00:00 : pathways css tweaks
 @import "addons/_font-awesome-overrule.scss";
 @import "addons/_mbt.scss";
 @import "addons/_minor-tweaks.scss";
-@import "amadded/assets/css/font-awesome.min.css";/* hacky? */
+// @import "amadded/assets/css/font-awesome.min.css";/* hacky? */
+// @import "amadded/assets/icomoon/style.css";

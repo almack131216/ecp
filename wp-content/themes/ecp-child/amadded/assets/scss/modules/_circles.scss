@@ -24,19 +24,28 @@
       background-color: white;
       width: 145px;
       height: 145px;
-      // transform: scale(0.90);
+      
+      @media (min-width: $bp-sm) {
+        width: 145px;
+        height: 145px;
+      }
+      @media (max-width: $bp-sm-1) {
+        width: 200px;
+        height: 200px;
 
-      // &:hover {
-      //     transform: scale(1.0);
-      // }
+        > .aligner {
+          zoom:1.2;
+        }
+        /* (END) .aligner */
+      }
 
       border-radius: 100%;
       margin: $offset-0-5;
       padding: 0;
 
       box-sizing: border-box;
-      float: left;
-      display: block;
+      // float: left;
+      display: inline-block;
 
       // display: flex;
       // align-items: center;

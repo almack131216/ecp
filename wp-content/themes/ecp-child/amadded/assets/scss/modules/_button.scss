@@ -12,3 +12,22 @@
   font-size: $font-size_button;
   line-height: $font-size_button-line-height;
 }
+
+.show-more-handle-button {
+  padding:$offset-1 $offset-g1;
+
+  &:before {
+    @extend .fa-dummy;
+    content: "\f078";
+    margin-right: $offset-1;
+  }
+
+  &.expanded:before {
+    content: "\f077";
+  }
+}
+
+// .fasc-ico-before.dashicons-format-aside:before
+// .fasc-ico-before.dashicons-format-aside:after {
+//   content: "\f15c";
+// }
