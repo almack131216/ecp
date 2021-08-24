@@ -552,7 +552,13 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
     $columns = $atts['columns'] ? $atts['columns'] : false;
     $devNotes = $atts['dev_notes'] ? true : false;
     $linkToPost = $atts['link_to_post'] ? true : false;
-    $linkToTarget = $atts['link_to_target'] ? true : false;
+    $linkToTargetArr = $atts['link_to_target'] ? explode(',', $atts['link_to_target']) : false;
+    if($linkToTargetArr){
+        $catSkip = true;
+        // $postIdsArr = $postIds;
+        echo '<br>targets: ';
+        print_r($linkToTargetArr);
+    }
 
     $postIdsArr = $atts['post_ids'] ? explode(',', $atts['post_ids']) : null;
     if($postIdsArr){
@@ -577,7 +583,6 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
     $allTitlesUsed[] = $catIdParent;
 
     $catDesc = false;//$atts['cat_desc'];
-    // $hasSsc = $atts['depth'] == 2 ? true : false;//sub-subcategories?
 
     if($devNotes) $catPosts .= '<h1 class="devNote">get_cat_name: '.get_cat_name($catId).' ['.$catId.'], order_by: '.$order_by.'</h1>';
     
@@ -686,77 +691,56 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
                     
                     $catPosts .= $gridStart;//if(!$group || $group && $subcategoryCounted == 1) 
                     
-                    while ( $featuredPosts->have_posts() ): $featuredPosts->the_post();                    
-                        $thisPost = get_post();
-                        $catPosts .= '<li class="out-left">';
-
-                        // $catPosts .= '<div class="fade-bottom">';
-                        if($linkToTarget) $catPosts .= '<a href="'.$_SERVER['REQUEST_URI'] .'?target=czech" title="Link to '.get_the_title().'" class="read-more">Read More</a>';
-                        if($linkToPost) $catPosts .= '<a href="'. esc_url( get_the_permalink() ) .'" title="Link to '.get_the_title().'" class="read-more">Read More</a>';
-                        if(!$linkToPost && !$linkToTarget) $catPosts .= '<div class="a-dummy"></div>';                                           
-                        // $catPosts .= 'xxx</div>';
+                    $postCount = 0;
+                    while ( $featuredPosts->have_posts() ): $featuredPosts->the_post();
+                    
+                        $catQuoteField = '';
+                        switch($subcategoryId){
+                            case 3848: $catQuoteField = '';break;//Arts and PE
+                            case 3840: $catQuoteField = '';break;//czech
+                            case 3836: $catQuoteField = '';break;//english
+                            case 1239:
+                            case 3975: $catQuoteField = '';break;//governers
+                            case 6796: $catQuoteField = 'graduates_quote';break;//graduates
+                            case 1350:
+                            case 2473: $catQuoteField = 'hof_quote';break;//head of faculties
+                            case 3832: $catQuoteField = '';break;//humanities
+                            case 2484: $catQuoteField = 'ib_quote';break;//IB
+                            case 3844: $catQuoteField = '';break;//mathematics
+                            case 3661: $catQuoteField = '';break;//modern foreign languages
+                            case 2589: $catQuoteField = 'par_quote';break;//par
+                            case 2591: $catQuoteField = 'pat_quote';break;//pat
+                            case 3786: $catQuoteField = '';break;//science
+                            case 1352:
+                            case 2471: $catQuoteField = 'slt_quote';break;//slt
+                            case 2479: $catQuoteField = 'st_quote';break;//st
+                            case 2583: $catQuoteField = 'stu_quote';break;//stu
+                            case 3701: $catQuoteField = '';break;//support
+                            case 2477: $catQuoteField = 'tal_quote';break;//tal
+                            case 3828: $catQuoteField = 'ust_quote';break;//ust
+                        }
                         
-                        $catPosts .= '<div class="img-bg">';
+                        
+                        $thisPost = get_post();
                         if( has_post_thumbnail() ):
                             // $catPosts .= get_the_post_thumbnail( $thisPost->ID, 'thumbnail', array( 'class' => 'img-bg' ) );
                             $image_arr = wp_get_attachment_image_src( get_post_thumbnail_id($post_array->ID), 'medium' );
-                            
-                            $catPosts .= '<img src="'.$image_arr[0].'">';
-                            
                         endif;
-                        $catPosts .= '<span class="txt-wrap">';
-                            $catPosts .= '<span class="name">'.get_the_title().'</span>';
-                            $catPosts .= '<span class="title">'.get_metadata( 'post', $thisPost->ID, 'job_title', true ).'</span>';
-                        $catPosts .= '</span>';
-                        $catPosts .= '</div>';
+                        $metaString = get_metadata( 'post', $thisPost->ID, $catQuoteField, true );
 
+                        $itemArr = array(
+                            'title' => get_the_title(),
+                            'subtitle' => get_metadata( 'post', $thisPost->ID, 'job_title', true ),
+                            'quote' => $metaString && !is_array($metaString) ? $metaString : null,
+                            'link_target' => $linkToTargetArr ? GenerateTabLink($linkToTargetArr[$postCount]) : null,
+                            'link_post' => esc_url( get_the_permalink() ),
+                            'thumb' => $image_arr ? $image_arr : null
+                        );
+                        $catPosts .= amgrid_listItem($itemArr);
                         
-
-                        $catPosts .= '<div class="info">';
-                            $catPosts .= '<h3>'.get_the_title().'</h3>';
-                            $catPosts .= '<div class="quote">';
-                            $catPosts .= '<p>';
-
-                            $catQuoteField = '';
-                            switch($subcategoryId){
-                                case 3848: $catQuoteField = '';break;//Arts and PE
-                                case 3840: $catQuoteField = '';break;//czech
-                                case 3836: $catQuoteField = '';break;//english
-                                case 1239:
-                                case 3975: $catQuoteField = '';break;//governers
-                                case 6796: $catQuoteField = 'graduates_quote';break;//graduates
-                                case 1350:
-                                case 2473: $catQuoteField = 'hof_quote';break;//head of faculties
-                                case 3832: $catQuoteField = '';break;//humanities
-                                case 2484: $catQuoteField = 'ib_quote';break;//IB
-                                case 3844: $catQuoteField = '';break;//mathematics
-                                case 3661: $catQuoteField = '';break;//modern foreign languages
-                                case 2589: $catQuoteField = 'par_quote';break;//par
-                                case 2591: $catQuoteField = 'pat_quote';break;//pat
-                                case 3786: $catQuoteField = '';break;//science
-                                case 1352:
-                                case 2471: $catQuoteField = 'slt_quote';break;//slt
-                                case 2479: $catQuoteField = 'st_quote';break;//st
-                                case 2583: $catQuoteField = 'stu_quote';break;//stu
-                                case 3701: $catQuoteField = '';break;//support
-                                case 2477: $catQuoteField = 'tal_quote';break;//tal
-                                case 3828: $catQuoteField = 'ust_quote';break;//ust
-                            }
-                            
-                            $metaString = get_metadata( 'post', $thisPost->ID, $catQuoteField, true );
-                            if($metaString && !is_array($metaString)) $catPosts .= $metaString;
-                            $catPosts .= '</p>';
-                            $catPosts .= '</div>';
-
-                            
-
-                        $catPosts .= '</div>';
-                        //(END) div.info
-
-                        
-                        
-                        $catPosts .= '</li>';
+                        $postCount++;
                     endwhile;
+                    //(END) while
                     
                     $gridEnd = '</ul>';//<!--['.$subcategoryCounted.'-'.$subcategoryCount.']-->
                     $gridEnd .= '</div>';
@@ -787,3 +771,49 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
 });
 // (END) amgrid
 ///////////////
+
+
+function GenerateTabLink($getTarget){
+    $url = strtok($_SERVER["REQUEST_URI"], '?');
+    $tabUrl = $url.'?target='.$getTarget;
+    return $tabUrl;
+}
+
+
+function amgrid_listItem($getItemArr){
+    $listItem = '';
+    $listItem .= '<li>';
+
+    // $listItem .= '<div class="fade-bottom">';
+    if($getItemArr['link_target']) $listItem .= '<a href="'.$getItemArr['link_target'].'" title="Link to '.$getItemArr['title'].'" class="read-more">Read More</a>';
+    if($getItemArr['link_post'] && !$getItemArr['link_target']) $listItem .= '<a href="'.$getItemArr['link_post'].'" title="Link to '.$getItemArr['title'].'" class="read-more">Read More</a>';
+    if(!$getItemArr['link_post'] && !$getItemArr['link_target']) $listItem .= '<div class="a-dummy"></div>';                                           
+    // $listItem .= 'xxx</div>';
+    //div.img-bg
+    $listItem .= '<div class="img-bg">';
+    if( $getItemArr['thumb'] ):                            
+        $listItem .= '<img src="'.$getItemArr['thumb'][0].'">';                            
+    endif;
+    $listItem .= '<span class="txt-wrap">';
+        $listItem .= '<span class="name">'.$getItemArr['title'].'</span>';
+        $listItem .= '<span class="title">'.$getItemArr['subtitle'].'</span>';
+    $listItem .= '</span>';
+    $listItem .= '</div>';
+    //(END) div.img-bg
+    
+    //div.info
+    $listItem .= '<div class="info">';
+        $listItem .= '<h3>'.$getItemArr['title'].'</h3>';
+        $listItem .= '<div class="quote">';
+        $listItem .= '<p>';                            
+        
+        if($getItemArr['quote']) $listItem .= $getItemArr['quote'];
+        $listItem .= '</p>';
+        $listItem .= '</div>';
+    $listItem .= '</div>';
+    //(END) div.info                        
+    
+    $listItem .= '</li>';
+
+    return $listItem;
+}
