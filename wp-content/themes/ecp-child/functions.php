@@ -443,7 +443,7 @@ function amcust_dequeue_styles() {
         wp_deregister_style( 'google-analytics-dashboard-for-wp' );        
     }
     //
-    //GIT: CR | r1 | streamline css (210620)
+    //GIT: CR | r1 | streamline css
     // DISABLE STYLESHEETS IN PLUGINS:
     // \wp-content\plugins\cookie-bar\cookie-bar.php
     // \wp-content\plugins\forget-about-shortcode-buttons\public\class-forget-about-shortcode-buttons-public.php
@@ -451,8 +451,29 @@ function amcust_dequeue_styles() {
     //GIT: CR | r2 | streamline css
     // \wp-content\plugins\tablepress\classes\class-css.php
     //(END) CR | r2
+    //GIT: CR | r3 | streamline css
+    // 
+    //(END) CR | r3
 }
 
+function amcust_sc_embed_youtube( $atts = array() ) {
+    //EXAMPLE: [embed_youtube v="3lLZxTzXf-Y" class="full margin-top-g2"][/embed_youtube]
+    //parameters: v,class,title
+    $appendClass = '';
+    if($atts['class']) $appendClass = ' '.$atts['class'];
+
+    $contentBuild = '<div class="youtube-wrap '.$appendClass.'">';
+    if($atts['title']) $contentBuild .= '<h2>'.$atts['title'].'</h2>';
+    $contentBuild .= '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/'.$atts['v'].'?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>';
+    $contentBuild .= '</iframe>';
+    $contentBuild .= '</div>';
+
+    return $contentBuild;
+}
+add_shortcode( 'embed_youtube', 'amcust_sc_embed_youtube' );
+
+
+/////////
 // amgrid
 
 function category_get_parent($catid){
@@ -520,65 +541,55 @@ function amgrid_in_footer(){ // $tag variable is here
 }//(END) if on grid page 
 }//(END) amgrid_in_footer
 
-/* list posts for MORE PROGRAMME */
+/* list posts for AMGRID POSTS */
 add_shortcode( 'amgrid_posts', function( $atts = [] ){	    
     $allTitlesUsed = [];
     $catPosts = '';
-    $catPostsTmp = '';
-
-    $catPostTmp .= <<<EOD
-    <li class="out-left">
-        <img class="img-bg" src="http://localhost:8080/ecp/wp-content/uploads/2017/03/HRHPOW-BW.jpg">
-        <span class="txt-wrap">
-                <span class="name">HRH The Prince of Wales</span>
-                <span class="title">Founding Patron</span>
-            </span>
-        <a class="normal" href="#">
-            
-        </a>
-        <div class="info">
-          <h3>HRH The Prince of Wales</h3>
-          <p>"I have watched with great pleasure and a sense of pride as the College has grown and flourished. I was particularly glad to meet many of the students and staff during my last visit to Prague, and see for myself the friendly and stimulating environment at the College. I especially welcome the broader international vision the College encourages in its students and I am particularly glad to hear that several of them are now studying in the U.K."</p>
-        </div>
-      </li>
-EOD;
-
-    $catPostsTmp .= <<<EOD
-<div class="amgrid-wrap">
-    <div class="container">
-    <ul>      
-EOD;
-$catPostsTmp .= $catPostTmp;
-$catPostsTmp .= $catPostTmp;
-$catPostsTmp .= $catPostTmp;
-$catPostsTmp .= $catPostTmp;
-$catPostsTmp .= $catPostTmp;
-
-    $catPostsTmp .= <<<EOD
-    </ul>
-  </div>
-</div>
-EOD;
-    // print_r($atts);
 
     $catId = $atts['cat_id'];//parent (root) categoryId
-    $group = $atts['group']=='true' ? true : false;
+    $order_by = $atts['order_by'] ? $atts['order_by'] : 'all_order';
+    $styled = $atts['styled'] ? true : false;
+    $columns = $atts['columns'] ? $atts['columns'] : false;
+    $devNotes = $atts['dev_notes'] ? true : false;
+    $linkToPost = $atts['link_to_post'] ? true : false;
+    $linkToTarget = $atts['link_to_target'] ? true : false;
+
+    $postIdsArr = $atts['post_ids'] ? explode(',', $atts['post_ids']) : null;
+    if($postIdsArr){
+        $catSkip = true;
+        // $postIdsArr = $postIds;
+        echo '<br>post_ids: ';
+        print_r($postIdsArr);
+    }
+    $group = false;//$atts['group'] ? true : false;
     $catIdParent = $catId;
     $catIdParentDynamic = category_get_parent($catId);
     if($catIdParentDynamic) {
         // it has a parent
         $catIdParent = $catIdParentDynamic;
-        $hasSsc = true;
-        $catPosts .= '<h5>is child of '.$catIdParent.', group='.$group.'</h5>';
+        if($devNotes) $catPosts .= '<h5 class="devNote">is child of '.$catIdParent.', group='.$group.'</h5>';
+    }else{
+        if($devNotes) $catPosts .= '<h5 class="devNote">IS PARENT CATEGORY, group='.$group.'</h5>';        
+    }
+    
+
+    
+    $allTitlesUsed[] = $catIdParent;
+
+    $catDesc = false;//$atts['cat_desc'];
+    // $hasSsc = $atts['depth'] == 2 ? true : false;//sub-subcategories?
+
+    if($devNotes) $catPosts .= '<h1 class="devNote">get_cat_name: '.get_cat_name($catId).' ['.$catId.'], order_by: '.$order_by.'</h1>';
+    
+    
+    if($catSkip){
         $args = array(
             // 'cat' => $catId,
-            'child_of' => $catIdParent,
+            'cat' => $catIdParent,
             'orderby' => 'all_order',
             'order' => 'ASC'
         );
     }else{
-        $hasSsc = true;
-        $catPosts .= '<h5>IS PARENT CATEGORY, group='.$group.'</h5>';
         $args = array(
             // 'cat' => $catId,
             'child_of' => $catIdParent,
@@ -586,16 +597,6 @@ EOD;
             'order' => 'ASC'
         );
     }
-
-    $order_by = $atts['order_by'] ? $atts['order_by'] : 'all_order';
-    $styled = $atts['styled'] ? true : false;
-    $allTitlesUsed[] = $catIdParent;
-
-    $catDesc = false;//$atts['cat_desc'];
-    // $hasSsc = $atts['depth'] == 2 ? true : false;//sub-subcategories?
-
-    $catPosts .= '<h1>get_cat_name: '.get_cat_name($catId).' ['.$catId.'], order_by: '.$order_by.'</h1>';
-    
     $subcategories = get_categories( $args );
 
 
@@ -603,28 +604,29 @@ EOD;
         $catPosts .= '<h4>No items found</h4>';
     }else{
         $subcategoryCount = sizeof($subcategories);
-        $subcategoryCounted = 0;
+        if($catSkip) $subcategoryCount = 1;
+        // $subcategoryCounted = 0;
         $groupEnd = false;
 
-        $catPosts .= '<div class="mp-wrap_all '.($styled ? 'roots' : 'list').'">';
+        $catPosts .= '<div class="amgrid-wrap_all '.($styled ? 'roots' : 'list').'">';
 
-        $catPosts .= '<div class="xxx">';
-            $catPosts .= '<h2>get_cat_name: '.get_cat_name($catId).', ('.$subcategoryCount.')</h2>';
-        $catPosts .= '</div>';
+        if($devNotes){
+            $catPosts .= '<div class="devNote">';
+                $catPosts .= '<h2>get_cat_name: '.get_cat_name($catId).', (subcategoryCount: '.$subcategoryCount.')</h2>';
+            $catPosts .= '</div>';
+        }
+        
 
-        $catPosts .= '<div class="mp-wrap has-'.$subcategoryCount.'-children">';        
+        $catPosts .= '<div class="amgrid-wrap_inner has-'.$subcategoryCount.'-children">';        
 
         foreach($subcategories as $subcategory) {
-            
             $catTitlesUsed = [];
             $catTitlesUsed[] = $catId;
 
-            
-            if(!$group) $catPosts .= '<ul class="'.($styled ? 'mp-item' : 'mp-ul').'">';
             if( ($catIdParent == $catId) || ($catIdParent != $catId && $subcategory->term_id == $catId) ){
                 $subcategoryId = intval($subcategory->term_id);                
-
-                if(!$group) $catPosts .= '<li>';
+                // $catPosts .= '<ul class="'.($styled ? 'amgrid-item' : 'amgrid-ul').'">';//if(!$group) 
+                // $catPosts .= '<li>';//if(!$group) 
 
                 if($catId != $subcategory->category_parent) {
                     $catTitlesUsed[] = $subcategory->category_parent;
@@ -635,8 +637,8 @@ EOD;
                     $catTitlesUsed[] = $subcategoryId;
                 }
                 
-                if(!$group) $catPosts .= '<a name="'.$subcategory->slug.'"></a>';
-                if(!$group) $catPosts .= '<h4>$subcategory->name: '.$subcategory->name.' ['.$subcategoryId.'], order_by: '.$order_by.'</h4>';         
+                $catPosts .= '<a name="'.$subcategory->slug.'"></a>';//if(!$group) 
+                if($devNotes) $catPosts .= '<h4 class="devNote">$subcategory->name: '.$subcategory->name.' ['.$subcategoryId.'], order_by: '.$order_by.'</h4>';//if(!$group) 
 
                 $postArgs = array(
                     'post_type'  => 'post',
@@ -646,6 +648,7 @@ EOD;
                     'meta_key' => $order_by,
                     'orderby' => 'meta_value',//all_order
                     'order' => 'ASC',
+                    'ignore_sticky_posts' => 1,
                     'meta_query' => array(
                         array(
                             'key' => '_thumbnail_id',
@@ -653,111 +656,134 @@ EOD;
                         ),
                     )
                 );
+
+                if($postIdsArr){
+                    $myarray = $postIdsArr;//3592,3604
+
+                    $postArgs = array(
+                        'post_type' => 'post',
+                        'post__in'      => $myarray,
+                        'orderby'=>'post__in',
+                        'posts_per_page' => 100,
+                        'ignore_sticky_posts' => 1,
+                        'meta_query' => array(
+                            array(
+                                'key' => '_thumbnail_id',
+                                'compare' => 'EXISTS'
+                            ),
+                        )
+                    );
+                }
+                
                 $featuredPosts = new WP_Query( $postArgs );//'type=post&posts_per_page=5'
                 
 
                 if( $featuredPosts->have_posts() ):
-                    $subcategoryCounted++;                    
+                    // $subcategoryCounted++;                    
                     $gridStart = '<div class="amgrid-wrap">';
                     $gridStart .= '<div class="container">';
-                    $gridStart .= '<ul>';
+                    $gridStart .= '<ul class="has-'.$columns.'-items">';
                     
-                    if(!$group || $group && $subcategoryCounted == 1) $catPosts .= $gridStart;
+                    $catPosts .= $gridStart;//if(!$group || $group && $subcategoryCounted == 1) 
                     
                     while ( $featuredPosts->have_posts() ): $featuredPosts->the_post();                    
                         $thisPost = get_post();
-                        $catPosts .= '<li class="out-left '.$subcategoryCounted.'-'.$subcategoryCount.'">';
+                        $catPosts .= '<li class="out-left">';
 
+                        // $catPosts .= '<div class="fade-bottom">';
+                        if($linkToTarget) $catPosts .= '<a href="'.$_SERVER['REQUEST_URI'] .'?target=czech" title="Link to '.get_the_title().'" class="read-more">Read More</a>';
+                        if($linkToPost) $catPosts .= '<a href="'. esc_url( get_the_permalink() ) .'" title="Link to '.get_the_title().'" class="read-more">Read More</a>';
+                        if(!$linkToPost && !$linkToTarget) $catPosts .= '<div class="a-dummy"></div>';                                           
+                        // $catPosts .= 'xxx</div>';
+                        
+                        $catPosts .= '<div class="img-bg">';
                         if( has_post_thumbnail() ):
                             // $catPosts .= get_the_post_thumbnail( $thisPost->ID, 'thumbnail', array( 'class' => 'img-bg' ) );
                             $image_arr = wp_get_attachment_image_src( get_post_thumbnail_id($post_array->ID), 'medium' );
-                            $catPosts .= '<img src="'.$image_arr[0].'" class="img-bg">';
+                            
+                            $catPosts .= '<img src="'.$image_arr[0].'">';
                             
                         endif;
                         $catPosts .= '<span class="txt-wrap">';
-                        $catPosts .= '<span class="name">'.get_the_title().', '.$subcategoryCounted.'('.$subcategoryCount.')</span>';
-                        $catPosts .= '<span class="title">'.get_metadata( 'post', $thisPost->ID, 'job_title', true ).'</span>';
+                            $catPosts .= '<span class="name">'.get_the_title().'</span>';
+                            $catPosts .= '<span class="title">'.get_metadata( 'post', $thisPost->ID, 'job_title', true ).'</span>';
                         $catPosts .= '</span>';
+                        $catPosts .= '</div>';
 
-                        $catPosts .= '<a href="'. esc_url( get_the_permalink() ) .'" title="Link to '.get_the_title().'">';                                              
-                        $catPosts .= '</a>';
+                        
 
                         $catPosts .= '<div class="info">';
-                        $catPosts .= '<h3>'.get_the_title().'</h3>';
-                        $catPosts .= '<p>';
+                            $catPosts .= '<h3>'.get_the_title().'</h3>';
+                            $catPosts .= '<div class="quote">';
+                            $catPosts .= '<p>';
 
-                        $catQuoteField = '';
-                        switch($subcategoryId){
-                            case 3848: $catQuoteField = '';break;//Arts and PE
-                            case 3840: $catQuoteField = '';break;//czech
-                            case 3836: $catQuoteField = '';break;//english
-                            case 1239:
-                            case 3975: $catQuoteField = '';break;//governers
-                            case 6796: $catQuoteField = 'graduates_quote';break;//graduates
-                            case 1350:
-                            case 2473: $catQuoteField = 'hof_quote';break;//head of faculties
-                            case 3832: $catQuoteField = '';break;//humanities
-                            case 2484: $catQuoteField = 'ib_quote';break;//IB
-                            case 3844: $catQuoteField = '';break;//mathematics
-                            case 3661: $catQuoteField = '';break;//modern foreign languages
-                            case 2589: $catQuoteField = 'par_quote';break;//par
-                            case 2591: $catQuoteField = 'pat_quote';break;//pat
-                            case 3786: $catQuoteField = '';break;//science
-                            case 1352:
-                            case 2471: $catQuoteField = 'slt_quote';break;//slt
-                            case 2479: $catQuoteField = 'st_quote';break;//st
-                            case 2583: $catQuoteField = 'stu_quote';break;//stu
-                            case 3701: $catQuoteField = '';break;//support
-                            case 2477: $catQuoteField = 'tal_quote';break;//tal
-                            case 3828: $catQuoteField = 'ust_quote';break;//ust
-                        }
-                        
-                        $metaString = get_metadata( 'post', $thisPost->ID, $catQuoteField, true );
-                        if($metaString && !is_array($metaString)) $catPosts .= $metaString;
-                        $catPosts .= '</p>';
+                            $catQuoteField = '';
+                            switch($subcategoryId){
+                                case 3848: $catQuoteField = '';break;//Arts and PE
+                                case 3840: $catQuoteField = '';break;//czech
+                                case 3836: $catQuoteField = '';break;//english
+                                case 1239:
+                                case 3975: $catQuoteField = '';break;//governers
+                                case 6796: $catQuoteField = 'graduates_quote';break;//graduates
+                                case 1350:
+                                case 2473: $catQuoteField = 'hof_quote';break;//head of faculties
+                                case 3832: $catQuoteField = '';break;//humanities
+                                case 2484: $catQuoteField = 'ib_quote';break;//IB
+                                case 3844: $catQuoteField = '';break;//mathematics
+                                case 3661: $catQuoteField = '';break;//modern foreign languages
+                                case 2589: $catQuoteField = 'par_quote';break;//par
+                                case 2591: $catQuoteField = 'pat_quote';break;//pat
+                                case 3786: $catQuoteField = '';break;//science
+                                case 1352:
+                                case 2471: $catQuoteField = 'slt_quote';break;//slt
+                                case 2479: $catQuoteField = 'st_quote';break;//st
+                                case 2583: $catQuoteField = 'stu_quote';break;//stu
+                                case 3701: $catQuoteField = '';break;//support
+                                case 2477: $catQuoteField = 'tal_quote';break;//tal
+                                case 3828: $catQuoteField = 'ust_quote';break;//ust
+                            }
+                            
+                            $metaString = get_metadata( 'post', $thisPost->ID, $catQuoteField, true );
+                            if($metaString && !is_array($metaString)) $catPosts .= $metaString;
+                            $catPosts .= '</p>';
+                            $catPosts .= '</div>';
+
+                            
+
                         $catPosts .= '</div>';
+                        //(END) div.info
+
+                        
                         
                         $catPosts .= '</li>';
                     endwhile;
                     
-                    $gridEnd = '</ul><!--['.$subcategoryCounted.'-'.$subcategoryCount.']-->';
+                    $gridEnd = '</ul>';//<!--['.$subcategoryCounted.'-'.$subcategoryCount.']-->
                     $gridEnd .= '</div>';
                     $gridEnd .= '</div>';
 
-                    if(!$group || $group && $subcategoryCounted == $subcategoryCount) $groupEnd = true;
+                    // if(!$group || $group && $subcategoryCounted == $subcategoryCount) $groupEnd = true;
 
-                    if($groupEnd){
-                        $catPosts .= $gridEnd;                
-                        wp_reset_postdata();
-                    }                  
+                    $catPosts .= $gridEnd;                
+                    wp_reset_postdata();                 
                     
                 endif;
 
-                if($groupEnd) $catPosts .= '</li>';
+                // $catPosts .= '</li>';//if($groupEnd) 
+                // $catPosts .= '</ul>';//if($groupEnd) //<!--[wrap '.$subcategoryCounted.'-'.$subcategoryCount.']-->
             }
 
-            if($groupEnd) $catPosts .= '</ul><!--[wrap '.$subcategoryCounted.'-'.$subcategoryCount.']-->';
+            if($catSkip){
+                break;
+            }
         }
+        //(END) foreach
+
         $catPosts .= '</div>';//(END) mp-wrap
         $catPosts .= '</div>';//(END) mp-wrap_all
     }
 
-    // $catPosts = $catPostTmp.$catPosts;
     return $catPosts;
 });
-
-function amcust_sc_embed_youtube( $atts = array() ) {
-    //EXAMPLE: [embed_youtube v="3lLZxTzXf-Y" class="full margin-top-g2"][/embed_youtube]
-    //parameters: v,class,title
-    $appendClass = '';
-    if($atts['class']) $appendClass = ' '.$atts['class'];
-
-    $contentBuild = '<div class="youtube-wrap '.$appendClass.'">';
-    if($atts['title']) $contentBuild .= '<h2>'.$atts['title'].'</h2>';
-    $contentBuild .= '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/'.$atts['v'].'?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>';
-    $contentBuild .= '</iframe>';
-    $contentBuild .= '</div>';
-
-    return $contentBuild;
-}
-add_shortcode( 'embed_youtube', 'amcust_sc_embed_youtube' );
+// (END) amgrid
+///////////////

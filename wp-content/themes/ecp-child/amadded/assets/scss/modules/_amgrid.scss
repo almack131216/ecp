@@ -7,60 +7,101 @@ $wet-asphalt: #34495E;
 $midnight-blue: #2C3E50;
 $clouds: #ECF0F1;
 
+.devNote {
+    background:red;
+    // display:none;
+}
+
+
+.amgrid-wrap_all.list {
+    ul.amgrid-ul {
+        list-style: none;
+        margin:0;
+        padding:0;
+      }
+  }
+
 .amgrid-wrap {
 
     /* the important bits */
     li {
-    perspective: 600px;
+        perspective: 600px;
     }
 
     .info {
         // hide-initial-state
-        transform: rotate3d(1,0,0, 90deg);
-        
+        transform: rotate3d(1,0,0, 90deg);        
         width: 100%;
         height: 100%;
-        padding: 20px;
+        padding: $offset-g1;
         position: absolute;
         top: 0;
         left: 0;
+        z-index:2;
+        overflow:hidden;
         border-radius: 4px;
         pointer-events: none;
         background-color: $color_primary;//transparentize($turquoise, .1);
+
+        &:after {
+            content:"";
+            position:absolute;
+            bottom:0;
+            left:0;
+            display:block;
+            height:120px;
+            width:100%;
+
+            // background:$color_primary;
+            background-image: -moz-linear-gradient(top, rgba(37, 34, 89,0), rgba(37, 34, 89,1));
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(37, 34, 89,0)), to(rgba(37, 34, 89,1)));
+            background-image: -webkit-linear-gradient(top, rgba(37, 34, 89,0), rgba(37, 34, 89,1));
+            background-image: -o-linear-gradient(top, rgba(37, 34, 89,0), rgba(37, 34, 89,1));
+            background-image: linear-gradient(to bottom, rgba(37, 34, 89,0),rgba(37, 34, 89,1));
+            background-repeat: repeat-x;
+            border-bottom:30px solid $color_primary;
+        }
+
+        .quote {
+            // height:200px;
+            p {
+                padding:0;
+            }
+        }
     }
 
     .in-top .info {
-    transform-origin: 50% 0%;
-    animation: in-top $duration $timing-fn 0ms 1 forwards;
+        transform-origin: 50% 0%;
+        animation: in-top $duration $timing-fn 0ms 1 forwards;
     }
     .in-right .info {
-    transform-origin: 100% 0%;
-    animation: in-right $duration $timing-fn 0ms 1 forwards;
+        transform-origin: 100% 0%;
+        animation: in-right $duration $timing-fn 0ms 1 forwards;
     }
     .in-bottom .info {
-    transform-origin: 50% 100%;
-    animation: in-bottom $duration $timing-fn 0ms 1 forwards;
+        transform-origin: 50% 100%;
+        animation: in-bottom $duration $timing-fn 0ms 1 forwards;
     }
     .in-left .info {
-    transform-origin: 0% 0%;
-    animation: in-left $duration $timing-fn 0ms 1 forwards;
+        transform-origin: 0% 0%;
+        animation: in-left $duration $timing-fn 0ms 1 forwards;
     }
 
     .out-top .info {
-    transform-origin: 50% 0%;
-    animation: out-top $duration $timing-fn 0ms 1 forwards;
+        transform-origin: 50% 0%;
+        animation: out-top $duration $timing-fn 0ms 1 forwards;
     }
     .out-right .info {
-    transform-origin: 100% 50%;
-    animation: out-right $duration $timing-fn 0ms 1 forwards;
+        transform-origin: 100% 50%;
+        animation: out-right $duration $timing-fn 0ms 1 forwards;
     }
     .out-bottom .info {
-    transform-origin: 50% 100%;
-    animation: out-bottom $duration $timing-fn 0ms 1 forwards;
+        transform-origin: 50% 100%;
+        animation: out-bottom $duration $timing-fn 0ms 1 forwards;
     }
     .out-left .info {
-    transform-origin: 0% 0%;
-    animation: out-left $duration $timing-fn 0ms 1 forwards;
+        transform-origin: 0% 0%;
+        animation: out-left $duration $timing-fn 0ms 1 forwards;
     }
 
     @keyframes in-top {
@@ -111,16 +152,32 @@ $clouds: #ECF0F1;
         padding: 0;
         list-style: none;
 
-        img.img-bg {
+        .img-bg {
             position:absolute;
             top:0;
             left:0;
             z-index:-1;
             width:100%;
             height:100%;
+
+            img{
+                height: 100%;
+                width: auto;
+            }
         }
         
-        a  {
+                  
+
+        a,
+        .a-dummy  {
+            // visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s;
+            &:hover {
+                // visibility: visible;
+                opacity: 1;
+                transition: opacity 1s;                  
+            }
             display: inline-block;
             vertical-align: top;
             text-decoration: none;
@@ -128,10 +185,23 @@ $clouds: #ECF0F1;
             position:absolute;
             top:0;
             left:0;
-            z-index:1;
+            z-index:3;
             width:100%;
-            height:100%;        
+            height:100%;     
+            padding:$offset-g1;
+            padding-top:260px;
+
+            &.read-more {
+                color:white;
+            
+                &:before {
+                    @extend .fa-dummy;
+                    content: "\f054" !important;
+                }
+            }
+            
         }
+        
         
         p  {
             font-size: 12px;
@@ -151,6 +221,7 @@ $clouds: #ECF0F1;
             z-index:0;
             background:transparent;
             background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+            display:block;
             width:100%;
             padding:$offset-g1;
             text-align:left;
@@ -166,6 +237,12 @@ $clouds: #ECF0F1;
                 &.title {
 
                 }
+            }
+        }
+
+        &:hover {
+            .txt-wrap {
+                display:none;
             }
         }
         
@@ -189,6 +266,29 @@ $clouds: #ECF0F1;
                 width: 50px;
                 path {
                     fill: transparentize($wet-asphalt, .8);
+                }
+            }
+        }
+    }
+
+    ul.has-4-items {
+        li {
+            perspective: 440px;
+            width: 220px;
+            height: 220px;
+    
+            .img-bg {
+                // position:absolute;
+                // top:0;
+                // left:0;
+                // z-index:-1;
+                // width:100%;
+                // height:100%;
+            }
+
+            .info {
+                h3 {
+                    display:none;
                 }
             }
         }
