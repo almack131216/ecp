@@ -63,7 +63,6 @@ $clouds: #ECF0F1;
         }
 
         .quote {
-            // height:200px;
             p {
                 padding:0;
             }
@@ -158,51 +157,62 @@ $clouds: #ECF0F1;
             left:0;
             z-index:-1;
             width:100%;
-            height:100%;
+            height:100%;            
 
             img{
                 height: 100%;
                 width: auto;
+                min-width: 100%;
+                
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                user-select: none;
             }
         }
         
                   
-
-        a,
+        a.read-more-inner {
+            pointer-events: all;
+        }
+        
+        a.read-more,
         .a-dummy  {
-            // visibility: hidden;
             opacity: 0;
             transition: opacity 0.5s;
-            &:hover {
-                // visibility: visible;
-                opacity: 1;
-                transition: opacity 1s;                  
-            }
-            display: inline-block;
+            display: block;
             vertical-align: top;
             text-decoration: none;
-            border-radius: 4px;    
             position:absolute;
-            top:0;
+            bottom:0;
             left:0;
             z-index:3;
             width:100%;
-            height:100%;     
+            height:50px;     
             padding:$offset-g1;
-            padding-top:260px;
+            background:transparent;
 
-            &.read-more {
-                color:white;
-            
-                &:before {
-                    @extend .fa-dummy;
-                    content: "\f054" !important;
-                }
-            }
-            
+
+            color:white;  
+        
+            &:before {
+                @extend .fa-dummy;
+                content: "\f054" !important;
+            }            
         }
         
-        
+        &.in-left,
+        &.in-top,
+        &.in-bottom,
+        &.in-right {
+            a,
+            .a-dummy  {
+                opacity: 1;
+                transition: opacity 1s;                  
+            }
+        }
+
         p  {
             font-size: 12px;
             line-height: 1.5;
@@ -225,7 +235,6 @@ $clouds: #ECF0F1;
             width:100%;
             padding:$offset-g1;
             text-align:left;
-            // font-size:1.0em;
 
             span {                    
                 color:white;
@@ -238,9 +247,15 @@ $clouds: #ECF0F1;
 
                 }
             }
-        }
+        }        
 
-        &:hover {
+        &.basic:hover {
+            .txt-wrap span {
+                opacity:0;
+                transition: opacity 0.5s;
+            }
+        }
+        &:not(.basic):hover {
             .txt-wrap {
                 display:none;
             }
@@ -250,16 +265,8 @@ $clouds: #ECF0F1;
             width: 100%;
             height: 100%;
             background-color: transparent;// $clouds;
-            // color: transparentize($wet-asphalt, .4);
-            // box-shadow: inset 0 2px 20px darken($clouds, 2);
             text-align: left;
-            // font-size: 50px;
             font-size:1em;
-
-            
-
-            
-            // line-height: 300px;
             
             svg {
                 pointer-events: none;
@@ -276,15 +283,6 @@ $clouds: #ECF0F1;
             perspective: 440px;
             width: 220px;
             height: 220px;
-    
-            .img-bg {
-                // position:absolute;
-                // top:0;
-                // left:0;
-                // z-index:-1;
-                // width:100%;
-                // height:100%;
-            }
 
             .info {
                 h3 {
@@ -301,19 +299,6 @@ $clouds: #ECF0F1;
     .container {
         width: 100%;
         margin: 0 auto;
-        // background:yellow;
-    }
-
-    header {
-        font-family: 'Bree Serif', serif;
-        text-align: center;
-        margin: 50px 0 25px;
-        color: $wet-asphalt;
-    
-    p {
-        margin: 0;
-        color: transparentize($wet-asphalt, .6);
-    }
     }
 
 }

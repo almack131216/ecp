@@ -7,7 +7,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
     function chld_thm_cfg_parent_css() {
-        wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css?v=200929', array(  ) );
+        wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css', array(  ), '1.0' );
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
@@ -473,6 +473,7 @@ function amcust_sc_embed_youtube( $atts = array() ) {
 add_shortcode( 'embed_youtube', 'amcust_sc_embed_youtube' );
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////
 /////////
 // amgrid
 
@@ -504,9 +505,7 @@ function amgrid_in_footer(){ // $tag variable is here
     
     function init_amgrid(){
         // - Noel Delgado | @pixelia_me
-
         // alert('? JS - init_amgrid');
-
         const nodes = [].slice.call(document.querySelectorAll('li'), 0);
         const directions  = { 0: 'top', 1: 'right', 2: 'bottom', 3: 'left' };
         const classNames = ['in', 'out'].map((p) => Object.values(directions).map((d) => `${p}-${d}`)).reduce((a, b) => a.concat(b));
@@ -523,8 +522,8 @@ function amgrid_in_footer(){ // $tag variable is here
         class Item {
             constructor(element) {
                 this.element = element;    
-                this.element.addEventListener('mouseover', (ev) => this.update(ev, 'in'));
-                this.element.addEventListener('mouseout', (ev) => this.update(ev, 'out'));
+                this.element.addEventListener('mouseenter', (ev) => this.update(ev, 'in'));
+                this.element.addEventListener('mouseleave', (ev) => this.update(ev, 'out'));
             }
             
             update(ev, prefix) {
@@ -548,24 +547,32 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
 
     $catId = $atts['cat_id'];//parent (root) categoryId
     $order_by = $atts['order_by'] ? $atts['order_by'] : 'all_order';
-    $styled = $atts['styled'] ? true : false;
+    $type = $atts['type'] ? $atts['type'] : null;
+    $strReadMore = $atts['str_read_more'] ? $atts['str_read_more'] : 'Read More';
+
     $columns = $atts['columns'] ? $atts['columns'] : false;
-    $devNotes = $atts['dev_notes'] ? true : false;
-    $linkToPost = $atts['link_to_post'] ? true : false;
+    $devNotes = $atts['dev_notes'] == 'true' || $atts['dev_notes'] == true ? true : false;
+    $linkToPost = true;    
+    if($devNotes) $catPosts .= '<br>linkToPost: '.$linkToPost.' ('.$atts['link_to_post'].')';
     $linkToTargetArr = $atts['link_to_target'] ? explode(',', $atts['link_to_target']) : false;
     if($linkToTargetArr){
         $catSkip = true;
         // $postIdsArr = $postIds;
-        echo '<br>targets: ';
-        print_r($linkToTargetArr);
+        if($devNotes) echo '<br>targets: ';
+        if($devNotes) print_r($linkToTargetArr);
+    }
+
+    if($linkToTargetArr || $atts['link_to_post'] == 'false'){
+        $linkToPost = false;
+        if($devNotes) $catPosts .= '<br>$linkToPost set to false!';
     }
 
     $postIdsArr = $atts['post_ids'] ? explode(',', $atts['post_ids']) : null;
     if($postIdsArr){
         $catSkip = true;
         // $postIdsArr = $postIds;
-        echo '<br>post_ids: ';
-        print_r($postIdsArr);
+        if($devNotes) echo '<br>post_ids: ';
+        if($devNotes) print_r($postIdsArr);
     }
     $group = false;//$atts['group'] ? true : false;
     $catIdParent = $catId;
@@ -578,12 +585,8 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
         if($devNotes) $catPosts .= '<h5 class="devNote">IS PARENT CATEGORY, group='.$group.'</h5>';        
     }
     
-
-    
     $allTitlesUsed[] = $catIdParent;
-
     $catDesc = false;//$atts['cat_desc'];
-
     if($devNotes) $catPosts .= '<h1 class="devNote">get_cat_name: '.get_cat_name($catId).' ['.$catId.'], order_by: '.$order_by.'</h1>';
     
     
@@ -613,7 +616,7 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
         // $subcategoryCounted = 0;
         $groupEnd = false;
 
-        $catPosts .= '<div class="amgrid-wrap_all '.($styled ? 'roots' : 'list').'">';
+        $catPosts .= '<div class="amgrid-wrap_all '.($type ? $type : 'list').'">';
 
         if($devNotes){
             $catPosts .= '<div class="devNote">';
@@ -630,8 +633,6 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
 
             if( ($catIdParent == $catId) || ($catIdParent != $catId && $subcategory->term_id == $catId) ){
                 $subcategoryId = intval($subcategory->term_id);                
-                // $catPosts .= '<ul class="'.($styled ? 'amgrid-item' : 'amgrid-ul').'">';//if(!$group) 
-                // $catPosts .= '<li>';//if(!$group) 
 
                 if($catId != $subcategory->category_parent) {
                     $catTitlesUsed[] = $subcategory->category_parent;
@@ -684,7 +685,6 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
                 
 
                 if( $featuredPosts->have_posts() ):
-                    // $subcategoryCounted++;                    
                     $gridStart = '<div class="amgrid-wrap">';
                     $gridStart .= '<div class="container">';
                     $gridStart .= '<ul class="has-'.$columns.'-items">';
@@ -733,8 +733,10 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
                             'subtitle' => get_metadata( 'post', $thisPost->ID, 'job_title', true ),
                             'quote' => $metaString && !is_array($metaString) ? $metaString : null,
                             'link_target' => $linkToTargetArr ? GenerateTabLink($linkToTargetArr[$postCount]) : null,
-                            'link_post' => esc_url( get_the_permalink() ),
-                            'thumb' => $image_arr ? $image_arr : null
+                            'link_post' => $linkToPost ? esc_url( get_the_permalink() ) : false,
+                            'thumb' => $image_arr ? $image_arr : null,
+                            'type' => $type ? $type : null,
+                            'str_read_more' => $strReadMore
                         );
                         $catPosts .= amgrid_listItem($itemArr);
                         
@@ -746,15 +748,10 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
                     $gridEnd .= '</div>';
                     $gridEnd .= '</div>';
 
-                    // if(!$group || $group && $subcategoryCounted == $subcategoryCount) $groupEnd = true;
-
                     $catPosts .= $gridEnd;                
                     wp_reset_postdata();                 
                     
                 endif;
-
-                // $catPosts .= '</li>';//if($groupEnd) 
-                // $catPosts .= '</ul>';//if($groupEnd) //<!--[wrap '.$subcategoryCounted.'-'.$subcategoryCount.']-->
             }
 
             if($catSkip){
@@ -772,23 +769,27 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
 // (END) amgrid
 ///////////////
 
-
+///////////////////////////
+// amgrid - GenerateTabLink
 function GenerateTabLink($getTarget){
     $url = strtok($_SERVER["REQUEST_URI"], '?');
     $tabUrl = $url.'?target='.$getTarget;
     return $tabUrl;
 }
+///////////////////////////
+// (END) amgrid - GenerateTabLink
 
-
+///////////////////////////
+// amgrid - amgrid_listItem
 function amgrid_listItem($getItemArr){
-    $listItem = '';
-    $listItem .= '<li>';
+    $listItem = '';    
+    $listItem .= '<li'.($getItemArr['type'] ? ' class="'.$getItemArr['type'].'"' : null).'>';
 
-    // $listItem .= '<div class="fade-bottom">';
-    if($getItemArr['link_target']) $listItem .= '<a href="'.$getItemArr['link_target'].'" title="Link to '.$getItemArr['title'].'" class="read-more">Read More</a>';
-    if($getItemArr['link_post'] && !$getItemArr['link_target']) $listItem .= '<a href="'.$getItemArr['link_post'].'" title="Link to '.$getItemArr['title'].'" class="read-more">Read More</a>';
-    if(!$getItemArr['link_post'] && !$getItemArr['link_target']) $listItem .= '<div class="a-dummy"></div>';                                           
-    // $listItem .= 'xxx</div>';
+    //footer link
+    if($getItemArr['link_target']) $listItem .= '<a href="'.$getItemArr['link_target'].'" title="Link to '.$getItemArr['title'].'" class="read-more">'.$getItemArr['str_read_more'].'</a>';
+    if($getItemArr['link_post'] && !$getItemArr['link_target']) $listItem .= '<a href="'.$getItemArr['link_post'].'" title="Link to '.$getItemArr['title'].'" class="read-more">'.$getItemArr['str_read_more'].'</a>';
+    //(END) footer link
+
     //div.img-bg
     $listItem .= '<div class="img-bg">';
     if( $getItemArr['thumb'] ):                            
@@ -802,18 +803,21 @@ function amgrid_listItem($getItemArr){
     //(END) div.img-bg
     
     //div.info
-    $listItem .= '<div class="info">';
-        $listItem .= '<h3>'.$getItemArr['title'].'</h3>';
-        $listItem .= '<div class="quote">';
-        $listItem .= '<p>';                            
-        
-        if($getItemArr['quote']) $listItem .= $getItemArr['quote'];
-        $listItem .= '</p>';
-        $listItem .= '</div>';
-    $listItem .= '</div>';
+    $info = '';
+    $info .= '<div class="info">';
+        $info .= '<h3>'.$getItemArr['title'].$getItemArr['type'].'</h3>';
+        $info .= '<div class="quote">';
+        $info .= '<p>';                        
+        if($getItemArr['quote']) $info .= $getItemArr['quote'];
+        $info .= '</p>';        
+        $info .= '</div>';
+    $info .= '</div>';
+    if($getItemArr['type'] !== "basic") $listItem .= $info;
     //(END) div.info                        
     
     $listItem .= '</li>';
 
     return $listItem;
 }
+///////////////////////////
+// (END) amgrid - amgrid_listItem
