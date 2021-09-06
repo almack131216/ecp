@@ -791,10 +791,13 @@ function amgrid_listItem($getItemArr){
     //(END) footer link
 
     //div.img-bg
-    $listItem .= '<div class="img-bg">';
-    if( $getItemArr['thumb'] ):                            
-        $listItem .= '<img src="'.$getItemArr['thumb'][0].'">';                            
-    endif;
+    $listItem .= '';
+    if( $getItemArr['thumb'] ){                          
+        // $listItem .= '<img src="'.$getItemArr['thumb'][0].'">';
+        $listItem .= '<div class="img-bg has-img" style="background-image:url('.$getItemArr['thumb'][0].')">';
+    }else{
+        $listItem .= '<div class="img-bg">';
+    }
     $listItem .= '<span class="txt-wrap">';
         $listItem .= '<span class="name">'.$getItemArr['title'].'</span>';
         $listItem .= '<span class="title">'.$getItemArr['subtitle'].'</span>';
