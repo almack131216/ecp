@@ -1,8 +1,8 @@
 /*
 Theme Name: Child
 Template: ecp-child
-Version: 2108231600
-Updated: 2021-08-24 00:00:00 : replace dashicons
+Version: 2109070800
+Updated: 2021-09-07 00:00:00 : title_splitter
 */
 
 /* BASE - base styles, variables, mixins etc */
@@ -25,6 +25,7 @@ Updated: 2021-08-24 00:00:00 : replace dashicons
 @import "modules/_buttons-sidetabs.scss";
 @import "modules/_amgrid.scss";
 @import "modules/_accordion.scss";
+@import "modules/_title-splitter.scss";
 
 /* LAYOUTS - page layout styles */
 @import "layouts/_base.scss";

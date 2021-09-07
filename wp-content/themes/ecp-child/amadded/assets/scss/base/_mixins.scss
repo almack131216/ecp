@@ -70,3 +70,10 @@
   text-overflow: ellipsis;
   white-space: normal;
 }
+
+@mixin resp-prop-half($prop, $val) {
+  #{$prop}: $val;
+  @media (max-width: $bp-tablet-1) {
+    #{$prop}: calc(#{$val} / 2);
+  }
+}

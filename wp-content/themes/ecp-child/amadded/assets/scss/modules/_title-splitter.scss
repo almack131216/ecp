@@ -1,0 +1,61 @@
+/* _title-splitter.scss */
+
+.title_splitter_wrap {
+    padding-top: $offset-g2;
+    @include resp-prop-half("padding-bottom", $offset-g1);
+    // @include resp-prop-half("padding-left", $offset-g2);
+    // @include resp-prop-half("padding-right", $offset-g2);
+    width: 100%;
+    // background: yellow;
+    box-sizing: border-box;
+  
+    .title-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  
+      .title {
+        white-space: nowrap;
+        padding-right: $offset-g1;
+        text-transform: capitalize;
+  
+        h2 {
+          // @extend .h4;
+          // @extend .a-black;
+          margin: 0;
+          background-color: transparent;
+          line-height:1em;
+          padding:0;
+        }
+      }
+      /* (END) .title */
+  
+      .spacer-line {
+        flex-grow: 1;
+        height: 1px;
+        background: black;
+        align-self: center;
+      }
+  
+      .see-all {
+        white-space: nowrap;
+        padding-left: $offset-g1;
+        line-height:1em;
+        // padding:0;
+  
+        > a {
+          // @extend .a-black;
+        }
+  
+        @media (max-width: $bp-xs-1) {
+          display: none;
+        }
+      }
+      /* (END) .see-all */
+    }
+  
+    .body {
+      padding-top: $offset-g1;
+    }
+  }
+  

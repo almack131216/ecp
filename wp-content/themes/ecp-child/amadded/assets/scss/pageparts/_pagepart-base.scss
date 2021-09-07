@@ -4,13 +4,24 @@
   padding: $offset-g2 0;
   padding: 2rem 0;
 
-  background-color: #eee;
+  background-color: $color_bg-body;
   background-position: top;
   background-size: cover;
+
+  h2 {
+    font-size:2rem;
+  }
 
   &.full-width {
     .pagepart-content {
       max-width: 100%;
+    }
+  }
+
+  &.bg-primary {
+    h1,h2,h3,
+    p, a {
+      color:white;
     }
   }
 }

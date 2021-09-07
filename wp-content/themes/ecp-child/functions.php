@@ -472,8 +472,41 @@ function amcust_sc_embed_youtube( $atts = array() ) {
 }
 add_shortcode( 'embed_youtube', 'amcust_sc_embed_youtube' );
 
+///////////////////////////////////////////////////////////////////////////////////////////// Title Splitter + Link
+function amcust_title_splitter( $atts = array() ) {
+    //EXAMPLE: [title_splitter title="Headmaster" see_all_link="/ecp-people" see_all_icon="dashicons-admin-users" see_all_text="ECP People" class="margin-top-g2"]
+    //parameters: title,see_all_link,see_all_icon,see_all_text,class
+    $appendClass = '';
+    $seeAllLinkClass = 'fasc-button fasc-size-medium';
+    if($atts['class']) $appendClass = ' '.$atts['class'];
+    if($atts['see_all_icon']) $seeAllLinkClass .= ' fasc-ico-before '.$atts['see_all_icon'];
 
-/////////////////////////////////////////////////////////////////////////////////////////////
+    $contentBuild = '<div class="title_splitter_wrap '.$appendClass.'">';
+    $contentBuild .= '<div class="title-wrap">';
+    $contentBuild .= '<div class="title">';
+    // $contentBuild .= '<a href="#">';
+    $contentBuild .= '<h2>'.$atts['title'].'</h2>';
+    // $contentBuild .= '</a>';
+    $contentBuild .= '</div>';
+    $contentBuild .= '<span class="spacer-line"></span>';
+    
+    if($atts['see_all_link']){
+        $contentBuild .= '<div class="see-all">';
+        $contentBuild .= '<a class="'.$seeAllLinkClass.'" href="'.$atts['see_all_link'].'">';
+        $contentBuild .= $atts['see_all_text'] ? $atts['see_all_text'] : 'See All';
+        $contentBuild .= '</a>';
+        $contentBuild .= '</div>';
+    }
+    
+    $contentBuild .= '</div>';
+    $contentBuild .= '</div>';
+
+    return $contentBuild;
+}
+add_shortcode( 'title_splitter', 'amcust_title_splitter' );
+
+
+///////////////////////////////////////////////////////////////////////////////////////////// AMGRID
 /////////
 // amgrid
 
