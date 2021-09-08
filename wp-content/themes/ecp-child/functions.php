@@ -457,7 +457,7 @@ function amcust_dequeue_styles() {
 }
 
 function amcust_sc_embed_youtube( $atts = array() ) {
-    //EXAMPLE: [embed_youtube v="3lLZxTzXf-Y" class="full margin-top-g2"][/embed_youtube]
+    //EXAMPLE: [embed_youtube v="3lLZxTzXf-Y" class="full margin-top-g2"]
     //parameters: v,class,title
     $appendClass = '';
     if($atts['class']) $appendClass = ' '.$atts['class'];
@@ -466,6 +466,7 @@ function amcust_sc_embed_youtube( $atts = array() ) {
     if($atts['title']) $contentBuild .= '<h2>'.$atts['title'].'</h2>';
     $contentBuild .= '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/'.$atts['v'].'?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>';
     $contentBuild .= '</iframe>';
+    if($atts['title_bar_under']) $contentBuild .= '<span class="title_bar_under">'.$atts['title_bar_under'].'</span>';
     $contentBuild .= '</div>';
 
     return $contentBuild;
