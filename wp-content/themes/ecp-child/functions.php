@@ -1,4 +1,7 @@
 <?php
+// CR | separate functions into separate files...
+include("amcust_accordion.php");
+
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 

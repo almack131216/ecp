@@ -82,6 +82,14 @@
         max-height: 0;
         overflow: hidden;
 
+        p {
+            margin:0 0 $offset-g1 0;
+        }
+
+        ul {
+            margin-bottom: $offset-g1;
+        }
+
         a {
             min-width: 90px;
             // background: #222;
@@ -105,6 +113,17 @@
         border-bottom:2px solid #ddd;
     }
 
+    .img-right {
+        display: block;
+        float: right;
+        padding: 0 0 $offset-g2 $offset-g2;
+
+        img {
+            width:200px;
+            height:auto;
+            margin:0 0 $offset-g1 0;
+        }
+    }
     
 }
 
@@ -116,4 +135,16 @@
     // -moz-transition: all 0.3s;
     // -o-transition: all 0.3s;
     // transition: all 0.3s;
+}
+
+.two-thir {
+    float:left;
+    background:yellow;
+    width:66.66666666%;
+}
+
+.one-thir {
+    float:left;
+    background:orange;
+    width:33.33333333%;
 }
