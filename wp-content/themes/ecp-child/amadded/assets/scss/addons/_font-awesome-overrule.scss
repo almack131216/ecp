@@ -48,3 +48,22 @@ i[class^="icon-"] {
   width: 20px;
   height: 20px;
 }
+
+.icon-inside {
+  &:before {
+    @extend .fa-dummy;
+    margin-right:$offset-1;
+  }
+
+  &.icon-envelope {
+    &:before {
+      content: "\f0e0";
+    }
+  }
+
+  &.icon-phone {
+    &:before {
+      content: "\f095";
+    }
+  }  
+}

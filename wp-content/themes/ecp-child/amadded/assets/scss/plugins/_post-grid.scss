@@ -6,10 +6,24 @@
 
     > .nav-search {
       padding: 0 0 $offset-1 0;
+      position:relative;
+
+      &:before {
+        @extend .fa-dummy;
+        content: "\f002";
+        position:absolute;
+        left: 10px;
+        top: 10px;
+        color:#ddd;
+      }
 
       > .search {
         height: 40px;
         border: 2px solid #ddd;
+        border-radius: 0;
+        display: inline-block;
+        padding-left: 35px;
+        vertical-align: top;
       }
     }
   }
@@ -18,6 +32,7 @@
     .grid-nav-top {
       > .nav-search {
         padding: 0 0 $offset-g2 0;
+        text-align:left;
       }
     }
   }
@@ -143,4 +158,14 @@
     }
     /* (END) .post-grid.grid */
   }
+}
+
+/* search input */
+.post-grid .grid-nav-top .nav-search .search {
+  
+
+  // &:before {
+  //   @extend .fa-dummy;
+  //   content: "\f002";
+  // }
 }
