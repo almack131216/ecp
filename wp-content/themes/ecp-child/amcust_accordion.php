@@ -14,6 +14,20 @@ function amaccordion( $atts = array(), $content = null ) {
   
   
   function amacc_row( $atts = array(), $content = null ) {
+
+    // if(has_shortcode($post->post_content, 'amacc_row')){
+      ?>
+      <script type="text/javascript">        
+        function showNext(getNumber){
+          var nextStep = getNumber + 1;
+          // alert(getNumber + ' - ' + nextStep);
+
+          document.getElementById("accordion-" + getNumber).checked = false;
+          document.getElementById("accordion-" + nextStep).checked = true;
+        }
+      </script>
+      <?php
+    // }
   
     // set up default parameters
     // extract(shortcode_atts(array(
@@ -25,6 +39,7 @@ function amaccordion( $atts = array(), $content = null ) {
     $rowNum = $atts['number'] ? $atts['number'] : null;
     $rowTitle = $atts['title'] ? $atts['title'] : 'insert title here';
     $rowOpen = $atts['open'] ? $atts['open'] : false;
+    $btnContinue = $atts['btn_continue'] && $atts['btn_continue'] == "false" ? false : true;
   
     $rowBuild = '';
     $rowBuild .= '<nav class="drop-down-menu">';
@@ -32,6 +47,7 @@ function amaccordion( $atts = array(), $content = null ) {
     if($rowOpen) $rowBuild .= ' checked="checked"';
     $rowBuild .= ' />';
     $rowBuild .= '<label class="accordion-title first" for="accordion-'.$rowNum.'">';
+    // $rowBuild .= '<div class="pulse-bg"></div>';
     $rowBuild .= '<span class="badge">'.$rowNum.'</span>';
     $rowBuild .= $rowTitle;
     $rowBuild .= '</label>';
@@ -46,6 +62,8 @@ function amaccordion( $atts = array(), $content = null ) {
     }else{
         $rowBuild .= $content;
     }
+    // $rowBuild .= '<label class="pulse-container margin-y-g2" for="accordion-'.round($rowNum + 1,0).'"><span class="pulse-bg"></span><span class="pulse-button"><i class="fa fa-chevron-down" aria-hidden="true"></i></span><span class="continue">Step '.round($rowNum + 1,0).'</span></label>';
+    if($btnContinue) $rowBuild .= '<div onClick="showNext('.$rowNum.')" class="pulse-container margin-y-g2" for="accordion-'.round($rowNum + 1,0).'"><span class="pulse-bg"></span><span class="pulse-button"><i class="fa fa-chevron-down" aria-hidden="true"></i></span><span class="continue">Step '.round($rowNum + 1,0).'</span></div>';
     $rowBuild .= '</div>';
     $rowBuild .= '</nav>';    
   
