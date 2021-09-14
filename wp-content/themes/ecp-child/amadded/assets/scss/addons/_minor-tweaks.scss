@@ -225,41 +225,6 @@ html[lang="en-GB"] .btn-contact-2do.cs {
 }
 /* (2do) Look at theme footer.php */
 
-.youtube-wrap {
-  padding:0;
-  margin:0;
-  width:100%;
-
-  h3 {
-    margin-bottom:$offset-2;
-  }
-
-  &.fullXXX {    
-    // margin-left:0;
-    // margin-right:0;
-  }
-
-  iframe {
-    width:100%;
-    min-height:300px;
-    margin:0 auto;
-  }
-}
-
-.one-third {
-  .youtube-wrap {  
-    &.fullXXX {
-      margin-left:0 !important;
-      margin-right:0 !important;
-    }
-  
-    iframe {
-      width:100%;
-      min-height:200px;
-    }
-  }
-}
-
 .align-center {
   text-align:center;
 }
