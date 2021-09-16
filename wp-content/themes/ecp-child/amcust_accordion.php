@@ -22,8 +22,19 @@ function amaccordion( $atts = array(), $content = null ) {
           var nextStep = getNumber + 1;
           // alert(getNumber + ' - ' + nextStep);
 
-          document.getElementById("accordion-" + getNumber).checked = false;
+          // document.getElementById("accordion-1").checked = false;
+          // document.getElementById("accordion-2").checked = false;
+          // document.getElementById("accordion-3").checked = false;
+          // document.getElementById("accordion-4").checked = false;
+          // document.getElementById("accordion-5").checked = false;
+          // document.getElementById("accordion-6").checked = false;
           document.getElementById("accordion-" + nextStep).checked = true;
+          scrollToAnchor("accordion-" + nextStep);
+        }
+
+        function scrollToAnchor(aid){
+            var aTag = jQuery("a[name='"+ aid +"']");
+            jQuery('html,body').animate({scrollTop: aTag.offset().top},'slow');
         }
       </script>
       <?php
@@ -42,6 +53,7 @@ function amaccordion( $atts = array(), $content = null ) {
     $btnContinue = $atts['btn_continue'] && $atts['btn_continue'] == "false" ? false : true;
   
     $rowBuild = '';
+    $rowBuild .= '<a name="accordion-'.$rowNum.'"></a>';
     $rowBuild .= '<nav class="drop-down-menu">';
     $rowBuild .= '<input id="accordion-'.$rowNum.'" class="activate" name="accordion-'.$rowNum.'" type="checkbox"';
     if($rowOpen) $rowBuild .= ' checked="checked"';

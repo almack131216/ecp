@@ -50,6 +50,13 @@
             margin-right:$offset-g1;
             line-height:28px;
         }
+
+        &:after {
+            font-family: FontAwesome;
+            content: '\f078';
+            float: right;
+            font-weight: 300;
+        }
     }
     
 
@@ -108,6 +115,10 @@
         .badge {
             background:$color_primary;
             color:white;
+        }
+
+        &:after {
+            content: '\f077';
         }
     }
 
