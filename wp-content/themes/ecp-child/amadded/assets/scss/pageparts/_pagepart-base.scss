@@ -41,8 +41,22 @@
 
 
 // :more tree page
-body.page-id-11786 {
-  .section.daily-life {
-    display:none;
+body.page-id-11786,
+body.page-id-22 {
+  .four-main-section {
+    // @extend .all-four-display;
   }
+  .four-main-section h3,
+  .four-main-section .four-main-bottom {
+      max-width: 653.33333px;
+  }
+
+  .four-main-section .four-main-bottom .section {
+    width: calc(50% - 2 * 1rem);
+  }
+
+  
+  // .section.daily-life {
+  //   display:none;
+  // }
 }

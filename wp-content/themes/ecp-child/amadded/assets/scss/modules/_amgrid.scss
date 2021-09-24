@@ -275,10 +275,11 @@ $clouds: #ECF0F1;
         
         a.read-more,
         .a-dummy  {
+            display:none;
             opacity: 0;
             transition: opacity 0.5s;
             display: block;
-            vertical-align: top;
+            // vertical-align: top;
             text-decoration: none;
             position:absolute;
             bottom:0;
@@ -304,6 +305,7 @@ $clouds: #ECF0F1;
         &.in-right {
             a,
             .a-dummy  {
+                display:block;
                 opacity: 1;
                 transition: opacity 1s;                  
             }
