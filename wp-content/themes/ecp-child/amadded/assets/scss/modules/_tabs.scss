@@ -134,11 +134,9 @@
       }
 
       h2.tabtitle.responsive-tabs__heading--active {
-        background: $color-primary;
-        
+        background: $color-primary;        
         border: 1px solid $color-primary;
-        border-top: 0px;
-        
+        border-top: 0px;        
         color: white;
 
         &:after {
@@ -205,6 +203,29 @@
     }    
   }
   /* (END) lozenge */
+
+  /* sm */
+  /* small text to avoid line break in tabs */
+  &.sm {
+    .responsive-tabs-wrapper {
+      .responsive-tabs {
+        ul.responsive-tabs__list {
+
+          li.responsive-tabs__list__item {
+            font-size: 14px;
+            margin-right:4px;
+          }
+  
+          li.responsive-tabs__list__item--active,
+          li.responsive-tabs__list__item--active:hover {
+            font-size: 16px;
+          }
+        }
+        /* (END) ul */
+      }
+    }    
+  }
+  /* (END) sm */
 
   .display-posts-listing {
     .listing-item {
