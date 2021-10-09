@@ -31,15 +31,16 @@
   }
   
   .one-third {
-    .youtube-wrap {  
-      &.fullXXX {
-        margin-left:0 !important;
-        margin-right:0 !important;
-      }
-    
+    .youtube-wrap {    
       iframe {
         width:100%;
         min-height:200px;
       }
+    }
+  }
+
+  .single-post {
+    .youtube-wrap {
+      margin-bottom:$offset-g2;
     }
   }
