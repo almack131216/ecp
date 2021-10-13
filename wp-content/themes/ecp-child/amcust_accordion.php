@@ -65,7 +65,11 @@ function amaccordion( $atts = array(), $content = null ) {
     $rowBuild .= '</label>';
     $rowBuild .= '<div class="drop-down">';
     if($atts['do_shortcode']){
-        $rowBuild .= do_shortcode($content);        
+        $rowBuild .= do_shortcode($content);
+    }elseif($atts['insert_pagepart']){       
+        $rowBuild .= do_shortcode('[pagepart slug="'.$atts['insert_pagepart'].'"]');
+    }elseif($atts['insert_textblock']){       
+        $rowBuild .= do_shortcode('[text-blocks id="'.$atts['insert_textblock'].'"]');   
     }elseif($atts['insert_post']){
       $insertPost = '[display-posts id='.$atts['insert_post'].' include_content="true" wrapper="div" include_title="false" category_display="false" ignore_sticky_posts="true"';
       // $insertPost .= ' image_size="medium"';
