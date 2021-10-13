@@ -238,3 +238,105 @@ html[lang="en-GB"] .btn-contact-2do.cs {
 
 //   }
 // }
+
+.how-to-apply_banner-row {
+  display:flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  // border:1px solid red;
+  padding:$offset-g1 0;
+
+  @media (max-width: $bp-tablet-1) {
+    flex-direction: column;  
+  }
+
+  .img-steps {
+    // flex-grow:1;
+    padding:0;
+    width: 66.66666666%;
+
+    @media (max-width: $bp-tablet-1) {
+      width:100%;  
+    }
+  }
+  .dates {    
+    padding: 0;
+    // width:33.33333333%;
+    flex-grow:1;
+    @media (max-width: $bp-tablet-1) {
+      width:100%;
+    }
+    
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        white-space: nowrap;
+        // padding-left: $offset-g1;
+
+        &::before {
+          content: "•"; /* Insert content that looks like bullets */
+          padding-right: $offset-1;
+        }
+      }
+    }
+  }
+}
+
+ul.btn-blocks {
+  display:flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  // border:1px solid red;
+  padding:$offset-g1 0;
+  // border-color:yellow;
+  align-items: stretch;
+  align-content: space-evenly;
+  gap: $offset-g1;
+  row-gap: $offset-g1;
+  column-gap: $offset-g1;
+  width: 100%;
+  margin: 0;
+
+  @media (max-width: $bp-tablet-1) {
+    flex-direction: column;  
+  }
+
+  li {
+    // background:orange;
+    flex-basis: 33.33333333%;
+    flex-grow: 0;
+    padding:0 !important;
+
+    a {
+      background: transparent;
+      text-align: center;
+      display:block;
+      border:1px solid white;
+      padding: $offset-g2 $offset-g1;
+      height: 100%;
+      width: 100%;
+      text-decoration:none;
+      font-weight: bold;
+
+      &:hover {
+        background:white;
+        color:$color_accent-1;
+
+        i.fa {
+          color:$color_accent-1;
+        }
+      }
+
+      i.fa {
+        display: block;
+        font-size: 60px;
+        height: 60px;
+        line-height: 60px;
+        margin: 0 auto $offset-g2 auto;
+      }
+    }
+  }
+}
