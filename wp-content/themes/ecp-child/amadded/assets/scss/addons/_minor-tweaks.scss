@@ -254,17 +254,20 @@ html[lang="en-GB"] .btn-contact-2do.cs {
     // flex-grow:1;
     padding:0;
     width: 66.66666666%;
+    align-items: center;
+    display: flex;
 
     @media (max-width: $bp-tablet-1) {
       width:100%;  
     }
   }
   .dates {    
-    padding: 0;
+    padding: 0 $offset-g2 0 0;
     // width:33.33333333%;
     flex-grow:1;
     @media (max-width: $bp-tablet-1) {
       width:100%;
+      padding-bottom:$offset-g2;
     }
     
     ul {
@@ -300,10 +303,6 @@ ul.btn-blocks {
   width: 100%;
   margin: 0;
 
-  @media (max-width: $bp-tablet-1) {
-    flex-direction: column;  
-  }
-
   li {
     // background:orange;
     flex-basis: 33.33333333%;
@@ -320,6 +319,7 @@ ul.btn-blocks {
       width: 100%;
       text-decoration:none;
       font-weight: bold;
+      @include border-radius($border-radius-button);
 
       &:hover {
         background:white;
@@ -336,6 +336,29 @@ ul.btn-blocks {
         height: 60px;
         line-height: 60px;
         margin: 0 auto $offset-g2 auto;
+      }
+    }
+  }
+
+  @media (max-width: $bp-tablet-1) {
+    flex-direction: column;
+
+    li {
+      width:100%;
+
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding:$offset-g1;
+
+        i.fa {
+          font-size: $offset-g2;
+          height: $offset-g2;
+          width: $offset-g2;
+          line-height: $offset-g2;
+          margin:0 $offset-g1 0 0;
+        }
       }
     }
   }

@@ -46,5 +46,18 @@ table#tablepress-EntranceExamResultsMathsCZ {
         }
       }
     }
+  }  
+}
+
+table.tablepress {
+  &.col-1-shrink {
+    tr > td:first-child {
+      width:30px;    
+    }
+  }
+  &.col-1-bold {
+    tr > td:first-child {
+      font-weight:bold;    
+    }
   }
 }

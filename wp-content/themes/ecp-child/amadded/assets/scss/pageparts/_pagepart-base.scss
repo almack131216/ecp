@@ -42,9 +42,23 @@
 
 // :more tree page
 body.page-id-11786,
+body.page-id-11812,//:more programme
+body.page-id-927,//ecp-people
+body.page-id-12369,//finance-fees (h2a)
+body.page-id-11977,//how-to-apply (en)
+body.page-id-12559,//how-to-apply (cz)
+body.page-id-12617,//how-to-apply TABS (cz)
+body.page-id-1456,//faculties (en)
+body.page-id-1979,//faculties (cz)
 body.page-id-22 {
   .four-main-section {
     // @extend .all-four-display;
+    @media (min-width: $bp-tablet) {
+      flex-direction: unset;
+    }
+    @media (max-width: $bp-tablet-1) {
+      flex-direction: column;
+    }
   }
   .four-main-section h3,
   .four-main-section .four-main-bottom {
@@ -53,6 +67,10 @@ body.page-id-22 {
 
   .four-main-section .four-main-bottom .section {
     width: calc(50% - 2 * 1rem);
+
+    @media (max-width: $bp-tablet-1) {
+      width: 100%;
+    }
   }
 
   

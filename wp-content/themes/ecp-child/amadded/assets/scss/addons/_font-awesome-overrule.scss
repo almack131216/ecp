@@ -65,5 +65,11 @@ i[class^="icon-"] {
     &:before {
       content: "\f095";
     }
-  }  
+  } 
+  
+  &.icon-map {
+    &:before {
+      content: "\f041";
+    }
+  }
 }

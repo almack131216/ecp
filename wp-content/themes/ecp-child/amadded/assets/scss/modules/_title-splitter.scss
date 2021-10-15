@@ -8,6 +8,22 @@
     width: 100%;
     // background: yellow;
     box-sizing: border-box;
+
+    &.white {
+      .title-wrap {    
+        .spacer-line {
+          background: white;
+        }
+    
+        .see-all {
+          > a {
+            background: transparent;
+            border-color: white;
+            color:white;
+          }
+        }
+      }
+    }
   
     .title-wrap {
       display: flex;
@@ -24,7 +40,7 @@
           // @extend .a-black;
           margin: 0;
           background-color: transparent;
-          line-height:1em;
+          line-height:45px;//height of SEE-ALL btn
           padding:0;
         }
       }
@@ -41,6 +57,7 @@
         white-space: nowrap;
         padding-left: $offset-g1;
         line-height:1em;
+        display: flex;
         // padding:0;
   
         > a {
