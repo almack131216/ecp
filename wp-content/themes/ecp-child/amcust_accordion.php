@@ -14,6 +14,10 @@ function amaccordion( $atts = array(), $content = null ) {
   
   
   function amacc_row( $atts = array(), $content = null ) {
+    global $lang;
+
+    $lblStep = "Step ";
+    if ( $lang === 'cs') $lblStep = "Krok ";
 
     // if(has_shortcode($post->post_content, 'amacc_row')){
       ?>
@@ -71,15 +75,21 @@ function amaccordion( $atts = array(), $content = null ) {
     }elseif($atts['insert_textblock']){       
         $rowBuild .= do_shortcode('[text-blocks id="'.$atts['insert_textblock'].'"]');   
     }elseif($atts['insert_post']){
-      $insertPost = '[display-posts id='.$atts['insert_post'].' include_content="true" wrapper="div" include_title="false" category_display="false" ignore_sticky_posts="true"';
-      // $insertPost .= ' image_size="medium"';
-      $insertPost .= ']';
+      $insertPost = '[display-posts id='.$atts['insert_post'].' include_content="true" wrapper="div" include_title="false" category_display="false" ignore_sticky_posts="true"]';
       $rowBuild .= do_shortcode($insertPost);
+    }elseif($atts['insert_page']){
+      $insertPage = '[insert page='.$atts['insert_page'].' display=\'content\']';
+      $rowBuild .= do_shortcode($insertPage);
     }else{
         $rowBuild .= $content;
     }
     // $rowBuild .= '<label class="pulse-container margin-y-g2" for="accordion-'.round($rowNum + 1,0).'"><span class="pulse-bg"></span><span class="pulse-button"><i class="fa fa-chevron-down" aria-hidden="true"></i></span><span class="continue">Step '.round($rowNum + 1,0).'</span></label>';
-    if($btnContinue) $rowBuild .= '<div onClick="showNext('.$rowNum.')" class="pulse-container margin-y-g2" for="accordion-'.round($rowNum + 1,0).'"><span class="pulse-bg"></span><span class="pulse-button"><i class="fa fa-chevron-down" aria-hidden="true"></i></span><span class="continue">Step '.round($rowNum + 1,0).'</span></div>';
+    if($btnContinue){
+      $rowBuild .= '<div onClick="showNext('.$rowNum.')" class="pulse-container margin-y-g2" for="accordion-'.round($rowNum + 1,0).'">';
+      $rowBuild .= '<span class="pulse-bg"></span><span class="pulse-button"><i class="fa fa-chevron-down" aria-hidden="true"></i></span><span class="continue">';
+      $rowBuild .= $lblStep.round($rowNum + 1,0);
+      $rowBuild .= '</span></div>';
+    }
     $rowBuild .= '</div>';
     $rowBuild .= '</nav>';    
   
