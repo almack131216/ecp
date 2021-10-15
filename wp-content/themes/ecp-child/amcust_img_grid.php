@@ -68,14 +68,19 @@ function amgrid_in_footer(){ // $tag variable is here
 }//(END) amgrid_in_footer
 
 /* list posts for AMGRID POSTS */
-add_shortcode( 'amgrid_posts', function( $atts = [] ){	    
+add_shortcode( 'amgrid_posts', function( $atts = [] ){
+    global $lang;
+
+    $lblReadMore = "Read More";
+    if ( $lang === 'cs') $lblReadMore = "Více Zde";
+
   $allTitlesUsed = [];
   $catPosts = '';
 
   $catId = $atts['cat_id'];//parent (root) categoryId
   $order_by = $atts['order_by'] ? $atts['order_by'] : 'all_order';
   $type = $atts['type'] ? $atts['type'] : null;
-  $strReadMore = $atts['str_read_more'] ? $atts['str_read_more'] : 'Read More';
+  $strReadMore = $atts['str_read_more'] ? $atts['str_read_more'] : $lblReadMore;//more information(CZ: více informací), read more(CZ: více zde)
 
   $columns = $atts['columns'] ? $atts['columns'] : false;
   $devNotes = $atts['dev_notes'] == 'true' || $atts['dev_notes'] == true ? true : false;
@@ -227,23 +232,30 @@ add_shortcode( 'amgrid_posts', function( $atts = [] ){
                           case 3840: $catQuoteField = '';break;//czech
                           case 3836: $catQuoteField = '';break;//english
                           case 1239:
-                          case 3975: $catQuoteField = '';break;//governers
+                            case 3975: $catQuoteField = '';break;//governers
                           case 6796: $catQuoteField = 'graduates_quote';break;//graduates
-                          case 1350:
-                          case 2473: $catQuoteField = 'hof_quote';break;//head of faculties
+                          case 1350:                          
+                          case 2473:
+                            case 2594: $catQuoteField = 'hof_quote';break;//head of faculties
                           case 3832: $catQuoteField = '';break;//humanities
-                          case 2484: $catQuoteField = 'ib_quote';break;//IB
+                          case 2484:
+                            case 2608: $catQuoteField = 'ib_quote';break;//IB
                           case 3844: $catQuoteField = '';break;//mathematics
                           case 3661: $catQuoteField = '';break;//modern foreign languages
-                          case 2589: $catQuoteField = 'par_quote';break;//par
-                          case 2591: $catQuoteField = 'pat_quote';break;//pat
+                          case 2589:
+                            case 2602: $catQuoteField = 'par_quote';break;//par
+                          case 2591:
+                            case 2596: $catQuoteField = 'pat_quote';break;//pat
                           case 3786: $catQuoteField = '';break;//science
                           case 1352:
-                          case 2471: $catQuoteField = 'slt_quote';break;//slt
-                          case 2479: $catQuoteField = 'st_quote';break;//st
-                          case 2583: $catQuoteField = 'stu_quote';break;//stu
+                            case 2471: $catQuoteField = 'slt_quote';break;//slt
+                          case 2479:
+                            case 2610: $catQuoteField = 'st_quote';break;//st
+                          case 2583:
+                            case 2612: $catQuoteField = 'stu_quote';break;//stu
                           case 3701: $catQuoteField = '';break;//support
-                          case 2477: $catQuoteField = 'tal_quote';break;//tal
+                          case 2477:
+                            case 2614: $catQuoteField = 'tal_quote';break;//tal
                           case 3828: $catQuoteField = 'ust_quote';break;//ust
                       }
                       
