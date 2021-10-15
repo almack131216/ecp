@@ -497,7 +497,9 @@ function amcust_title_splitter( $atts = array() ) {
     
     if($atts['see_all_link']){
         $contentBuild .= '<div class="see-all">';
-        $contentBuild .= '<a class="'.$seeAllLinkClass.'" href="'.$atts['see_all_link'].'">';
+        $contentBuild .= '<a class="'.$seeAllLinkClass.'" href="'.$atts['see_all_link'].'"';
+        if($atts['see_all_target']) $contentBuild .= ' target="'.$atts['see_all_target'].'"';
+        $contentBuild .= '>';
         $contentBuild .= $atts['see_all_text'] ? $atts['see_all_text'] : 'See All';
         $contentBuild .= '</a>';
         $contentBuild .= '</div>';
