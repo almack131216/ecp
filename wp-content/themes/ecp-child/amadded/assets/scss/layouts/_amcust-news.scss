@@ -152,13 +152,17 @@
         max-width: 100%;
         padding: 0;
 
-        .nav-previous a ,
-        .nav-next a {
-          @extend .fasc-button;
-          @extend .fasc-size-medium;
-          color:$color-primary;
-          text-decoration:none;
-          display:inline-block;
+        .nav-previous ,
+        .nav-next {
+          width:48%;
+
+          a {
+            @extend .fasc-button;
+            @extend .fasc-size-medium;
+            color:$color-primary;
+            text-decoration:none;
+            display:inline-block;
+          }          
         }
 
         .nav-previous a:before {
@@ -186,6 +190,45 @@
             }
           }
         }
+
+        // move nav-links onto their own rows
+        // 100% width, text ellipses if too long (...)
+        // remove border
+        @media (max-width: $bp-tablet-1) {
+          display: flex;
+          flex-direction: column-reverse;
+
+          .nav-previous,
+          .nav-next {
+            width:100%;            
+
+            > a {             
+              display:block;
+              @include trim-string;
+              padding:$offset-1 0 !important;
+              border:none !important;
+
+              &:before,
+              &:after {
+                width:16px !important;
+                margin-right:$offset-1;
+              }
+            }
+          }
+
+          .nav-next {
+            margin-bottom:$offset-g1;
+            a {
+              display: flex;
+              flex-direction: row-reverse;
+              text-align: left;
+              align-items: baseline;
+              justify-content: flex-end;
+            }
+          }
+        }
+
+        
 
         .nav-previous {
           text-align: left;

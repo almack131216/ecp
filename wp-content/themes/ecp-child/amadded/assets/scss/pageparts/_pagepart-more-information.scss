@@ -5,4 +5,51 @@
   color: white;
   text-align: center;
   padding: $offset-g3 0;
+
+  @media (max-width: $bp-tablet-1) {
+    padding: $offset-g1 0;
+  }
+
+  .moreinfo-btns {
+    display:block;
+    padding:$offset-g1 0;
+
+    ul {
+      @extend .btns-inline;
+      margin:0;
+
+      li {
+        margin:7px;
+
+        a {
+          background:transparent;
+          border: 1px solid $color-btn-border;
+          &:hover {
+            background:transparent;
+            border-color: $color-btn-border-hover
+          }
+
+          @media (max-width: $bp-tablet-1) {
+            font-size: 16px;
+            padding:5px $offset-1;
+          }
+
+          &.news-events {
+            &:hover {
+            }
+          }
+          &.contact {
+            background: $color-contact;
+            &:hover {
+              background: $color-contact-hover;
+            }
+          }
+          &.newsletter {
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -55,6 +55,11 @@ table.tablepress {
       width:30px;    
     }
   }
+  &.col-1-100 {
+    tr > td:first-child {
+      width:100px;    
+    }
+  }
   &.col-1-bold {
     tr > td:first-child {
       font-weight:bold;    
