@@ -4,8 +4,8 @@ Theme URI: https://englishcollege.cz/
 Author: ECP College
 Author URI: https://englishcollege.cz/
 Description: Additional styles to be used on top of ecp/styles.css
-Version: 2110150620
-Updated: 2021-10-15 00:00:00 : how-to-apply btns
+Version: 2111261615
+Updated: 2021-11-26 00:00:00 : tablepress col-1-100
 */
 
 /* BASE - base styles, variables, mixins etc */
@@ -60,6 +60,7 @@ Updated: 2021-10-15 00:00:00 : how-to-apply btns
 @import "plugins/_display-posts-page.scss";
 @import "plugins/_cookie-bar.scss";
 @import "plugins/_forget-about-shortcode-buttons.scss";
+@import "plugins/_social-flow-flow.scss";
 
 @import "addons/_font-awesome-overrule.scss";
 @import "addons/_mbt.scss";

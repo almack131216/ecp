@@ -1,0 +1,65 @@
+/* _social-flow-flow.scss */
+
+#ff-stream-1.ff-stream {
+    background:white;
+    padding:0 0 $offset-g2 0;
+
+    .ff-stream-wrapper {
+        margin:0;
+
+        .picture-item__inner {
+            background: rgb(255, 255, 255);
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        
+        .ff-item {
+            .ff-icon-inner {
+                &:before {
+                    @extend .fa-dummy;
+                    margin:0 5px 0 0;
+                    display: block !important;
+                    line-height: 22px !important;
+                    float: left !important;
+                }
+            }
+        }
+
+
+        .ff-twitter {
+            .ff-icon-inner {
+                background-color:$color_twitter;
+                &:before {
+                    content: "\f099";
+                }
+            }
+        }
+        .ff-facebook {
+            .ff-icon-inner {
+                background-color:$color_facebook;
+                &:before {
+                    content: "\f09a";
+                }
+            }
+        }
+        .ff-instagram {
+            .ff-icon-inner {
+                background-color:$color_instagram;
+                &:before {
+                    content: "\f16d";
+                }
+            }
+        }
+    }
+
+    .ff-loadmore-wrapper {
+        margin:$offset-g2 0 0 0;
+        .ff-btn {
+            @include btn-base();
+            &:hover {
+                background:white;
+            }
+        }
+    }
+    
+}
