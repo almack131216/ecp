@@ -55,6 +55,13 @@ i[class^="icon-"] {
     margin-right:$offset-1;
   }
 
+  &.in-text {
+    white-space: nowrap;
+    &:before {
+      margin-right:5px;
+    }    
+  }
+
   &.icon-envelope {
     &:before {
       content: "\f0e0";
@@ -70,6 +77,12 @@ i[class^="icon-"] {
   &.icon-map {
     &:before {
       content: "\f041";
+    }
+  }
+
+  &.icon-download {
+    &:before {
+      content: "\f019";
     }
   }
 }
