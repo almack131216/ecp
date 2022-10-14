@@ -11,3 +11,15 @@
     }
   }
 }
+
+ul#toptop {
+  li {
+    &.lang-item-first {
+      white-space:nowrap;
+      
+      a {
+        display:inline-block;
+      }
+    }
+  }
+}
