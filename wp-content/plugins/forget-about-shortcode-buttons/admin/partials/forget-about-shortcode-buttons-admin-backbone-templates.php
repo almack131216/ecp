@@ -18,14 +18,14 @@
 			<div class="centered-button">
 				
 			</div>
-			<!--<a href="#" class="fa fa-save fasc-save-btn"></a>-->
+			<a href="#" class="fa fa-save fasc-save-btn"></a>
 			
 		</div>
 		<div class="fasc-popup-toolbar">
 			
 			<div class="fasc-popup-toolbar-button-row">
 			
-				<!--<div class="fasc-mce-button fasc-mce-button-color-picker" data-fasc-action="popup-colorpicker" data-fasc-action-target="fasc-foreground" data-fasc-button-active="0">
+				<div class="fasc-mce-button fasc-mce-button-color-picker" data-fasc-action="popup-colorpicker" data-fasc-action-target="fasc-foreground" data-fasc-button-active="0">
 					<button role="presentation" type="button" tabindex="-1">
 						<span class="fasc-ico-fg">
 							<span class="fg-panel"></span>
@@ -51,11 +51,11 @@
 				<div class="fasc-popup-colorpicker-container" data-fasc-colorpicker-name="fasc-background">
 					<input type="text" id="fasc-popup-button-color" name="button-color" value="#33809e" /><br />
 					<input type="text" id="" class="fasc-popup-color-input" value="#33809e" />
-				</div>-->
+				</div>
 				
-				<!--<div class="fasc-mce-button fasc-mce-button-toggle" data-fasc-button-active="0" data-fasc-action='bold'><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div>
+				<div class="fasc-mce-button fasc-mce-button-toggle" data-fasc-button-active="0" data-fasc-action='bold'><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div>
 				<div class="fasc-mce-button fasc-mce-button-toggle" data-fasc-button-active="0" data-fasc-action='italic'><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-italic"></i></button></div>
-				<div class="fasc-mce-button fasc-mce-button-toggle" data-fasc-button-active="0" data-fasc-action='strikethrough'><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-strikethrough"></i></button></div>-->
+				<div class="fasc-mce-button fasc-mce-button-toggle" data-fasc-button-active="0" data-fasc-action='strikethrough'><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-strikethrough"></i></button></div>
 				<!--<div class="fasc-mce-button fasc-mce-button-toggle" data-fasc-button-active="0" data-fasc-action='alignleft'><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignleft"></i></button></div>
 				<div class="fasc-mce-button fasc-mce-button-toggle" data-fasc-button-active="0" data-fasc-action='aligncenter'><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-aligncenter"></i></button></div>
 				<div class="fasc-mce-button fasc-mce-button-toggle" data-fasc-button-active="0" data-fasc-action='alignright'><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignright"></i></button></div>-->
@@ -64,21 +64,18 @@
 				<!--<button role="presentation" type="button" tabindex="-1" style="float:right;"><i class="mce-ico mce-i-save"></i></button>-->
 				
 				<select name="button-type" id="fasc-popup-button-type">
-					<option value="fasc-type-amcust-white" selected="selected">amcust - white</option>
-					<option value="fasc-type-amcust-strong">amcust - strong</option>
-					<option value="fasc-type-amcust-secondary">amcust - secondary</option>
-					<!--<option value="fasc-type-flat">Flat</option>
+					<option value="fasc-type-flat" selected="selected">Flat</option>
 					<option value="fasc-type-flat fasc-rounded-medium">Flat Rounded</option>
 					<option value="fasc-type-glossy">Glossy</option>
 					<option value="fasc-type-glossy fasc-rounded-medium">Glossy Rounded</option>
 					<option value="fasc-type-popout">Pop out</option>
-					<option value="fasc-type-popout fasc-rounded-medium">Pop out Rounded</option>-->
+					<option value="fasc-type-popout fasc-rounded-medium">Pop out Rounded</option>
 				</select> 
 				
 				<select name="button-size" id="fasc-popup-button-size" size="1">
-					<!--<option value="fasc-size-xsmall">Extra Small</option>-->
+					<option value="fasc-size-xsmall">Extra Small</option>
 					<option value="fasc-size-small">Small</option>
-					<option value="fasc-size-medium" selected="selected">Default</option>
+					<option value="fasc-size-medium" selected="selected">Medium</option>
 					<option value="fasc-size-large">Large</option>
 					<option value="fasc-size-xlarge">Extra Large</option>
 				</select>
@@ -113,7 +110,7 @@
 				<ul>
 					<li data-fasc-tab="1" class="active">Properties</li>
 					<li data-fasc-tab="2">Icon</li>
-					<!--<li data-fasc-tab="3">Templates</li>-->
+					<li data-fasc-tab="3">Templates</li>
 					<!--<li  data-fasc-tab="4" class="settings"><a href="#tab-4-content"><div data-code="f111" class="dashicons dashicons-admin-generic active"></div></a></li>-->
 				</ul><div class="clear"></div>
 			</div>
