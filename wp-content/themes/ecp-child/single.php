@@ -8,6 +8,7 @@
  */
 $categoryMore = 5364;
 if(amactive_is_localhost()) $categoryMore = 1115;
+if ($lang === 'cs') $categoryMore = 7483;
 
 get_header(); ?>
 

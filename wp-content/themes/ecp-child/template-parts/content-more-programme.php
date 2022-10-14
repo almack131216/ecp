@@ -9,6 +9,7 @@
 $categoryMore = 5364;
 if(amactive_is_localhost()) $categoryMore = 1115;
 $categoryMoreLink = '<div class="back-to-tree-wrap"><a href="/daily-life-activities/#more-programme" class="back-to-tree in-content"><span>:more programme</span></a></div>';
+if ($lang === 'cs') $categoryMoreLink = '<div class="back-to-tree-wrap"><a href="/cs/zazit-vice/" class="back-to-tree in-content"><span>program :more</span></a></div>';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("post-more-programme"); ?>>
