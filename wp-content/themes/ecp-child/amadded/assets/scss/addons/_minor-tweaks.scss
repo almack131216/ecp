@@ -156,16 +156,6 @@ ul.elastislide-list li:first-child:nth-last-child(1) {
   top: 110%;
 }
 
-@media (max-width: $bp-xxs-1) {
-  header.site-header {
-    #searchform {
-      input#search {
-        width: 100px;
-      }
-    }
-  }
-}
-
 // 201118_youtube-embed-fix
 // to be used together with code in functions.php: add_theme_support( 'responsive-embeds' );
 figure.wp-block-embed-youtube.is-provider-youtube {
@@ -362,4 +352,8 @@ ul.btn-blocks {
       }
     }
   }
+}
+
+.display-none {
+  display:none;
 }

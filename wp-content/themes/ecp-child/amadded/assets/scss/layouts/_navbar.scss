@@ -3,6 +3,8 @@
 header.site-header {
   > .page-box {
     > .site-branding {
+      flex-grow: 0;
+
       &.bigger-emblem {
         > .site-title {
           .site-logo {
@@ -52,19 +54,22 @@ header.site-header {
         @media (max-width: 599px) {
           position: relative;
           background: $color_debug;
-          width: 100px;
-          height: 90px;
+          width: 230px;
+          height: 50px;
           overflow: hidden;
 
           a {
             position: absolute;
             top: 0;
             left: 0;
+            display:block;
+            width:100%;
+            height:100%;
 
             > img {
-              width: 462px;
+              width: auto;
               max-width: 462px;
-              height: 100px;
+              height: 100%;
               margin: -3px 0 0 -3px;
             }
           }
@@ -74,16 +79,89 @@ header.site-header {
       /* (END) .site-title */
     }
     /* (END) .site-branding */
+    > .headerbuttons {
+      flex-grow:1;
+      text-align:right;
+
+      .first-line {
+        @media (max-width: $bp-tablet-1) {
+          flex-direction: column-reverse;
+
+          .search-box {
+            input#search {
+              width: calc(100% - 35px);
+            }
+          }
+        }
+      }
+    }
+    /* (END) .headerbuttons */
+
+    @media (max-width: 399px) {
+      background-image: url(https://www.englishcollege.cz/wp-content/themes/ecp/assets/ECP-logo-full-white-transparent.svg);
+      background-repeat:no-repeat;
+      background-size: 230px 50px;
+      background-position:15px 0;
+      background-color:transparent;
+
+      > .site-branding {
+        > .site-title {
+          width: 50px;
+          height: 50px;
+    
+          a {
+            > img {
+              display:none;
+            }
+          }
+          /* (END) a */
+        }
+      }
+    }
   }
   /* (END) .page-box */
 
-  #menucontactusXXX .request-brochure > a,
   #menucontactus {
-    ul#contactus li:nth-child(1) a {
-      background: $color_accent-1;
+    ul#contactus {
+      li {
 
-      &:not(:hover) {
-        border-color: $color_accent-1;
+        &.prospectus a {
+          background: $color_accent-1;
+    
+          &:not(:hover) {
+            border-color: $color_accent-1;
+          }
+        }
+    
+        &.news-events a {
+          background-color: $color_primary;
+          border: 1px solid white;
+          border: 1px solid rgba(255, 255, 255, .6);
+        }
+
+        &.ukraine a {
+          &:before {
+            display:inline-block;
+            content:"";
+            width:16px;
+            height:10px;
+            margin-right:5px;
+            background: transparent url(amadded/assets/svg/ukraine.svg) no-repeat 0 0;
+          }
+          background-color: $color_primary;
+          border: 1px solid $color_primary;
+
+          @media (max-width:$bp-sm-1) {
+            font-size: 0px;
+            color: transparent;
+            padding: 7px;
+            box-shadow:none;
+
+            &:before {
+              margin-right:0;
+            }
+          }
+        }
       }
     }
 
