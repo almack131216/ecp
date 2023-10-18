@@ -29,13 +29,13 @@
         }
       }
 
-      ul.wp-block-gallery {
+      .wp-block-gallery {
         margin: 0;
         padding: 0;
       }
     }
 
-    ul.wp-block-gallery {
+    .wp-block-gallery {
       margin: 0;
     }
 
@@ -134,7 +134,8 @@
       @include border-radius(50%);
     }
 
-    &.lightbox-8043 {
+    &.lightbox-8043,
+    &.lightbox-13928 {
       //   background-color: $color_primary !important;
     }
 
